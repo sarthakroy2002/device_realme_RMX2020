@@ -26,6 +26,32 @@
 #include <hardware/hardware.h>
 #include <hardware/power.h>
 
+int sysfs_write(char *path, char *s)
+{
+    char buf[80];
+    int len;
+    int ret = 0;
+    int fd = open(path, O_WRONLY);
+
+    if (fd < 0) {
+        strerror_r(errno, buf, sizeof(buf));
+        ALOGE("Error opening %s: %s\n", path, buf);
+        return -1 ;
+    }
+
+    len = write(fd, s, strlen(s));
+    if (len < 0) {
+        strerror_r(errno, buf, sizeof(buf));
+        ALOGE("Error writing to %s: %s\n", path, buf);
+
+        ret = -1;
+    }
+
+    close(fd);
+
+    return ret;
+}
+
 static void power_init(struct power_module *module)
 {
 	if(module)
@@ -42,6 +68,16 @@ static void power_set_feature(struct power_module *module, feature_t feature, in
 {
 	if(module)
 	ALOGI("power_set_feature feature:%d, state:%d", feature, state);
+
+    switch (feature) {
+#ifdef TAP_TO_WAKE_NODE
+        case POWER_FEATURE_DOUBLE_TAP_TO_WAKE:
+            sysfs_write(TAP_TO_WAKE_NODE, state ? "1" : "0");
+            break;
+#endif
+        default:
+            break;
+    }
 }
 
 static void power_hint(struct power_module *module, power_hint_t hint,
@@ -88,12 +124,13 @@ static int power_open(const hw_module_t* module, const char* name,
         if (dev) {
             /* Common hw_device_t fields */
             dev->common.tag = HARDWARE_DEVICE_TAG;
-            dev->common.module_api_version = POWER_MODULE_API_VERSION_0_2;
+            dev->common.module_api_version = POWER_MODULE_API_VERSION_0_3;
             dev->common.hal_api_version = HARDWARE_HAL_API_VERSION;
 
             dev->init = power_init;
             dev->powerHint = power_hint;
             dev->setInteractive = power_set_interactive;
+            dev->setFeature = power_set_feature;
             dev->get_number_of_platform_modes = NULL;
             dev->get_platform_low_power_stats = NULL;
             dev->get_voter_list = NULL;
@@ -116,7 +153,7 @@ static struct hw_module_methods_t power_module_methods = {
 struct power_module HAL_MODULE_INFO_SYM = {
     .common = {
         .tag = HARDWARE_MODULE_TAG,
-        .module_api_version = POWER_MODULE_API_VERSION_0_2,
+        .module_api_version = POWER_MODULE_API_VERSION_0_3,
         .hal_api_version = HARDWARE_HAL_API_VERSION,
         .id = POWER_HARDWARE_MODULE_ID,
         .name = "Mediatek Power HAL",
