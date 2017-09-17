@@ -4,3 +4,7 @@ soong_namespace {
         "hardware/google/pixel",
     ],
 }
+
+subdirs = [
+    "usb",
+]
