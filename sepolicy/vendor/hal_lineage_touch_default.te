@@ -1,0 +1,2 @@
+allow hal_lineage_touch_default proc_tp:dir search;
+allow hal_lineage_touch_default proc_tp:file rw_file_perms;

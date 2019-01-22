@@ -1,0 +1,24 @@
+//
+// Copyright (C) The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+
+cc_binary {
+    name: "vendor.lineage.touch@1.0-service.RMX2020",
+    init_rc: ["vendor.lineage.touch@1.0-service.RMX2020.rc"],
+    vintf_fragments: ["vendor.lineage.touch@1.0-service.RMX2020.xml"],
+    defaults: ["hidl_defaults"],
+    relative_install_path: "hw",
+    srcs: [
+        "TouchscreenGesture.cpp",
+        "service.cpp",
+    ],
+    shared_libs: [
+        "libbase",
+        "libbinder",
+        "libhidlbase",
+        "libutils",
+        "vendor.lineage.touch@1.0",
+    ],
+    proprietary: true,
+}

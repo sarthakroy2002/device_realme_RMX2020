@@ -18,5 +18,8 @@
 # Sensor
 /dev/m_virtual_sensor_misc(/.*)?                                                                          u:object_r:m_virtual_sensor_device:s0 
 
+# Touch
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@[0-9]\.[0-9]-service\.RMX2020                       u:object_r:hal_lineage_touch_default_exec:s0
+
 # USB
 /(vendor|system/vendor)/bin/hw/android\.hardware\.usb@1\.0-service\.RMX2020                               u:object_r:hal_usb_default_exec:s0
