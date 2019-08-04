@@ -46,6 +46,11 @@ on post-fs
     #  so it is fine to just revert back)
     umount /vendor/etc/fstab.mt6768
 
+on property:sys.boot_completed=1
+    # Restrict permissions to socket file 
+    # to hide Magisk & co.
+    chmod 440 /proc/net/unix
+
 on post-fs-data
     # VideoCodec
     chmod 0666 /dev/video0
