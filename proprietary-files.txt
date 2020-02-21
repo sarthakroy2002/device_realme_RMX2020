@@ -47,4 +47,4 @@ lib64/libmtkshifter.so
 bin/kpoc_charger
 etc/init/kpoc_charger.rc
 lib/libshowlogo.so
-lib/libsysenv_system.so
+
