@@ -1,6 +1,8 @@
 # Blurs
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.surface_flinger.supports_background_blur=1
+    ro.sf.blurs_are_expensive=1 \
+    persist.sys.sf.disable_blurs=1
 
 # Camera
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
