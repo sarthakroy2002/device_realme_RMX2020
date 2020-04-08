@@ -54,6 +54,10 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/idc/mtk-kpd.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/mtk-kpd.idc \
     $(DEVICE_PATH)/keylayout/mtk-kpd.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/mtk-kpd.kl
 
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-service.rmx2020
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay
