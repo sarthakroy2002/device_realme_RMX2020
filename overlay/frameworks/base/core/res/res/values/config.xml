@@ -217,9 +217,6 @@
     -->
      <bool name="config_wifiDisplaySupportsProtectedBuffers">false</bool>
 
-    <!-- Boolean indicating whether the wifi chipset has background scan support -->
-     <bool name="config_wifi_background_scan_support">true</bool>
-
     <!-- Wifi driver supports batched scan -->
      <bool name="config_wifi_batched_scan_supported">false</bool>
 
@@ -320,16 +317,6 @@
     <!-- Shutdown if the battery temperature exceeds (this value * 0.1) Celsius. -->
      <integer name="config_shutdownBatteryTemperature">680</integer>
 
-    <!-- Integer parameters of the wifi to cellular handover feature
-         wifi should not stick to bad networks -->
-     <integer name="config_wifi_framework_wifi_score_bad_rssi_threshold_24GHz">-85</integer>
-     <integer name="config_wifi_framework_wifi_score_bad_rssi_threshold_5GHz">-82</integer>
-     <integer name="config_wifi_framework_wifi_score_low_rssi_threshold_24GHz">-73</integer>
-     <integer name="config_wifi_framework_wifi_score_low_rssi_threshold_5GHz">-70</integer>
-
-    <!-- Regex of wired ethernet ifaces -->
-     <string name="config_ethernet_iface_regex">eth\\d</string>
-
     <!-- The bounding path of the cutout region of the main built-in display.
          Must either be empty if there is no cutout region, or a string that is parsable by
          {@link android.util.PathParser}.
@@ -343,10 +330,6 @@
          Note that a physical cutout should be configured in pixels for the best results.
     -->
      <string name="config_mainBuiltInDisplayCutout">M -38,0 L -38,56 L 38,56 L 38,0 Z</string>
-
-    <!-- Configure wifi tcp buffersizes in the form:
-         rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
-     <string name="config_wifi_tcp_buffers">524288,1048576,4525824,524288,1048576,4525824</string>
 
     <!-- Array of desired screen brightness in nits corresponding to the lux values
          in the config_autoBrightnessLevels array. As with config_screenBrightnessMinimumNits and
