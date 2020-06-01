@@ -13,3 +13,7 @@ on post-fs
     # (at post-fs, the fstab has already been used to mount the partitions,
     #  so it is fine to just revert back)
     umount /vendor/etc/fstab.mt6785
+
+on post-fs-data
+    chmod 0666 /dev/video0
+    chmod 0666 /dev/video1
