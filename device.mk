@@ -137,6 +137,10 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.4.vendor \
     android.hardware.drm@1.4-service.clearkey
 
+# DT2W
+PRODUCT_PACKAGES += \
+    DT2W-Service-RMX2020
+
 # fastbootd
 PRODUCT_PACKAGES += \
     fastbootd

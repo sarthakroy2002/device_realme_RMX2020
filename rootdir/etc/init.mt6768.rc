@@ -1000,3 +1000,9 @@ on property:sys.boot_completed=1
     chown root root /sys/module/ged/parameters/gx_force_cpu_boost
     chown root root /proc/cpufreq/cpufreq_power_mode
     chown root root /proc/cpufreq/cpufreq_cci_mode
+
+on property:persist.sys.dt2w=0
+    write /proc/touchpanel/double_tap_enable 0
+
+on property:persist.sys.dt2w=1
+    write /proc/touchpanel/double_tap_enable 1
