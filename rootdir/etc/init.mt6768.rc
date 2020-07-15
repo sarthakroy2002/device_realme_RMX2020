@@ -1,4 +1,6 @@
-import /vendor/etc/init/hw/init.safailnet.rc
+import /vendor/etc/init/hw/init.safailnet.rc 
+import /system/etc/init/init.ago.rc
+import /system/etc/init/init.devicesetting.rc
 
 on init
     mount none /vendor/lost+found /vendor/overlay bind
