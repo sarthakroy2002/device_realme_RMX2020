@@ -15,15 +15,6 @@
     <string name="device_summary">Adjust Realme specific device settings</string>
     <string name="display_title">Display</string>
     <string name="misc_title">Misc settings</string>
-
-    <!-- DC dimming -->
-    <string name="dc_mode_summary">Reduces screen flicker while brightness is low</string>
-    <string name="dc_mode_title">DC-Dimming</string>
-    <string name="tile_dc_mode">DC-Dimming</string>
-    <!-- HBM mode -->
-    <string name="hbm_mode_summary">Peak brightness for better visibility in outdoors</string>
-    <string name="hbm_mode_title">High brightness mode</string>
-    <string name="tile_hbm_mode">High brightness modes</string>
     <!-- srgb mode -->
     <string name="srgb_mode_summary">sRGB mode for simpler colour display</string>
     <string name="srgb_mode_title">sRGB mode</string>
