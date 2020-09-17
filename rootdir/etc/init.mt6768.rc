@@ -1,2 +1,10 @@
 on init
     setprop sys.usb.ffs.aio_compat 1
+
+    # Custom overrides that need to happen right on boot
+    # Override vendor fstab
+    # We only need it to be overridden before things are mounted
+    mount none /system/etc/fstab.mt6785 /vendor/etc/fstab.mt6785 bind
+
+on post-fs
+    mount none /system/etc/fstab.mt6785 /vendor/etc/fstab.mt6785 bind
