@@ -45,7 +45,9 @@ PRODUCT_COPY_FILES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    init.mt6768.rc
+    init.mt6768.rc \
+    fstab.mt6768
+
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
