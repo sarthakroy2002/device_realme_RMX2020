@@ -1,0 +1,2 @@
+# Allow init to mount vendor overlay
+allow init vendor_overlay_file:dir mounton;
