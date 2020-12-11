@@ -1,0 +1,4 @@
+# From ImsService.apk
+add_service(radio, mwis_service);
+add_service(radio, mtk_ims_service);
+add_service(radio, wfo_service);
