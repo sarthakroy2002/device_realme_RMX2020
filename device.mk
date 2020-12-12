@@ -25,6 +25,12 @@ $(call inherit-product-if-exists, vendor/realme/rmx2020/rmx2020-vendor.mk)
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
+# Call proprietary blob setup
+$(call inherit-product-if-exists, vendor/realme/RMX2001/RMX2001-vendor.mk)
+
+# IMS
+$(call inherit-product, vendor/mediatek/ims/mtk-ims.mk)
+
 PRODUCT_SHIPPING_API_LEVEL := 29
 
 # VNDK
@@ -42,8 +48,8 @@ TARGET_SCREEN_WIDTH := 1080
 PRODUCT_PACKAGES += \
     audio.a2dp.default
 
-#PRODUCT_COPY_FILES += \
-#    $(DEVICE_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_EXTRA_VNDK_VERSIONS)/etc/audio_policy_configuration.xml
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_EXTRA_VNDK_VERSIONS)/etc/audio_policy_configuration.xml
 
 # fastbootd
 PRODUCT_PACKAGES += \
@@ -100,15 +106,17 @@ PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
-# Telephony Jars
-#PRODUCT_BOOT_JARS += \
- #   mediatek-common \
- #   mediatek-framework \
- #   mediatek-ims-base \
- #   mediatek-ims-common \
- #   mediatek-telecom-common \
- #   mediatek-telephony-base \
- #   mediatek-telephony-common
+# Telephony
+PRODUCT_PACKAGES += vendor.mediatek.hardware.videotelephony@1.0
+
+PRODUCT_BOOT_JARS += \
+    mediatek-common \
+    mediatek-framework \
+    mediatek-ims-base \
+    mediatek-ims-common \
+    mediatek-telecom-common \
+    mediatek-telephony-base \
+    mediatek-telephony-common
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml
