@@ -1,0 +1,9 @@
+type kpoc_charger, domain;
+type kpoc_charger_exec, system_file_type, exec_type, file_type;
+
+# Move to system partition
+typeattribute kpoc_charger coredomain;
+
+init_daemon_domain(kpoc_charger)
+
+permissive kpoc_charger;
