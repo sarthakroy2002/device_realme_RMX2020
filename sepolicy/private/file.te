@@ -1,1 +1,2 @@
+type debugfs_ion, fs_type, debugfs_type;
 type proc_tp, fs_type, proc_type;
