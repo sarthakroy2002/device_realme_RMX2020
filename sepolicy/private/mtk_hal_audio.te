@@ -1,0 +1,2 @@
+type mtk_hal_audio, domain;
+typeattribute mtk_hal_audio hal_broadcastradio_client;
