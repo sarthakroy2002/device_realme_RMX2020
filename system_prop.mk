@@ -1,6 +1,3 @@
-#APNs
-etc/apns-conf.xml:product/etc/apns-conf.xml
-
 # OMX
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     debug.stagefright.omx_default_rank.sw-audio=1 \
