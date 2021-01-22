@@ -28,22 +28,21 @@
 
     <!-- Flag indicating whether the we should enable the automatic brightness in Settings.
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
-     <bool name="config_automatic_brightness_available">false</bool>
+     <bool name="config_automatic_brightness_available">true</bool>
 
     <!-- Boolean indicating if current platform supports HFP inband ringing -->
-     <bool name="config_bluetooth_hfp_inband_ringing_support">true</bool>
+     <bool name="config_bluetooth_hfp_inband_ringing_support">false</bool>
 
     <!-- Boolean indicating if current platform supports BLE peripheral mode -->
      <bool name="config_bluetooth_le_peripheral_mode_supported">false</bool>
 
     <!-- Whether camera shutter sound is forced or not  (country specific). -->
-     <bool name="config_camera_sound_forced">false</bool>
+     <bool name="config_camera_sound_forced">true</bool>
 
     <!-- Flag specifying whether VoLTE should be available for carrier: independent of
          carrier provisioning. If false: hard disabled. If true: then depends on carrier
          provisioning, availability etc -->
      <bool name="config_carrier_volte_available">false</bool>
-     <bool name="config_carrier_volte_tty_supported">true</bool>
 
     <!-- Flag specifying whether WFC over IMS should be available for carrier: independent of
          carrier provisioning. If false: hard disabled. If true: then depends on carrier
@@ -51,13 +50,13 @@
      <bool name="config_carrier_wfc_ims_available">false</bool>
 
     <!-- Set to true to add links to Cell Broadcast app from Settings and MMS app. -->
-     <bool name="config_cellBroadcastAppLinks">false</bool>
+     <bool name="config_cellBroadcastAppLinks">true</bool>
 
     <!-- Flag specifying whether VoLTE is available on device -->
-     <bool name="config_device_volte_available">false</bool>
+     <bool name="config_device_volte_available">true</bool>
 
     <!-- Flag specifying whether VT is available on device -->
-     <bool name="config_device_vt_available">false</bool>
+     <bool name="config_device_vt_available">true</bool>
 
     <!-- Flag specifying whether WFC over IMS is available on device -->
      <bool name="config_device_wfc_ims_available">false</bool>
@@ -67,16 +66,14 @@
 
     <!-- If true, the doze component is not started until after the screen has been turned off
          and the screen off animation has been performed. -->
-     <bool name="config_dozeAfterScreenOffByDefault">false</bool>
-     <bool name="config_dozeAlwaysOnDisplayAvailable">false</bool>
-     <bool name="config_dozeAlwaysOnEnabled">true</bool>
+     <bool name="config_dozeAfterScreenOffByDefault">true</bool>
 
     <!-- Flag specifying whether or not IMS will use the ImsResolver dynamically -->
-     <bool name="config_dynamic_bind_ims">false</bool>
+     <bool name="config_dynamic_bind_ims">true</bool>
      <bool name="config_eap_sim_based_auth_supported">true</bool>
 
     <!--  Whether Multiuser UI should be shown -->
-     <bool name="config_enableMultiUserUI">false</bool>
+     <bool name="config_enableMultiUserUI">true</bool>
 
     <!-- Whether to enable network location overlay which allows network
          location provider to be replaced by an app at run-time. When disabled,
@@ -87,7 +84,7 @@
          be picked. Anyone who wants to disable the overlay mechanism can set it
          to false.
     -->
-     <bool name="config_enableNetworkLocationOverlay">true</bool>
+     <bool name="config_enableNetworkLocationOverlay">false</bool>
 
     <!-- Whether WiFi display is supported by this device.
          There are many prerequisites for this feature to work correctly.
@@ -109,7 +106,7 @@
      <bool name="config_fillMainBuiltInDisplayCutout">false</bool>
 
     <!-- Is the device capable of hot swapping an ICC Card -->
-     <bool name="config_hotswapCapable">false</bool>
+     <bool name="config_hotswapCapable">true</bool>
 
     <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
      <bool name="config_intrusiveNotificationLed">false</bool>
@@ -117,7 +114,7 @@
     <!-- Indicate whether closing the lid causes the device to go to sleep and opening
          it causes the device to wake up.
          The default is false. -->
-     <bool name="config_lidControlsSleep">false</bool>
+     <bool name="config_lidControlsSleep">true</bool>
 
     <!-- Should the pinner service pin the Camera application? -->
      <bool name="config_pinnerCameraApp">false</bool>
@@ -139,7 +136,7 @@
          to maximize power savings but not all devices support it.
          Refer to autosuspend.h for details.
     -->
-     <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">false</bool>
+     <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">true</bool>
 
     <!-- Power Management: Specifies whether to decouple the interactive state of the
          device from the display on/off state.
@@ -170,7 +167,7 @@
      <bool name="config_supportAudioSourceUnprocessed">false</bool>
 
     <!-- Whether device supports double tap to wake -->
-     <bool name="config_supportDoubleTapWake">false</bool>
+     <bool name="config_supportDoubleTapWake">true</bool>
 
     <!-- Boolean indicating if current platform supports HFP inband ringing -->
      <bool name="config_supportSystemNavigationKeys">false</bool>
@@ -180,13 +177,13 @@
          if the sensor HAL correctly handles the proximity sensor as a wake-up source.
          Otherwise, the device may fail to wake out of suspend reliably.
          The default is false. -->
-     <bool name="config_suspendWhenScreenOffDueToProximity">false</bool>
+     <bool name="config_suspendWhenScreenOffDueToProximity">true</bool>
 
     <!-- True if the device supports Sustained Performance Mode-->
      <bool name="config_sustainedPerformanceModeSupported">false</bool>
 
     <!-- Whether or not swipe up gesture's opt-in setting is available on this device -->
-     <bool name="config_swipe_up_gesture_setting_available">false</bool>
+     <bool name="config_swipe_up_gesture_setting_available">true</bool>
 
     <!-- Config determines whether to update phone object when voice registration
          state changes. Voice radio tech change will always trigger an update of
@@ -221,7 +218,7 @@
      <bool name="config_wifiDisplaySupportsProtectedBuffers">false</bool>
 
     <!-- Boolean indicating whether the wifi chipset has background scan support -->
-     <bool name="config_wifi_background_scan_support">false</bool>
+     <bool name="config_wifi_background_scan_support">true</bool>
 
     <!-- Wifi driver supports batched scan -->
      <bool name="config_wifi_batched_scan_supported">false</bool>
@@ -325,8 +322,8 @@
 
     <!-- Integer parameters of the wifi to cellular handover feature
          wifi should not stick to bad networks -->
-     <integer name="config_wifi_framework_wifi_score_bad_rssi_threshold_24GHz">-83</integer>
-     <integer name="config_wifi_framework_wifi_score_bad_rssi_threshold_5GHz">-80</integer>
+     <integer name="config_wifi_framework_wifi_score_bad_rssi_threshold_24GHz">-85</integer>
+     <integer name="config_wifi_framework_wifi_score_bad_rssi_threshold_5GHz">-82</integer>
      <integer name="config_wifi_framework_wifi_score_low_rssi_threshold_24GHz">-73</integer>
      <integer name="config_wifi_framework_wifi_score_low_rssi_threshold_5GHz">-70</integer>
 
@@ -371,16 +368,6 @@
         <item>350.8851</item>
         <item>430.98703</item>
     </array>
-    <array name="config_autoBrightnessKeyboardBacklightValues" />
-    <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>8</item>
-        <item>22</item>
-        <item>48</item>
-        <item>78</item>
-        <item>128</item>
-        <item>206</item>
-        <item>255</item>
-    </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
          in the config_autoBrightnessLevels array.  This array should have size one greater
