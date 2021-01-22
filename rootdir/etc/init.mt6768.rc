@@ -2,10 +2,29 @@ on init
     mount none /vendor/lost+found /vendor/overlay bind
     setprop sys.usb.ffs.aio_compat 1
 
+    # Boot time fs tune
+    write /sys/block/sda/queue/iostats 0
+    write /sys/block/sda/queue/scheduler cfq
+    write /sys/block/sda/queue/iosched/slice_idle 0
+    write /sys/block/sda/queue/read_ahead_kb 2048
+    write /sys/block/sda/queue/nr_requests 256
+    write /sys/block/sdb/queue/iostats 0
+    write /sys/block/sdb/queue/scheduler cfq
+    write /sys/block/sdb/queue/iosched/slice_idle 0
+    write /sys/block/sdb/queue/read_ahead_kb 2048
+    write /sys/block/sdb/queue/nr_requests 256
+    write /sys/block/sdc/queue/iostats 0
+    write /sys/block/sdc/queue/scheduler cfq
+    write /sys/block/sdc/queue/iosched/slice_idle 0
+    write /sys/block/sdc/queue/read_ahead_kb 2048
+    write /sys/block/sdc/queue/nr_requests 256
+    write /sys/block/dm-0/queue/read_ahead_kb 2048
+    write /sys/block/dm-1/queue/read_ahead_kb 2048
+
     # Custom overrides that need to happen right on boot
     # Override vendor fstab
     # We only need it to be overridden before things are mounted
-    mount none /system/etc/fstab.mt6785 /vendor/etc/fstab.mt6768 bind
+    mount none /system/etc/fstab.mt6785 /vendor/etc/fstab.mt6785 bind
 
 on fs
     mount_all /vendor/etc/fstab.mt6785 --early
@@ -16,8 +35,78 @@ on post-fs
     # and some MTK daemons can crash because of that
     # (at post-fs, the fstab has already been used to mount the partitions,
     #  so it is fine to just revert back)
-    umount /vendor/etc/fstab.mt6768
+    umount /vendor/etc/fstab.mt6785
 
 on post-fs-data
+    # VideoCodec
     chmod 0666 /dev/video0
     chmod 0666 /dev/video1
+
+    # Create Goodix FP related directories
+    mkdir /data/gf_data 0700 system system
+    mkdir /data/system/gf_data 0700 system system
+    mkdir /data/images 0700 system system
+
+    # Set permissions for FPC FP
+    chown system  system /sys/bus/platform/devices/fpc_interrupt/clk_enable
+    chown system  system /sys/bus/platform/devices/fpc_interrupt/wakelock_enable
+    chown system  system /sys/bus/platform/devices/fpc_interrupt/irq
+    chown system  system /sys/bus/platform/devices/fpc_interrupt/irq_enable
+    chown system  system /sys/bus/platform/devices/fpc_interrupt/irq_unexpected
+    chmod 0200 /sys/bus/platform/devices/fpc_interrupt/irq_enable
+    chmod 0200 /sys/bus/platform/devices/fpc_interrupt/clk_enable
+    chmod 0200 /sys/bus/platform/devices/fpc_interrupt/wakelock_enable
+    chmod 0600 /sys/bus/platform/devices/fpc_interrupt/irq
+    chmod 0660 /sys/bus/platform/devices/fpc_interrupt/irq_unexpected
+
+    # Services
+    setprop init.svc.console stopped
+on boot
+    # Set permission for Goodix FP
+    chown system system /dev/goodix_fp
+ 
+    # DT2W
+    write /proc/touchpanel/double_tap_enable 1
+
+    # Update touchscreen firmware
+    write /proc/touchpanel/tp_fw_update 1
+
+    # Disable edge limit control interface
+    write /proc/touchpanel/oppo_tp_limit_enable 0
+
+    # Enable oppo touchpanel direction
+    write /proc/touchpanel/oppo_tp_direction 1
+
+    # Game mode
+    write /proc/touchpanel/game_switch_enable 1
+
+    # OTG
+    write /sys/class/power_supply/usb/otg_switch 1
+
+on property:sys.boot_completed=1
+    setprop vendor.oppo.biometrics.fingerprint.boot_completed 1
+    
+    # ZRAM
+    swapon_all /vendor/fstab.enableswap
+
+    # Runtime fs tuning for runtime performance
+    write /sys/block/sda/queue/read_ahead_kb 512
+    write /sys/block/sda/queue/nr_requests 128
+    write /sys/block/sda/queue/iostats 1
+    write /sys/block/sdb/queue/read_ahead_kb 512
+    write /sys/block/sdb/queue/nr_requests 128
+    write /sys/block/sdb/queue/iostats 1
+    write /sys/block/sdc/queue/read_ahead_kb 512
+    write /sys/block/sdc/queue/nr_requests 128
+    write /sys/block/sdc/queue/iostats 1
+    write /sys/block/dm-0/queue/read_ahead_kb 128
+    write /sys/block/dm-1/queue/read_ahead_kb 128
+
+service oppo_fingerprints_sh /vendor/bin/sh /vendor/bin/init.oppo.fingerprints.sh
+    class main
+    user root
+    oneshot
+
+# Disable AOSP RIL if MTK RIL is up
+on property:vendor.ril.mtk=1
+    stop vendor.ril-daemon
