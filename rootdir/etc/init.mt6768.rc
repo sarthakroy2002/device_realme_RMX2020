@@ -24,18 +24,18 @@ on init
     # Custom overrides that need to happen right on boot
     # Override vendor fstab
     # We only need it to be overridden before things are mounted
-    mount none /system/etc/fstab.mt6785 /vendor/etc/fstab.mt6785 bind
+    mount none /system/etc/fstab.mt6768 /vendor/etc/fstab.mt6768 bind
 
 on fs
-    mount_all /vendor/etc/fstab.mt6785 --early
-    mount_all /vendor/etc/fstab.mt6785 --late
+    mount_all /vendor/etc/fstab.mt6768 --early
+    mount_all /vendor/etc/fstab.mt6768 --late
 
 on post-fs
     # Unmount the overridden fstab because the SELinux label is incorrect
     # and some MTK daemons can crash because of that
     # (at post-fs, the fstab has already been used to mount the partitions,
     #  so it is fine to just revert back)
-    umount /vendor/etc/fstab.mt6785
+    umount /vendor/etc/fstab.mt6768
 
 on post-fs-data
     # VideoCodec
