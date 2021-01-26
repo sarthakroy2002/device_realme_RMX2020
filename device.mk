@@ -122,6 +122,18 @@ PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
+# Telephony
+PRODUCT_PACKAGES += vendor.mediatek.hardware.videotelephony@1.0
+
+PRODUCT_BOOT_JARS += \
+    mediatek-common \
+    mediatek-framework \
+    mediatek-ims-base \
+    mediatek-ims-common \
+    mediatek-telecom-common \
+    mediatek-telephony-base \
+    mediatek-telephony-common
+
 # Wi-Fi
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
