@@ -145,8 +145,3 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
     WifiOverlay
-
-# Charger
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/off_chg.sh:install/bin/off_chg.sh \
-    $(DEVICE_PATH)/rootdir/bin/charger:install/bin/charger
