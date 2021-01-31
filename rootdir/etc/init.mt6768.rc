@@ -85,6 +85,17 @@ on boot
 
 on property:sys.boot_completed=1
     setprop vendor.oppo.biometrics.fingerprint.boot_completed 1
+
+on property:sys.boot_completed=1
+    # Toggle airplane mode on and off on boot to enable volte.
+    # This hack needs ImsInit commit to request ims on boot to work properly
+
+    exec - root -- /system/bin/sh -c "sleep 3"
+    exec - root -- /system/bin/sh -c "settings put global airplane_mode_on 1"
+    exec - root -- /system/bin/sh -c "am broadcast -a android.intent.action.AIRPLANE_MODE --ez state true"
+
+    exec - root -- /system/bin/sh -c "settings put global airplane_mode_on 0"
+    exec - root -- /system/bin/sh -c "am broadcast -a android.intent.action.AIRPLANE_MODE --ez state false"
     
     # ZRAM
     swapon_all /vendor/fstab.enableswap
