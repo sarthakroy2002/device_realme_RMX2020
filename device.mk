@@ -57,16 +57,9 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.rmx2020
 
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.fingerprint.xml
-
-#Hax
-PRODUCT_COPY_FILES += \
-   $(DEVICE_PATH)/TrebleApp/devinput.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/devinput.apk
-
-
-# Apn
-PRODUCT_COPY_FILES += \
-   $(DEVICE_PATH)/configs/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.fingerprint.xml \
+    frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/handheld_core_hardware.xml \
+    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.telephony.ims.xml
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -91,11 +84,6 @@ PRODUCT_PACKAGES += \
     libsuspend \
     android.hardware.health@2.0
 
-# Ims
-PRODUCT_PACKAGES += \
-    mtk-ims \
-    mtk-ims-telephony
-
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.rmx2020
@@ -104,13 +92,15 @@ PRODUCT_PACKAGES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay
 
+#Hax
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/TrebleApp/devinput.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/devinput.apk
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.controls.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.controls.xml \
     $(DEVICE_PATH)/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml \
     $(DEVICE_PATH)/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-hotword.xml
-    frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/handheld_core_hardware.xml \
-    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.telephony.ims.xml
 
 # Power
 PRODUCT_PACKAGES += \
@@ -125,10 +115,6 @@ PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
     PresencePolling \
     RcsService
-
-#ImsInit
-PRODUCT_PACKAGES += \
-    ImsInit
 
 # Screen density
 PRODUCT_AAPT_CONFIG := xxxhdpi
@@ -146,3 +132,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
     WifiOverlay
+
+# APNs
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
+
+# IMS
+PRODUCT_PACKAGES += \
+    mtk-ims \
+    mtk-ims-telephony
+
+# ImsInit hack
+PRODUCT_PACKAGES += \
+    ImsInit 
