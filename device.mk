@@ -114,7 +114,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    power.mt6785
+    power.mt6768
 
 # Properties
 -include $(DEVICE_PATH)/system_prop.mk
