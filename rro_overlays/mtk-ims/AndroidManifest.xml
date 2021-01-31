@@ -1,0 +1,9 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="id.my.wulan17.mtkims"
+    android:versionCode="1"
+    android:versionName="1.0">
+    <overlay android:isStatic="true" android:targetPackage="android" android:priority="97" />
+
+    <application android:label="@string/overlay_name" android:hasCode="false"/>
+
+</manifest>
