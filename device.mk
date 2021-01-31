@@ -25,9 +25,6 @@ $(call inherit-product-if-exists, vendor/realme/rmx2020/rmx2020-vendor.mk)
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
-# IMS
-$(call inherit-product, vendor/mediatek/ims/mtk-ims.mk)
-
 PRODUCT_SHIPPING_API_LEVEL := 29
 
 # VNDK
@@ -111,6 +108,10 @@ PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
     PresencePolling \
     RcsService
+
+#ImsInit
+PRODUCT_PACKAGES += \
+    ImsInit
 
 # Screen density
 PRODUCT_AAPT_CONFIG := xxxhdpi
