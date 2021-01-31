@@ -236,10 +236,10 @@
                        sources="primary output"/>
                 <route type="mix" sink="USB Primary Out"
                        sources="primary output,Voice Call In"/>
+               <route type="mix" sink="Telephony Tx"
+                       sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic,BT SCO Headset Mic,USB Primary In,incall_music_uplink"/>
                 <route type="mix" sink="primary input"
-                       sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic,BT SCO Headset Mic,AUX Digital In,USB Primary In,Echo Ref In"/>
-                <route type="mix" sink="mmap_no_irq_in"
-                       sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic"/>
+                       sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic,BT SCO Headset Mic,AUX Digital In,USB Primary In"/>
                 <route type="mix" sink="voice tx"
                        sources="Voice Call In"/>
                 <route type="mix" sink="FM Tuner input"
