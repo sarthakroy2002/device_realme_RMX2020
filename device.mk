@@ -59,6 +59,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.fingerprint.xml
 
+#Hax
+PRODUCT_COPY_FILES += \
+   $(DEVICE_PATH)/TrebleApp/devinput.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/devinput.apk
+
+
 # Apn
 PRODUCT_COPY_FILES += \
    $(DEVICE_PATH)/configs/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
