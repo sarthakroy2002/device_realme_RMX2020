@@ -32,10 +32,13 @@ PRODUCT_MODEL := Realme G70 Series
 PRODUCT_MANUFACTURER := realme
 
 # Build info
-BUILD_FINGERPRINT := "realme/RMX2027/RMX2027:10/QP1A.190711.020/1604480355:user/release-keys"
+BUILD_FINGERPRINT := "google/sunfish/sunfish:11/RQ1A.210105.002/6985033:user/release-keys""
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=rmx2020 \
     PRODUCT_NAME=rmx2020 \
     PRIVATE_BUILD_DESC="full_oppo6769-user 10 QP1A.190711.020 68b77aba7cb33275 release-keys"
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.fingerprint=$(BUILD_FINGERPRINT)
