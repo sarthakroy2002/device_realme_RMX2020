@@ -85,6 +85,11 @@ PRODUCT_PACKAGES += \
     libsuspend \
     android.hardware.health@2.0
 
+# Ims
+PRODUCT_PACKAGES += \
+    mtk-ims \
+    mtk-ims-telephony
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.rmx2020

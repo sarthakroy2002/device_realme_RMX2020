@@ -1,0 +1,7 @@
+runtime_resource_overlay {
+    name: "mtk-ims",
+    theme: "mtk-ims",
+    certificate: "platform",
+    sdk_version: "current",
+    product_specific: true
+}
