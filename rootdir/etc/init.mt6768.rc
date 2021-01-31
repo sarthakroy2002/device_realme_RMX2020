@@ -20,6 +20,12 @@ on init
     write /sys/block/sdc/queue/nr_requests 256
     write /sys/block/dm-0/queue/read_ahead_kb 2048
     write /sys/block/dm-1/queue/read_ahead_kb 2048
+    setprop persist.vendor.mtk.volte.enable 0
+    setprop persist.vendor.mtk_ct_volte_support 0
+    setprop persist.dbg.allow_ims_off 1
+    setprop persist.dbg.volte_avail_ovr 1
+    setprop persist.dbg.vt_avail_ovr 1
+    setprop persist.dbg.wfc_avail_ovr 1
 
     # Custom overrides that need to happen right on boot
     # Override vendor fstab
