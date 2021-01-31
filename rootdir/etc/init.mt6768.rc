@@ -27,6 +27,7 @@ on init
     setprop persist.dbg.vt_avail_ovr 1
     setprop persist.dbg.wfc_avail_ovr 1
     setprop persist.vendor.vilte_support 0
+    setprop persist.sys.overlay.devinputjack true
 
     # Custom overrides that need to happen right on boot
     # Override vendor fstab
