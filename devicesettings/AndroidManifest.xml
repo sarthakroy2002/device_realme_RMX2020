@@ -60,16 +60,6 @@
 
         <!-- Quick Settings Tiles -->
         <service
-            android:name="org.lineageos.settings.device.SRGBModeTileService"
-            android:icon="@drawable/ic_srgb_tile"
-            android:label="@string/tile_srgb_mode"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
-            <intent-filter>
-                <action
-                    android:name="android.service.quicksettings.action.QS_TILE"/>
-            </intent-filter>
-        </service>
-        <service
             android:name="org.lineageos.settings.device.GameModeTileService"
             android:icon="@drawable/ic_game_tile"
             android:label="@string/tile_game_mode"
