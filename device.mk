@@ -92,10 +92,6 @@ PRODUCT_PACKAGES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay
 
-#Hax
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/TrebleApp/devinput.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/devinput.apk
-
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.controls.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.controls.xml \
