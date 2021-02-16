@@ -200,7 +200,7 @@
 
     <!-- When true use the linux /dev/input/event subsystem to detect the switch changes
          on the headphone/microphone jack. When false use the older uevent framework. -->
-     <bool name="config_useDevInputEventForAudioJack">false</bool>
+     <bool name="config_useDevInputEventForAudioJack">true</bool>
 
     <!-- Enable video pause workaround when enabling/disabling the camera. -->
      <bool name="config_useVideoPauseWorkaround">false</bool>
