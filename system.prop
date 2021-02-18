@@ -64,6 +64,10 @@ ro.dolby.device=oppoEffectDevice
 ro.dolby.manufacturer=OPPO
 ro.dolby.brand=OPPO
 
+# LMKD
+ro.config.low_ram=false
+ro.lmk.log_stats=true
+
 # Order
 ro.product.property_source_order=odm,vendor,product,system
 
