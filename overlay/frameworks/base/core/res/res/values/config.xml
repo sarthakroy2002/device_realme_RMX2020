@@ -245,8 +245,11 @@
     <!-- The maximum range of gamma adjustment possible using the screen
          auto-brightness adjustment setting. -->
      <fraction name="config_autoBrightnessAdjustmentMaxGamma">300.0%</fraction>
-
-    <!-- User activity timeout: Maximum screen dim duration as a percentage of screen off timeout.
+	
+	<!-- Whether to cleanup fingerprints upon connection to the daemon and when user switches -->
+    <bool name="config_cleanupUnusedFingerprints">false</bool>
+    
+	<!-- User activity timeout: Maximum screen dim duration as a percentage of screen off timeout.
     
          This resource is similar to config_maximumScreenDimDuration but the maximum
          screen dim duration is defined as a ratio of the overall screen off timeout
