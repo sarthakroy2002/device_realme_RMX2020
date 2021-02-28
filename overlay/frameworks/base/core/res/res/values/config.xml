@@ -285,7 +285,10 @@
 
     <!--  Maximum number of supported users -->
      <integer name="config_multiuserMaximumUsers">1</integer>
-
+	 
+	<!-- Show the network traffic monitor on statusbar even if the device has a notch -->
+    <bool name="config_forceShowNetworkTrafficOnStatusBar">true</bool>
+	
     <!-- Default value for led color when battery is fully charged -->
      <integer name="config_notificationsBatteryFullARGB">0xFF00FF00</integer>
 
