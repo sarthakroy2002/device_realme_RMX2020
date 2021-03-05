@@ -31,6 +31,8 @@ PRODUCT_BRAND := realme
 PRODUCT_MODEL := Realme G70 Series
 PRODUCT_MANUFACTURER := realme
 
+TARGET_BOOT_ANIMATION_RES := 720
+
 # Build info
 BUILD_FINGERPRINT := "google/sunfish/sunfish:11/RQ1A.210205.004/7038034:user/release-keys"
 PRODUCT_BUILD_PROP_OVERRIDES += \
