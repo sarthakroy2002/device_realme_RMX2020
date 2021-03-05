@@ -39,7 +39,11 @@
     <!-- Whether camera shutter sound is forced or not  (country specific). -->
      <bool name="config_camera_sound_forced">true</bool>
 
-    <!-- Flag specifying whether VoLTE should be available for carrier: independent of
+    <!-- Whether device has screen with higher aspect ratio -->
+     <bool name="config_haveHigherAspectRatioScreen">true</bool>
+
+	
+	<!-- Flag specifying whether VoLTE should be available for carrier: independent of
          carrier provisioning. If false: hard disabled. If true: then depends on carrier
          provisioning, availability etc -->
      <bool name="config_carrier_volte_available">false</bool>
