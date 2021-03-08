@@ -21,7 +21,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Display
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.sf.lcd_density=320
+    ro.sf.lcd_density=320 \
+    video.accelerate.hw=1
 
 # IMS
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -79,8 +80,3 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.device_config.runtime_native.usap_pool_enabled=true
 	
-# Media
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    media.stagefright.thumbnail.prefer_hw_codecs=true \
-    debug.stagefright.ccodec=0
-
