@@ -4,7 +4,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Camera
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.camera \
+    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.camera,org.pixelexperience.faceunlock \
     vendor.camera.aux.packageblacklist=org.telegram.messenger,com.microsoft.teams,com.discord
 
 # Dex2oat
