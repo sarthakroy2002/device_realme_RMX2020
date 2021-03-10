@@ -1,2 +1,0 @@
-type mtk_hal_power, domain;
-allow mtk_hal_power system_data_root_file:file create_file_perms;
