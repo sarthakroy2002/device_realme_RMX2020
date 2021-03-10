@@ -1,1 +1,0 @@
-allow zygote ashmem_device:chr_file execute;
