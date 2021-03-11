@@ -21,8 +21,16 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Display
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.sf.lcd_density=320 \
-    video.accelerate.hw=1
+    ro.sf.lcd_density=320
+	
+# Hardware Acceleration
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    video.accelerate.hw=1 \
+    debug.sf.hw=1 \
+    debug.performance.tuning=1 \
+    debug.egl.profiler=1 \
+    debug.egl.hw=1 \
+    debug.composition.type=gpu
 
 # IMS
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
