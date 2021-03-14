@@ -144,3 +144,11 @@ PRODUCT_PACKAGES += \
 # ImsInit hack
 PRODUCT_PACKAGES += \
     ImsInit 
+
+# Doze
+PRODUCT_PACKAGES += \
+    CustomDoze
+
+# Device Settings
+PRODUCT_PACKAGES += \
+    devicesettings
