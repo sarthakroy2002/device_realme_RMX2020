@@ -288,7 +288,7 @@
      <integer name="config_longPressOnHomeBehavior">0</integer>
 
     <!--  Maximum number of supported users -->
-     <integer name="config_multiuserMaximumUsers">1</integer>
+     <integer name="config_multiuserMaximumUsers">5</integer>
 	 
 	<!-- Show the network traffic monitor on statusbar even if the device has a notch -->
     <bool name="config_forceShowNetworkTrafficOnStatusBar">true</bool>
