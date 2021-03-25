@@ -73,8 +73,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.mt6768.rc \
     fstab.mt6768 \
-    init.safailnet.rc \
-    init.devicesetting.rc 
+    init.devicesetting.rc
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
