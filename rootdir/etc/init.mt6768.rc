@@ -1,4 +1,3 @@
-import /vendor/etc/init/hw/init.safailnet.rc 
 import /system/etc/init/init.ago.rc
 import /system/etc/init/init.devicesetting.rc
 
