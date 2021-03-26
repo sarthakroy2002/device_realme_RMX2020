@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_rmx2020.mk
+    $(LOCAL_DIR)/lineage_RMX2020.mk

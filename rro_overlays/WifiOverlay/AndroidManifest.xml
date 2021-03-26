@@ -12,7 +12,7 @@
 -->
 <!-- Pixel specific wifi overlays -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.wifi.resources.rmx2020"
+    package="com.android.wifi.resources.RMX2020"
     android:versionCode="1"
     android:versionName="1.0">
     <application android:hasCode="false" />
