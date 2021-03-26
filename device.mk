@@ -14,13 +14,13 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/realme/rmx2020
+DEVICE_PATH := device/realme/RMX2020
 
 # Installs gsi keys into ramdisk, to boot a GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 # Call proprietary blob setup
-$(call inherit-product-if-exists, vendor/realme/rmx2020/rmx2020-vendor.mk)
+$(call inherit-product-if-exists, vendor/realme/RMX2020/RMX2020-vendor.mk)
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
@@ -48,6 +48,14 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_EXTRA_VNDK_VERSIONS)/etc/audio_policy_configuration.xml \
     $(DEVICE_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_policy_configuration.xml
 
+# Doze
+PRODUCT_PACKAGES += \
+    CustomDoze
+
+# Device Settings
+PRODUCT_PACKAGES += \
+    devicesettings
+
 # fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
@@ -57,7 +65,7 @@ PRODUCT_COPY_FILES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.rmx2020
+    android.hardware.biometrics.fingerprint@2.1-service.RMX2020
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.fingerprint.xml \
@@ -68,6 +76,15 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libhidltransport \
     libhwbinder
+
+# IMS
+PRODUCT_PACKAGES += \
+    mtk-ims \
+    mtk-ims-telephony
+
+# ImsInit hack
+PRODUCT_PACKAGES += \
+    ImsInit
 
 # Init
 PRODUCT_PACKAGES += \
@@ -88,15 +105,15 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.rmx2020
+    android.hardware.light@2.0-service.RMX2020
 
 # NFC
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
+    com.gsma.services.nfc  \
     NfcNci \
     SecureElement \
-    Tag \
-    android.hardware.nfc@1.2-service
+    Tag
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -139,20 +156,3 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
     WifiOverlay
-
-# IMS
-PRODUCT_PACKAGES += \
-    mtk-ims \
-    mtk-ims-telephony
-
-# ImsInit hack
-PRODUCT_PACKAGES += \
-    ImsInit 
-
-# Doze
-PRODUCT_PACKAGES += \
-    CustomDoze
-
-# Device Settings
-PRODUCT_PACKAGES += \
-    devicesettings

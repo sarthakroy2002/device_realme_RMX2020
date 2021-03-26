@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.light@2.0-service.rmx2020"
+#define LOG_TAG "android.hardware.light@2.0-service.RMX2020"
 
 #include <android-base/logging.h>
 #include <hidl/HidlTransportSupport.h>
