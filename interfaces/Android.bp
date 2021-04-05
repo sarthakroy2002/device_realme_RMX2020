@@ -1,4 +1,4 @@
 hidl_package_root {
-    name: "vendor.oppo.hardware",
+    name: "vendor.oplus.hardware",
     path: "device/realme/RMX2020/interfaces",
 }

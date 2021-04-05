@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package vendor.oppo.hardware.biometrics.fingerprint@2.1;
+package vendor.oplus.hardware.biometrics.fingerprint@2.1;
 
 enum RequestStatus : int32_t {
   SYS_UNKNOWN = 1,
