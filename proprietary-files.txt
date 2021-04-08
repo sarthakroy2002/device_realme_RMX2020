@@ -12,7 +12,3 @@ lib64/libaptXHD_encoder.so
 bin/kpoc_charger
 etc/init/kpoc_charger.rc
 lib/libshowlogo.so
-
-# Fingerprint
-bin/hw/vendor.oppo.hardware.biometrics.fingerprint@2.1-service
-etc/init/vendor.oppo.hardware.biometrics.fingerprint@2.1-service.rc
