@@ -1,7 +1,7 @@
 type mtk_hal_mms_hwservice, hwservice_manager_type;
 
-# Allow untrusted_app_29 to add and find mtk_hal_mms_hwservice
-add_hwservice(untrusted_app_29, mtk_hal_mms_hwservice)
+# Allow untrusted_app_29 to find mtk_hal_mms_hwservice
+allow { appdomain -isolated_app } mtk_hal_mms_hwservice:hwservice_manager find;
 
 # Allow binder calls from untrusted_app_29 to mtk_hal_mms and vice versa
 binder_call(untrusted_app_29, mtk_hal_mms)
