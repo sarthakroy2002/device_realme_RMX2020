@@ -1,0 +1,1 @@
+allow untrusted_app sw_sync_device:chr_file rw_file_perms;
