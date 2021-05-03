@@ -8,3 +8,8 @@ allow system_app sysfs:file { write getattr  open  read };
 # Allow system_app to read fps info node
 allow system_app sysfs_fps:dir search;
 allow system_app sysfs_fps:file r_file_perms;
+
+allow system_app sw_sync_device:chr_file rw_file_perms;
+
+allow system_app mtk_hal_pq_hwservice:hwservice_manager find;
+binder_call(system_app, mtk_hal_pq)
