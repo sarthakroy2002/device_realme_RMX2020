@@ -48,14 +48,6 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_EXTRA_VNDK_VERSIONS)/etc/audio_policy_configuration.xml \
     $(DEVICE_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_policy_configuration.xml
 
-# Doze
-PRODUCT_PACKAGES += \
-    CustomDoze
-
-# Device Settings
-PRODUCT_PACKAGES += \
-    devicesettings
-
 # fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
