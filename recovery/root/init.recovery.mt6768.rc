@@ -1,3 +1,6 @@
+on init
+    write /sys/class/leds/lcd-backlight/brightness 255
+
 on fs
     install_keyring
     mkdir /mnt/vendor/persist 0777 system system
