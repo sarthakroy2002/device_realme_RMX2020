@@ -12,3 +12,9 @@ lib64/libaptXHD_encoder.so
 bin/kpoc_charger
 etc/init/kpoc_charger.rc
 lib/libshowlogo.so
+
+#camera
+vendor/lib/libdpframework.so:product/vendor_overlay/29/lib/libdpframework.so|9b7726891d7432869742d02674cb367d770ed772
+vendor/lib64/libdpframework.so:product/vendor_overlay/29/lib64/libdpframework.so|48d574415db7f42a855841197a81039274edd20a
+
+vendor/lib/libvpud_vcodec.so:product/vendor_overlay/29/lib/libvpud_vcodec.so|f64b62e94a3f6edb661b7b74c3ec34c19ee710bb
