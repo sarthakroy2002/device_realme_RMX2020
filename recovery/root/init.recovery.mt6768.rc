@@ -10,6 +10,10 @@ on init
     chmod 0440 /sys/fs/pstore/console-ramoops-0
     chown system log /sys/fs/pstore/pmsg-ramoops-0
     chmod 0440 /sys/fs/pstore/pmsg-ramoops-0
+	
+on fs
+    wait /dev/block/platform/bootdevice/
+    symlink /dev/block/platform/bootdevice/ /dev/block/bootdevice
 
 on fs && property:ro.debuggable=0
     # distinguish USB shoulde connect or not, i.e. CDP vs SDP
