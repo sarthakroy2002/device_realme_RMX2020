@@ -321,6 +321,10 @@ PRODUCT_PACKAGES += \
     fstab.mt6768 \
     ueventd.mtk.rc
 
+# Recovery
+PRODUCT_PACKAGES += \
+    init.recovery.mt6768.rc
+
 # RcsService
 PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
