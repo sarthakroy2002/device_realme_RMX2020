@@ -41,4 +41,4 @@ on post-fs
 service init-recovery-mt6768-sh /init.recovery.mt6768.sh
     user root
     group root
-	
+    seclabel u:r:recovery:s0
