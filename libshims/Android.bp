@@ -1,0 +1,11 @@
+cc_library_shared {
+    name: "libshim_showlogo",
+    srcs: ["libshim_showlogo.cpp"],
+    shared_libs: ["libgui"],
+}
+
+java_library {
+    name: "ImsServiceBase",
+    installable: true,
+    srcs: ["ImsServiceBase.java"],
+}
