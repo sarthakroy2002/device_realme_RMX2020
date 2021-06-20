@@ -122,6 +122,13 @@ PRODUCT_PACKAGES += \
     mtk-ims \
     mtk-ims-telephony
 
+# Telephony
+PRODUCT_BOOT_JARS += \
+    ImsServiceBase
+
+PRODUCT_PACKAGES += \
+    ImsServiceBase
+
 # ImsInit hack
 PRODUCT_PACKAGES += \
     ImsInit
