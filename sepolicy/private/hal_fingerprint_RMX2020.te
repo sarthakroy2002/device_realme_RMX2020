@@ -1,8 +1,0 @@
-type hal_fingerprint_RMX2020, domain;
-hal_client_domain(hal_fingerprint_RMX2020, hal_fingerprint)
-hal_server_domain(hal_fingerprint_RMX2020, hal_fingerprint)
-
-type hal_fingerprint_RMX2020_exec, system_file_type, exec_type, file_type;
-init_daemon_domain(hal_fingerprint_RMX2020)
-
-binder_call(hal_fingerprint_RMX2020, hal_fingerprint_RMX2020)

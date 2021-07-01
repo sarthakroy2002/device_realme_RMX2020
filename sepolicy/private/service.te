@@ -1,4 +1,0 @@
-type mwis_service, service_manager_type;
-type mtk_ims_service, service_manager_type;
-type wfo_service, service_manager_type;
-type vtservice_service, service_manager_type;
