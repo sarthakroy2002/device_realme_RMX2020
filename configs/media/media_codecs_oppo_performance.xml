@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<MediaCodecs>
+    <Encoders>
+        <MediaCodec name="OMX.oppo.h264.encoder" type="video/avc" update="true">
+            <Limit name="measured-frame-rate-320x240" range="220-480" />
+            <Limit name="measured-frame-rate-720x480" range="87-87" />
+            <Limit name="measured-frame-rate-1280x720" range="30-30" />
+            <Limit name="measured-frame-rate-1920x1080" range="9-20" />
+        </MediaCodec>
+    </Encoders>
+</MediaCodecs>
