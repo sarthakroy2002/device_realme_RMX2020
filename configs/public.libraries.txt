@@ -1,0 +1,16 @@
+libOpenCL.so
+libvpu.so
+libion_mtk.so
+libqti-perfd-client.so
+libadsprpc.so
+libcdsprpc.so
+libsdsprpc.so
+libfastcvopt.so
+liblistenjni.so
+liblistensoundmodel2.so
+libnpu.so
+liboddi.so
+librftoolkit.so
+libnativehelpers.so
+libOppoAlgoProcess.so
+libMegviiHumBokeh-mtk.so
