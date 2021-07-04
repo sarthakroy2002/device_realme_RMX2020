@@ -1,0 +1,49 @@
+##########################################################
+# Copyright (C), 2008-2018, OPPO Mobile Comm Corp., Ltd
+# VENDOR_EDIT
+# File: init.oppo.rc
+#
+# Description:
+#	Definitions for init.oppo.vendor.motor.rc.
+#
+# Version: 1.0
+# Date created: 2018/10/30,20:27
+# Author: Fei.Mo@PSW.BSP.Sensor
+#
+# --------------------------- Revision History: ------------------------------------
+# <version>		<date>		<author>		<desc>
+# Revision 1.0		2018/10/30	Fei.Mo@PSW.BSP.Sensor	Created
+#######################################################
+
+on boot
+    chown system system /sys/bus/platform/devices/motor_pl/direction
+    chown system system /sys/bus/platform/devices/motor_pl/enable
+    chown system system /sys/bus/platform/devices/motor_pl/mode
+    chown system system /sys/bus/platform/devices/motor_pl/speed
+    chown system system /sys/bus/platform/devices/motor_pl/hall_data
+    chown system system /sys/bus/platform/devices/motor_pl/hall_calibration
+    chown system system /sys/bus/platform/devices/motor_pl/hall_irq_count
+    chown system system /sys/bus/platform/devices/motor_pl/move_state
+    chown system system /sys/bus/platform/devices/motor_pl/sw_switch
+    chown system system /sys/bus/platform/devices/motor_pl/manual2auto_switch
+    chown system system /sys/bus/platform/devices/motor_pl/motor_test
+    chown system system /sys/bus/platform/devices/motor_pl/force_move
+    chown system system /sys/bus/platform/devices/motor_pl/stop_range
+    chown system system /sys/bus/platform/devices/motor_pl/distance
+    chown system system /sys/bus/platform/devices/motor_pl/in_calibration
+    chmod 0666 /sys/bus/platform/devices/motor_pl/direction
+    chmod 0666 /sys/bus/platform/devices/motor_pl/mode
+    chmod 0666 /sys/bus/platform/devices/motor_pl/enable
+    chmod 0666 /sys/bus/platform/devices/motor_pl/speed
+    chmod 0666 /sys/bus/platform/devices/motor_pl/hall_data
+    chmod 0666 /sys/bus/platform/devices/motor_pl/hall_calibration
+    chmod 0666 /sys/bus/platform/devices/motor_pl/hall_irq_count
+    chmod 0666 /sys/bus/platform/devices/motor_pl/move_state
+    chmod 0666 /sys/bus/platform/devices/motor_pl/sw_switch
+    chmod 0666 /sys/bus/platform/devices/motor_pl/manual2auto_switch
+    chmod 0666 /sys/bus/platform/devices/motor_pl/motor_test
+    chmod 0666 /sys/bus/platform/devices/motor_pl/force_move
+    chmod 0666 /sys/bus/platform/devices/motor_pl/stop_range
+    chmod 0666 /sys/bus/platform/devices/motor_pl/distance
+    chmod 0666 /sys/bus/platform/devices/motor_pl/in_calibration
+
