@@ -10,12 +10,13 @@ system /system ext4 ro wait,,avb=vbmeta_system,logical,first_stage_mount,avb_key
 
 vendor /vendor ext4 ro wait,,avb,logical,first_stage_mount,async_discard
 
+product /product ext4 ro wait,logical,first_stage_mount
+system_ext /system_ext ext4 ro wait,logical,first_stage_mount
+odm /odm ext4 ro wait,logical,first_stage_mount
 
-
-
-oppo_product /oppo_product ext4 ro wait,logical,first_stage_mount,nofail,async_discard
-oppo_engineering /oppo_engineering ext4 ro wait,logical,first_stage_mount,nofail,async_discard
-common_preload /common_preload ext4 ro wait,logical,first_stage_mount,nofail,async_discard
+#oppo_product /oppo_product ext4 ro wait,logical,first_stage_mount,nofail,async_discard
+#oppo_engineering /oppo_engineering ext4 ro wait,logical,first_stage_mount,nofail,async_discard
+#common_preload /common_preload ext4 ro wait,logical,first_stage_mount,nofail,async_discard
 
 
 
