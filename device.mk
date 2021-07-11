@@ -167,7 +167,7 @@ PRODUCT_PACKAGES += \
     power.mt6768
 
 # Properties
--include $(DEVICE_PATH)/system_prop.mk
+-include $(DEVICE_PATH)/vendor_prop.mk
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # Public Libraries
