@@ -4,10 +4,10 @@
 # This is a common source of Android security bugs.
 #
 import /system/etc/init/hw/vendor_init_as_system.rc
-import ${ro.vendor.rc}factory_init.connectivity.rc
+import vendor/etc/init/hw/factory_init.connectivity.rc
 import /init.environ.rc
 import /vendor/etc/init/trustonic.rc
-import ${ro.vendor.rc}init.nvdata.rc
+import vendor/etc/init/hw/init.nvdata.rc
 import /vendor/etc/init/microtrust.rc
 import /vendor/etc/init/hw/init.aee.rc
 import /system/etc/init/hw/init.aee.rc
@@ -300,7 +300,7 @@ on fs
     write /proc/bootprof "INIT:Mount_START"
     wait_for_prop hwservicemanager.ready "true"
     start vendor.boot-hal-1-0
-    mount_all /vendor/etc/fstab.mt6768 ${ro.vendor.rc}multi_init.rc
+    mount_all /vendor/etc/fstab.mt6768 vendor/etc/init/hw/multi_init.rc
     write /proc/bootprof "INIT:Mount_END"
 #INTERNAL_END
 # mount different fs end
