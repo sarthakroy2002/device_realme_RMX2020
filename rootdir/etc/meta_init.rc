@@ -10,7 +10,7 @@ import /system/etc/init/hw/init.aee.rc
 import /system/etc/init/update_verifier.rc
 import /vendor/etc/init/android.hardware.boot@1.0-service.rc
 import /vendor/etc/init/trustonic.rc
-import ${ro.vendor.rc}meta_init.connectivity.rc
+import vendor/etc/init/hw/meta_init.connectivity.rc
 import /vendor/etc/init/hw/meta_init.project.rc
 import /vendor/etc/init/microtrust.rc
 #copy from system/etc for APEX
@@ -23,7 +23,7 @@ import /system/etc/init/hwservicemanager.rc
 import /system/etc/init/android.hidl.allocator@1.0-service.rc
 
 #Make sure meta_init.modem.rc is the last rc file.
-import ${ro.vendor.rc}meta_init.modem.rc
+import vendor/etc/init/hw/meta_init.modem.rc
 
 #ifdef VENDOR_EDIT
 #Haoran.Zhang@PSW.AD.BuildConfig.StandaloneUserdata.0, 2017/09/13, Add for [read new prop for feature StandaloneUserdata]
@@ -325,7 +325,7 @@ on fs
     write /proc/bootprof "INIT:Mount_START"
     wait_for_prop hwservicemanager.ready "true"
     start vendor.boot-hal-1-0
-    mount_all /vendor/etc/fstab.mt6768 ${ro.vendor.rc}multi_init.rc
+    mount_all /vendor/etc/fstab.mt6768 vendor/etc/init/hw/multi_init.rc
     write /proc/bootprof "INIT:Mount_END"
 #INTERNAL_END
 
