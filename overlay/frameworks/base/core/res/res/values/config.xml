@@ -723,5 +723,8 @@
          without explicit consent of the user. If no autofill service with the
           specified name exists on the device, autofill will be disabled by default. -->
     <string name="config_defaultAutofillService" translatable="false">com.google.android.gms/.autofill.service.AutofillService</string>
+
+    <!-- Screen off delay --> 
+    <integer name="config_screen_off_delay">0</integer>
 	
 </resources>
