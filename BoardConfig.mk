@@ -163,6 +163,9 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 #DPI
 TARGET_SCREEN_DENSITY := 423
 
+# Security patch level
+VENDOR_SECURITY_PATCH := 2020-10-01
+
 # HIDL
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
