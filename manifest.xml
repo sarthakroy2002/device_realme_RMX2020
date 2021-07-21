@@ -216,6 +216,7 @@
         <fqname>@1.3::IDevice/mtk-dsp</fqname>
         <fqname>@1.3::IDevice/mtk-gpu</fqname>
         <fqname>@1.3::IDevice/mtk-neuron</fqname>
+        <fqname>@1.1::IDevice/gpunn</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.power</name>
