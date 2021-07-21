@@ -2150,6 +2150,7 @@ vendor/lib64/hw/vibrator.default.so
 # WiFi
 bin/iwpriv
 vendor/bin/iwpriv
+vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so
 
 # rootdir
 vendor/bin/ccci_fsd
