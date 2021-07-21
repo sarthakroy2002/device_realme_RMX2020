@@ -39,6 +39,9 @@ function blob_fixup {
         lib/libshowlogo.so)
             "$PATCHELF" --add-needed "libshim_showlogo.so" "$2"
             ;;
+        vendor/lib/hw/audio.primary.mt6768.so)
+            "$PATCHELF" --replace-needed "libmedia_helper.so" "libmedia_helper-v29.so" "$2"
+            ;; 
     esac
 }
 
