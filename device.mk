@@ -70,6 +70,10 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
     libvulkan
 
+# TinyXML
+PRODUCT_PACKAGES += \
+    libtinyxml
+
 # fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
