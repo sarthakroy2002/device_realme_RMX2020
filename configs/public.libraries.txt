@@ -14,3 +14,5 @@ librftoolkit.so
 libnativehelpers.so
 libOppoAlgoProcess.so
 libMegviiHumBokeh-mtk.so
+libprotobuf-cpp-full.so
+libprotobuf-cpp-lite.so
