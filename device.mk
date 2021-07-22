@@ -69,7 +69,8 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    libldacBT_dec
+    libldacBT_dec \
+    libbtconfigstore
 
 # Display
 PRODUCT_PACKAGES += \
