@@ -471,26 +471,6 @@
         <fqname>@1.0::ILbs/mtk_mtklogger2mnld</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.mediatek.hardware.log</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ILog</name>
-            <instance>ATMWiFiHidlServer</instance>
-            <instance>ConnsysFWHidlServer</instance>
-            <instance>MobileLogHidlServer</instance>
-            <instance>ModemLogHidlServer</instance>
-            <instance>aee</instance>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ILog/ATMWiFiHidlServer</fqname>
-        <fqname>@1.0::ILog/ConnsysFWHidlServer</fqname>
-        <fqname>@1.0::ILog/MobileLogHidlServer</fqname>
-        <fqname>@1.0::ILog/ModemLogHidlServer</fqname>
-        <fqname>@1.0::ILog/aee</fqname>
-        <fqname>@1.0::ILog/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.mediatek.hardware.mdmonitor</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -678,16 +658,6 @@
         <fqname>@1.0::IEngSensor/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.oppo.hardware.biometrics.face</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IBiometricsFace</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IBiometricsFace/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.oppo.hardware.biometrics.fingerprint</name>
         <transport>hwbinder</transport>
         <version>2.1</version>
@@ -696,16 +666,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@2.1::IBiometricsFingerprint/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.oppo.hardware.biometrics.fingerprintpay</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IFingerprintPay</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IFingerprintPay/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.oppo.hardware.camera.slogan</name>
@@ -738,16 +698,6 @@
         <fqname>@1.0::IHypnusUtil/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.oppo.hardware.ktv</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IKtv</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IKtv/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.oppo.hardware.nfc</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -756,16 +706,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::IOppoNfc/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.oppo.hardware.oiface</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IOiface</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IOiface/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.oppo.hardware.wifi.hostapd</name>
