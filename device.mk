@@ -249,7 +249,7 @@ PRODUCT_PACKAGES += \
     multi_init.rc \
     fstab.enableswap \
     fstab.mt6768 \
-    ueventd.qcom.rc \
+    ueventd.mt6768.rc
 
 # RcsService
 PRODUCT_PACKAGES += \
