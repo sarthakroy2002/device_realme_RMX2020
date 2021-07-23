@@ -98,6 +98,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     GoogleCameraGo
 
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-impl.recovery \
+    android.hardware.health@2.1-service
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.allocator@1.0 \
@@ -131,8 +137,7 @@ PRODUCT_PACKAGES += \
 
 # KPOC
 PRODUCT_PACKAGES += \
-    libsuspend \
-    android.hardware.health@2.0
+    libsuspend
 
 # Lights
 PRODUCT_PACKAGES += \
