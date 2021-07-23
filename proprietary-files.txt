@@ -2348,12 +2348,9 @@ vendor/etc/init/fuelgauged_init.rc
 vendor/etc/init/fuelgauged_nvram_init.rc
 vendor/etc/init/gsm0710muxd.rc
 vendor/etc/init/init.bip.rc
-vendor/etc/init/init.bt_drv.rc
 vendor/etc/init/init.cccifsd.rc
 vendor/etc/init/init.cccimdinit.rc
 vendor/etc/init/init.cccirpcd.rc
-vendor/etc/init/init.fmradio_drv.rc
-vendor/etc/init/init.gps_drv.rc
 vendor/etc/init/init.md_apps.rc
 vendor/etc/init/init.pn8x.se.rc
 vendor/etc/init/init.udc_lib.rc
@@ -2364,8 +2361,6 @@ vendor/etc/init/init.volte_stack.rc
 vendor/etc/init/init.volte_ua.rc
 vendor/etc/init/init.vtservice_hidl.rc
 vendor/etc/init/init.wfca.rc
-vendor/etc/init/init.wlan_drv.rc
-vendor/etc/init/init.wmt_drv.rc
 vendor/etc/init/init.wod.rc
 vendor/etc/init/init_connectivity.rc
 vendor/etc/init/ipsec_mon.rc
