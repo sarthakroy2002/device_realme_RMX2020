@@ -303,7 +303,8 @@ PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
 # Symbols
 PRODUCT_PACKAGES += \
-    libshim_showlogo
+    libshim_showlogo \
+    libshim_vtservice
 
 # TinyXML
 PRODUCT_PACKAGES += \
