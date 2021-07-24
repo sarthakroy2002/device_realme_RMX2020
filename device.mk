@@ -52,6 +52,7 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
     libaudiofondation.vendor \
     libtinycompress \
+    libtinyxml \
     libalsautils \
     libnbaio_mono
 
