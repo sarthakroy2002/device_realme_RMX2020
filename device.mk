@@ -48,7 +48,9 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     audio.usb.default \
     libaudiofondation.vendor \
-    libtinycompress
+    libtinycompress \
+    libalsautils \
+    libnbaio_mono
 
 # Audio
 PRODUCT_COPY_FILES += \
