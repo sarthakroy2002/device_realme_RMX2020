@@ -903,37 +903,6 @@ on property:odm.wifi.sar.idx=*
     start wifisar_realme
 #endif /* VENDOT_EDIT */
 
-on property:vold.decrypt=trigger_reset_main
-    write /proc/bootprof "INIT:vold.decrypt=trigger_reset_main"
-    setprop sys.boot_completed 0
-    setprop dev.bootcomplete 0
-
-on property:vold.decrypt=trigger_post_fs_data
-    write /proc/bootprof "INIT:vold.decrypt=trigger_post_fs_data"
-
-on property:vold.decrypt=trigger_restart_min_framework
-    write /proc/bootprof "INIT:vold.decrypt=trigger_restart_min_framework"
-# ifdef VENDOR_EDIT
-# Tong.Han@PSW.Bsp.Tp, 2018/01/31, Add to aceess data fw files
-    start bspFwUpdate
-#endif
-    start nvram_daemon
-    start msensord
-
-on property:vold.decrypt=trigger_restart_framework
-    write /proc/bootprof "INIT:vold.decrypt=trigger_restart_framework"
-# ifdef VENDOR_EDIT
-# Tong.Han@PSW.Bsp.Tp, 2018/01/31, Add to aceess data fw files
-    start bspFwUpdate
-#endif
-    start nvram_daemon
-    start msensord
-
-on property:vold.decrypt=trigger_shutdown_framework
-    write /proc/bootprof "INIT:vold.decrypt=trigger_shutdown_framework"
-    setprop sys.boot_completed 0
-    setprop dev.bootcomplete 0
-
 # Set enableflags for boot Systrace
 on early-init && property:ro.boot.boot_trace=1
     setprop debug.atrace.tags.enableflags 0x1fffffe
