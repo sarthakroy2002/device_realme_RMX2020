@@ -56,6 +56,7 @@ PRODUCT_PACKAGES += \
     libaudiofondation.vendor \
     libtinycompress \
     libtinyxml \
+    libldacBT_bco \
     libalsautils \
     libnbaio_mono
 
