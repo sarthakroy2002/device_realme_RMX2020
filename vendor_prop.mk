@@ -136,6 +136,7 @@ PRODUCT_PROPERTY_OVERRIDES +=  \
     persist.vendor.camera3.pipeline.bufnum.min.low_ram.lcso=6 \
     persist.vendor.camera3.pipeline.bufnum.min.low_ram.rrzo=6 \
     persist.vendor.camera3.pipeline.bufnum.min.low_ram.rsso=6 \
+    ro.vendor.perf.scroll_opt=true \
     persist.vendor.connsys.chipid=-1 \
     persist.vendor.connsys.dynamic.dump=0 \
     persist.vendor.connsys.fm_50khz_support=1 \
