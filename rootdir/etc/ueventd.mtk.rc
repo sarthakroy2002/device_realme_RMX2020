@@ -51,7 +51,7 @@
 /dev/fw_log_wifi          0660   wifi     wifi
 
 # FMRadio
-/dev/fm                   0660   media     media
+/dev/fm                   0660   system   system
 
 #ifdef ODM_WT_EDIT
 # Zengchao.Duan@ODM_WT.MM.AudioDriver.HAL, 2019/10/22, MonetX audio sia8108 bringup
