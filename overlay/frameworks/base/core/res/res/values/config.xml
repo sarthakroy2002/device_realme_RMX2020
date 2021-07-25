@@ -73,7 +73,6 @@
      <bool name="config_dozeAfterScreenOffByDefault">true</bool>
 
     <!-- Flag specifying whether or not IMS will use the ImsResolver dynamically -->
-     <bool name="config_dynamic_bind_ims">true</bool>
      <bool name="config_eap_sim_based_auth_supported">true</bool>
 
     <!--  Whether Multiuser UI should be shown -->
