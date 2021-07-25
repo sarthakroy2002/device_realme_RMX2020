@@ -123,11 +123,6 @@ PRODUCT_PACKAGES += \
     libhwbinder.vendor \
     libhidltransport.vendor
 
-# IMS
-PRODUCT_PACKAGES += \
-    mtk-ims \
-    mtk-ims-telephony
-
 # Telephony
 PRODUCT_BOOT_JARS += \
     ImsServiceBase
