@@ -63,7 +63,7 @@ on late-init
 # mount different fs start
 
 on charger
-    exec /system/bin/e2fsck -f -p /dev/block/platform/bootdevice/by-name/cache
+    exec /bin/e2fsck -f -p /dev/block/platform/bootdevice/by-name/cache
     mount ext4 /dev/block/platform/bootdevice/by-name/cache /cache rw wait
     chmod 0660 /dev/spm
     chown system system /dev/spm
@@ -94,9 +94,6 @@ on charger
     chown system system /sys/class/leds/red/brightness
     chown system system /sys/class/leds/green/brightness
 
-    start servicemanager
-    start hwservicemanager
-
 #ifdef VENDOR_EDIT
 #huacai.zhou@bsp.drv modify for setting zram size according to totalram size
 service swap_enable_init /system/bin/sh /system/etc/swap_enable.sh
@@ -116,7 +113,7 @@ on fs
     #endif /*VENDOR_EDIT*/
     wait_for_prop hwservicemanager.ready "true"
     mount_all /vendor/etc/fstab.mt6768
-    exec /system/bin/tune2fs -O has_journal -u 10010 -r 4096 /dev/block/platform/bootdevice/by-name/userdata
+    exec /bin/tune2fs -O has_journal -u 10010 -r 4096 /dev/block/platform/bootdevice/by-name/userdata
     write /sys/kernel/debug/tracing/trace_marker "E"
     write /proc/bootprof "INIT:Mount_END"
     write /sys/block/zram0/comp_algorithm zstd
@@ -1000,7 +997,7 @@ on property:ro.oppo.reconcile_media_resource=1
 #  Modem related services (Begin)
 #
 ##Add by T.Zh for ppp daemon
-#service pppd /system/bin/pppd file /data/misc/ppp/ppp_options
+#service pppd /bin/pppd file /data/misc/ppp/ppp_options
 #    user root
 #    disabled
 #    oneshot
@@ -1041,7 +1038,7 @@ on property:persist.vendor.mediatek.fg.log.enable=1
     write /proc/sys/kernel/printk 8
 
 # add loghidl client
-service loghidlsysservice /system/bin/loghidlsysservice
+service loghidlsysservice /bin/loghidlsysservice
     class main
     user root
     group system
