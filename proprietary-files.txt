@@ -2175,8 +2175,6 @@ vendor/bin/wmt_launcher
 vendor/bin/wmt_loader
 vendor/etc/fstab.enableswap
 vendor/etc/fstab.mt6768
-vendor/etc/init/aee_aedv.rc
-vendor/etc/init/aee_aedv64.rc
 vendor/etc/init/factorybsp_service.rc
 vendor/etc/init/nvram_daemon.rc
 vendor/etc/init/tee.rc
@@ -2214,11 +2212,6 @@ vendor/app/mcRegistry/09190000000000000000000000000000.tlbin
 vendor/app/mcRegistry/511ead0a000000000000000000000000.tabin
 vendor/app/SensorHub/lib/arm64/libem_sensor_jni.so
 -vendor/app/SensorHub/SensorHub.apk
-vendor/bin/aeev
-vendor/bin/aee_aedv
-vendor/bin/aee_aedv64
-vendor/bin/aee_archivev
-vendor/bin/aee_dumpstatev
 vendor/bin/atcid
 vendor/bin/audiocmdservice_atci
 vendor/bin/autobt
@@ -2314,7 +2307,6 @@ vendor/data/misc/pdc.txt
 vendor/data/misc/ProjectConfig.mk
 vendor/etc/.tp/.ht120.mtc
 vendor/etc/a2dp_in_audio_policy_configuration.xml
-vendor/etc/aee-config
 vendor/etc/agps_profiles_conf2.xml
 vendor/etc/apdb/APDB_MT6768_S01__W1952
 vendor/etc/apdb/APDB_MT6768_S01__W1952_ENUM
