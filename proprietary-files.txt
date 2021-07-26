@@ -484,6 +484,9 @@ vendor/lib64/libOpenCL.so
 vendor/bin/hw/android.hardware.health@2.0-service
 vendor/etc/init/android.hardware.health@2.0-service.rc
 
+# MTK-IMS
+-priv-app/ImsService/ImsService.apk
+
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.0-service.trustonic
 vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service
