@@ -42,7 +42,8 @@ iorapd.readahead.enable=true
 ro.control_privapp_permissions=log
 
 persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera,com.google.camera,com.google.android.apps.cameralite,com.google.android.GoogleCamera.Go
-
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.camera,org.pixelexperience.faceunlock,com.google.android.apps.cameralite
+vendor.camera.aux.packageblacklist=org.telegram.messenger,com.microsoft.teams,com.discord
 # USB MTP WHQL
 ro.sys.usb.mtp.whql.enable=0
 
