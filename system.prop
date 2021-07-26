@@ -41,6 +41,8 @@ iorapd.readahead.enable=true
 # Privapp permissions whitelisting
 ro.control_privapp_permissions=log
 
+persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera,com.google.camera,com.google.android.apps.cameralite,com.google.android.GoogleCamera.Go
+
 # USB MTP WHQL
 ro.sys.usb.mtp.whql.enable=0
 
