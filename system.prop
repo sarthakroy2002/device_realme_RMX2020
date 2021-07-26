@@ -8,6 +8,10 @@ ro.dolby.brand=OPPO
 #
 ro.product.property_source_order=odm,vendor,product,system
 
+# Blurs
+ro.surface_flinger.supports_background_blur=1
+ro.sf.blurs_are_expensive=1
+persist.sys.sf.disable_blurs=1
 
 wifi.interface=wlan0
 ro.mediatek.wlan.wsc=1
