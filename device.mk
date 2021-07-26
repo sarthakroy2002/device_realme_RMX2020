@@ -134,6 +134,20 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     ImsServiceBase
 
+# MTK-IMS
+PRODUCT_BOOT_JARS += \
+    mediatek-common \
+    mediatek-framework \
+    mediatek-ims-base \
+    mediatek-ims-common \
+    mediatek-telecom-common \
+    mediatek-telephony-base \
+    mediatek-telephony-common
+
+# Video Telephony
+PRODUCT_PACKAGES += \
+    vendor.mediatek.hardware.videotelephony@1.0
+
 # ImsInit hack
 PRODUCT_PACKAGES += \
     ImsInit
