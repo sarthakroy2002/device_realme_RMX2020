@@ -546,9 +546,7 @@ vendor/lib64/hw/lights.mt6768.so
 
 # Listen
 vendor/lib/hw/android.hardware.soundtrigger@2.2-impl.so
-vendor/lib/hw/sound_trigger.primary.mt6768.so
 vendor/lib64/hw/android.hardware.soundtrigger@2.2-impl.so
-vendor/lib64/hw/sound_trigger.primary.mt6768.so
 
 # Kernel-Modules
 vendor/lib/modules/bt_drv.ko
