@@ -34,6 +34,10 @@ wifi.direct.interface=p2p0
 #dalvik.vm.heapgrowthlimit=256m
 #dalvik.vm.heapsize=512m
 
+# Iorap
+iorapd.perfetto.enable=true
+iorapd.readahead.enable=true
+
 # USB MTP WHQL
 ro.sys.usb.mtp.whql.enable=0
 
