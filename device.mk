@@ -29,9 +29,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # IMS
 $(call inherit-product, vendor/mediatek/ims/mtk-ims.mk)
 
-# Engineering Mode
-$(call inherit-product, vendor/mediatek/ims/mtk-engi.mk)
-
 PRODUCT_SHIPPING_API_LEVEL := 29
 
 # VNDK
