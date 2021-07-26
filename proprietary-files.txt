@@ -486,6 +486,8 @@ vendor/etc/init/android.hardware.health@2.0-service.rc
 
 # MTK-IMS
 -priv-app/ImsService/ImsService.apk
+bin/vtservice
+etc/init/init.vtservice.rc
 -framework/mediatek-common.jar
 -framework/mediatek-framework.jar
 -framework/mediatek-ims-base.jar
@@ -496,6 +498,11 @@ vendor/etc/init/android.hardware.health@2.0-service.rc
 -framework/mediatek-ims-extension-plugin.jar
 -framework/mediatek-ims-legacy.jar
 -framework/mediatek-ims-wwop-common.jar
+lib/libcomutils.so
+lib/libimsma.so
+lib/libimsma_adapt.so
+lib/libimsma_rtp.so
+lib/libimsma_socketwrapper.so
 lib/libmtk_vt_service.so
 lib/libmtk_vt_wrapper.so
 lib/libmtkaudio_utils.so
@@ -503,8 +510,12 @@ lib/libmtkavenhancements.so
 lib/libmtklimiter.so
 lib/libmtkperf_client.so
 lib/libmtkshifter.so
+lib/libsignal.so
+lib/libsink.so
+lib/libsource.so
 lib/libvcodec_cap.so
 lib/libvcodec_capenc.so
+lib/libvt_avsync.so
 lib64/libmtk_serialnum.so
 lib64/libmtk_vt_wrapper.so
 lib64/libmtkaudio_utils.so
