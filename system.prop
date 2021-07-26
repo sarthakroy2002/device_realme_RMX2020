@@ -34,6 +34,11 @@ wifi.direct.interface=p2p0
 #dalvik.vm.heapgrowthlimit=256m
 #dalvik.vm.heapsize=512m
 
+# ZRAM
+ro.zram.mark_idle_delay_mins=60
+ro.zram.first_wb_delay_mins=180
+ro.zram.periodic_wb_delay_hours=24
+
 # Dex2oat
 dalvik.vm.dex2oat64.enabled=true
 dalvik.vm.image-dex2oat-filter=quicken 
