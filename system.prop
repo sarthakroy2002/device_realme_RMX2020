@@ -38,6 +38,9 @@ wifi.direct.interface=p2p0
 iorapd.perfetto.enable=true
 iorapd.readahead.enable=true
 
+# Privapp permissions whitelisting
+ro.control_privapp_permissions=log
+
 # USB MTP WHQL
 ro.sys.usb.mtp.whql.enable=0
 
