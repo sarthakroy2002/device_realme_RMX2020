@@ -1,46 +1,22 @@
-ro.dolby.model=oppoEffectModel
-ro.dolby.device=oppoEffectDevice
-ro.dolby.manufacturer=OPPO
-ro.dolby.brand=OPPO
-
-#
-# from device/mediatek/system/common/system.prop
-#
-ro.product.property_source_order=odm,vendor,product,system
+# Audio
+ro.camera.sound.forced=0
+ro.audio.silent=0
+ro.config.vc_call_vol_steps=6
 
 # Blurs
 ro.surface_flinger.supports_background_blur=1
 ro.sf.blurs_are_expensive=1
 persist.sys.sf.disable_blurs=1
 
-wifi.interface=wlan0
-ro.mediatek.wlan.wsc=1
-ro.mediatek.wlan.p2p=1
-mediatek.wlan.ctia=0
+# Brand
+Build.BRAND=MTK
 
-ro.product.board=oppo6769
-ro.board.platform=mt6768
-ro.hardware.egl=mali
-
-#
-wifi.tethering.interface=ap0
-#
-
-ro.opengles.version=196610
-# ro.kernel.qemu=1
-# ro.kernel.qemu.gles=0
-
-wifi.direct.interface=p2p0
-#dalvik.vm.heapgrowthlimit=256m
-#dalvik.vm.heapsize=512m
-
-# Zygote preforking
-persist.device_config.runtime_native.usap_pool_enabled=true
-
-# ZRAM
-ro.zram.mark_idle_delay_mins=60
-ro.zram.first_wb_delay_mins=180
-ro.zram.periodic_wb_delay_hours=24
+# Camera
+persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera,com.google.camera
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.camera,org.pixelexperience.faceunlock
+vendor.camera.aux.packageblacklist=org.telegram.messenger,com.microsoft.teams,com.discord
+persist.vendor.camera.expose.aux=1
+ro.camera.hfr.enable=1
 
 # Dex2oat
 dalvik.vm.dex2oat64.enabled=true
@@ -53,83 +29,76 @@ dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5,6,7
 dalvik.vm.boot-dex2oat-threads=8 
 dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3,4,5,6,7
 
+# Graphics
+ro.opengles.version=196610
+
 # Iorap
 iorapd.perfetto.enable=true
 iorapd.readahead.enable=true
-
-# Privapp permissions whitelisting
-ro.control_privapp_permissions=log
-
-persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera,com.google.camera,com.google.android.apps.cameralite,com.google.android.GoogleCamera.Go
-vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.camera,org.pixelexperience.faceunlock,com.google.android.apps.cameralite
-vendor.camera.aux.packageblacklist=org.telegram.messenger,com.microsoft.teams,com.discord
-# USB MTP WHQL
-ro.sys.usb.mtp.whql.enable=0
-
-# Power off opt in IPO
-sys.ipo.pwrdncap=2
-
-ro.sys.usb.storage.type=mtp
-
-# USB BICR function
-ro.sys.usb.bicr=no
-
-# USB Charge only function
-ro.sys.usb.charging.only=yes
-
-# audio
-ro.camera.sound.forced=0
-ro.audio.silent=0
-
-ro.config.vc_call_vol_steps=6
-
-ro.zygote.preload.enable=0
-
-ro.kernel.zio=38,108,105,16
-#ro.kernel.qemu=1
-#ro.kernel.qemu.gles=0
-#ro.boot.selinux=disable
-
-# Disable dirty region for Mali
-#debug.hwui.render_dirty_regions=false
-
-persist.vendor.camera.expose.aux=1
-
-# performance
-ro.mtk_perf_simple_start_win=1
-ro.mtk_perf_fast_start_win=1
-ro.mtk_perf_response_time=1
-
-# disable ipo for development
-sys.ipo.disable=1
-
-# identity
-ro.com.google.clientidbase=android-mtk
-Build.BRAND=MTK
-
-#ifdef ODM_WT_EDIT
-#Qingqiang.Ni@ODM_WT.Ad.Engineeringmode, 2019/11/16, Add for WT version
-
-ro.build.display.wtid.mp=SW_S98670AA1_V010_USRD_TEST
-ro.build.display.wtid.ato=SW_S98670AA1_V010_USRD_TEST
-
-ro.build.display.wtid.monet.mp=SW_S98670AA1_V006_M10_R_USRD_MP
-ro.build.display.wtid.monet.ato=SW_S98670AA1_V017_M10_R_USRD_ATO
-
-ro.build.display.wtid.monetx.mp=SW_S98675AA1_V010_M10_R_USRD_MP
-ro.build.display.wtid.monetx.ato=SW_S98675AA1_V015_M10_R_USRD_ATO
-
-#endif /* ODM_WT_EDIT */
-
-# ifeq ($(ODM_WT_EDIT),yes)
-# Weiwei.Cui@camera.Driver.2019/11/14, add for slow movie
-ro.camera.hfr.enable=1
-# endif
-# end of device/mediatek/system/common/system.prop
-
-#
 
 # IMS 
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
+
+# IPO
+sys.ipo.pwrdncap=2
+sys.ipo.disable=1
+
+# Kernel
+ro.kernel.zio=38,108,105,16
+
+# OPPO
+ro.build.display.wtid.mp=SW_S98670AA1_V010_USRD_TEST
+ro.build.display.wtid.ato=SW_S98670AA1_V010_USRD_TEST
+ro.build.display.wtid.monet.mp=SW_S98670AA1_V006_M10_R_USRD_MP
+ro.build.display.wtid.monet.ato=SW_S98670AA1_V017_M10_R_USRD_ATO
+ro.build.display.wtid.monetx.mp=SW_S98675AA1_V010_M10_R_USRD_MP
+ro.build.display.wtid.monetx.ato=SW_S98675AA1_V015_M10_R_USRD_ATO
+
+# OPPO Dolby
+ro.dolby.model=oppoEffectModel
+ro.dolby.device=oppoEffectDevice
+ro.dolby.manufacturer=OPPO
+ro.dolby.brand=OPPO
+
+# Order
+ro.product.property_source_order=odm,vendor,product,system
+
+# Performance
+ro.mtk_perf_simple_start_win=1
+ro.mtk_perf_fast_start_win=1
+ro.mtk_perf_response_time=1
+
+# Privapp permissions whitelisting
+ro.control_privapp_permissions=log
+
+# Product
+ro.product.board=oppo6769
+ro.board.platform=mt6768
+ro.hardware.egl=mali
+
+# USB 
+ro.sys.usb.mtp.whql.enable=0
+ro.sys.usb.storage.type=mtp
+ro.sys.usb.bicr=no
+ro.sys.usb.charging.only=yes
+
+# Wifi
+wifi.interface=wlan0
+ro.mediatek.wlan.wsc=1
+ro.mediatek.wlan.p2p=1
+mediatek.wlan.ctia=0
+wifi.tethering.interface=ap0
+wifi.direct.interface=p2p0
+
+# ZRAM
+ro.zram.mark_idle_delay_mins=60
+ro.zram.first_wb_delay_mins=180
+ro.zram.periodic_wb_delay_hours=24
+
+# Zygote
+ro.zygote.preload.enable=0
+
+# Zygote preforking
+persist.device_config.runtime_native.usap_pool_enabled=true
