@@ -140,6 +140,10 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     ImsServiceBase
 
+# Trust HAL
+PRODUCT_PACKAGES += \
+    lineage.trust@1.0-service
+
 # MTK-IMS
 PRODUCT_BOOT_JARS += \
     mediatek-common \
