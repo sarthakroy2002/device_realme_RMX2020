@@ -515,6 +515,7 @@ lib/libsource.so
 lib/libvcodec_cap.so
 lib/libvcodec_capenc.so
 lib/libvt_avsync.so
+lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 lib64/libmtk_serialnum.so
 lib64/libmtk_vt_wrapper.so
 lib64/libmtkaudio_utils.so
@@ -524,6 +525,7 @@ lib64/libmtkperf_client.so
 lib64/libmtkshifter.so
 lib64/libvcodec_cap.so
 lib64/libvcodec_capenc.so
+lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.0-service.trustonic
