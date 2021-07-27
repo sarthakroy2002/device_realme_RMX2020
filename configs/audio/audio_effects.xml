@@ -75,6 +75,7 @@
         <!-- Yunmang.Xiao@PSW.MM.AudioServer.Effect.1065522, 2019/09/24, Add for dirac effect -->
         <effect name="dirac_controller" library="dirac" uuid="b437f4de-da28-449b-9673-667f8b9643fe"/>
         <effect name="dirac_music" library="dirac" uuid="b437f4de-da28-449b-9673-667f8b964304"/>
+        <effect name="dirac" library="dirac" uuid="e069d9e0-8329-11df-9168-0002a5d5c51b"/>
         <!-- Yunmang.Xiao@PSW.MM.AudioServer.Dolby.2019/11/04 add for dolby -->
         <!--DOLBY DAP-->
         <effect name="dap" library="dap" uuid="9d4921da-8225-4f29-aefa-39537a04bcaa"/>
