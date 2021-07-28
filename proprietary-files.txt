@@ -896,12 +896,6 @@ vendor/etc/init/android.hardware.neuralnetworks@1.1-service-cpunn.rc
 vendor/etc/init/android.hardware.neuralnetworks@1.1-service-gpunn.rc
 
 # Oppo
-oppo_product/vendor/etc/oppo_app_scale_list.xml
-oppo_product/vendor/etc/oppo_display_perf_list.xml
-oppo_product/vendor/etc/oppo_rc_bottom.png
-oppo_product/vendor/etc/oppo_rc_left.png
-oppo_product/vendor/etc/oppo_rc_right.png
-oppo_product/vendor/etc/oppo_rc_top.png
 vendor/bin/hw/vendor.oppo.engnative.engineer@1.0-service
 vendor/bin/hw/vendor.oppo.engnative.engsensor@1.0-service
 vendor/bin/hw/vendor.oppo.hardware.cryptoeng@1.0-service
@@ -2117,8 +2111,6 @@ vendor/lib64/vendor.oppo.hardware.wifi.hostapd@1.0.so
 vendor/lib64/vendor.oppo.hardware.wifi.supplicant@1.0.so
 vendor/oppo/ck.fs
 vendor/oppo/recovery_rootcheck
--vendor/overlay/OppoGmailOverlay.apk
--vendor/overlay/OppoPhoneActivationResCommon.apk
 
 # Perf
 
@@ -3015,10 +3007,5 @@ vendor/lib64/monet_txd_front_hi556_tuning.so
 vendor/lib64/vendor.trustonic.tee.tui@1.0.so
 vendor/lib64/vendor.trustonic.tee@1.0.so
 vendor/lib64/vendor.trustonic.teeregistry@1.0.so
-vendor/res/images/lcd_test_00.png
-vendor/res/images/lcd_test_01.png
-vendor/res/images/lcd_test_02.png
-vendor/res/sound/ringtone.wav
-vendor/res/sound/testpattern1.wav
 vendor/ro.prop
 vendor/rw.prop
