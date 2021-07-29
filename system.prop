@@ -32,6 +32,9 @@ dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3,4,5,6,7
 # Graphics
 ro.opengles.version=196610
 
+# Display
+debug.sf.disable_backpressure=1
+
 # Iorap
 iorapd.perfetto.enable=true
 iorapd.readahead.enable=true
