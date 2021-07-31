@@ -278,12 +278,8 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    engineer_vendor_shell.sh \
-    init.oppo.face.sh \
-    init.oppo.face_calib.sh \
     init.oppo.fingerprints.sh \
     init.oppo.wifi.debug.sh \
-    oppo-install-recovery.sh \
     swap_enable.sh \
     perf_profile.sh \
     factory_init.connectivity.rc \
