@@ -10,8 +10,6 @@ Build.BRAND=MTK
 persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera,com.google.camera
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.camera,org.pixelexperience.faceunlock
 vendor.camera.aux.packageblacklist=org.telegram.messenger,com.microsoft.teams,com.discord
-persist.vendor.camera.expose.aux=1
-ro.camera.hfr.enable=1
 
 # Dex2oat
 dalvik.vm.dex2oat64.enabled=true
