@@ -116,10 +116,6 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service \
     android.hardware.gatekeeper@1.0-impl
 
-# Gcam
-PRODUCT_PACKAGES += \
-    GoogleCameraGo
-
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
@@ -344,6 +340,10 @@ PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
+
+# Camera
+PRODUCT_PACKAGES += \
+    Snap
 
 # Symbols
 PRODUCT_PACKAGES += \
