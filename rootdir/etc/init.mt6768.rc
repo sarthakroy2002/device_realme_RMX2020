@@ -128,6 +128,9 @@ on post-fs
     restorecon /mnt/vendor/persist
 #endif /*ODM_WT_EDIT*/
 
+    # Camera 
+    setprop oppo.camera.packname com.oppo.camera
+
     # USB-OTG
     chown system system /sys/class/power_supply/usb/otg_switch
     chmod 0666 /sys/class/power_supply/usb/otg_switch
@@ -278,9 +281,7 @@ on post-fs-data
     #insmod /vendor/lib/modules/mali.ko
     chmod 666 /dev/mali0
     #chown system graphics /dev/mali
-
-
-
+ 
     # Touch Panel
     # chmod 0664 /dev/touch
     chown root diag /sys/module/tpd_setting/parameters/tpd_calmat
