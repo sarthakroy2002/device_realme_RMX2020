@@ -321,6 +321,9 @@ vendor/etc/camera/M_Attribute_Gender_Age_1.0.model.hardcode
 # Camera-motor
 vendor/etc/init/hw/init.oppo.vendor.motor.rc
 
+# Charger - From From Redmi/begonia/begonia:11/RP1A.200720.011/21.4.28:user/release-keys
+bin/charger:bin/chargeonlymode|bb74c36cee72b1f2e2c8090eb6f21352eba8e83f
+
 # Configstore
 vendor/bin/hw/android.hardware.configstore@1.1-service
 vendor/etc/init/android.hardware.configstore@1.1-service.rc
