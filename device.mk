@@ -362,6 +362,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     lineage.trust@1.0-service
 
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.0-impl \
+    android.hardware.vibrator@1.0-service
+
 # Video Telephony
 PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.videotelephony@1.0
