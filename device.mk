@@ -100,6 +100,10 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
     libvulkan
 
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.3-service.clearkey
+
 # fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
