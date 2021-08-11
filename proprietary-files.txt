@@ -351,12 +351,14 @@ vendor/lib64/libmtkcam_pipelinemodel_utils.so
 vendor/lib64/libmtkcam_pipelinemodel_zsl.so
 vendor/lib64/libmtkcam_pipelinepolicy.so
 vendor/lib64/monet_hlt_custfront_gc5035_tuning.so
+vendor/lib64/monet_hlt_custfront_gc5035_IdxMgr.so
 vendor/lib64/monet_hlt_front_gc5035B_IdxMgr.so
 vendor/lib64/monet_hlt_front_gc5035B_tuning.so
 vendor/lib64/monet_hlt_front_gc5035_tuning.so
 vendor/lib64/monet_lh_macro_gc2375h_tuning.so
 vendor/lib64/monet_truly_main_ov12a10_tuning.so
 vendor/lib64/monetd_truly_main_ov12a10_tuning.so
+vendor/lib64/monet_hlt_depth_ov02a1b_IdxMgr.so
 vendor/lib64/monetx_hlt_macro_gc2375h_tuning.so
 vendor/lib64/monetx_hlt_macro_gc2385_tuning.so
 vendor/lib64/monetx_ofilm_front_ov16a1q_tuning.so
@@ -395,13 +397,19 @@ vendor/lib64/hw/gralloc.mt6768.so
 vendor/lib64/hw/hwcomposer.mt6768.so
 vendor/lib64/hw/memtrack.mt6768.so
 
+# EngineerMode
+-priv-app/EngineerMode/EngineerMode.apk
+lib/libem_support_jni.so
+lib64/libem_support_jni.so
+-lib/libem_support_jni.so
+-lib64/libem_support_jni.so
+
 # Fingerprint
 vendor/bin/hw/vendor.oppo.hardware.biometrics.fingerprint@2.1-service
 vendor/bin/hw/vendor.silead.hardware.fingerprintext@1.0-service
 vendor/etc/init/vendor.oppo.hardware.biometrics.fingerprint@2.1-service.rc
 vendor/etc/init/vendor.silead.hardware.fingerprintext@1.0-service.rc
 vendor/etc/permissions/com.fingerprints.fpmmi.xml
-vendor/etc/permissions/vendor-oppo-hardware.biometrics.fingerprintpay.xml
 vendor/lib/hw/fingerprint.silead.default.so
 vendor/lib/libsl_fp_algo.so
 vendor/lib/libsl_fp_impl.so
@@ -545,8 +553,7 @@ lib/libsource.so
 lib/libvcodec_cap.so
 lib/libvcodec_capenc.so
 lib/libvt_avsync.so
-lib64/vendor.mediatek.hardware.videotelephony@1.0.so
-lib64/libmtk_serialnum.so
+lib/vendor.mediatek.hardware.videotelephony@1.0.so:system_ext/lib/vendor.mediatek.hardware.videotelephony@1.0.so
 lib64/libmtk_vt_wrapper.so
 lib64/libmtkaudio_utils.so
 lib64/libmtkavenhancements.so
@@ -555,7 +562,7 @@ lib64/libmtkperf_client.so
 lib64/libmtkshifter.so
 lib64/libvcodec_cap.so
 lib64/libvcodec_capenc.so
-lib64/vendor.mediatek.hardware.videotelephony@1.0.so
+lib64/vendor.mediatek.hardware.videotelephony@1.0.so:system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.0-service.trustonic
@@ -880,7 +887,6 @@ vendor/etc/nfc/libnfc_xiamen_config.conf_19125
 vendor/etc/nfc/libnfc_xiamen_config.conf_19165
 vendor/etc/nfc/libnfc_zhengzhou_config.conf_19081
 vendor/etc/nfc/nfc_conf_ref
-vendor/etc/permissions/com.oppo.nfc_feature.xml
 vendor/etc/sn100u_nfcon.pnscr
 vendor/lib/ese_spi_nxp.so
 vendor/lib/hal_libnfc.so
@@ -2352,8 +2358,6 @@ vendor/etc/ecc_list_OP17.xml
 vendor/etc/ecc_list_OP18.xml
 vendor/etc/ecc_list_OP20.xml
 vendor/etc/factory.ini
-vendor/etc/file112.wav
-vendor/etc/fstb.cfg
 vendor/etc/init/atcid.rc
 vendor/etc/init/audiocmdservice_atci.rc
 vendor/etc/init/bootperf.rc
@@ -2427,8 +2431,6 @@ vendor/etc/mmigroup/MMIGroupSensorAta.json
 vendor/etc/mmigroup/MMIGroupSensorManual.json
 vendor/etc/mmigroup/rec.wav
 vendor/etc/mmigroup/spk.wav
-vendor/etc/mmi_audio/rec.wav
-vendor/etc/mmi_audio/spk.wav
 vendor/etc/mtk_omx_core.cfg
 vendor/etc/ncf_pack.ncf
 vendor/etc/powercontable.xml
