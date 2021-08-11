@@ -36,9 +36,6 @@ $(call inherit-product-if-exists, packages/apps/RealmeParts/parts.mk)
 
 PRODUCT_SHIPPING_API_LEVEL := 29
 
-# VNDK
-PRODUCT_EXTRA_VNDK_VERSIONS := 29
-
 # Dynamic Partition
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
