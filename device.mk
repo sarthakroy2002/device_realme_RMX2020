@@ -148,8 +148,8 @@ PRODUCT_COPY_FILES += \
 
 # Keymaster
 PRODUCT_PACKAGES += \
-    libkeymaster4 \
-    libkeymaster4support
+    libkeymaster4.vendor \
+    libkeymaster4support.vendor
 
 # KPOC
 PRODUCT_PACKAGES += \
