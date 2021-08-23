@@ -224,6 +224,7 @@ PRODUCT_PROPERTY_OVERRIDES +=  \
     ro.vendor.mtk_md_world_mode_support=1 \
     ro.vendor.mtk_modem_monitor_support=1 \
     ro.vendor.mtk_nn.option=D,E,F,Z \
+    ro.vendor.mtk_nn_support=1 \
     ro.vendor.mtk_pq_color_mode=1 \
     ro.vendor.mtk_besloudness_support=0 \
     ro.vendor.mtk_pq_support=0 \
