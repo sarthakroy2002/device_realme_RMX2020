@@ -2773,7 +2773,6 @@ vendor/lib/libsysenv.so
 vendor/lib/libTBaseProvisioning.so
 vendor/lib/libTBaseProvisioningAT.so
 vendor/lib/libTEECommon.so
-vendor/lib/libtextclassifier_hash.so
 vendor/lib/libtflite_mtk.so
 vendor/lib/libtflite_mtk_static.so
 vendor/lib/libthha.so
@@ -2951,7 +2950,6 @@ vendor/lib64/libsysenv.so
 vendor/lib64/libTBaseProvisioning.so
 vendor/lib64/libTBaseProvisioningAT.so
 vendor/lib64/libTEECommon.so
-vendor/lib64/libtextclassifier_hash.so
 vendor/lib64/libtflite_mtk.so
 vendor/lib64/libtflite_mtk_static.so
 vendor/lib64/libthha.so

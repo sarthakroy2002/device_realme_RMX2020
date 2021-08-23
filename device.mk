@@ -358,6 +358,10 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     ImsServiceBase
 
+# Text classifier
+PRODUCT_PACKAGES += \
+    libtextclassifier_hash.vendor
+
 # TinyXML
 PRODUCT_PACKAGES += \
     libtinyxml
