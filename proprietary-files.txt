@@ -566,6 +566,7 @@ lib64/vendor.mediatek.hardware.videotelephony@1.0.so:system_ext/lib64/vendor.med
 
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.0-service.trustonic
+vendor/etc/init/android.hardware.keymaster@4.0-service.trustonic.rc
 vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service
 vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc
 vendor/lib/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so
