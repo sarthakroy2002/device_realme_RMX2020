@@ -3,6 +3,14 @@
 # ADSP
 vendor/lib64/libadsprpc.so
 
+# AEE - from alps/vnd_oppo6769/oppo6769:11/RP1A.200720.011/1607914664672:user/release-keys
+vendor/lib/libaedv.so|890379be0a71e647b8c8f885e8c7288fb3d849ba
+vendor/lib/libladder.so|b3161af9c1ae115b467ed6d210355348717145c8
+vendor/lib/libudf.so|0ff2e45766f5ff54a7b975afd69f13ec5d20cd81
+vendor/lib64/libaedv.so|f011b65f0638c0305e7f113b5d6109a162c1a061
+vendor/lib64/libladder.so|47ab171fde2026c25c0c63f0af9bfcee3fcd74a9
+vendor/lib64/libudf.so|6e43a3069e9f36e188433a03906800b73f429e24
+
 # Audio
 vendor/etc/dirac/17061/diracmobile.config
 vendor/etc/dirac/17061/diracvdd.bin
@@ -2655,7 +2663,6 @@ vendor/lib/libaalservice.so
 vendor/lib/libaal_cust.so
 vendor/lib/libaal_key.so
 vendor/lib/libaal_mtk.so
-vendor/lib/libaedv.so
 vendor/lib/libakl.so
 vendor/lib/libalipay_factory.so
 vendor/lib/libaurisysdemo.so
@@ -2705,7 +2712,6 @@ vendor/lib/libipsec_ims_shr.so
 vendor/lib/libjpeg-alpha-oal_vendor.so
 vendor/lib/libjpeg-alpha_vendor.so
 vendor/lib/libJpgEncPipe.so
-vendor/lib/libladder.so
 vendor/lib/liblic_divx.so
 vendor/lib/libMcClient.so
 vendor/lib/libmemsic.so
@@ -2776,7 +2782,6 @@ vendor/lib/libTEECommon.so
 vendor/lib/libtflite_mtk.so
 vendor/lib/libtflite_mtk_static.so
 vendor/lib/libthha.so
-vendor/lib/libudf.so
 vendor/lib/libutinterface_custom_md.so
 vendor/lib/libutinterface_md.so
 vendor/lib/libvc1dec_sa.ca7.so
@@ -2835,7 +2840,6 @@ vendor/lib64/libaal_cust.so
 vendor/lib64/libaal_key.so
 vendor/lib64/libaal_mtk.so
 vendor/lib64/libacdk.so
-vendor/lib64/libaedv.so
 vendor/lib64/libakl.so
 vendor/lib64/libalipay_factory.so
 vendor/lib64/libaurisysdemo.so
@@ -2901,7 +2905,6 @@ vendor/lib64/libjpeg-alpha_vendor.so
 vendor/lib64/libJpgEncPipe.so
 vendor/lib64/libkmsetkey.so
 vendor/lib64/libksensor.so
-vendor/lib64/libladder.so
 vendor/lib64/liblpcnr.so
 vendor/lib64/libMcClient.so
 vendor/lib64/libmegface_rt_bokeh.so
@@ -2954,7 +2957,6 @@ vendor/lib64/libtflite_mtk.so
 vendor/lib64/libtflite_mtk_static.so
 vendor/lib64/libthha.so
 vendor/lib64/libtrustonic_keybox_ca.so
-vendor/lib64/libudf.so
 vendor/lib64/libutinterface_custom_md.so
 vendor/lib64/libutinterface_md.so
 vendor/lib64/libvcodec_oal.so
