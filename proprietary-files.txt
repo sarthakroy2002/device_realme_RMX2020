@@ -635,10 +635,6 @@ vendor/lib64/libkeystore-wifi-hidl.so
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.0.so
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so
 
-# Lights
-vendor/lib/hw/lights.mt6768.so
-vendor/lib64/hw/lights.mt6768.so
-
 # Kernel-Modules
 vendor/lib/modules/bt_drv.ko
 vendor/lib/modules/fmradio_drv.ko
