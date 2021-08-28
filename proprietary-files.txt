@@ -639,10 +639,6 @@ vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so
 vendor/lib/hw/lights.mt6768.so
 vendor/lib64/hw/lights.mt6768.so
 
-# Listen
-vendor/lib/hw/android.hardware.soundtrigger@2.2-impl.so
-vendor/lib64/hw/android.hardware.soundtrigger@2.2-impl.so
-
 # Kernel-Modules
 vendor/lib/modules/bt_drv.ko
 vendor/lib/modules/fmradio_drv.ko
