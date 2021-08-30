@@ -554,11 +554,6 @@ vendor/lib64/hw/gps.default.so
 
 # GPS-Hardware
 
-# Gatekeeper
-vendor/bin/hw/android.hardware.gatekeeper@1.0-service
-vendor/lib/hw/android.hardware.gatekeeper@1.0-impl.so
-vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl.so
-
 # Graphics
 vendor/lib/egl/egl.cfg
 vendor/lib/egl/libGLES_mali.so
