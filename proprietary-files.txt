@@ -574,10 +574,6 @@ vendor/lib64/egl/libGLES_meow.so
 vendor/lib64/egl/libMEOW_trace.so
 vendor/lib64/libOpenCL.so
 
-# Health
-vendor/bin/hw/android.hardware.health@2.0-service
-vendor/etc/init/android.hardware.health@2.0-service.rc
-
 # MTK-IMS
 -priv-app/ImsService/ImsService.apk
 bin/vtservice
