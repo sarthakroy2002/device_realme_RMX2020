@@ -994,8 +994,6 @@ vendor/lib64/vendor.oppo.hardware.cryptoeng@1.0.so
 vendor/lib64/vendor.oppo.hardware.hypnus@1.0.so
 vendor/lib64/vendor.oppo.hardware.wifi.hostapd@1.0.so
 vendor/lib64/vendor.oppo.hardware.wifi.supplicant@1.0.so
-vendor/oppo/ck.fs
-vendor/oppo/recovery_rootcheck
 
 # Perf
 
