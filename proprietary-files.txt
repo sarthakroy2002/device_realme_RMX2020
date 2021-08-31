@@ -1066,10 +1066,8 @@ vendor/lib64/libwpa_client.so
 vendor/bin/ccci_fsd
 vendor/bin/ccci_mdinit
 vendor/bin/ccci_rpcd
-vendor/bin/factory
 vendor/bin/fuelgauged
 vendor/bin/loghidlvendorservice
-vendor/bin/meta_tst
 vendor/bin/mnld
 vendor/bin/nvram_daemon
 vendor/bin/self-init
@@ -1224,7 +1222,6 @@ vendor/etc/ecc_list_OP12.xml
 vendor/etc/ecc_list_OP17.xml
 vendor/etc/ecc_list_OP18.xml
 vendor/etc/ecc_list_OP20.xml
-vendor/etc/factory.ini
 vendor/etc/init/atcid.rc
 vendor/etc/init/audiocmdservice_atci.rc
 vendor/etc/init/bootperf.rc
