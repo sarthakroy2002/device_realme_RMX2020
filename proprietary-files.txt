@@ -1081,7 +1081,6 @@ vendor/etc/init/factorybsp_service.rc
 vendor/etc/init/nvram_daemon.rc
 vendor/etc/init/tee.rc
 vendor/etc/init/trustonic.rc
-vendor/etc/partition_permission.sh
 
 # Misc
 -vendor/app/EmCamera/EmCamera.apk
@@ -1489,7 +1488,6 @@ vendor/etc/special_pws_channel.xml
 vendor/etc/spk.wav
 vendor/etc/spn-conf-op09.xml
 vendor/etc/test_path/common/mixer_paths.xml
-vendor/etc/throttle.sh
 vendor/etc/virtual-spn-conf-by-efgid1.xml
 vendor/etc/virtual-spn-conf-by-efpnn.xml
 vendor/etc/virtual-spn-conf-by-efspn.xml
