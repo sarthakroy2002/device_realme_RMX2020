@@ -1,22 +1,22 @@
-#!/system/bin/sh
+#!/vendor/bin/sh
 
 #change partition permission
-/system/bin/chown root:system /mtd@preloader
-/system/bin/chmod 0640 /mtd@preloader
-/system/bin/chown root:system /mtd@pro_info
-/system/bin/chmod 0660 /mtd@pro_info
-/system/bin/chown root:system /mtd@bootimg
-/system/bin/chmod 0640 /mtd@bootimg
-/system/bin/chown root:system /mtd@recovery
-/system/bin/chmod 0640 /mtd@recovery
-/system/bin/chown root:system /mtd@sec_ro
-/system/bin/chmod 0640 /mtd@sec_ro
+/vendor/bin/chown root:system /mtd@preloader
+/vendor/bin/chmod 0640 /mtd@preloader
+/vendor/bin/chown root:system /mtd@pro_info
+/vendor/bin/chmod 0660 /mtd@pro_info
+/vendor/bin/chown root:system /mtd@bootimg
+/vendor/bin/chmod 0640 /mtd@bootimg
+/vendor/bin/chown root:system /mtd@recovery
+/vendor/bin/chmod 0640 /mtd@recovery
+/vendor/bin/chown root:system /mtd@sec_ro
+/vendor/bin/chmod 0640 /mtd@sec_ro
 
-/system/bin/chown root:system /mtd@nvram
-/system/bin/chmod 0660 /mtd@nvram
-/system/bin/chown root:system /mtd@seccfg
-/system/bin/chmod 0660 /mtd@seccfg
-/system/bin/chown root:system /mtd@misc
-/system/bin/chmod 0660 /mtd@misc
+/vendor/bin/chown root:system /mtd@nvram
+/vendor/bin/chmod 0660 /mtd@nvram
+/vendor/bin/chown root:system /mtd@seccfg
+/vendor/bin/chmod 0660 /mtd@seccfg
+/vendor/bin/chown root:system /mtd@misc
+/vendor/bin/chmod 0660 /mtd@misc
 
 
