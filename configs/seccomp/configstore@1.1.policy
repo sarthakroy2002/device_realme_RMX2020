@@ -45,6 +45,7 @@ madvise: 1
 getdents64: 1
 clock_gettime: 1
 getpid: 1
+gettid: 1
 
 # used during process crash by crash_dump to dump process info
 rt_sigprocmask: 1

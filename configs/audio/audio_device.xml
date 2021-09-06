@@ -57,11 +57,9 @@
         <!--external_speaker output-->
         <path name="ext_speaker_output" value="turnon">
             <kctl name="Ext_Speaker_Amp Switch" value="1" />
-			<kctl name="SpkrLeft Sia81xx Power" value="On" />
         </path>
         <path name="ext_speaker_output" value="turnoff">
             <kctl name="Ext_Speaker_Amp Switch" value="0" />
-			<kctl name="SpkrLeft Sia81xx Power" value="Off" />
         </path>
         <!--mic setting-->
         <path name="builtin_Mic_Mic1" value="turnon">

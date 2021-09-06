@@ -83,6 +83,8 @@ Only the three quirks included above are recognized at this point:
             <Quirk name="supports-multiple-frames-per-input-buffer" />
         </MediaCodec>
         <MediaCodec name="OMX.MTK.AUDIO.DECODER.GSM" type="audio/gsm" />
+<!-- #ifndef OPLUS_BUG_STABILITY -->
+<!-- Xiaofeng.Yang@MULTIMEDIA.MEDIASERVER.VTS.89389, 2020/11/13, Remove for ListRoles VTS, move to media_codecs_mediatek_odm.xml
         <MediaCodec name="OMX.MTK.AUDIO.DECODER.WMA" type="audio/x-ms-wma" />
         <MediaCodec name="OMX.MTK.AUDIO.DECODER.ADPCM.MS" type="audio/x-adpcm-ms" />
         <MediaCodec name="OMX.MTK.AUDIO.DECODER.ADPCM.DVI" type="audio/x-adpcm-dvi-ima" />
@@ -91,5 +93,7 @@ Only the three quirks included above are recognized at this point:
             <Quirk name="supports-multiple-frames-per-input-buffer" />
         </MediaCodec>
         <MediaCodec name="OMX.MTK.AUDIO.DECODER.ALAC" type="audio/alac" />
+-->
+<!-- #endif OPLUS_BUG_STABILITY -->
     </Decoders>
 </Included>
