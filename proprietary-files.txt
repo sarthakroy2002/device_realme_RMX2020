@@ -547,13 +547,7 @@ vendor/lib64/hw/gps.default.so
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service
 vendor/etc/init/android.hardware.gatekeeper@1.0-service.rc
 vendor/lib/hw/android.hardware.gatekeeper@1.0-impl.so
-vendor/lib/hw/gatekeeper.default.so
-vendor/lib/hw/gatekeeper.mt6768.so
-vendor/lib/hw/gatekeeper.oppo6769.so
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl.so
-vendor/lib64/hw/gatekeeper.default.so
-vendor/lib64/hw/gatekeeper.mt6768.so
-vendor/lib64/hw/gatekeeper.oppo6769.so
 
 # Graphics
 vendor/lib/egl/egl.cfg
