@@ -1,19 +1,24 @@
 on early-init
     write /sys/module/musb_hdrc/parameters/kernel_init_done 1
+	#ifdef VENDOR_EDIT
+    #Wanghao@BSP.bootloader.bootflow, 2020/03/28, Add for usb port in meta mode
+    write /sys/class/udc/musb-hdrc/device/cmode 3
+    #endif
 
 on post-fs
-#ifndef ODM_WT_EDIT
-#/* Mingyao.Xie@ODM_WT.BSP.Storage.usb, 2019/10/09, Modify for monet VID&PID */
-#   setprop vendor.usb.vid "0x0E8D"
-#else
+#ifndef VENDOR_EDIT
+#/* Qiao.Hu@BSP.BaseDrv.CHG.Basic, 2017/12/08, Modify for OPPO VID&PID */
+    #setprop vendor.usb.vid "0x0E8D"
+#else /* VENDOR_EDIT */
     setprop vendor.usb.vid "0x22d9"
-#endif
+#endif /* VENDOR_EDIT */
     mkdir /dev/usb-ffs 0770 shell shell
     mkdir /dev/usb-ffs/adb 0770 shell shell
     mkdir /config/usb_gadget/g1 0770 shell shell
     write /config/usb_gadget/g1/idVendor ${vendor.usb.vid}
-    write /config/usb_gadget/g1/bcdDevice 0x0223
+    write /config/usb_gadget/g1/bcdDevice 0x0404
     write /config/usb_gadget/g1/bcdUSB 0x0200
+    write /config/usb_gadget/g1/os_desc/use 1
     mkdir /config/usb_gadget/g1/strings/0x409 0770
     write /config/usb_gadget/g1/strings/0x409/serialnumber ${ro.serialno}
     write /config/usb_gadget/g1/strings/0x409/manufacturer ${ro.product.manufacturer}
@@ -44,12 +49,8 @@ on post-fs
     mount functionfs adb /dev/usb-ffs/adb uid=2000,gid=2000
 
 on boot
-#ifdef ODM_WT_EDIT
-#/* Mingyao.Xie@ODM_WT.BSP.Storage.usb, 2019/10/09, Modify for monet VID&PID */
-    setprop vendor.usb.vid "0x22d9"
-#endif
     setprop sys.usb.configfs 1
-    setprop sys.usb.ffs.aio_compat 1
+    setprop sys.usb.ffs.aio_compat 0
     setprop vendor.usb.controller "musb-hdrc"
     setprop vendor.usb.acm_cnt 0
     setprop vendor.usb.acm_port0 ""
@@ -77,16 +78,13 @@ on boot
     chmod 0660 /dev/ttyGS2
     chown system radio /dev/ttyGS3
     chmod 0660 /dev/ttyGS3
-    # #ifdef ODM_WT_EDIT
-    # Mingyao.Xie@ODM_WT.BSP.Storage.usb, 2019/10/07, Add for factory version serial number
-    trigger set_serialnumber
-    # #endif
 
 on charger
     mkdir /config/usb_gadget/g1 0770 shell shell
     write /config/usb_gadget/g1/idVendor 0x0E8D
     write /config/usb_gadget/g1/bcdDevice 0x0223
     write /config/usb_gadget/g1/bcdUSB 0x0200
+    write /config/usb_gadget/g1/os_desc/use 1
     mkdir /config/usb_gadget/g1/strings/0x409 0770
     write /config/usb_gadget/g1/strings/0x409/serialnumber ${ro.serialno}
     write /config/usb_gadget/g1/strings/0x409/manufacturer ${ro.product.manufacturer}
@@ -127,24 +125,25 @@ on property:sys.usb.config=hid && property:sys.usb.configfs=1
 ### start adbd at init.usb.configfs.rc ###
 on property:sys.usb.config=adb && property:vendor.usb.acm_cnt=0 && \
 property:sys.usb.configfs=1
-#ifndef ODM_WT_EDIT
-#/* Mingyao.Xie@ODM_WT.BSP.Storage.usb, 2019/10/09, Modify for monet VID&PID */
+#ifndef VENDOR_EDIT
+#/* Qiao.Hu@BSP.BaseDrv.CHG.Basic, 2017/12/08, Modify for OPPO VID&PID */
     #setprop vendor.usb.pid 0x201C
-#else /* ODM_WT_EDIT */
+#else /* VENDOR_EDIT */
     setprop vendor.usb.pid 0x2769
-#endif /* ODM_WT_EDIT */
+#endif /* VENDOR_EDIT */
 on property:sys.usb.config=adb && property:vendor.usb.acm_cnt=1 && \
 property:sys.usb.configfs=1
     setprop vendor.usb.pid 0x2006
     setprop vendor.usb.acm_port1 ""
 on property:sys.usb.config=adb && property:vendor.usb.acm_cnt=2 && \
 property:sys.usb.configfs=1
-#ifndef ODM_WT_EDIT
-# Haibin1.Zhang@ODM_WT.BSP.Storage.usb, 2019/11/2, Modify for monet VID&PID
+#ifndef VENDOR_EDIT
+#/* Qiao.Hu@BSP.BaseDrv.CHG.Basic, 2018/03/14, Modify for OPPO VID&PID */
     #setprop vendor.usb.pid 0x2029
 #else
-     setprop vendor.usb.pid 0x200E
+    setprop vendor.usb.pid 0x200E
 #endif
+
 on property:sys.usb.ffs.ready=1 && property:sys.usb.config=adb && \
 property:vendor.usb.acm_enable=1 && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "adb_acm"
@@ -168,12 +167,12 @@ property:vendor.usb.acm_enable=0 && property:sys.usb.configfs=1
 ### main function : mtp ###
 on property:sys.usb.config=mtp && property:vendor.usb.acm_cnt=0 && \
 property:sys.usb.configfs=1
-#ifndef ODM_WT_EDIT
-#/* Mingyao.Xie@ODM_WT.BSP.Storage.usb, 2019/10/09, Modify for monet VID&PID */
-    #setprop sys.usb.pid 0x2008
-#else /* ODM_WT_EDIT */
+#ifndef VENDOR_EDIT
+#/* Qiao.Hu@BSP.BaseDrv.CHG.Basic, 2017/12/08, Modify for OPPO VID&PID */
+    #setprop vendor.usb.pid 0x2008
+#else /* VENDOR_EDIT */
     setprop vendor.usb.pid 0x2764
-#endif /* ODM_WT_EDIT */
+#endif /* VENDOR_EDIT */
 on property:sys.usb.config=mtp && property:vendor.usb.acm_cnt=1 && \
 property:sys.usb.configfs=1
     setprop vendor.usb.pid 0x2012
@@ -206,12 +205,12 @@ property:sys.usb.configfs=1
 ### start adbd at init.usb.configfs.rc ###
 on property:sys.usb.config=mtp,adb && property:vendor.usb.acm_cnt=0 && \
 property:sys.usb.configfs=1
-#ifndef ODM_WT_EDIT
-#/* Mingyao.Xie@ODM_WT.BSP.Storage.usb, 2019/10/09, Modify for monet VID&PID */
-    #setprop sys.usb.pid 0x201D
-#else /* ODM_WT_EDIT */
+#ifndef VENDOR_EDIT
+#/* Qiao.Hu@BSP.BaseDrv.CHG.Basic, 2017/12/08, Modify for OPPO VID&PID */
+    #setprop vendor.usb.pid 0x201D
+#else
     setprop vendor.usb.pid 0x2765
-#endif /* ODM_WT_EDIT */
+#endif
 on property:sys.usb.config=mtp,adb && property:vendor.usb.acm_cnt=1 && \
 property:sys.usb.configfs=1
     setprop vendor.usb.pid 0x200A
@@ -277,12 +276,12 @@ property:sys.usb.configfs=1
 ### start adbd at init.usb.configfs.rc ###
 on property:sys.usb.config=ptp,adb && property:vendor.usb.acm_cnt=0 && \
 property:sys.usb.configfs=1
-#ifndef ODM_WT_EDIT
-#/* Mingyao.Xie@ODM_WT.BSP.Storage.usb, 2019/10/09, Modify for monet VID&PID */
-    #setprop sys.usb.pid 0x200C
-#else /* ODM_WT_EDIT */
+#ifndef VENDOR_EDIT
+#/* Qiao.Hu@BSP.BaseDrv.CHG.Basic, 2017/12/08, Modify for OPPO VID&PID */
+    #setprop vendor.usb.pid 0x200C
+#else
     setprop vendor.usb.pid 0x2772
-#endif /* ODM_WT_EDIT */
+#endif
 on property:sys.usb.config=ptp,adb && property:vendor.usb.acm_cnt=1 && \
 property:sys.usb.configfs=1
     setprop vendor.usb.pid 0x200D
@@ -315,12 +314,12 @@ property:vendor.usb.acm_enable=0 && property:sys.usb.configfs=1
 ### main function : rndis ###
 on property:sys.usb.config=rndis && property:vendor.usb.acm_cnt=0 && \
 property:sys.usb.configfs=1
-#ifndef ODM_WT_EDIT
-#/* Mingyao.Xie@ODM_WT.BSP.Storage.usb, 2019/10/09, Modify for monet VID&PID */
-    #setprop sys.usb.pid 0x2004
-#else /* ODM_WT_EDIT */
+#ifndef VENDOR_EDIT
+#/* Qiao.Hu@BSP.BaseDrv.CHG.Basic, 2017/12/08, Modify for OPPO VID&PID */
+    #setprop vendor.usb.pid 0x2004
+#else
     setprop vendor.usb.pid 0x276A
-#endif /* ODM_WT_EDIT */
+#endif
 on property:sys.usb.config=rndis && property:vendor.usb.acm_cnt=1 && \
 property:sys.usb.configfs=1
     setprop vendor.usb.pid 0x2011
@@ -352,12 +351,12 @@ property:sys.usb.configfs=1
 
 on property:sys.usb.config=rndis,adb && property:vendor.usb.acm_cnt=0 && \
 property:sys.usb.configfs=1
-#ifndef ODM_WT_EDIT
-#/* Mingyao.Xie@ODM_WT.BSP.Storage.usb, 2019/10/09, Modify for monet VID&PID */
-    #setprop sys.usb.pid 0x2005
-#else /* ODM_WT_EDIT */
+#ifndef VENDOR_EDIT
+#/* Qiao.Hu@BSP.BaseDrv.CHG.Basic, 2017/12/08, Modify for OPPO VID&PID */
+    #setprop vendor.usb.pid 0x2005
+#else
     setprop vendor.usb.pid 0x2766
-#endif /* ODM_WT_EDIT */
+#endif
 on property:sys.usb.config=rndis,adb && property:vendor.usb.acm_cnt=1 && \
 property:sys.usb.configfs=1
     setprop vendor.usb.pid 0x2010
@@ -515,12 +514,12 @@ property:vendor.usb.acm_enable=0 && property:sys.usb.configfs=1
 ### main function : mass_storage ###
 on property:sys.usb.config=mass_storage && property:vendor.usb.acm_cnt=0 && \
 property:sys.usb.configfs=1
-#ifndef ODM_WT_EDIT
-#/* Mingyao.Xie@ODM_WT.BSP.Storage.usb, 2019/10/09, Modify for monet VID&PID */
-    #setprop sys.usb.pid 0x2002
-#else /* ODM_WT_EDIT */
+#ifndef VENDOR_EDIT
+#/* Qiao.Hu@BSP.BaseDrv.CHG.Basic, 2017/12/08, Modify for OPPO VID&PID */
+    #setprop vendor.usb.pid 0x2002
+#else /* VENDOR_EDIT */
     setprop vendor.usb.pid 0x2768
-#endif /* ODM_WT_EDIT */
+#endif /* VENDOR_EDIT */
 on property:sys.usb.config=mass_storage && property:vendor.usb.acm_cnt=1 && \
 property:sys.usb.configfs=1
     setprop vendor.usb.pid 0x200F
@@ -550,12 +549,12 @@ property:sys.usb.configfs=1
 
 on property:sys.usb.config=mass_storage,adb && property:vendor.usb.acm_cnt=0 && \
 property:sys.usb.configfs=1
-#ifndef ODM_WT_EDIT
-#/* Mingyao.Xie@ODM_WT.BSP.Storage.usb, 2019/10/09, Modify for monet VID&PID */
-    #setprop sys.usb.pid 0x2003
-#else /* ODM_WT_EDIT */
+#ifndef VENDOR_EDIT
+#/* Qiao.Hu@BSP.BaseDrv.CHG.Basic, 2017/12/08, Modify for OPPO VID&PID */
+    #setprop vendor.usb.pid 0x2003
+#else
     setprop vendor.usb.pid 0x2767
-#endif /* ODM_WT_EDIT */
+#endif
 on property:sys.usb.config=mass_storage,adb && property:vendor.usb.acm_cnt=1 && \
 property:sys.usb.configfs=1
     setprop vendor.usb.pid 0x2006
@@ -663,14 +662,14 @@ property:vendor.usb.acm_enable=0 && property:sys.usb.configfs=1
     setprop sys.usb.state ${sys.usb.config}
 
 ### ACM APPEND SERIES ###
-on property:persist.vendor.radio.port_index=""
+on property:persist.vendor.radio.port_index=0 && property:sys.boot_completed=1
     setprop vendor.usb.acm_idx ""
     setprop vendor.usb.acm_cnt 0
     setprop vendor.usb.acm_enable 0
     setprop sys.usb.config none
     setprop sys.usb.config ${sys.usb.state}
 
-on property:persist.vendor.radio.port_index="1"
+on property:persist.vendor.radio.port_index=1 && property:sys.boot_completed=1
     setprop sys.usb.config acm_gs0
 on property:sys.usb.config=mass_storage,adb,acm
     setprop sys.usb.config acm_gs0
@@ -683,7 +682,7 @@ on property:sys.usb.config=acm_gs0
     setprop sys.usb.config ${sys.usb.state}
     setprop vendor.usb.acm_idx "1"
 
-on property:persist.vendor.radio.port_index="2"
+on property:persist.vendor.radio.port_index=2 && property:sys.boot_completed=1
     setprop sys.usb.config acm_gs1
 on property:sys.usb.config=acm_gs1
     setprop vendor.usb.acm_port0 1
@@ -694,7 +693,7 @@ on property:sys.usb.config=acm_gs1
     setprop sys.usb.config ${sys.usb.state}
     setprop vendor.usb.acm_idx "2"
 
-on property:persist.vendor.radio.port_index="3"
+on property:persist.vendor.radio.port_index=3 && property:sys.boot_completed=1
     setprop sys.usb.config acm_gs2
 on property:sys.usb.config=acm_third
     setprop sys.usb.config acm_gs2
@@ -707,7 +706,7 @@ on property:sys.usb.config=acm_gs2
     setprop sys.usb.config ${sys.usb.state}
     setprop vendor.usb.acm_idx "3"
 
-on property:persist.vendor.radio.port_index="4"
+on property:persist.vendor.radio.port_index=4 && property:sys.boot_completed=1
     setprop sys.usb.config acm_gs3
 on property:sys.usb.config=gs3
     setprop sys.usb.config acm_gs3
@@ -821,13 +820,8 @@ property:vendor.usb.clear=2 && property:sys.usb.configfs=1
     symlink /config/usb_gadget/g1/functions/acm.gs0 /config/usb_gadget/g1/configs/b.1/f3
     write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
     #setprop sys.usb.state ${sys.usb.config}
-    #setprop vendor.usb.pid 0x200A
-    #ifndef ODM_WT_EDIT
-    # Haibin1.Zhang@ODM_WT.BSP.Storage.usb, 2019/11/8, comment it to fix the vcom disapper when unplug and plug in ATM
+    setprop vendor.usb.pid 0x200A
     #setprop vendor.usb.clear 0
-    #else
-    #setprop vendor.usb.clear 0
-    #endif
     setprop vendor.usb.acm_idx "1"
 
 on property:sys.usb.config=atm_gs0gs3 && property:sys.usb.configfs=1
@@ -846,28 +840,23 @@ property:vendor.usb.clear=2 && property:sys.usb.configfs=1
     setprop vendor.usb.acm_cnt 2
     setprop vendor.usb.acm_enable 1
     write /sys/class/udc/musb-hdrc/device/saving 1
-    #ifndef ODM_WT_EDIT
-    # Haibin1.Zhang@ODM_WT.BSP.Storage.usb, 2019/11/2, Modify for monet VID&PID
-    #write /config/usb_gadget/g1/idProduct 0x2026
-    #symlink /config/usb_gadget/g1/functions/mtp.gs0 /config/usb_gadget/g1/configs/b.1/f1
-    #symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f2
-    #symlink /config/usb_gadget/g1/functions/acm.gs0 /config/usb_gadget/g1/configs/b.1/f3
-    #symlink /config/usb_gadget/g1/functions/acm.gs3 /config/usb_gadget/g1/configs/b.1/f4
-    #else
+#ifndef VENDOR_EDIT
+#Jianchao.Shi@PSW.BSP.CHG.Basic, 2018/11/02, sjc Modify for factory mode	
+#    write /config/usb_gadget/g1/idProduct 0x2026
+#    symlink /config/usb_gadget/g1/functions/mtp.gs0 /config/usb_gadget/g1/configs/b.1/f1
+#    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f2
+#    symlink /config/usb_gadget/g1/functions/acm.gs0 /config/usb_gadget/g1/configs/b.1/f3
+#    symlink /config/usb_gadget/g1/functions/acm.gs3 /config/usb_gadget/g1/configs/b.1/f4
+#else
     write /config/usb_gadget/g1/idProduct 0x200E
     symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1
     symlink /config/usb_gadget/g1/functions/acm.gs0 /config/usb_gadget/g1/configs/b.1/f2
     symlink /config/usb_gadget/g1/functions/acm.gs3 /config/usb_gadget/g1/configs/b.1/f3
-    #endif
+#endif
     write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
     #setprop sys.usb.state ${sys.usb.config}
-    #setprop vendor.usb.pid 0x2026
-    #ifndef ODM_WT_EDIT
-    # Haibin1.Zhang@ODM_WT.BSP.Storage.usb, 2019/11/8, comment it to fix the vcom disapper when unplug and plug in ATM
+    setprop vendor.usb.pid 0x2026
     #setprop vendor.usb.clear 0
-    #else
-    #setprop vendor.usb.clear 0
-    #endif
     setprop vendor.usb.acm_idx "1,4"
 
 ### CHARGING ###
@@ -959,17 +948,5 @@ on property:vendor.usb.printk=*
 
 on property:persist.vendor.usb.printk=*
 	setprop vendor.usb.printk ${persist.vendor.usb.printk}
-    
-# #ifdef ODM_WT_EDIT
-# Mingyao.Xie@ODM_WT.BSP.Storage.usb, 2019/10/07, Add for factory version serial number
-on set_serialnumber && property:ro.factory_mode=1
-	write /config/usb_gadget/g1/strings/0x409/serialnumber "0123456789ABCDEF"
-# #endif
-
-# #ifdef ODM_WT_EDIT
-# Mingyao.Xie@ODM_WT.BSP.Storage.usb, 2019/10/07, Add for factory version AT port
-on property:ro.factory_mode=1 && property:sys.boot_completed=1 && property:ro.boot.atm=disabled
-	setprop sys.usb.config acm_gs0
-# #endif
 
 ### PLATFORM VARIANT, cat $rc_file | grep write | sort | grep -vE "android0|usb20_phy" | awk '{print $2}' | uniq ###

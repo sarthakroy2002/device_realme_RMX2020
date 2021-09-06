@@ -34,6 +34,13 @@ service wmt_launcher /vendor/bin/wmt_launcher -p /vendor/firmware/
     user system
     group system
 
+# conninfra
+service conninfra_loader /vendor/bin/conninfra_loader
+    class core
+    user system
+    group system
+    oneshot
+
 # GPS
 #service mnld /vendor/bin/mnld
 #    class main
@@ -45,11 +52,6 @@ service wmt_launcher /vendor/bin/wmt_launcher -p /vendor/firmware/
 #    user system
 #    group gps system radio
 #    class main
-
-service wlan_assistant /vendor/bin/wlan_assistant
-    class main
-    user wifi
-    group system gps inet
 
 #
 # Connectivity related services (End)
@@ -63,6 +65,10 @@ service wlan_assistant /vendor/bin/wlan_assistant
 on boot
     insmod /vendor/lib/modules/wmt_drv.ko
 
+# load conninfra driver
+on boot
+    insmod /vendor/lib/modules/conninfra.ko
+
 # load bt_drv
 on property:vendor.connsys.driver.ready=yes
     insmod /vendor/lib/modules/bt_drv.ko
@@ -71,7 +77,6 @@ on property:vendor.connsys.driver.ready=yes
 on property:vendor.connsys.driver.ready=yes
     insmod /vendor/lib/modules/wmt_chrdev_wifi.ko
     insmod /vendor/lib/modules/wlan_drv_${ro.vendor.wlan.gen}.ko
-    start wlan_assistant
 
 # load fmradio_drv
 on property:vendor.connsys.driver.ready=yes

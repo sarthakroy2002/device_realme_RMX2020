@@ -23,9 +23,12 @@ on post-fs-data
     chmod 0660 /dev/m_situ_misc
     chmod 0660 /dev/m_step_c_misc
     chmod 0660 /dev/m_fusion_misc
+    chmod 0660 /dev/m_virtual_sensor_misc
     chmod 0660 /dev/m_bio_misc
     chmod 0660 /dev/biometric
     chmod 0660 /dev/sensorlist
+    chmod 0660 /dev/input/event4
+    chmod 0660 /dev/input/event5
 
     chown system system /dev/hwmsensor
     chown system system /dev/msensor
@@ -47,9 +50,12 @@ on post-fs-data
     chown system system /dev/m_situ_misc
     chown system system /dev/m_step_c_misc
     chown system system /dev/m_fusion_misc
+    chown system system /dev/m_virtual_sensor_misc
     chown system system /dev/m_bio_misc
     chown system system /dev/biometric
     chown system system /dev/sensorlist
+    chown system system /dev/input/event4
+    chown system system /dev/input/event5
 
     chmod 0660 /sys/class/sensor/m_acc_misc/accenablenodata
     chmod 0660 /sys/class/sensor/m_acc_misc/accactive
@@ -111,17 +117,28 @@ on post-fs-data
     chown system system /sys/class/sensor/m_ps_misc/psflush
     chown system system /sys/class/sensor/m_ps_misc/pscali
 
+    chmod 0660 /sys/class/oplus_sensor/m_virtual_sensor_misc/virtual_sensoractive
+    chmod 0660 /sys/class/oplus_sensor/m_virtual_sensor_misc/virtual_sensordelay
+    chmod 0660 /sys/class/oplus_sensor/m_virtual_sensor_misc/virtual_sensorbatch
+    chmod 0660 /sys/class/oplus_sensor/m_virtual_sensor_misc/virtual_sensorflush
+    chown system system /sys/class/oplus_sensor/m_virtual_sensor_misc/virtual_sensoractive
+    chown system system /sys/class/oplus_sensor/m_virtual_sensor_misc/virtual_sensordelay
+    chown system system /sys/class/oplus_sensor/m_virtual_sensor_misc/virtual_sensorbatch
+    chown system system /sys/class/oplus_sensor/m_virtual_sensor_misc/virtual_sensorflush
+
     chmod 0660 /sys/class/sensor/m_baro_misc/baroenablenodata
     chmod 0660 /sys/class/sensor/m_baro_misc/baroactive
     chmod 0660 /sys/class/sensor/m_baro_misc/barodelay
     chmod 0660 /sys/class/sensor/m_baro_misc/barobatch
     chmod 0660 /sys/class/sensor/m_baro_misc/baroflush
+    chmod 0660 /sys/class/sensor/m_baro_misc/barocali
     chown system system /sys/class/sensor/m_baro_misc/baroenablenodata
     chown system system /sys/class/sensor/m_baro_misc/baroactive
     chown system system /sys/class/sensor/m_baro_misc/barodelay
     chown system system /sys/class/sensor/m_baro_misc/barobatch
     chown system system /sys/class/sensor/m_baro_misc/baroflush
-
+    chown system system /sys/class/sensor/m_baro_misc/barocali
+    
     chmod 0660 /sys/class/sensor/m_hmdy_misc/hmdyenablenodata
     chmod 0660 /sys/class/sensor/m_hmdy_misc/hmdyactive
     chmod 0660 /sys/class/sensor/m_hmdy_misc/hmdydelay

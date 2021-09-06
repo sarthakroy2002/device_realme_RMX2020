@@ -20,11 +20,6 @@
 /dev/block/platform/bootdevice/by-name/md1dsp    0660    root    system
 /dev/block/platform/bootdevice/by-name/boot_para 0640    root    system
 
-#ifdef ODM_WT_EDIT
-#Kaitong.Zhang@ODM_WT.AD.ENGINEERINGMODE,2019/10/25,add for enginer hardwareinfo
-/dev/hardwareinfo         0660   root      system
-#endif
-
 # OTP
 /dev/otp                  0660   system     system
 /dev/block/platform/bootdevice/by-name/otp       0660    root    system
@@ -51,23 +46,18 @@
 /dev/fw_log_wifi          0660   wifi     wifi
 
 # FMRadio
-/dev/fm                   0660   system   system
-
-#ifdef ODM_WT_EDIT
-# Zengchao.Duan@ODM_WT.MM.AudioDriver.HAL, 2019/10/22, MonetX audio sia8108 bringup
-/dev/sia81xx_tuning_if    0666   system     audio
-#endif
+/dev/fm                   0660   system     system
 
 # NFC
-/dev/msr3110              0666   root       root
-/dev/mt6605               0660   nfc        radio
 /dev/st21nfc              0660   nfc        radio
+/dev/st54spi              0660   secure_element        secure_element
 
 # MTK BTIF driver
 /dev/btif                 0600   system     system
 
 # Trusty driver
 /dev/trusty-ipc-dev0      0660   system     system
+/dev/nebula-ipc-dev0      0660   system     system
 
 # RPMB (for Trusty)
 /dev/block/mmcblk0rpmb    0660   root       system
@@ -143,8 +133,11 @@
 /dev/hotknot              0660   root       system
 
 #hang_detect
-/dev/RT_Monitor           0600   system     system
-/dev/kick_powerkey        0600   system     system
+/dev/RT_Monitor           0660   system     system
+/dev/kick_powerkey        0660   system     system
 
 #MTK In-House TEE
 /dev/ttyACM0              0660   radio      radio
+
+# Resume-on-Reboot
+/dev/access-kregistry     0660   system     system
