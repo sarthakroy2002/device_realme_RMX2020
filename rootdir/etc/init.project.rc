@@ -28,27 +28,6 @@ on post-fs-data
     chmod 0660 /dev/BU64745GWZAF
     chown system camera /dev/BU64745GWZAF
 
-#ifdef ODM_WT_EDIT
-#/*Tian.Tian@ODM_WT.Camera.Driver, 2019/10/17, add for dual cam cali */
-    mkdir mnt/vendor/persist/camera 0777 system camera
-#endif
-
-#ifdef ODM_WT_EDIT
-#Tongxing.Liu@ODM_WT.BSP.Touchscreen.Base,2020/01/08,Modify firmware path permissions. */
-    mkdir /vendor/firmware/tp/19741 0666 root shell
-#endif
-
-#Flashlight
-# Xingyu.Liu@Camera.Driver, 2019/10/10, add for [wingtech ATO factory app camera]
-	chmod 0666 /sys/class/flashlightdrv/kd_camera_flashlight/flash1
-	chown media system /sys/class/flashlightdrv/kd_camera_flashlight/flash1
-
-	chmod 0666 /sys/class/flashlightdrv/kd_camera_flashlight/flash2
-	chown media system /sys/class/flashlightdrv/kd_camera_flashlight/flash2
-
-	chmod 0666 /sys/class/flashlightdrv/kd_camera_flashlight/flash3
-	chown media system /sys/class/flashlightdrv/kd_camera_flashlight/flash3
-
 #SMB
     chown system system /proc/smb/ScreenComm
     chmod 0660 /proc/smb/ScreenComm
@@ -71,4 +50,8 @@ service fuse_usbotg /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/
     class late_start
     disabled
 
-
+#ifdef OPLUS_FEATURE_CHG_BASIC
+# Yong.Liu@BSP.bootloader.bootflow, 2021/01/113, Add kernel log control for release verion
+on property:ro.build.release_type=true
+    write /proc/sys/kernel/printk  "6 6 1 7"
+#endif /* OPLUS_FEATURE_CHG_BASIC */

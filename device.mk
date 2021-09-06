@@ -383,8 +383,6 @@ PRODUCT_PACKAGES += \
     init.mt6768.usb.rc \
     init.wmt_drv.rc \
     init.wlan_drv.rc \
-    init.oppo.reserve.rc \
-    init.oppo.vendor.motor.rc \
     init.project.rc \
     init.sensor_1_0.rc \
     meta_init.connectivity.rc \
