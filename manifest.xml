@@ -1,47 +1,50 @@
 <!--
     Input:
-        manifest_gpunn_cpunn.xml
         manifest_target_level_q.xml
+        manifest_sensor_hidl_v2.xml
         manifest_audio.xml
         manifest_dsds.xml
         manifest_radioconfig.xml
+        manifest_pplagent.xml
         manifest_em.xml
         manifest_bgservice.xml
-        manifest_op_dsds.xml
         manifest_wifi.xml
+        manifest_hostapd.xml
         manifest_videotelephony.xml
+        manifest_secure_element_dsds.xml
+        manifest_mtkcodecservice.xml
         manifest_km4.xml
         manifest_tee.xml
         manifest_trustonic.xml
         manifest_log.xml
         manifest_mdmonitor.xml
+        manifest_aee.xml
         manifest_netdagent.xml
         manifest_pq.xml
+        manifest_mmservice.xml
         manifest_gnss.xml
-        manifest_oppo_nfc.xml
-        manifest.xml
         manifest.xml
 -->
-<manifest version="1.0" type="device" target-level="4">
+<manifest version="2.0" type="device" target-level="4">
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
-        <version>5.0</version>
+        <version>6.0</version>
         <interface>
             <name>IDevicesFactory</name>
             <instance>default</instance>
         </interface>
-        <fqname>@5.0::IDevicesFactory/default</fqname>
+        <fqname>@6.0::IDevicesFactory/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.audio.effect</name>
         <transport>hwbinder</transport>
-        <version>5.0</version>
+        <version>6.0</version>
         <interface>
             <name>IEffectsFactory</name>
             <instance>default</instance>
         </interface>
-        <fqname>@5.0::IEffectsFactory/default</fqname>
+        <fqname>@6.0::IEffectsFactory/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.bluetooth</name>
@@ -66,12 +69,12 @@
     <hal format="hidl">
         <name>android.hardware.camera.provider</name>
         <transport>hwbinder</transport>
-        <version>2.4</version>
+        <version>2.6</version>
         <interface>
             <name>ICameraProvider</name>
             <instance>internal/0</instance>
         </interface>
-        <fqname>@2.4::ICameraProvider/internal/0</fqname>
+        <fqname>@2.6::ICameraProvider/internal/0</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.gatekeeper</name>
@@ -87,23 +90,23 @@
         <name>android.hardware.gnss</name>
         <transport>hwbinder</transport>
         <version>1.1</version>
-        <version>2.0</version>
+        <version>2.1</version>
         <interface>
             <name>IGnss</name>
             <instance>default</instance>
         </interface>
         <fqname>@1.1::IGnss/default</fqname>
-        <fqname>@2.0::IGnss/default</fqname>
+        <fqname>@2.1::IGnss/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.graphics.allocator</name>
         <transport>hwbinder</transport>
-        <version>2.0</version>
+        <version>4.0</version>
         <interface>
             <name>IAllocator</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.0::IAllocator/default</fqname>
+        <fqname>@4.0::IAllocator/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.graphics.composer</name>
@@ -118,12 +121,12 @@
     <hal format="hidl">
         <name>android.hardware.graphics.mapper</name>
         <transport arch="32+64">passthrough</transport>
-        <version>2.1</version>
+        <version>4.0</version>
         <interface>
             <name>IMapper</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.1::IMapper/default</fqname>
+        <fqname>@4.0::IMapper/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.keymaster</name>
@@ -161,16 +164,6 @@
         <fqname>@1.0::IMemtrack/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.power</name>
-        <transport>hwbinder</transport>
-        <version>1.3</version>
-        <interface>
-            <name>IPower</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.3::IPower/default</fqname>
-    </hal>
-    <hal format="hidl" override="true">
         <name>android.hardware.radio</name>
         <transport>hwbinder</transport>
         <version>1.2</version>
@@ -200,14 +193,14 @@
         <fqname>@1.2::IRadio/slot2</fqname>
         <fqname>@1.2::ISap/slot1</fqname>
         <fqname>@1.2::ISap/slot2</fqname>
-        <fqname>@1.4::IRadio/em1</fqname>
-        <fqname>@1.4::IRadio/em2</fqname>
-        <fqname>@1.4::IRadio/imsAospSlot1</fqname>
-        <fqname>@1.4::IRadio/imsAospSlot2</fqname>
-        <fqname>@1.4::IRadio/se1</fqname>
-        <fqname>@1.4::IRadio/se2</fqname>
-        <fqname>@1.4::IRadio/slot1</fqname>
-        <fqname>@1.4::IRadio/slot2</fqname>
+        <fqname>@1.5::IRadio/em1</fqname>
+        <fqname>@1.5::IRadio/em2</fqname>
+        <fqname>@1.5::IRadio/imsAospSlot1</fqname>
+        <fqname>@1.5::IRadio/imsAospSlot2</fqname>
+        <fqname>@1.5::IRadio/se1</fqname>
+        <fqname>@1.5::IRadio/se2</fqname>
+        <fqname>@1.5::IRadio/slot1</fqname>
+        <fqname>@1.5::IRadio/slot2</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.radio.config</name>
@@ -230,6 +223,18 @@
         <fqname>@1.0::IDevice/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>android.hardware.secure_element</name>
+        <transport>hwbinder</transport>
+        <version>1.2</version>
+        <interface>
+            <name>ISecureElement</name>
+            <instance>SIM1</instance>
+            <instance>SIM2</instance>
+        </interface>
+        <fqname>@1.2::ISecureElement/SIM1</fqname>
+        <fqname>@1.2::ISecureElement/SIM2</fqname>
+    </hal>
+    <hal format="hidl">
         <name>android.hardware.sensors</name>
         <transport>hwbinder</transport>
         <version>2.0</version>
@@ -238,6 +243,18 @@
             <instance>default</instance>
         </interface>
         <fqname>@2.0::ISensors/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.thermal</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <version>2.0</version>
+        <interface>
+            <name>IThermal</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IThermal/default</fqname>
+        <fqname>@2.0::IThermal/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.usb</name>
@@ -250,87 +267,26 @@
         <fqname>@1.1::IUsb/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.vibrator</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IVibrator</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IVibrator/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.wifi</name>
-        <transport>hwbinder</transport>
-        <version>1.3</version>
-        <interface>
-            <name>IWifi</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.3::IWifi/default</fqname>
-        <fqname>@1.0::IWifi/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.wifi.hostapd</name>
+        <name>android.hardware.usb.gadget</name>
         <transport>hwbinder</transport>
         <version>1.1</version>
         <interface>
-            <name>IHostapd</name>
+            <name>IUsbGadget</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.1::IHostapd/default</fqname>
+        <fqname>@1.1::IUsbGadget/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.wifi.supplicant</name>
-        <transport>hwbinder</transport>
-        <version>1.2</version>
-        <interface>
-            <name>ISupplicant</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.2::ISupplicant/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.secure_element</name>
+        <name>vendor.mediatek.hardware.aee</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
-            <name>ISecureElement</name>
-            <instance>SIM1</instance>
-            <instance>SIM2</instance>
-        </interface>
-        <fqname>@1.0::ISecureElement/SIM1</fqname>
-        <fqname>@1.0::ISecureElement/SIM2</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>interfaces.factoryAta</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IFactoryAta</name>
+            <name>IAee</name>
+            <instance>AEE</instance>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IFactoryAta/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>interfaces.factoryInterface</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IFactoryInterface</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IFactoryInterface/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.egistec.hardware.fingerprint</name>
-        <transport>hwbinder</transport>
-        <version>4.0</version>
-        <interface>
-            <name>IBiometricsFingerprintRbs</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@4.0::IBiometricsFingerprintRbs/default</fqname>
+        <fqname>@1.0::IAee/AEE</fqname>
+        <fqname>@1.0::IAee/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.gpu</name>
@@ -352,6 +308,16 @@
         <fqname>@1.0::IAtcid/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.mediatek.hardware.bluetooth.audio</name>
+        <transport>hwbinder</transport>
+        <version>2.1</version>
+        <interface>
+            <name>IBluetoothAudioProvidersFactory</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@2.1::IBluetoothAudioProvidersFactory/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.mediatek.hardware.camera.bgservice</name>
         <transport>hwbinder</transport>
         <version>1.1</version>
@@ -360,6 +326,16 @@
             <instance>internal/0</instance>
         </interface>
         <fqname>@1.1::IBGService/internal/0</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.mediatek.hardware.camera.isphal</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IISPModule</name>
+            <instance>internal/0</instance>
+        </interface>
+        <fqname>@1.0::IISPModule/internal/0</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.dfps</name>
@@ -374,12 +350,12 @@
     <hal format="hidl">
         <name>vendor.mediatek.hardware.engineermode</name>
         <transport>hwbinder</transport>
-        <version>1.2</version>
+        <version>1.3</version>
         <interface>
             <name>IEmd</name>
             <instance>EmHidlServer</instance>
         </interface>
-        <fqname>@1.2::IEmd/EmHidlServer</fqname>
+        <fqname>@1.3::IEmd/EmHidlServer</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.keymaster_attestation</name>
@@ -448,12 +424,12 @@
     <hal format="hidl">
         <name>vendor.mediatek.hardware.mms</name>
         <transport>hwbinder</transport>
-        <version>1.3</version>
+        <version>1.5</version>
         <interface>
             <name>IMms</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.3::IMms/default</fqname>
+        <fqname>@1.5::IMms/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.mtkcodecservice</name>
@@ -468,7 +444,7 @@
     <hal format="hidl">
         <name>vendor.mediatek.hardware.mtkpower</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.1</version>
         <interface>
             <name>IMtkPerf</name>
             <instance>default</instance>
@@ -477,13 +453,13 @@
             <name>IMtkPower</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IMtkPerf/default</fqname>
-        <fqname>@1.0::IMtkPower/default</fqname>
+        <fqname>@1.1::IMtkPerf/default</fqname>
+        <fqname>@1.1::IMtkPower/default</fqname>
     </hal>
-    <hal format="hidl" override="true">
+    <hal format="hidl">
         <name>vendor.mediatek.hardware.mtkradioex</name>
         <transport>hwbinder</transport>
-        <version>1.3</version>
+        <version>2.0</version>
         <interface>
             <name>IMtkRadioEx</name>
             <instance>imsSlot1</instance>
@@ -500,21 +476,25 @@
             <instance>mtkSe2</instance>
             <instance>mtkSlot1</instance>
             <instance>mtkSlot2</instance>
+            <instance>mtkSmartRatSwitch1</instance>
+            <instance>mtkSmartRatSwitch2</instance>
         </interface>
-        <fqname>@1.3::IMtkRadioEx/imsSlot1</fqname>
-        <fqname>@1.3::IMtkRadioEx/imsSlot2</fqname>
-        <fqname>@1.3::IMtkRadioEx/mtkAssist1</fqname>
-        <fqname>@1.3::IMtkRadioEx/mtkAssist2</fqname>
-        <fqname>@1.3::IMtkRadioEx/mtkCap1</fqname>
-        <fqname>@1.3::IMtkRadioEx/mtkCap2</fqname>
-        <fqname>@1.3::IMtkRadioEx/mtkEm1</fqname>
-        <fqname>@1.3::IMtkRadioEx/mtkEm2</fqname>
-        <fqname>@1.3::IMtkRadioEx/mtkRcs1</fqname>
-        <fqname>@1.3::IMtkRadioEx/mtkRcs2</fqname>
-        <fqname>@1.3::IMtkRadioEx/mtkSe1</fqname>
-        <fqname>@1.3::IMtkRadioEx/mtkSe2</fqname>
-        <fqname>@1.3::IMtkRadioEx/mtkSlot1</fqname>
-        <fqname>@1.3::IMtkRadioEx/mtkSlot2</fqname>
+        <fqname>@2.0::IMtkRadioEx/imsSlot1</fqname>
+        <fqname>@2.0::IMtkRadioEx/imsSlot2</fqname>
+        <fqname>@2.0::IMtkRadioEx/mtkAssist1</fqname>
+        <fqname>@2.0::IMtkRadioEx/mtkAssist2</fqname>
+        <fqname>@2.0::IMtkRadioEx/mtkCap1</fqname>
+        <fqname>@2.0::IMtkRadioEx/mtkCap2</fqname>
+        <fqname>@2.0::IMtkRadioEx/mtkEm1</fqname>
+        <fqname>@2.0::IMtkRadioEx/mtkEm2</fqname>
+        <fqname>@2.0::IMtkRadioEx/mtkRcs1</fqname>
+        <fqname>@2.0::IMtkRadioEx/mtkRcs2</fqname>
+        <fqname>@2.0::IMtkRadioEx/mtkSe1</fqname>
+        <fqname>@2.0::IMtkRadioEx/mtkSe2</fqname>
+        <fqname>@2.0::IMtkRadioEx/mtkSlot1</fqname>
+        <fqname>@2.0::IMtkRadioEx/mtkSlot2</fqname>
+        <fqname>@2.0::IMtkRadioEx/mtkSmartRatSwitch1</fqname>
+        <fqname>@2.0::IMtkRadioEx/mtkSmartRatSwitch2</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.netdagent</name>
@@ -537,40 +517,24 @@
         <fqname>@1.1::INvram/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.mediatek.hardware.power</name>
+        <name>vendor.mediatek.hardware.pplagent</name>
         <transport>hwbinder</transport>
-        <version>2.1</version>
+        <version>1.0</version>
         <interface>
-            <name>IPower</name>
+            <name>IPplAgent</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.1::IPower/default</fqname>
+        <fqname>@1.0::IPplAgent/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.pq</name>
         <transport>hwbinder</transport>
-        <version>2.3</version>
+        <version>2.6</version>
         <interface>
             <name>IPictureQuality</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.3::IPictureQuality/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.mediatek.hardware.radio_op</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>IRadioOp</name>
-            <instance>OpImsRILd1</instance>
-            <instance>OpImsRILd2</instance>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
-        </interface>
-        <fqname>@2.0::IRadioOp/OpImsRILd1</fqname>
-        <fqname>@2.0::IRadioOp/OpImsRILd2</fqname>
-        <fqname>@2.0::IRadioOp/slot1</fqname>
-        <fqname>@2.0::IRadioOp/slot2</fqname>
+        <fqname>@2.6::IPictureQuality/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.videotelephony</name>
@@ -603,27 +567,17 @@
         <fqname>@2.0::ISupplicant/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.oppo.engnative.engineer</name>
+        <name>vendor.oplus.hardware.biometrics.face</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
-            <name>IEngineer</name>
+            <name>IBiometricsFace</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IEngineer/default</fqname>
+        <fqname>@1.0::IBiometricsFace/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.oppo.engnative.engsensor</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IEngSensor</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IEngSensor/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.oppo.hardware.biometrics.fingerprint</name>
+        <name>vendor.oplus.hardware.biometrics.fingerprint</name>
         <transport>hwbinder</transport>
         <version>2.1</version>
         <interface>
@@ -633,17 +587,17 @@
         <fqname>@2.1::IBiometricsFingerprint/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.oppo.hardware.camera.slogan</name>
+        <name>vendor.oplus.hardware.biometrics.fingerprintpay</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
-            <name>ISlogan</name>
-            <instance>internal/0</instance>
+            <name>IFingerprintPay</name>
+            <instance>default</instance>
         </interface>
-        <fqname>@1.0::ISlogan/internal/0</fqname>
+        <fqname>@1.0::IFingerprintPay/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.oppo.hardware.cryptoeng</name>
+        <name>vendor.oplus.hardware.cryptoeng</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
@@ -653,54 +607,14 @@
         <fqname>@1.0::ICryptoeng/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.oppo.hardware.hypnus</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IHypnusUtil</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IHypnusUtil/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.oppo.hardware.wifi.hostapd</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IOppoHostapd</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IOppoHostapd/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.soter</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISoter</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ISoter/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.silead.hardware.fingerprintext</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISileadFingerprint</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ISileadFingerprint/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.trustonic.tee</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.1</version>
         <interface>
             <name>ITee</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::ITee/default</fqname>
+        <fqname>@1.1::ITee/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.trustonic.tee.tui</name>
@@ -711,15 +625,5 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::ITui/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.trustonic.teeregistry</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ITeeRegistry</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ITeeRegistry/default</fqname>
     </hal>
 </manifest>
