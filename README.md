@@ -19,11 +19,6 @@ Rear Camera  | Dual : 13 MP; 2MP(depth); 2MP(Macro- only Narzo 10A and C3 Global
 Front Camera | Single: 5 MP
 Release Month | 2020, February 14 | 2020, May 22 
 
-
-Patches needed for building:
-
-1. Needed to boot: https://github.com/PixelExperience/external_selinux/commit/9d6ebe89430ffe0aeeb156f572b2a810f9dc98cc
-
 Repos needed for building:
 
 1. https://github.com/Realme-G70-Series/android_packages_apps_RealmeParts
