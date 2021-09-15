@@ -1067,10 +1067,6 @@ on property:sys.boot_completed=1 && property:ro.boot.atm=enable
 on property:vendor.mtk.md1.status=reset
     setprop persist.vendor.atm.mdmode normal
 
-# FPSGO FBT Game
-on boot
-    insmod /vendor/lib/modules/fpsgo.ko
-
 #ifdef ODM_WT_EDIT
 # Jianmin.Niu@ODM_WT.BSP.Storage, 2019/12/24, Add for gsi CtsOsTestCases
 on property:ro.vendor.gsi.build.flavor=*
