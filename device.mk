@@ -19,6 +19,9 @@ DEVICE_PATH := device/realme/RMX2020
 # Installs gsi keys into ramdisk, to boot a GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
+# Installs gsi keys into ramdisk, to boot a developer GSI with verified boot.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
+
 # Call proprietary blob setup
 $(call inherit-product, vendor/realme/RMX2020/RMX2020-vendor.mk)
 
