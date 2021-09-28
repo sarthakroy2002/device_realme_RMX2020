@@ -124,7 +124,7 @@ on fs
     write /sys/kernel/mm/swap/vma_ra_enabled false
     write /sys/block/zram0/disksize 2147483648
 
-    swapon_all /vendor/etc/fstab.enableswap
+    swapon_all /vendor/etc/fstab.mt6768
 
 on post-fs
     write /proc/bootprof "INIT:post-fs"
