@@ -955,39 +955,6 @@ on property:sys.boot_completed=1
     # switch to sched-dvfs
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor "schedplus"
     write /sys/devices/system/cpu/cpufreq/policy4/scaling_governor "schedplus"
-#ifdef VENDOR_EDIT
-#Qiang.shao@PSW.AD.OppoFeature.CommonSoft.1181235, 2016/07/30, Add for self_init domain to access block_device for init prop
-service prop-adap-core /vendor/bin/self-init core
-    class core
-    user root
-    oneshot
-    seclabel u:r:rutilsdaemon:s0
-service prop-adap-main /vendor/bin/self-init main
-    class main
-    user root
-    oneshot
-    seclabel u:r:rutilsdaemon:s0
-service media-resource-reconciliation /vendor/bin/self-init reconcile_media_resource
-    user root
-    oneshot
-    disabled
-    seclabel u:r:rutilsdaemon:s0
-service prop-adap-core-gsi /vendor/bin/self-init gsicore
-    class core
-    user root
-    group root system radio
-    oneshot
-
-service prop-adap-main-gsi /vendor/bin/self-init gsimain
-    class main
-    user root
-    group root system radio
-    oneshot
-
-
-on property:ro.oppo.reconcile_media_resource=1
-    start media-resource-reconciliation
-#endif
 
 #service dpfd /vendor/bin/dpfd
 #	user root
