@@ -3,18 +3,11 @@
 import vendor/etc/init/hw/init.connectivity.rc
 import vendor/etc/init/hw/init.mt6768.usb.rc
 import /vendor/etc/init/hw/init.project.rc
-import /FWUpgradeInit.rc
 import vendor/etc/init/hw/init.volte.rc
 import vendor/etc/init/hw/init.mal.rc
 import vendor/etc/init/hw/init.sensor_1_0.rc
 import /vendor/etc/init/hw/init.stnfc.rc
 import /system/etc/init/hw/init.stnfc.rc
-#ifdef VENDOR_EDIT
-#Long.Liu@BSP.Fingerprint.Basic 2018/10/16 Add for fingerprint
-import /init.oppo.fingerprints.rc
-import /init.oppo.face.rc
-import /init.oppo.seccommon.rc
-#endif
 
 # init.modem.rc must be the LAST rc file because vold.post_fs_data_done is set in it
 import vendor/etc/init/hw/init.modem.rc
@@ -1034,11 +1027,6 @@ on property:sys.boot_completed=1 && property:ro.boot.atm=enable
 on property:vendor.mtk.md1.status=reset
     setprop persist.vendor.atm.mdmode normal
 
-#ifdef ODM_WT_EDIT
-# Jianmin.Niu@ODM_WT.BSP.Storage, 2019/12/24, Add for gsi CtsOsTestCases
-on property:ro.vendor.gsi.build.flavor=*
-    restorecon /dev/loop-control
-#endif /*ODM_WT_EDIT*/
 
 service charger /bin/chargeonlymode
     class charger
