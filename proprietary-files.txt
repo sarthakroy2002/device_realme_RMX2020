@@ -439,8 +439,7 @@ vendor/lib64/monetx_ofilm_front_ov16a1q_tuning.so
 vendor/lib64/monetx_shengtai_wide_ov8856_tuning.so
 vendor/lib64/monetx_truly_main_s5kgm1sp_tuning.so
 
-
-# Charger - From From Redmi/begonia/begonia:11/RP1A.200720.011/21.4.28:user/release-keys
+# Charger - From Redmi/merlin/merlin:11/RP1A.200720.011/V12.5.1.0.RJOMIXM:user/release-keys
 bin/charger:bin/chargeonlymode|bb74c36cee72b1f2e2c8090eb6f21352eba8e83f
 
 # DRM (Hardware) - from alps/vnd_oppo6769/oppo6769:11/RP1A.200720.011/1607914664672:user/release-keys
