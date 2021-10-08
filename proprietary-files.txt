@@ -3,13 +3,13 @@
 # ADSP
 vendor/lib64/libadsprpc.so
 
-# AEE - from alps/vnd_oppo6769/oppo6769:11/RP1A.200720.011/1607914664672:user/release-keys
-vendor/lib/libaedv.so|890379be0a71e647b8c8f885e8c7288fb3d849ba
-vendor/lib/libladder.so|b3161af9c1ae115b467ed6d210355348717145c8
-vendor/lib/libudf.so|0ff2e45766f5ff54a7b975afd69f13ec5d20cd81
-vendor/lib64/libaedv.so|f011b65f0638c0305e7f113b5d6109a162c1a061
-vendor/lib64/libladder.so|47ab171fde2026c25c0c63f0af9bfcee3fcd74a9
-vendor/lib64/libudf.so|6e43a3069e9f36e188433a03906800b73f429e24
+# AEE - from TECNO/CG6-OP/TECNO-CG6:S/SPB1.210331.013/UVW-210513V149:user/release-keys
+vendor/lib/libaedv.so
+vendor/lib/libladder.so
+vendor/lib/libudf.so
+vendor/lib64/libaedv.so
+vendor/lib64/libladder.so
+vendor/lib64/libudf.so
 
 # Audio
 vendor/etc/dirac/19741/diracmobile.config
