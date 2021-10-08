@@ -358,7 +358,7 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/seccomp/mediaextractor.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy \
     $(DEVICE_PATH)/configs/seccomp/mediaswcodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaswcodec.policy
 
-#Secure element
+# Secure element
 PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.0 \
     android.hardware.secure_element@1.0.vendor
@@ -398,6 +398,11 @@ PRODUCT_PACKAGES += \
 # TinyXML
 PRODUCT_PACKAGES += \
     libtinyxml
+
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0 \
+    android.hardware.usb@1.0.vendor
 
 # Vibrator
 PRODUCT_PACKAGES += \
