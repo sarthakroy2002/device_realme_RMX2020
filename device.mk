@@ -91,6 +91,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libldacBT_dec \
     libldacBT_bco \
+    android.hardware.bluetooth@1.0.vendor \
     libbtconfigstore
 
 # Configstore
