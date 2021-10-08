@@ -94,6 +94,10 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0.vendor \
     libbtconfigstore
 
+# Camera
+PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4
+
 # Configstore
 PRODUCT_PACKAGES += \
     android.hardware.configstore@1.1-service
