@@ -57,6 +57,10 @@ PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.2 \
     android.hardware.soundtrigger@2.2.vendor \
     android.hardware.bluetooth.audio@2.0-impl \
+    android.hardware.broadcastradio@1.0 \
+    android.hardware.broadcastradio@1.0.vendor \
+    android.hardware.broadcastradio@1.1 \
+    android.hardware.broadcastradio@1.1.vendor \
     audio.bluetooth.default \
     audio.r_submix.default \
     audio.usb.default \
