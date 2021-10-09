@@ -97,7 +97,8 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4
+    android.hardware.camera.provider@2.4 \
+    android.hardware.camera.provider@2.4.vendor
 
 # Configstore
 PRODUCT_PACKAGES += \
