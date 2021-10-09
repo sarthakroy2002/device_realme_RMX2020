@@ -305,7 +305,9 @@ PRODUCT_COPY_FILES += \
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.0 \
-    android.hardware.power@1.0.vendor
+    android.hardware.power@1.0.vendor \
+    android.hardware.power@1.1 \
+    android.hardware.power@1.1.vendor
 
 # Properties
 -include $(DEVICE_PATH)/vendor_prop.mk
