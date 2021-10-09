@@ -223,7 +223,9 @@ PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.0 \
     android.hardware.neuralnetworks@1.0.vendor \
     android.hardware.neuralnetworks@1.1 \
-    android.hardware.neuralnetworks@1.1.vendor
+    android.hardware.neuralnetworks@1.1.vendor \
+    android.hardware.neuralnetworks@1.2 \
+    android.hardware.neuralnetworks@1.2.vendor
 
 # NFC
 PRODUCT_PACKAGES += \
