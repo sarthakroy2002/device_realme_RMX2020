@@ -492,6 +492,14 @@ PRODUCT_PACKAGES += \
     WifiOverlay
 
 PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0 \
+    android.hardware.wifi@1.0.vendor \
+    android.hardware.wifi@1.1 \
+    android.hardware.wifi@1.1.vendor \
+    android.hardware.wifi@1.2 \
+    android.hardware.wifi@1.2.vendor \
+    android.hardware.wifi@1.3 \
+    android.hardware.wifi@1.3.vendor \
     libkeystore-engine-wifi-hidl \
     libkeystore-wifi-hidl \
 
