@@ -506,6 +506,10 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi.supplicant@1.1.vendor \
     android.hardware.wifi.supplicant@1.2 \
     android.hardware.wifi.supplicant@1.2.vendor \
+    android.hardware.wifi.hostapd@1.0 \
+    android.hardware.wifi.hostapd@1.0.vendor \
+    android.hardware.wifi.hostapd@1.1 \
+    android.hardware.wifi.hostapd@1.1.vendor \
     libkeystore-engine-wifi-hidl \
     libkeystore-wifi-hidl \
 
