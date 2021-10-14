@@ -18,9 +18,11 @@ cc_library_static {
     name: "libinit_RMX2020",
     recovery_available: true,
     srcs: ["init_RMX2020.cpp"],
-    shared_libs: ["libbase"],
+    whole_static_libs: ["libbase"],
+    header_libs: [
+        "libbase_headers",
+    ],
     include_dirs: [
-        "system/core/base/include",
         "system/core/init"
     ]
 }
