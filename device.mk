@@ -65,7 +65,7 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     audio.r_submix.default \
     audio.usb.default \
-    libaudiofondation.vendor \
+    libaudiofoundation.vendor \
     libtinycompress \
     libtinyxml \
     libalsautils \
@@ -106,6 +106,10 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    android.hardware.camera.device@3.2.vendor \
+    android.hardware.camera.device@3.3.vendor \
+    android.hardware.camera.device@3.4.vendor \
+    android.hardware.camera.device@3.5.vendor \
     android.hardware.camera.provider@2.4 \
     android.hardware.camera.provider@2.4.vendor
 
