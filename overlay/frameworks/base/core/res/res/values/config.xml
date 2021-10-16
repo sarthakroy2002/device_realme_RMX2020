@@ -267,12 +267,6 @@
     <!-- Boolean indicating whether the wifi chipset has 5GHz frequency band support -->
     <bool translatable="false" name="config_wifi5ghzSupport">true</bool>
  
-    <!-- Define Rounded Corner -->
-    <dimen name="rounded_corner_radius_bottom">128.0px</dimen>
-    <dimen name="rounded_corner_radius_bottom_adjustment">46.0px</dimen>
-    <dimen name="rounded_corner_radius_top">144.0px</dimen>
-    <dimen name="rounded_corner_radius_top_adjustment">79.0px</dimen>
-
     <!-- Height of the status bar -->
      <dimen name="status_bar_height_portrait">32.0dip</dimen>
 
