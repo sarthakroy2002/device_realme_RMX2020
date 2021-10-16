@@ -50,6 +50,7 @@ TARGET_SCREEN_WIDTH := 720
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
+    libwebrtc_audio_preprocessing \
     android.hardware.audio@5.0 \
     android.hardware.audio@5.0.vendor \
     android.hardware.audio.effect@5.0-impl \
