@@ -94,7 +94,7 @@ PRODUCT_PACKAGES += \
 
 # Configstore
 PRODUCT_PACKAGES += \
-    android.hardware.configstore@1.1-service
+    disable_configstore
 
 # Display
 PRODUCT_PACKAGES += \
