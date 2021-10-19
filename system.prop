@@ -82,6 +82,9 @@ ro.surface_flinger.vsync_event_phase_offset_ns=2000000
 ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
 ro.surface_flinger.running_without_sync_framework=true
 
+# System
+persist.sys.binary_xml=false
+
 # USB 
 ro.sys.usb.mtp.whql.enable=0
 ro.sys.usb.storage.type=mtp
