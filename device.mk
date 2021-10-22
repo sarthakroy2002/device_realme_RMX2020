@@ -51,9 +51,9 @@ TARGET_SCREEN_WIDTH := 720
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
     libwebrtc_audio_preprocessing \
-    android.hardware.audio@5.0 \
-    android.hardware.audio@5.0.vendor \
-    android.hardware.audio.effect@5.0-impl \
+    android.hardware.audio@6.0 \
+    android.hardware.audio@6.0.vendor \
+    android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.common@6.0-util \
     android.hardware.soundtrigger@2.2 \
     android.hardware.soundtrigger@2.2.vendor \
@@ -62,10 +62,15 @@ PRODUCT_PACKAGES += \
     android.hardware.broadcastradio@1.0.vendor \
     android.hardware.broadcastradio@1.1 \
     android.hardware.broadcastradio@1.1.vendor \
+    audio_policy.stub \
     audio.bluetooth.default \
     audio.r_submix.default \
     audio.usb.default \
     libaudiofoundation.vendor \
+    libaudiofoundation \
+    libaudiopreprocessing \
+    libbundlewrapper \
+    libdownmix \
     libtinycompress \
     libtinyxml \
     libalsautils \
@@ -119,12 +124,9 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.allocator@2.0-impl \
-    android.hardware.graphics.allocator@2.0-service \
-    android.hardware.graphics.common@1.2 \
     android.hardware.graphics.composer@2.1-impl \
     android.hardware.graphics.composer@2.1-service \
-    android.hardware.graphics.mapper@2.0-impl-2.1 \
+    libdrm.vendor \
     libvulkan
 
 # DRM
@@ -240,6 +242,10 @@ PRODUCT_BOOT_JARS += \
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml
+
+# Net
+PRODUCT_PACKAGES += \
+    libpcap.vendor
 
 # Neutral Networks
 PRODUCT_PACKAGES += \
@@ -419,8 +425,8 @@ PRODUCT_COPY_FILES += \
 
 # Secure element
 PRODUCT_PACKAGES += \
-    android.hardware.secure_element@1.0 \
-    android.hardware.secure_element@1.0.vendor
+    android.hardware.secure_element@1.2 \
+    android.hardware.secure_element@1.2.vendor
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -462,6 +468,8 @@ PRODUCT_PACKAGES += \
 
 # Thermal
 PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0-impl \
+    android.hardware.thermal@2.0-service \
     android.hardware.thermal@1.0-impl \
     android.hardware.thermal@1.0-service
 
