@@ -1,1 +1,6 @@
+# Allow init to execute vendor file
 allow init vendor_file:file { execute execute_no_trans };
+
+# Allow init to write touchpanel nodes
+allow init proc:file { open write };
+allow init proc_tp:file rw_file_perms;
