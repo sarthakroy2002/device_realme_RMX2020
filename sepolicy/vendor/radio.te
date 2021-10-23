@@ -3,3 +3,7 @@ add_service(radio, mwis_service)
 add_service(radio, mtk_ims_service)
 add_service(radio, wfo_service)
 add_service(radio, vtservice)
+
+# IMS needs to read settings
+allow radio system_app_data_file:dir r_dir_perms;
+allow radio system_app_data_file:file r_file_perms;
