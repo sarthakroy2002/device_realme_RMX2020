@@ -1,0 +1,1 @@
+genfscon sysfs /module/primary_display/parameters u:object_r:sysfs_fps:s0
