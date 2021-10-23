@@ -1,0 +1,2 @@
+allow untrusted_app_29 proc:file read;
+allow untrusted_app_29 vendor_file:file getattr;
