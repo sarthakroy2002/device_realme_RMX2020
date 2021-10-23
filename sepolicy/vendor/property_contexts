@@ -3,3 +3,6 @@ persist.vendor.camera.privapp.list    u:object_r:exported_default_prop:s0
 
 # Dirac
 persist.audio.dirac                           u:object_r:dirac_prop:s0
+
+# RILD
+ro.telephony.default_network u:object_r:radio_prop:s0
