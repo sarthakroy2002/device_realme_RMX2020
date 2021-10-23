@@ -1,2 +1,3 @@
+type proc_tp, fs_type, proc_type;
 type sysfs_light, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_graphics, sysfs_type, fs_type, mlstrustedobject;
