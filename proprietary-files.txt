@@ -973,10 +973,6 @@ vendor/app/mcRegistry/09190000000000000000000000000000.tlbin
 vendor/app/mcRegistry/9073f03a9618383bb1856eb3f990babd.drbin
 vendor/app/mcRegistry/9073f03a9618383bb1856eb3f990babd.tlbin
 vendor/app/mcRegistry/98fb95bcb4bf42d26473eae48690d7ea.tabin
-vendor/bin/aeev
-vendor/bin/aee_aedv
-vendor/bin/aee_aedv64
-vendor/bin/aee_dumpstatev
 vendor/bin/applypatch
 vendor/bin/atcid
 vendor/bin/audiocmdservice_atci
@@ -1145,8 +1141,6 @@ vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Test_SIM1.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Test_SIM2.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Verizon_Wireless.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Vodafone.xml
-vendor/etc/init/aee_aedv.rc
-vendor/etc/init/aee_aedv64.rc
 vendor/etc/init/atcid.rc
 vendor/etc/init/audiocmdservice_atci.rc
 vendor/etc/init/bootperf.rc
