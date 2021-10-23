@@ -1,5 +1,8 @@
 # FPS Info
 /sys/module/primary_display/parameters/display_framerate_main      u:object_r:sysfs_fpsinfo:s0
 
+# Same Process HAL
+/(vendor|system/vendor)/lib(64)?/libunwindstack-v29\.so  u:object_r:same_process_hal_file:s0
+
 # Light
 /vendor/bin/hw/android\.hardware\.light@2\.0-service\.RMX2020      u:object_r:hal_light_default_exec:s0
