@@ -1,6 +1,9 @@
 # Same Process HAL
 /(vendor|system/vendor)/lib(64)?/libunwindstack-v29\.so  u:object_r:same_process_hal_file:s0
 
+# NFC
+/dev/pn553 u:object_r:nfc_device:s0
+
 # Sensor
 /(vendor|system/vendor)/bin/hw/android\.hardware\.sensors@1\.0-service\.mediatek                     u:object_r:hal_sensors_default_exec:s0
 
