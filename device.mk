@@ -161,8 +161,8 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.0 \
-    android.hardware.gnss@2.0.vendor \
+    android.hardware.gnss@2.1 \
+    android.hardware.gnss@2.1.vendor \
 
 # Health
 PRODUCT_PACKAGES += \
