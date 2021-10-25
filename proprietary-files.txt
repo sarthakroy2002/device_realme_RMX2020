@@ -19,6 +19,7 @@ vendor/lib/libaudio_engineer_test.so
 vendor/lib/libaudio_param_parser-vnd.so
 vendor/lib/liboplus_audio_config.so
 vendor/lib/libtinycompress.so
+vendor/lib/libtinyxml.so
 vendor/lib/soundfx/libaudiopreprocessing.so
 vendor/lib/soundfx/libaudiopreprocessing_mtk.so
 vendor/lib64/libaudiocompensationfilterc.so
@@ -36,6 +37,7 @@ vendor/lib64/libaudio_engineer_test.so
 vendor/lib64/libaudio_param_parser-vnd.so
 vendor/lib64/liboplus_audio_config.so
 vendor/lib64/libtinycompress.so
+vendor/lib64/libtinyxml.so
 vendor/lib64/soundfx/libaudiopreprocessing.so
 vendor/lib64/soundfx/libaudiopreprocessing_mtk.so
 
