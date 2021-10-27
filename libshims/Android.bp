@@ -1,9 +1,3 @@
-java_library {
-    name: "ImsServiceBase",
-    installable: true,
-    srcs: ["ImsServiceBase.java"],
-}
-
 cc_library_shared {
     name: "libshim_vtservice",
     srcs: ["libshim_vtservice.cpp"],
