@@ -57,6 +57,8 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.common@6.0-util \
     android.hardware.audio.common-util.vendor \
     android.hardware.audio.common@6.0-util.vendor \
+    android.hardware.audio@6.0-util \
+    android.hardware.audio@6.0-util.vendor \
     android.hardware.soundtrigger@2.3 \
     android.hardware.soundtrigger@2.3.vendor \
     android.hardware.bluetooth.audio@2.0-impl \
