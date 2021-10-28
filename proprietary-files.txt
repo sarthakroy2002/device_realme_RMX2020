@@ -614,7 +614,6 @@ vendor/lib64/hw/lights.mt6768.so
 
 # Media
 vendor/lib/libstagefright_soft_mpeg2dec.so
-vendor/lib/vndk/libstagefright_omx.so
 
 # Media (Hardware)
 vendor/lib/libstagefrighthw.so
