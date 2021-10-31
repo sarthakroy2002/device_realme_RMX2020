@@ -473,8 +473,7 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.0-impl \
-    android.hardware.vibrator@1.0-service
+    android.hardware.vibrator-V1-ndk_platform.vendor
 
 # Video Telephony
 PRODUCT_PACKAGES += \
