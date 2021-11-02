@@ -30,6 +30,7 @@ vendor/lib/libaudio_engineer_test.so
 vendor/lib/libaudio_param_parser-vnd.so
 vendor/lib/libDiracAPI_SHARED.so
 vendor/lib/libtinycompress.so
+vendor/lib/libwebrtc_audio_preprocessing.so
 vendor/lib/soundfx/libaudiopreprocessing.so
 vendor/lib/soundfx/libdirac.so
 vendor/lib64/libaudiocompensationfilterc.so
@@ -45,6 +46,7 @@ vendor/lib64/libaudiotoolkit_vendor.so
 vendor/lib64/libaudio_engineer_test.so
 vendor/lib64/libaudio_param_parser-vnd.so
 vendor/lib64/libtinycompress.so
+vendor/lib64/libwebrtc_audio_preprocessing.so
 vendor/lib64/soundfx/libaudiopreprocessing.so
 
 # Audio-Hardware
