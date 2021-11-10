@@ -9,7 +9,9 @@ vendor/lib/libladder.so|b3161af9c1ae115b467ed6d210355348717145c8
 vendor/lib/libudf.so|0ff2e45766f5ff54a7b975afd69f13ec5d20cd81
 vendor/lib64/libaedv.so|f011b65f0638c0305e7f113b5d6109a162c1a061
 vendor/lib64/libladder.so|47ab171fde2026c25c0c63f0af9bfcee3fcd74a9
-vendor/lib64/libudf.so|6e43a3069e9f36e188433a03906800b73f429e24
+
+# AEE - from Redmi/ares/ares:12/SP1A.210812.016/21.11.8:user/release-keys
+vendor/lib64/libudf.so|f57a4f63592b62c2de72b377021327756fc5fac1
 
 # Audio
 vendor/etc/dirac/19741/diracmobile.config
