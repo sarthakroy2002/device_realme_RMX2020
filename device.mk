@@ -446,13 +446,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libshim_vtservice
 
-# Telephony
-PRODUCT_BOOT_JARS += \
-    ImsServiceBase
-
-PRODUCT_PACKAGES += \
-    ImsServiceBase
-
 # Text classifier
 PRODUCT_PACKAGES += \
     libtextclassifier_hash.vendor
