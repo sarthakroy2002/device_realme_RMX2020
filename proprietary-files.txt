@@ -200,8 +200,8 @@ vendor/lib64/libbluetooth_relayer.so
 vendor/lib64/libbt-vendor.so
 
 # Bluetooth-AptX
-lib64/libaptXHD_encoder.so
-lib64/libaptX_encoder.so
+lib64/libaptXHD_encoder.so:system_ext/lib64/libaptXHD_encoder.so
+lib64/libaptX_encoder.so:system_ext/lib64/libaptX_encoder.so
 
 # CDSP
 vendor/lib64/libcdsprpc.so
