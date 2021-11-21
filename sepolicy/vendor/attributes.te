@@ -1,0 +1,4 @@
+# Cryptoeng
+attribute hal_cryptoeng;
+attribute hal_cryptoeng_client;
+attribute hal_cryptoeng_server;

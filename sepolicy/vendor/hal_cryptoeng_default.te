@@ -1,0 +1,8 @@
+type hal_cryptoeng_default, domain;
+hal_server_domain(hal_cryptoeng_default, hal_cryptoeng)
+
+type hal_cryptoeng_default_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_cryptoeng_default)
+
+add_hwservice(hal_cryptoeng_server, hal_cryptoeng_hwservice)
+allow hal_cryptoeng_client hal_cryptoeng_hwservice:hwservice_manager find;
