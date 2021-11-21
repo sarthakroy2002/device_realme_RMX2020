@@ -1,2 +1,5 @@
 # Dirac
 type dirac_prop, property_type;
+
+# Oppo props
+type oppo_fingerprint_prop, property_type;

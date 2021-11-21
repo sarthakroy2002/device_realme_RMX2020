@@ -1,2 +1,5 @@
 genfscon sysfs /module/primary_display/parameters u:object_r:sysfs_fps:s0
 genfscon proc  /touchpanel u:object_r:proc_tp:s0
+
+# Oppo FP
+genfscon proc /fp_id u:object_r:proc_oppo_fp:s0

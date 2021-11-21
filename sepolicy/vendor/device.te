@@ -1,0 +1,5 @@
+# egis device
+type egis_device, dev_type;
+
+# silead device
+type silead_device, dev_type;
