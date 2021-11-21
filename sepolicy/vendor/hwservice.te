@@ -1,1 +1,2 @@
 type hal_cryptoeng_hwservice, hwservice_manager_type;
+type hal_hypnus_hwservice, hwservice_manager_type;

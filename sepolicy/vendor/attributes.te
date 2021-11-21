@@ -2,3 +2,8 @@
 attribute hal_cryptoeng;
 attribute hal_cryptoeng_client;
 attribute hal_cryptoeng_server;
+
+# Hypnus
+attribute hal_hypnus;
+attribute hal_hypnus_client;
+attribute hal_hypnus_server;

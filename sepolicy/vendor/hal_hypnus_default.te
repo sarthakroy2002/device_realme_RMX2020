@@ -1,0 +1,8 @@
+type hal_hypnus_default, domain;
+hal_server_domain(hal_hypnus_default, hal_hypnus)
+
+type hal_hypnus_default_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_hypnus_default)
+
+add_hwservice(hal_hypnus_server, hal_hypnus_hwservice)
+allow hal_hypnus_client hal_hypnus_hwservice:hwservice_manager find;
