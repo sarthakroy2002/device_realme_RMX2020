@@ -901,15 +901,6 @@ vendor/lib64/libsensorndkbridge.so
 vendor/lib64/libsensor_custom.so
 vendor/lib64/sensors.ap.so
 
-# Soter
--app/SoterService/SoterService.apk
-vendor/bin/hw/vendor.trustonic.soter@1.0-service
-vendor/etc/init/vendor.trustonic.soter@1.0-service.rc
-vendor/lib64/libMcTeeSoter.so
-vendor/lib64/libSoterProvision.so
-vendor/lib64/soter_attk_provision.so
-vendor/lib64/vendor.qti.hardware.soter@1.0.so
-
 # Thermal
 vendor/bin/thermal
 vendor/bin/thermalloadalgod
