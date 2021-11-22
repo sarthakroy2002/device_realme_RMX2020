@@ -850,19 +850,13 @@ vendor/lib64/libnir_neon_driver_ndk.mtk.so|58a4322988d1f224e126a42897a0289a14b50
 vendor/lib64/libnir_neon_driver.so|5feec1e1a3a77d6022f259bf39fff8f644fb3e0c
 
 # Oppo
-vendor/bin/hw/vendor.oppo.engnative.engineer@1.0-service
-vendor/bin/hw/vendor.oppo.engnative.engsensor@1.0-service
 vendor/bin/hw/vendor.oppo.hardware.cryptoeng@1.0-service
 vendor/bin/hw/vendor.oppo.hardware.hypnus@1.0-service
 vendor/bin/OppoKeybox
 vendor/etc/init/hw/init.oppo.reserve.rc
 vendor/etc/init/init.oppo.connectivity.rc
-vendor/etc/init/vendor.oppo.engnative.engineer@1.0-service.rc
-vendor/etc/init/vendor.oppo.engnative.engsensor@1.0-service.rc
 vendor/etc/init/vendor.oppo.hardware.cryptoeng@1.0-service_FDE.rc
 vendor/etc/init/vendor.oppo.hardware.hypnus@1.0-service.rc
-vendor/etc/permissions/vendor-oppo-engnative-engineer.xml
-vendor/etc/permissions/vendor-oppo-engnative-engsensor.xml
 vendor/etc/permissions/vendor-oppo-hardware.cryptoeng.xml
 vendor/lib/vendor.oppo.hardware.hypnus@1.0.so
 vendor/lib64/libOPPORectify.so
@@ -870,8 +864,6 @@ vendor/lib64/liboppo_aisd.so
 vendor/lib64/liboppo_arcSoftBokehEngine.so
 vendor/lib64/liboppo_blank_algo.so
 vendor/lib64/liboppo_platform_hwi.so
-vendor/lib64/vendor.oppo.engnative.engineer@1.0.so
-vendor/lib64/vendor.oppo.engnative.engsensor@1.0.so
 vendor/lib64/vendor.oppo.engnative.transfer@1.0.so
 vendor/lib64/vendor.oppo.hardware.commondcs@1.0.so
 vendor/lib64/vendor.oppo.hardware.cryptoeng@1.0.so
