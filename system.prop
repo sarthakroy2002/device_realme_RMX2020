@@ -57,12 +57,6 @@ ro.build.display.wtid.monet.ato=SW_S98670AA1_V017_M10_R_USRD_ATO
 ro.build.display.wtid.monetx.mp=SW_S98675AA1_V010_M10_R_USRD_MP
 ro.build.display.wtid.monetx.ato=SW_S98675AA1_V015_M10_R_USRD_ATO
 
-# OPPO Dolby
-ro.dolby.model=oppoEffectModel
-ro.dolby.device=oppoEffectDevice
-ro.dolby.manufacturer=OPPO
-ro.dolby.brand=OPPO
-
 # LMKD
 ro.config.low_ram=false
 ro.lmk.log_stats=true

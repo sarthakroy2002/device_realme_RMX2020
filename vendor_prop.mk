@@ -181,7 +181,6 @@ PRODUCT_PROPERTY_OVERRIDES +=  \
     ro.logd.size=256K \
     ro.mtk_cam_stereo_camera_support=1 \
     ro.opengles.version=196610 \
-    ro.oppo.theme.version=7000 \
     ro.surface_flinger.primary_display_orientation=0 \
     ro.telephony.default_network=9,9,9,9 \
     ro.telephony.iwlan_operation_mode=default \

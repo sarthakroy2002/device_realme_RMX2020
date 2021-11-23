@@ -1,27 +1,3 @@
-<!--
-    Input:
-        manifest_gpunn_cpunn.xml
-        manifest_target_level_q.xml
-        manifest_audio.xml
-        manifest_dsds.xml
-        manifest_radioconfig.xml
-        manifest_em.xml
-        manifest_bgservice.xml
-        manifest_op_dsds.xml
-        manifest_wifi.xml
-        manifest_videotelephony.xml
-        manifest_km4.xml
-        manifest_tee.xml
-        manifest_trustonic.xml
-        manifest_log.xml
-        manifest_mdmonitor.xml
-        manifest_netdagent.xml
-        manifest_pq.xml
-        manifest_gnss.xml
-        manifest_oppo_nfc.xml
-        manifest.xml
-        manifest.xml
--->
 <manifest version="1.0" type="device" target-level="4">
     <hal format="hidl">
         <name>android.hardware.audio</name>
