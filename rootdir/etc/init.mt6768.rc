@@ -131,9 +131,6 @@ on fs
 on post-fs
     write /proc/bootprof "INIT:post-fs"
 
-    # Camera 
-    setprop oppo.camera.packname com.oppo.camera
-
     # USB-OTG
     chown system system /sys/class/power_supply/usb/otg_switch
     chmod 0666 /sys/class/power_supply/usb/otg_switch
