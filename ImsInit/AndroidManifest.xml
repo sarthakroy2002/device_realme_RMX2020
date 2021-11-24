@@ -7,7 +7,9 @@
     
     <application
         android:persistent="true">
-        <receiver android:name="org.lineageos.oppo.imsinit.BootCompletedReceiver">
+        <receiver 
+        android:name="org.lineageos.oppo.imsinit.BootCompletedReceiver"
+        android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <category android:name="android.intent.category.DEFAULT" />
