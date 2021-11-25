@@ -3,6 +3,9 @@
 # ADSP
 vendor/lib64/libadsprpc.so
 
+# AEE - from Redmi/ares/ares:12/SP1A.210812.016/21.11.8:user/release-keys
+vendor/lib64/libudf.so|f57a4f63592b62c2de72b377021327756fc5fac1
+
 # Audio
 vendor/lib/libaudiocompensationfilterc.so
 vendor/lib/libaudiocompensationfilter_vendor.so
@@ -1779,7 +1782,6 @@ vendor/lib64/libtextclassifier_hash.so
 vendor/lib64/libtflite_mtk.so
 vendor/lib64/libtflite_mtk_static_R.so
 vendor/lib64/libthha.so
-vendor/lib64/libudf.so
 vendor/lib64/libutinterface_custom_md.so
 vendor/lib64/libutinterface_md.so
 vendor/lib64/libvcodec_oal.so
