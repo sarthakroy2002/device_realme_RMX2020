@@ -894,7 +894,9 @@ odm/lib64/vendor.oplus.hardware.radio@1.0.so
 odm/lib64/vendor.oplus.hardware.appradio@1.0.so
 
 # Sensors
+odm/lib/sensors.virtual.so
 odm/lib64/libmxmafa.so
+odm/lib64/sensors.virtual.so
 vendor/lib/libsensorndkbridge.so
 vendor/lib64/hw/sensors.mt6768.so
 vendor/lib64/libsensorndkbridge.so
