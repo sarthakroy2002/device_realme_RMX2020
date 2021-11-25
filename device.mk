@@ -52,6 +52,8 @@ PRODUCT_PACKAGES += \
     audio.a2dp.default \
     android.hardware.audio@6.0 \
     android.hardware.audio@6.0.vendor \
+    android.hardware.audio.service \
+    android.hardware.audio@6.0-impl \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.common@6.0-util \
     android.hardware.audio.common-util.vendor \
