@@ -681,6 +681,7 @@ odm/lib/hw/fingerprint.silead.default.so
 odm/lib/libRbsFlow_cap.so
 odm/lib/vendor.oplus.hardware.biometrics.fingerprint@2.1.so
 odm/lib/vendor.oplus.hardware.biometrics.fingerprintservice@1.0.so
+odm/lib/vendor.oplus.hardware.commondcs@1.0.so
 odm/lib64/hw/fingerprint.goodix_G2.default.so
 odm/lib64/hw/fingerprint.goodix_G3.default.so
 odm/lib64/hw/fingerprint.goodix_G5.default.so
@@ -689,6 +690,7 @@ odm/lib64/hw/fingerprint.silead.default.so
 odm/lib64/libRbsFlow_cap.so
 odm/lib64/vendor.oplus.hardware.biometrics.fingerprint@2.1.so
 odm/lib64/vendor.oplus.hardware.biometrics.fingerprintservice@1.0.so
+odm/lib64/vendor.oplus.hardware.commondcs@1.0.so
 
 # Firmware
 vendor/firmware/BT_FW.cfg
