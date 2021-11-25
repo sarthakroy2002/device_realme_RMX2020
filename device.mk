@@ -209,6 +209,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libsuspend
 
+# Libxml2
+PRODUCT_PACKAGES += \
+    libxml2.vendor
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.RMX2020
