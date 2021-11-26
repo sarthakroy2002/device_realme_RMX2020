@@ -49,9 +49,9 @@ echo 0-7 > /dev/cpuset/system-background/cpus
 echo 0-7 > /dev/cpuset/top-app/cpus
 echo 0-7 > /dev/cpuset/restricted/cpus
 
-# OPPO touchpanel
-echo 0 > /proc/touchpanel/oppo_tp_limit_enable
-echo 1 > /proc/touchpanel/oppo_tp_direction
+# oplus touchpanel
+echo 0 > /proc/touchpanel/oplus_tp_limit_enable
+echo 1 > /proc/touchpanel/oplus_tp_direction
 echo 0 > /proc/touchpanel/game_switch_enable
 
 case $1 in
@@ -116,9 +116,9 @@ case $1 in
 	# Lock Lowest GPU Freq
     echo 299000 > /proc/gpufreq/gpufreq_opp_freq
 	
-	# OPPO touchpanel
-	echo 0 > /proc/touchpanel/oppo_tp_limit_enable
-    echo 1 > /proc/touchpanel/oppo_tp_direction
+	# oplus touchpanel
+	echo 0 > /proc/touchpanel/oplus_tp_limit_enable
+    echo 1 > /proc/touchpanel/oplus_tp_direction
     echo 0 > /proc/touchpanel/game_switch_enable
 	;;
 2)
@@ -179,9 +179,9 @@ case $1 in
     # Set maximum GPU Freq
 	echo 823000 > /proc/gpufreq/gpufreq_opp_freq
 
-    # OPPO touchpanel
-	echo 0 > /proc/touchpanel/oppo_tp_limit_enable
-	echo 1 > /proc/touchpanel/oppo_tp_direction
+    # oplus touchpanel
+	echo 0 > /proc/touchpanel/oplus_tp_limit_enable
+	echo 1 > /proc/touchpanel/oplus_tp_direction
 	echo 1 > /proc/touchpanel/game_switch_enable
 	;;
 esac
