@@ -681,6 +681,7 @@ odm/lib64/hw/fingerprint.goodix_G3.default.so
 odm/lib64/hw/fingerprint.goodix_G5.default.so
 odm/lib64/hw/fingerprint.goodix_G6.default.so
 odm/lib64/hw/fingerprint.silead.default.so
+odm/lib64/libegis_hal.so
 odm/lib64/libRbsFlow_cap.so
 odm/lib64/libsl_fp_impl.so
 odm/lib64/vendor.oplus.hardware.biometrics.fingerprint@2.1.so
