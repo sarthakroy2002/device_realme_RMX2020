@@ -14,7 +14,7 @@ system_ext                                              /system_ext             
 odm                                                     /odm                    ext4     ro                                                                       wait,logical,first_stage_mount
 /dev/block/by-name/md_udc                               /metadata               ext4     noatime,nosuid,nodev,discard                                             wait,formattable,first_stage_mount
 /dev/block/by-name/cache                                /cache                  ext4     noatime,nosuid,nodev,noauto_da_alloc,async_discard                       wait,check,formattable
-/dev/block/by-name/userdata                             /data                   ext4     noatime,nosuid,nodev,noauto_da_alloc,async_discard,errors=panic,inlinecrypt wait,check,formattable,quota,latemount,reservedsize=128m,resize,fileencryption=aes-256-xts:aes-256-cts:v1
+/dev/block/by-name/userdata                             /data                   ext4     noatime,nosuid,nodev,noauto_da_alloc,async_discard,errors=panic,inlinecrypt wait,check,formattable,quota,latemount,reservedsize=128m,resize,fileencryption=aes-256-xts
 /dev/block/by-name/protect1                             /mnt/vendor/protect_f   ext4     noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc                 wait,check,formattable
 /dev/block/by-name/protect2                             /mnt/vendor/protect_s   ext4     noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc                 wait,check,formattable
 /dev/block/by-name/nvdata                               /mnt/vendor/nvdata      ext4     noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc                 wait,check,formattable
