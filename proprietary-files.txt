@@ -621,10 +621,6 @@ vendor/etc/camera/merged_model_post
 vendor/etc/camera/M_Attribute_AG_BMW_1.1.0.model
 vendor/etc/camera/M_Attribute_Gender_Age_1.0.model
 
-# Configstore
-vendor/bin/hw/android.hardware.configstore@1.1-service
-vendor/etc/init/android.hardware.configstore@1.1-service.rc
-
 # DRM (Hardware) - from Redmi/ares/ares:12/SP1A.210812.016/21.11.8:user/release-keys
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine|031392617dfa8cf36c9578e9d2a9cd3d7a1fa9c0
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc|992f63e9700da29099e0590858a6becaaadb2976
