@@ -1,3 +1,4 @@
+#include <gui/SurfaceComposerClient.h>
 #include <media/AudioTrack.h>
 
 using namespace android;
@@ -27,4 +28,14 @@ void _ZN7android10AudioTrackC1E19audio_stream_type_tj14audio_format_tjj20audio_o
                            user, notificationFrames, sessionId, transferType, offloadInfo, attributionSource,
                             pAttributes, doNotReconnect, maxRequiredSpeed, selectedDeviceId);
         }
+
+void _ZN7android7SurfaceC1ERKNS_2spINS_22IGraphicBufferProducerEEEbRKNS1_INS_7IBinderEEE(
+    void* thisptr, const sp<IGraphicBufferProducer>& bufferProducer, bool controlledByApp, const sp<IBinder>& surfaceControlHandle);
+
+void _ZN7android7SurfaceC1ERKNS_2spINS_22IGraphicBufferProducerEEEb(
+    void* thisptr, const sp<IGraphicBufferProducer> &bufferProducer, bool controlledByApp) {
+        _ZN7android7SurfaceC1ERKNS_2spINS_22IGraphicBufferProducerEEEbRKNS1_INS_7IBinderEEE(thisptr, bufferProducer, controlledByApp, nullptr);
+}
+
+int _ZN7android10MediaMuxerC1EiNS0_12OutputFormatE[6] = { 0, 1, 2, 3, 4, NULL };
 }
