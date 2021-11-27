@@ -1,30 +1,3 @@
-<!--
-    Input:
-        manifest_target_level_q.xml
-        manifest_sensor_hidl_v2.xml
-        manifest_audio.xml
-        manifest_dsds.xml
-        manifest_radioconfig.xml
-        manifest_pplagent.xml
-        manifest_em.xml
-        manifest_bgservice.xml
-        manifest_wifi.xml
-        manifest_hostapd.xml
-        manifest_videotelephony.xml
-        manifest_secure_element_dsds.xml
-        manifest_mtkcodecservice.xml
-        manifest_km4.xml
-        manifest_tee.xml
-        manifest_trustonic.xml
-        manifest_log.xml
-        manifest_mdmonitor.xml
-        manifest_aee.xml
-        manifest_netdagent.xml
-        manifest_pq.xml
-        manifest_mmservice.xml
-        manifest_gnss.xml
-        manifest.xml
--->
 <manifest version="2.0" type="device" target-level="4">
     <hal format="hidl">
         <name>android.hardware.audio</name>
@@ -265,18 +238,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.1::IUsbGadget/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.mediatek.hardware.aee</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IAee</name>
-            <instance>AEE</instance>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IAee/AEE</fqname>
-        <fqname>@1.0::IAee/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.gpu</name>
@@ -557,16 +518,6 @@
         <fqname>@2.0::ISupplicant/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.oplus.hardware.biometrics.face</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IBiometricsFace</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IBiometricsFace/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.oplus.hardware.biometrics.fingerprint</name>
         <transport>hwbinder</transport>
         <version>2.1</version>
@@ -575,26 +526,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@2.1::IBiometricsFingerprint/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.oplus.hardware.biometrics.fingerprintpay</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IFingerprintPay</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IFingerprintPay/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.oplus.hardware.cryptoeng</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ICryptoeng</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ICryptoeng/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.trustonic.tee</name>
