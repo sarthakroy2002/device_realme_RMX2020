@@ -752,13 +752,6 @@ vendor/lib64/egl/libMEOW_gift.so
 vendor/lib64/egl/libMEOW_trace.so
 vendor/lib64/libOpenCL.so
 
-# Health
-vendor/bin/hw/android.hardware.health@2.1-service
-vendor/etc/init/android.hardware.health@2.1-service.rc
--vendor/etc/vintf/manifest/android.hardware.health@2.1.xml
-vendor/lib/hw/android.hardware.health@2.0-impl-2.1.so
-vendor/lib64/hw/android.hardware.health@2.0-impl-2.1.so
-
 # Kernel-Modules
 vendor/lib/modules/bt_drv.ko
 vendor/lib/modules/fmradio_drv.ko
