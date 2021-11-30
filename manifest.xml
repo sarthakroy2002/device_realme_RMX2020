@@ -498,16 +498,6 @@
         <fqname>@1.0::IVideoTelephony/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.mediatek.hardware.wifi.hostapd</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>IHostapd</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@2.0::IHostapd/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.mediatek.hardware.wifi.supplicant</name>
         <transport>hwbinder</transport>
         <version>2.0</version>
