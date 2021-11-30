@@ -128,6 +128,7 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
+    libmockdrmcryptoplugin \
     android.hardware.drm@1.0 \
     android.hardware.drm@1.0.vendor \
     android.hardware.drm@1.1 \
