@@ -996,7 +996,7 @@ service vendor.media.omx /vendor/bin/hw/android.hardware.media.omx@1.0-service
     override
     class main
     user mediacodec
-    group camera drmrpc mediadrm
+    group camera drmrpc mediadrm system
     ioprio rt 4
     writepid /dev/cpuset/foreground/tasks
 
