@@ -263,9 +263,6 @@
     <!-- Boolean indicating if restoring network selection should be skipped -->
     <!-- The restoring is handled by modem if it is true-->
      <bool name="skip_restoring_network_selection">false</bool>
-
-    <!-- Boolean indicating whether the wifi chipset has 5GHz frequency band support -->
-    <bool translatable="false" name="config_wifi5ghzSupport">true</bool>
  
     <!-- Height of the status bar -->
      <dimen name="status_bar_height_portrait">32.0dip</dimen>
