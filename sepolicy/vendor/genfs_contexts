@@ -3,3 +3,6 @@ genfscon proc  /touchpanel u:object_r:proc_tp:s0
 
 # Oppo FP
 genfscon proc /fp_id u:object_r:proc_oppo_fp:s0
+
+# Audio
+genfscon sysfs /devices/platform/sia81xx@L u:object_r:sysfs_sia81xx_file:s0
