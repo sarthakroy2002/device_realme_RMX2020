@@ -1,1 +1,2 @@
 allow mtk_hal_sensors oppo_devinfo_proc:file r_file_perms;
+allow mtk_hal_sensors system_prop:property_service set;
