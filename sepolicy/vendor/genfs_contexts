@@ -1,6 +1,7 @@
 genfscon sysfs /module/primary_display/parameters u:object_r:sysfs_fps:s0
 genfscon proc  /touchpanel u:object_r:proc_tp:s0
 genfscon proc /oppoVersion/prjVersion u:object_r:proc_oppo_ver:s0
+genfscon proc /devinfo u:object_r:oppo_devinfo_proc:s0
 
 # Oppo FP
 genfscon proc /fp_id u:object_r:proc_oppo_fp:s0

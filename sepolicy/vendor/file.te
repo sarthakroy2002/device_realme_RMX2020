@@ -3,6 +3,7 @@ type sysfs_light, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_graphics, sysfs_type, fs_type, mlstrustedobject;
 type proc_oppo_fp, fs_type, proc_type;
 type proc_oppo_ver, file_type;
+type oppo_devinfo_proc, file_type;
 
 # Audio
 type sysfs_sia81xx_file, fs_type, sysfs_type;
