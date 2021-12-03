@@ -1,0 +1,1 @@
+allow nvram_daemon proc_oppo_ver:file r_file_perms;
