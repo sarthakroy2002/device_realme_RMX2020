@@ -1,0 +1,1 @@
+allow mtk_hal_sensors oppo_devinfo_proc:file r_file_perms;
