@@ -1,9 +1,6 @@
 # NFC
 /dev/pn553 u:object_r:nfc_device:s0
 
-# Sensor
-/(vendor|system/vendor)/bin/hw/android\.hardware\.sensors@1\.0-service\.mediatek                     u:object_r:hal_sensors_default_exec:s0
-
 # Light
 /vendor/bin/hw/android\.hardware\.light-service\.RMX2020      u:object_r:hal_light_default_exec:s0
 
