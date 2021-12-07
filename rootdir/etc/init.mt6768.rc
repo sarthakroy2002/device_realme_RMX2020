@@ -134,6 +134,7 @@ on post-fs
     # USB-OTG
     chown system system /sys/class/power_supply/usb/otg_switch
     chmod 0666 /sys/class/power_supply/usb/otg_switch
+    write /sys/class/power_supply/usb/otg_switch 1
 
     # boot perf. tune
     write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "0 100"
