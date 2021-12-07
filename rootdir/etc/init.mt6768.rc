@@ -673,6 +673,12 @@ on boot
 
     stop console
 
+    # Disable edge limit control interface
+    write /proc/touchpanel/oplus_tp_limit_enable 0
+
+    # Enable oppo touchpanel direction
+    write /proc/touchpanel/oplus_tp_direction 1
+
     write /proc/sys/vm/dirty_writeback_centisecs 300
     chmod 0660 /sys/power/autosleep
 
