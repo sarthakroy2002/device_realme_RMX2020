@@ -3,3 +3,6 @@ type dirac_prop, property_type;
 
 # Audio
 type audio_tunning_prop, property_type;
+
+# Camera
+type oppo_camera_prop, property_type, property_type;
