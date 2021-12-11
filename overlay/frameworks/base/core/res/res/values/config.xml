@@ -24,7 +24,7 @@
 
     <!-- If true, the screen can be rotated via the accelerometer in all 4
          rotations as the default behavior. -->
-     <bool name="config_allowAllRotations">false</bool>
+     <bool name="config_allowAllRotations">true</bool>
 
     <!-- Flag indicating whether the we should enable the automatic brightness in Settings.
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
