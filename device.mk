@@ -175,6 +175,9 @@ PRODUCT_PACKAGES += \
     libhwbinder.vendor \
     libhidltransport.vendor
 
+PRODUCT_PACKAGES += \
+    vndservicemanager
+
 # ImsInit hack
 PRODUCT_PACKAGES += \
     ImsInit
