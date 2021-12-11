@@ -1697,4 +1697,3 @@ vendor/lib64/monetx_truly_main_s5kgm1sp_IdxMgr.so
 vendor/lib64/vendor.trustonic.tee.tui@1.0.so
 vendor/lib64/vendor.trustonic.tee@1.0.so
 vendor/lib64/vendor.trustonic.teeregistry@1.0.so
-vendor/euclid_build.prop
