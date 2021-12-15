@@ -1,0 +1,1 @@
+allow rild proc_oppo_ver:file r_file_perms;
