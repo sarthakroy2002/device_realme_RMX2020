@@ -1,8 +1,13 @@
 # Allow init to execute same process hal file
 allow init same_process_hal_file:file execute;
 
+# Allow init to create socket_device(s)
+allow init socket_device:sock_file create_file_perms;
+
 # Allow init to execute vendor file
 allow init vendor_file:file { execute execute_no_trans };
+
+allow init sysfs_sensor:file setattr;
 
 # Allow init to write touchpanel nodes
 allow init proc:file { open write };
