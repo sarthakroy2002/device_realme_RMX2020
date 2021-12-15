@@ -1,1 +1,2 @@
 set_prop(vendor_init, mtk_emcamera_prop)
+allow vendor_init proc_tp:file rw_file_perms;
