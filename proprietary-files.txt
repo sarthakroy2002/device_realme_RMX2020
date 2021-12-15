@@ -1050,7 +1050,9 @@ lib/libsink.so
 lib/libsource.so
 lib/libvcodec_cap.so
 lib/libvcodec_capenc.so
+lib/vendor.mediatek.hardware.videotelephony@1.0.so:system_ext/lib/vendor.mediatek.hardware.videotelephony@1.0.so
 lib/libvt_avsync.so
+lib64/vendor.mediatek.hardware.videotelephony@1.0.so:system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 lib64/libmtk_vt_wrapper.so
 lib64/libmtkavenhancements.so
 lib64/libmtkperf_client.so
@@ -1058,6 +1060,7 @@ lib64/libvcodec_cap.so
 lib64/libvcodec_capenc.so
 vendor/lib/vendor.mediatek.hardware.videotelephony@1.0.so
 vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
+
 
 # NFC - from full_oppo6769-user 10 QP1A.190711.020 RMX2020_11.A.03 release-keys
 etc/nfcee_access.xml|0f05fc11d3060d453a6912c9b75b6f0a767c61a1
