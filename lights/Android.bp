@@ -14,17 +14,16 @@
 
 cc_binary {
     relative_install_path: "hw",
-    defaults: ["hidl_defaults"],
-    name: "android.hardware.light@2.0-service.RMX2020",
+    name: "android.hardware.light-service.RMX2020",
     proprietary: true,
-    init_rc: ["android.hardware.light@2.0-service.RMX2020.rc"],
-    vintf_fragments: ["android.hardware.light@2.0-service.RMX2020.xml"],
-    srcs: ["service.cpp", "Light.cpp"],
+    init_rc: ["android.hardware.light-service.RMX2020.rc"],
+    vintf_fragments: ["android.hardware.light-service.RMX2020.xml"],
+    srcs: ["main.cpp", "Light.cpp"],
     shared_libs: [
         "libhardware",
-        "libhidlbase",
-        "liblog",
-        "libutils",
-        "android.hardware.light@2.0",
+        "libbase",
+        "libbinder_ndk",
+        "android.hardware.light-V1-ndk_platform",
     ],
+    vendor: true,
 }
