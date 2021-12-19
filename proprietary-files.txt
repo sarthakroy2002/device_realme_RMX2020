@@ -1394,8 +1394,6 @@ vendor/etc/MNL_Config.xml
 vendor/etc/mtk_omx_core.cfg
 vendor/etc/ncf_pack.ncf
 vendor/etc/partition_permission.sh
-vendor/etc/powercontable.xml
-vendor/etc/powerscntbl.xml
 vendor/etc/power_app_cfg.xml
 vendor/etc/security/cacerts/00673b5b.0
 vendor/etc/security/cacerts/04f60c28.0
