@@ -1393,7 +1393,6 @@ vendor/etc/ipsec/strongswan.conf
 vendor/etc/MNL_Config.xml
 vendor/etc/mtk_omx_core.cfg
 vendor/etc/ncf_pack.ncf
-vendor/etc/oplus_avb.pubkey
 vendor/etc/partition_permission.sh
 vendor/etc/powercontable.xml
 vendor/etc/powerscntbl.xml
