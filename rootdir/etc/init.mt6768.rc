@@ -44,6 +44,9 @@ on init
     write /dev/cpuset/system-background/cpus 0-5
     write /dev/cpuset/top-app/cpus 0-7
 
+# Disable Carrier Video Calling
+    setprop persist.vendor.vilte_support 0
+
 service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service
     override
     class hal
