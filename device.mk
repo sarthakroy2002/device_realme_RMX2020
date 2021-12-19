@@ -367,15 +367,10 @@ PRODUCT_PACKAGES += \
     factory_init.project.rc \
     factory_init.rc \
     init.ago.rc \
-    init.bt_drv.rc \
     init.connectivity.rc \
-    init.fmradio_drv.rc \
-    init.gps_drv.rc \
     init.modem.rc \
     init.mt6768.rc \
     init.mt6768.usb.rc \
-    init.wmt_drv.rc \
-    init.wlan_drv.rc \
     init.project.rc \
     init.sensor_1_0.rc \
     meta_init.connectivity.rc \
