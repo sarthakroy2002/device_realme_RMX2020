@@ -1,0 +1,22 @@
+[
+  {
+    "repository": "android_vendor_realme_RMX2020",
+    "target_path": "vendor/realme/RMX2020"
+  },
+  {
+    "repository": "android_kernel_realme_RMX2020",
+    "target_path": "kernel/realme/RMX2020"
+  },
+  {
+    "repository": "sarthakroy2002/vendor_mediatek-ims",
+    "target_path": "vendor/mediatek-ims",
+    "remote": "github",
+    "branch": "twelve-rmui1"
+  },
+  {
+    "repository": "AOSP-12-RMX2020/device_mediatek_sepolicy_vndr",
+    "target_path": "device/mediatek/sepolicy_vndr",
+    "remote": "github",
+    "branch": "twelve"
+  },
+]
