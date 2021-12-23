@@ -1150,6 +1150,22 @@ vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.1.so|a2d1f545a8372a4812a
 vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.2.so|4e468b73726587e3de1dd0324b291f32a2ef9406
 
 # Misc
+odm/vendor/app/mcRegistry/030b0000000000000000000000000000.drbin
+odm/vendor/app/mcRegistry/030b0000000000000000000000000000.tlbin
+odm/vendor/app/mcRegistry/030c0000000000000000000000000000.drbin
+odm/vendor/app/mcRegistry/030c0000000000000000000000000000.tlbin
+odm/vendor/app/mcRegistry/030f0000000000000000000000000000.drbin
+odm/vendor/app/mcRegistry/030f0000000000000000000000000000.tlbin
+odm/vendor/app/mcRegistry/04320000000000000000000000000000.tlbin
+odm/vendor/app/mcRegistry/05060000000000000000000000000000.tabin
+odm/vendor/app/mcRegistry/05070000000000000000000000000000.drbin
+odm/vendor/app/mcRegistry/070f0000000000000000000000000a0a.tlbin
+odm/vendor/app/mcRegistry/08010203000000000000000000000000.tabin
+odm/vendor/app/mcRegistry/08080000000000000000000000000000.tlbin
+odm/vendor/app/mcRegistry/09070000000000000000000000000000.drbin
+odm/vendor/app/mcRegistry/09080000000000000000000000000000.tlbin
+odm/vendor/app/mcRegistry/09150000000000000000000000000000.tlbin
+odm/vendor/app/mcRegistry/511ead0a000000000000000000000000.tabin
 vendor/app/mcRegistry/020b0000000000000000000000000000.drbin
 vendor/app/mcRegistry/020b0000000000000000000000000000.tlbin
 vendor/app/mcRegistry/020f0000000000000000000000000000.drbin
