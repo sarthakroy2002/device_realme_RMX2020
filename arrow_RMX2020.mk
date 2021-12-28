@@ -35,6 +35,7 @@ TARGET_BOOT_ANIMATION_RES := 720
 
 # ArrowOS additions
 DEVICE_MAINTAINER := sarthakroy2002
+$(call inherit-product-if-exists, vendor/lawnchair/lawnchair.mk)
 
 # Build info
 BUILD_FINGERPRINT := "google/coral/coral:12/SQ1A.211205.008/7888514:user/release-keys"
