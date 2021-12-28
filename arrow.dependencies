@@ -8,10 +8,8 @@
     "target_path": "kernel/realme/RMX2020"
   },
   {
-    "repository": "sarthakroy2002/vendor_mediatek-ims",
-    "target_path": "vendor/mediatek-ims",
-    "remote": "github",
-    "branch": "twelve-rmui1"
+    "repository": "android_vendor_realme_RMX2020-ims",
+    "target_path": "vendor/realme/RMX2020-ims"
   },
   {
     "repository": "AOSP-12-RMX2020/device_mediatek_sepolicy_vndr",
