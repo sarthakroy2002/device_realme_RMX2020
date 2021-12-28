@@ -180,7 +180,7 @@
      <bool name="config_speed_up_audio_on_mt_calls">false</bool>
 
     <!-- Whether the Unprocessed audio source supports the required frequency range and level -->
-     <bool name="config_supportAudioSourceUnprocessed">false</bool>
+     <bool name="config_supportAudioSourceUnprocessed">true</bool>
 
     <!-- Whether device supports double tap to wake -->
      <bool name="config_supportDoubleTapWake">true</bool>
