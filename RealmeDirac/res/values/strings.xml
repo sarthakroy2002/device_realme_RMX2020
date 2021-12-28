@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2018 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <!-- Label for feature switch [CHAR LIMIT=30] -->
+    <string name="switch_bar_on">On</string>
+
+    <!-- Label for feature switch [CHAR LIMIT=30] -->
+    <string name="switch_bar_off">Off</string>
+
+    <!-- Device specific settings -->
+    <string name="device_settings_app_name">realme Dirac</string>
+
+    <!-- Dirac settings -->
+    <string name="dirac_title">realme-Dirac Sound Enhancer</string>
+    <string name="dirac_summary">Optimize audio quality</string>
+    <string name="dirac_headset_title">Choose headphones type</string>
+    <string name="dirac_preset_title">Choose a preset</string>
+
+    <string name="dirac_headset_default">Default</string>
+    <string name="dirac_headset_earbuds">realme Buds</string>
+    <string name="dirac_headset_in_ear_2013">realme Buds Neo</string>
+    <string name="dirac_headset_piston_1">realme Buds Wired</string>
+    <string name="dirac_headset_general">General Earbuds</string>
+    <string name="dirac_headset_general_inear">General In-Ear</string>
+    <string name="dirac_headset_piston_basic">Basic Edition</string>
+    <string name="dirac_headset_piston_2">realme Buds 2</string>
+    <string name="dirac_headset_piston_standard">realme Buds 2 Neo</string>
+    <string name="dirac_headset_headphone">realme Buds Q</string>
+    <string name="dirac_headset_piston_youth">Youth Edition</string>
+    <string name="dirac_headset_piston_color">Color Edition</string>
+    <string name="dirac_headset_in_ear"> In-Ear</string>
+    <string name="dirac_headset_capsule">Capsule</string>
+    <string name="dirac_headset_in_ear_pro">realme Buds Q2</string>
+    <string name="dirac_headset_comfort">Comfort</string>
+    <string name="dirac_headset_reduction_noise">Noise Cancellation (Type-C)</string>
+    <string name="dirac_headset_cancelling">Noise Cancellation (3.5mm)</string>
+    <string name="dirac_headset_half_in_ear">realme Buds Air</string>
+    <string name="dirac_headset_in_ear2">realme Buds Air 2</string>
+    <string name="dirac_headset_earphone_basic">Earphones Basic</string>
+    <string name="dirac_headset_earphone">Default Earphones</string>
+
+    <string name="dirac_preset_default">Default</string>
+    <string name="dirac_preset_rock">Rock</string>
+    <string name="dirac_preset_jazz">Jazz</string>
+    <string name="dirac_preset_pop">Pop</string>
+    <string name="dirac_preset_classical">Classical</string>
+    <string name="dirac_preset_hiphop">Hiphop</string>
+    <string name="dirac_preset_blues">Blues</string>
+    <string name="dirac_preset_electronic">Electronic</string>
+    <string name="dirac_preset_country">Country</string>
+    <string name="dirac_preset_dance">Dance</string>
+    <string name="dirac_preset_metal">Metal</string>
+    <!-- QS tile title -->
+    <string name="dirac_qs_tile_title">realme Dirac</string>
+</resources>
