@@ -1,0 +1,8 @@
+
+*.iml
+.idea
+gen/
+/src/build/
+/src/libs/
+.gradle/
+local.properties

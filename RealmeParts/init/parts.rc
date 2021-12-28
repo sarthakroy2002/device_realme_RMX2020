@@ -1,0 +1,2 @@
+on boot
+    chown system system /sys/class/power_supply/usb/otg_switch

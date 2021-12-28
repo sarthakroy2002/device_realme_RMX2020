@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2014-2016 The OmniROM Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:key="charging"
+        android:title="@string/smart_charging_main_title">
+
+        <SwitchPreference
+            android:key="smart_charging"
+            android:icon="@drawable/ic_charging_main"
+            android:summary="@string/smart_charging_summary"
+            android:title="@string/smart_charging_title" />
+
+        <com.realmeparts.SecureSettingListPreference
+            android:key="charging_speed"
+            android:icon="@drawable/ic_charging_speed"
+            android:title="Charging Speed"
+            android:dialogTitle="Select Charging Speed"
+            android:entries="@array/charging_speed_entries"
+            android:entryValues="@array/charging_speed_values"
+            android:defaultValue="0"
+            android:summary="%s" />
+
+        <com.realmeparts.SeekBarPreference
+            android:key="seek_bar"
+            android:title="Select charging limit"
+            android:layout="@layout/preference_slider"
+            android:defaultValue="95"
+            android:max="100"
+            android:min="80"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"/>
+
+        <SwitchPreference
+            android:key="reset_stats"
+            android:icon="@drawable/ic_info_outline_24dp"
+            android:title="@string/reset_stats_title"
+            android:summary="@string/reset_stats_summary" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="perf"
+        android:title="@string/perf_title">
+
+        <com.realmeparts.SecureSettingListPreference
+            android:icon="@drawable/ic_perf_profile"
+            android:key="perf_profile"
+            android:dialogTitle="@string/perf_profile_title"
+            android:entries="@array/perf_profiles"
+            android:entryValues="@array/perf_profile_values"
+            android:defaultValue="0"
+            android:title="@string/perf_profile_title" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="graphics"
+        android:title="@string/display_title">
+
+        <com.realmeparts.SecureSettingListPreference
+            android:icon="@drawable/ic_cabc"
+            android:key="cabc"
+            android:dialogTitle="@string/cabc_dialogTitle"
+            android:entries="@array/cabc_profiles"
+            android:entryValues="@array/cabc_values"
+            android:defaultValue="0"
+            android:title="@string/cabc_title" />
+
+        <SwitchPreference
+            android:icon="@drawable/dc_mode_icon"
+            android:key="dc"
+            android:summary="@string/dc_mode_summary"
+            android:title="@string/dc_mode_title" />
+
+        <SwitchPreference
+            android:key="hbm"
+            android:icon="@drawable/ic_hbm"
+            android:summary="@string/hbm_mode_summary"
+            android:title="@string/hbm_mode_title" />
+
+        <SwitchPreference
+            android:icon="@drawable/srgb_mode_icon"
+            android:key="srgb"
+            android:summary="@string/srgb_mode_summary"
+            android:title="@string/srgb_mode_title" />
+
+        <SwitchPreference
+            android:key="dt2w"
+            android:icon="@drawable/ic_dt2w"
+            android:summary="@string/dt2w_summary"
+            android:title="@string/dt2w_title" />
+
+        <Preference
+            android:key="doze"
+	    android:icon="@drawable/ic_doze"
+            android:title="@string/ambient_display_gestures_title"
+            android:summary="@string/ambient_display_gestures_summary">
+            <intent android:action="android.intent.action.MAIN"
+                 android:targetPackage="com.realmeparts"
+                 android:targetClass="com.realmeparts.doze.DozeSettingsActivity"/>
+        </Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="refresh_rate"
+        android:title="@string/refresh_title">
+
+        <com.realmeparts.RadioButtonPreference
+            android:icon="@drawable/refresh_rate_60_icon"
+            android:key="refresh_rate_60"
+            android:checked="false"
+            android:title="@string/refresh_rate_60_title"
+            android:summary="@string/refresh_rate_60_summary" />
+
+        <com.realmeparts.RadioButtonPreference
+            android:icon="@drawable/refresh_rate_90_icon"
+            android:key="refresh_rate_90"
+            android:checked="true"
+            android:enabled="true"
+            android:title="@string/refresh_rate_90_title"
+            android:summary="@string/refresh_rate_90_summary"  />
+
+        <SwitchPreference
+            android:key="refresh_rate_90Forced"
+            android:icon="@drawable/refresh_rate_90forced_icon"
+            android:summary="@string/refresh_rate_90Forced_summary"
+            android:title="@string/refresh_rate_90Forced_title" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="misc"
+        android:title="@string/misc_title">
+
+        <SwitchPreference
+            android:icon="@drawable/usb_otg_icon"
+            android:key="otg"
+            android:summary="@string/otg_mode_summary"
+            android:title="@string/otg_mode_title" />
+
+        <SwitchPreference
+            android:icon="@drawable/fps_info_icon"
+            android:key="fps_info"
+            android:title="@string/fps_info_title"
+            android:summary="@string/fps_info_summary"
+            android:persistent="true" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cabc_profiles">
+        <item>@string/cabc_off</item>
+        <item>@string/cabc_normal</item>
+        <item>@string/cabc_balanced</item>
+        <item>@string/cabc_aggressive</item>
+    </string-array>
+
+    <string-array name="cabc_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="charging_speed_entries">
+        <item>Default</item>
+        <item>1.8A &amp; 15W</item>
+    </string-array>
+
+    <string-array name="charging_speed_values">
+        <item>0</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="perf_profiles">
+        <item>@string/mode_balance</item>
+        <item>@string/mode_battery</item>
+        <item>@string/mode_perf</item>
+    </string-array>
+
+    <string-array name="perf_profile_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+</resources>
