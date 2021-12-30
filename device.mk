@@ -31,6 +31,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # IMS
 $(call inherit-product, vendor/realme/RMX2020-ims/RMX2020-ims.mk)
 
+# RealmeDirac
+$(call inherit-product, $(DEVICE_PATH)/RealmeDirac/dirac.mk)
+
+# Parts
+$(call inherit-product, $(DEVICE_PATH)/RealmeParts/parts.mk)
+
 PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Dynamic Partition
