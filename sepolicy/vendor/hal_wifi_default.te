@@ -1,1 +1,4 @@
 allow hal_wifi_default self:capability sys_module;
+
+# Get hotspot prop
+get_prop(hal_wifi_default, mtk_wifi_hotspot_prop)
