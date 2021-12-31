@@ -1,0 +1,14 @@
+ro.camera.hfr.enable=1
+ro.camera.videoeis.enable=1
+ro.camera.temperature.limit=420
+ro.camera.portrait.blur.level.enable=1
+ro.camera.high.resolution.video.filter.enable=1
+ro.separate.soft=19741
+ro.product.authentication=0
+ro.oppo.market.name=realme Narzo 10A
+ro.product.hw=19741
+ro.sys.reserve.integrate=true
+persist.sys.oppo.fusionlight=true
+persist.sys.oppo.proximity=true
+odm.dirac.path=/odm/etc/dirac
+ro.oplus.image.odm.version=version_stub
