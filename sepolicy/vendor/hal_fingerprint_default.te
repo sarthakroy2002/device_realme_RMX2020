@@ -21,6 +21,7 @@ allow hal_fingerprint_default mnt_vendor_file:dir { getattr search };
 allow hal_fingerprint_default default_prop:property_service set;
 allow hal_fingerprint_default default_prop:file { read open getattr map };
 allow hal_fingerprint_default system_prop:property_service set;
+allow hal_fingerprint_default init:binder { call  transfer };
 
 r_dir_file(hal_fingerprint_default, mnt_vendor_file);
 
