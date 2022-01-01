@@ -31,3 +31,7 @@ set_prop(hal_audio_default, vendor_audio_prop)
 get_prop(hal_audio_default, wmt_prop)
 
 allow hal_audio_default debugfs_ion:dir search;
+
+allow hal_audio_default sia81xx_tuning_if_device:chr_file rw_file_perms;
+allow hal_audio_default sysfs_sia81xx_file:dir search;
+allow hal_audio_default sysfs_sia81xx_file:file r_file_perms;
