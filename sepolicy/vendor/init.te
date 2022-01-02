@@ -6,9 +6,9 @@ allow init vendor_file:file { execute execute_no_trans };
 
 allow init sysfs_sensor:file setattr;
 
-allow init egis_device:chr_file ioctl;
-
-allow init mobicore_user_device:chr_file ioctl;
+allow init egis_device:chr_file { ioctl open  read };
+allow init proc_oppo_fp:file { open  read };
+allow init mobicore_user_device:chr_file { ioctl open  read };
 
 # Allow init to write touchpanel nodes
 allow init proc:file { open write };

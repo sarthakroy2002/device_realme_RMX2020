@@ -13,7 +13,7 @@ allow hal_fingerprint_default self:netlink_socket create_socket_perms_no_ioctl;
 
 allow hal_fingerprint_default proc_oppo_fp:file r_file_perms;
 
-get_prop(hal_fingerprint_default, default_prop);
+get_prop(hal_fingerprint_default, default_prop)
 
 allow hal_fingerprint_default sysfs:file w_file_perms;
 allow hal_fingerprint_default uhid_device:chr_file { write open ioctl };
@@ -23,6 +23,6 @@ allow hal_fingerprint_default default_prop:file { read open getattr map };
 allow hal_fingerprint_default system_prop:property_service set;
 allow hal_fingerprint_default init:binder { call  transfer };
 
-r_dir_file(hal_fingerprint_default, mnt_vendor_file);
-
-set_prop(hal_fingerprint_default, oppo_fingerprint_prop);
+r_dir_file(hal_fingerprint_default, mnt_vendor_file)
+r_dir_file(hal_fingerprint_default, sysfs_batteryinfo)
+set_prop(hal_fingerprint_default, oppo_fingerprint_prop)
