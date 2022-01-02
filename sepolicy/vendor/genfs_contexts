@@ -3,6 +3,8 @@ genfscon proc  /touchpanel u:object_r:proc_tp:s0
 genfscon proc /oppoVersion/prjVersion u:object_r:proc_oppo_ver:s0
 genfscon proc /oppoVersion/operatorName u:object_r:proc_oppo_opname:s0
 genfscon proc /devinfo u:object_r:oppo_devinfo_proc:s0
+genfscon proc /oppoCustom/Sensor u:object_r:proc_oppo_sensor:s0
+genfscon proc /oplusSensorFeature/is_support_mtk_cali u:object_r:proc_oplus_mtkcali:s0
 
 # Audio
 genfscon sysfs /devices/platform/sia81xx@L u:object_r:sysfs_sia81xx_file:s0

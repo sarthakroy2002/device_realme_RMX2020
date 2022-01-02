@@ -1,2 +1,3 @@
 allow nvram_daemon proc_oppo_ver:file { getattr open read };
 allow nvram_daemon proc_oppo_opname:file { getattr open read };
+allow nvram_daemon proc_oppo_sensor:file { getattr open read };
