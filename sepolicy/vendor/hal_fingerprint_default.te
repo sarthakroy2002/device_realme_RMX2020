@@ -26,3 +26,5 @@ allow hal_fingerprint_default init:binder { call  transfer };
 r_dir_file(hal_fingerprint_default, mnt_vendor_file)
 r_dir_file(hal_fingerprint_default, sysfs_batteryinfo)
 set_prop(hal_fingerprint_default, oppo_fingerprint_prop)
+
+add_hwservice(hal_fingerprint_default, hal_commondcs_hwservice)
