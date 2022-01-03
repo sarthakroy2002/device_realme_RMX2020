@@ -20,3 +20,6 @@ allow system_app sysfs_sia81xx_file:file r_file_perms;
 allow system_app mtk_hal_pq_hwservice:hwservice_manager find;
 binder_call(system_app, mtk_hal_pq)
 binder_call(system_app, wificond)
+
+# Allow system_app to get debug_mtk_gpud_prop
+get_prop(system_app, debug_mtk_gpud_prop)
