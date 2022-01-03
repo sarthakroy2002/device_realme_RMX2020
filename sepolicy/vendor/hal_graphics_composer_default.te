@@ -4,3 +4,8 @@ allow hal_graphics_composer_default {
 }:hwservice_manager { find };
 
 binder_call(hal_graphics_composer_default, mtk_hal_pq)
+
+allow hal_graphics_composer_default vendor_sysfs_graphics:file read;
+
+get_prop(hal_graphics_composer_default, mtk_pq_prop)
+get_prop(hal_graphics_composer_default, vendor_debug_prop)
