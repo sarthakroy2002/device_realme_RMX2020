@@ -6,3 +6,6 @@ type egis_device, dev_type;
 
 # silead device
 type silead_device, dev_type;
+
+# Oplus Sensor 
+type m_virtual_sensor_device, dev_type;

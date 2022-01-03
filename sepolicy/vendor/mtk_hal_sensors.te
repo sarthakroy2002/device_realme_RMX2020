@@ -4,4 +4,5 @@ allow mtk_hal_sensors oppo_devinfo_proc:file r_file_perms;
 allow mtk_hal_sensors oppo_devinfo_proc:dir search;
 allow mtk_hal_sensors proc_oppo_ver:file r_file_perms;
 allow mtk_hal_sensors proc_oplus_mtkcali:file r_file_perms;
+allow mtk_hal_sensors m_virtual_sensor_device:chr_file r_file_perms;
 set_prop(mtk_hal_sensors,system_prop)
