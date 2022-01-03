@@ -11,6 +11,7 @@ persist.audio.dirac                           u:object_r:dirac_prop:s0
 
 # RILD
 ro.telephony.default_network u:object_r:radio_prop:s0
+vendor.oppo.network.carrier_ver u:object_r:oppo_network_prop:s0
 
 # Audio
 audio.tuning.def_path                       u:object_r:audio_tunning_prop:s0
