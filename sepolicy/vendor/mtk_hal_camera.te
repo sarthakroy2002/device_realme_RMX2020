@@ -3,3 +3,4 @@ allow mtk_hal_camera oppo_camera_prop:file read;
 allow mtk_hal_camera proc_oppo_ver:file r_file_perms;
 allow mtk_hal_camera proc_oppo_opname:file r_file_perms;
 allow mtk_hal_camera hal_oplus_orms_hwservice:hwservice_manager find;
+get_prop(mtk_hal_camera, mtk_pq_prop)
