@@ -9,3 +9,6 @@ type oppo_camera_prop, property_type, property_type;
 
 # Oppo props
 type oppo_fingerprint_prop, property_type;
+
+# Wifi
+type vendor_wifi_version, property_type;
