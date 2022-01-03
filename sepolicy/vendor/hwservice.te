@@ -1,2 +1,3 @@
 type hal_commondcs_hwservice, hwservice_manager_type;
 type hal_oplus_radio_hwservice, hwservice_manager_type;
+type hal_oplus_orms_hwservice, hwservice_manager_type;
