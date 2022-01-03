@@ -1,1 +1,0 @@
-allow untrusted_app_27 system_data_root_file:file { getattr  read };
