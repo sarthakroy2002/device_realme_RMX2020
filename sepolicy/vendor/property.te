@@ -12,3 +12,6 @@ type oppo_fingerprint_prop, property_type;
 
 # Wifi
 type vendor_wifi_version, property_type;
+
+# Oppo Network
+type oppo_network_prop, property_type;
