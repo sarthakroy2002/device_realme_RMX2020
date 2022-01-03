@@ -5,3 +5,6 @@ vendor.oplus.hardware.biometrics.fingerprintservice::IFingerprintHalService  u:o
 
 # Oplus CommonDcs
 vendor.oplus.hardware.commondcs::ICommonDcsHalService u:object_r:hal_commondcs_hwservice:s0
+
+# Oplus Radio
+vendor.oplus.hardware.radio::IOplusRadio  u:object_r:hal_oplus_radio_hwservice:s0
