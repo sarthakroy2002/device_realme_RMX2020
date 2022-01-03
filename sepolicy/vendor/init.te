@@ -6,6 +6,7 @@ allow init vendor_file:file { execute execute_no_trans };
 
 allow init sysfs_sensor:file setattr;
 allow init hidl_base_hwservice:hwservice_manager add;
+allow init hal_tee_hwservice:hwservice_manager { add  find };
 allow init egis_device:chr_file { ioctl rw_file_perms };
 allow init proc_oppo_fp:file { open  read };
 allow init mobicore_user_device:chr_file { ioctl rw_file_perms };
