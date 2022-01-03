@@ -1,0 +1,3 @@
+get_prop(surfaceflinger, mtk_pq_prop)
+get_prop(surfaceflinger, mtk_pq_ro_prop)
+get_prop(surfaceflinger, vendor_debug_prop)

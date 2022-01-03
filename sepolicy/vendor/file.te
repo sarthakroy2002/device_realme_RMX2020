@@ -10,3 +10,6 @@ type proc_oplus_mtkcali, file_type, proc_type;
 
 # Audio
 type sysfs_sia81xx_file, fs_type, sysfs_type;
+
+# Display node
+type vendor_sysfs_graphics, fs_type, sysfs_type;
