@@ -1,7 +1,7 @@
 binder_call(hal_fingerprint_default, hal_fingerprint_default)
 typeattribute hal_fingerprint_default data_between_core_and_vendor_violators;
 
-allow hal_fingerprint_default hal_fingerprint_hwservice:hwservice_manager find;
+add_hwservice(hal_fingerprint_default, hal_fingerprint_hwservice)
 allow hal_fingerprint_default tee_device:chr_file rw_file_perms;
 allow hal_fingerprint_default egis_device:chr_file rw_file_perms;
 allow hal_fingerprint_default silead_device:chr_file rw_file_perms;
@@ -28,3 +28,4 @@ r_dir_file(hal_fingerprint_default, sysfs_batteryinfo)
 set_prop(hal_fingerprint_default, oppo_fingerprint_prop)
 
 add_hwservice(hal_fingerprint_default, hal_commondcs_hwservice)
+
