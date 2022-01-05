@@ -32,9 +32,6 @@ dalvik.vm.dex2oat-threads=6
 debug.sf.disable_backpressure=1
 debug.sf.enable_hwc_vds=0
 
-# Fingerprint
-fingerprint.nocleanup=true
-
 # Iorap
 persist.device_config.runtime_native_boot.iorap_readahead_enable=true
 iorapd.readahead.enable=true
