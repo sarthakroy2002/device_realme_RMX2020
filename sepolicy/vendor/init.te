@@ -9,8 +9,11 @@ allow init hidl_base_hwservice:hwservice_manager add;
 allow init hal_tee_hwservice:hwservice_manager { add  find };
 allow init hal_secure_element_hwservice:hwservice_manager { add };
 allow init egis_device:chr_file { ioctl rw_file_perms };
+allow init silead_device:chr_file { ioctl rw_file_perms };
 allow init proc_oppo_fp:file { open  read };
 allow init mobicore_user_device:chr_file { ioctl rw_file_perms };
+
+add_hwservice(init, hal_fingerprint_hwservice)
 
 # Allow init to write touchpanel nodes
 allow init proc:file { open write };
