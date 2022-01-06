@@ -25,3 +25,4 @@ oppo.fingerprint.                       u:object_r:oppo_fingerprint_prop:s0
 
 # Wifi
 vendor.wlan.firmware.version u:object_r:vendor_wifi_version:s0
+vendor.wlan.driver.version u:object_r:vendor_wifi_version:s0
