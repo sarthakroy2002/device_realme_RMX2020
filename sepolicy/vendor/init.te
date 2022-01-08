@@ -5,3 +5,4 @@ allow init vendor_data_file:file w_file_perms;
 allow init sysfs_mmc_host:file rw_file_perms;
 allow init proc_vm:file rw_file_perms;
 allow init sysfs_otg_switch:file rw_file_perms;
+allow init sysfs_mtusb_saving:file rw_file_perms;
