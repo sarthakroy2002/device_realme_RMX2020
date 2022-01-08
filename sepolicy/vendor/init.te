@@ -14,6 +14,7 @@ allow init proc_oppo_fp:file { open  read };
 allow init mobicore_user_device:chr_file { ioctl rw_file_perms };
 
 add_hwservice(init, hal_fingerprint_hwservice)
+binder_call(init, hal_fingerprint_default)
 
 # Allow init to write touchpanel nodes
 allow init proc:file { open write };
