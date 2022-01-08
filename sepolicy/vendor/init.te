@@ -22,3 +22,6 @@ allow init proc_tp:file rw_file_perms;
 
 # Allow init to find hal_secure_element_hwservice
 allow init hal_secure_element_hwservice:hwservice_manager find;
+
+# Allow init to access /sys/devices/platform/mt_usb/saving
+allow init sysfs_mtusb_saving:file rw_file_perms;
