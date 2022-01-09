@@ -15,6 +15,3 @@ on post-fs-data
 
 # Encrypt phone function
     setprop vold.post_fs_data_done 1
-
-
-
