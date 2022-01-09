@@ -47,6 +47,9 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 TARGET_SCREEN_HEIGHT := 1600
 TARGET_SCREEN_WIDTH := 720
 
+# AudioFX
+TARGET_EXCLUDES_AUDIOFX := true
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
@@ -66,7 +69,6 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     audio.usb.default \
     libaudiofoundation.vendor \
-    libaudiofoundation \
     libaudiopreprocessing \
     libbundlewrapper \
     libdownmix \
@@ -90,8 +92,6 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
-
-TARGET_EXCLUDES_AUDIOFX := true
 
 # APN
 PRODUCT_COPY_FILES += \
@@ -124,8 +124,13 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service \
+    android.hardware.graphics.composer@2.1-resources \
+    android.hardware.graphics.composer@2.1-resources.vendor \
     android.hardware.graphics.composer@2.1-impl \
     android.hardware.graphics.composer@2.1-service \
+    android.hardware.memtrack@1.0.vendor \
     libdrm.vendor \
     libvulkan
 
@@ -161,8 +166,9 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.1 \
-    android.hardware.gnss@2.1.vendor \
+    android.hardware.gnss.measurement_corrections@1.1.vendor \
+    android.hardware.gnss.visibility_control@1.0.vendor \
+    android.hardware.gnss@2.1.vendor
 
 # Health
 PRODUCT_PACKAGES += \
@@ -194,8 +200,12 @@ PRODUCT_COPY_FILES += \
 
 # Keymaster
 PRODUCT_PACKAGES += \
-    libkeymaster4.vendor \
-    libkeymaster4support.vendor
+    libkeymaster4.vendor:64 \
+    libkeymaster4support.vendor:64 \
+    libkeymaster_portable.vendor:64 \
+    libkeymaster_messages.vendor:64 \
+    libsoft_attestation_cert.vendor:64 \
+    libpuresoftkeymasterdevice.vendor:64
 
 # KPOC
 PRODUCT_PACKAGES += \
@@ -252,6 +262,7 @@ PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     android.hardware.nfc@1.2-service \
     android.hardware.secure_element@1.0-service-disabled \
+    SecureElement \
     NfcNci \
     Tag
 
@@ -414,6 +425,9 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0.vendor \
     android.hardware.sensors@2.0-impl \
     android.hardware.sensors@2.0-service \
+
+PRODUCT_PACKAGES += \
+    libsensorndkbridge
 
 # Sensors
 PRODUCT_COPY_FILES += \
