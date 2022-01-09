@@ -251,6 +251,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     android.hardware.nfc@1.2-service \
+    android.hardware.secure_element@1.0-service-disabled \
     NfcNci \
     Tag
 
