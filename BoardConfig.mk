@@ -135,9 +135,9 @@ BOARD_SUPER_PARTITION_ERROR_LIMIT := 6979321856
 BOARD_MAIN_PARTITION_LIST := product vendor system system_ext odm
 
 # Properties
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
-TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/configs/props/system.prop
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/configs/props/product.prop
+TARGET_ODM_PROP += $(DEVICE_PATH)/configs/props/odm.prop
 
 # Recovery
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
