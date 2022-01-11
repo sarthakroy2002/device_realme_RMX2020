@@ -5,14 +5,13 @@ allow init socket_device:sock_file create_file_perms;
 allow init vendor_file:file { execute execute_no_trans };
 
 allow init sysfs_sensor:file setattr;
-allow init hidl_base_hwservice:hwservice_manager add;
-allow init hal_tee_hwservice:hwservice_manager { add  find };
-allow init hal_secure_element_hwservice:hwservice_manager { add };
-allow init egis_device:chr_file { ioctl rw_file_perms };
-allow init silead_device:chr_file { ioctl rw_file_perms };
-allow init proc_oppo_fp:file { open  read };
-allow init mobicore_user_device:chr_file { ioctl rw_file_perms };
-
+add_hwservice(init, hidl_base_hwservice)
+add_hwservice(init, hal_tee_hwservice)
+add_hwservice(init, hal_secure_element_hwservice)
+allow init egis_device:chr_file rw_file_perms;
+allow init silead_device:chr_file rw_file_perms;
+allow init proc_oppo_fp:file r_file_perms;
+allow init mobicore_user_device:chr_file rw_file_perms;
 add_hwservice(init, hal_fingerprint_hwservice)
 binder_call(init, hal_fingerprint_default)
 
@@ -21,7 +20,7 @@ allow init proc:file { open write };
 allow init proc_tp:file rw_file_perms;
 
 # Allow init to find hal_secure_element_hwservice
-allow init hal_secure_element_hwservice:hwservice_manager find;
+add_hwservice(init, hal_secure_element_hwservice);
 
 # Allow init to access /sys/devices/platform/mt_usb/saving
 allow init sysfs_mtusb_saving:file rw_file_perms;
