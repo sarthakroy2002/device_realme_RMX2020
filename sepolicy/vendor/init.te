@@ -15,6 +15,9 @@ allow init mobicore_user_device:chr_file rw_file_perms;
 add_hwservice(init, hal_fingerprint_hwservice)
 binder_call(init, hal_fingerprint_default)
 
+# Allow init to binder call hwservicemanager
+allow init hwservicemanager:binder { call };
+
 # Allow init to write touchpanel nodes
 allow init proc:file { open write };
 allow init proc_tp:file rw_file_perms;
