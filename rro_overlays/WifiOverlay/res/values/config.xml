@@ -22,7 +22,7 @@
          Note: This config is replacing the config_wifi_dual_band_support
          since more bands may now be supported (such as 6GHz), the naming dual_band
          is no longer indicative, and a separate config now exists for each band -->
-    <bool translatable="false" name="config_wifi5ghzSupport">true</bool>
+    <bool translatable="false" name="config_wifi5ghzSupport">false</bool>
 
     <!-- Boolean indicating whether the wifi chipset has background scan support -->
     <bool translatable="false" name="config_wifi_background_scan_support">true</bool>
