@@ -1049,6 +1049,7 @@ vendor/lib64/liboppo_blank_algo.so
 vendor/lib64/liboppo_platform_hwi.so
 
 # Power (Hardware)
+-vendor/etc/vintf/manifest/power-default.xml:vendor/etc/vintf/manifest/power-mtk-default.xml
 vendor/lib/hw/power.mt6768.so
 vendor/lib64/hw/power.mt6768.so
 
@@ -1057,6 +1058,8 @@ odm/lib/vendor.oplus.hardware.appradio@1.0.so
 odm/lib/vendor.oplus.hardware.radio@1.0.so
 odm/lib64/vendor.oplus.hardware.appradio@1.0.so
 odm/lib64/vendor.oplus.hardware.radio@1.0.so
+-vendor/etc/vintf/manifest/oplus_radio_device_manifest.xml
+-vendor/etc/vintf/manifest/oplus_appradio_device_manifest.xml
 
 # Sensors
 odm/lib/sensors.virtual.so
