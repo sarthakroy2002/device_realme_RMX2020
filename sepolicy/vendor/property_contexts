@@ -6,6 +6,9 @@ dump.bpci_tbl.enable   u:object_r:oppo_camera_prop:s0
 vendor.oppo.camera.   u:object_r:oppo_camera_prop:s0
 oppo.camera.   u:object_r:oppo_camera_prop:s0
 
+# MTK Camera props
+persist.vendor.mtkcam.aosp_hal_version  u:object_r:mtk_cameraa_prop:s0
+
 # Dirac
 persist.audio.dirac                           u:object_r:dirac_prop:s0
 
