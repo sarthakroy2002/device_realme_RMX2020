@@ -6,7 +6,7 @@ type audio_tunning_prop, property_type;
 
 # Camera
 type oppo_camera_prop, property_type, property_type;
-
+type mtk_cameraa_prop, property_type;
 # Oppo props
 type oppo_fingerprint_prop, property_type;
 
