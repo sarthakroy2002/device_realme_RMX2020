@@ -25,8 +25,8 @@ public class PhoneStateService extends Service {
         ConnectivityManager cm;
         cm = (ConnectivityManager)this.getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
         Log.i(LOG_TAG, "handleServiceStateChanged");
-        if ((sLastState == null || sLastState.getDataRegState() != ServiceState.STATE_IN_SERVICE)
-                && serviceState.getDataRegState() == ServiceState.STATE_IN_SERVICE) {
+        if (((sLastState == null) ? true : (sLastState.getDataRegState() != ServiceState.STATE_IN_SERVICE))
+                && ((serviceState == null) ? false : (serviceState.getDataRegState() == ServiceState.STATE_IN_SERVICE))) {
             SharedPreferences prefs = getSharedPreferences("prefs", Context.MODE_PRIVATE);
         
 	    // this looks stupid XD, will fix it later (atleast it works XD)
