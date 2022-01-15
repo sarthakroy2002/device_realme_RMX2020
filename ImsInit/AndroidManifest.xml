@@ -17,5 +17,8 @@
         </receiver>
         <service android:name="org.lineageos.oppo.imsinit.PhoneStateService"/>
     </application>
-    
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS"/>
+    <uses-permission android:name="android.permission.DIAGNOSTIC"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+        
 </manifest>
