@@ -4,6 +4,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.provider.Settings;
+import android.os.UserHandle;
 import android.util.Log;
 
 import com.android.ims.ImsManager;
@@ -27,6 +29,35 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(final Context context, Intent intent) {
         Log.i(LOG_TAG, "onBoot");
+
+        /* Toggle airplane mode on and off at boot to enable VoLTE. */
+        Log.i(LOG_TAG, "Trying to toggle airplane mode to enable VoLTE");
+        new Thread(() -> {
+            Intent tIntent;
+
+            try {
+                Thread.sleep(2000);
+            } catch (Exception e) {}
+
+            tIntent = new Intent(Intent.ACTION_AIRPLANE_MODE_CHANGED);
+            tIntent.putExtra("state", true);
+            Settings.Global.putInt(context.getContentResolver(), Settings.Global.AIRPLANE_MODE_ON, 1);
+            context.sendBroadcastAsUser(tIntent, UserHandle.ALL);
+
+            /*
+             * Sleep for a second before toggling airplane mode
+             * off. Without this, airplane mode can sometimes
+             * fail to be toggled off again.
+             */
+            try {
+                Thread.sleep(1000);
+            } catch (Exception e) {}
+
+            tIntent = new Intent(Intent.ACTION_AIRPLANE_MODE_CHANGED);
+            tIntent.putExtra("state", false);
+            Settings.Global.putInt(context.getContentResolver(), Settings.Global.AIRPLANE_MODE_ON, 0);
+            context.sendBroadcastAsUser(tIntent, UserHandle.ALL);
+        }).start();
         
         context.startService(new Intent(context, PhoneStateService.class));
     }
