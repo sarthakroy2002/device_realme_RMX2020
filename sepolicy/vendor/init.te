@@ -11,7 +11,7 @@ allow init egis_device:chr_file rw_file_perms;
 allow init silead_device:chr_file rw_file_perms;
 allow init proc_oppo_fp:file r_file_perms;
 allow init mobicore_user_device:chr_file rw_file_perms;
-allow init hal_fingerprint_hwservice:hwservice_manager find;
+allow init hal_fingerprint_hwservice:hwservice_manager { add find };
 binder_call(init, hal_fingerprint_default)
 allow init mtk_hal_rild_hwservice:hwservice_manager { add find };
 allow init rild:binder { call  transfer };
@@ -26,8 +26,8 @@ allow init same_process_hal_file:file execute;
 allow init proc:file { open write };
 allow init proc_tp:file rw_file_perms;
 
-# Allow init to find hal_secure_element_hwservice
-allow init hal_secure_element_hwservice:hwservice_manager find;
+# Allow init to add/find hal_secure_element_hwservice
+allow init hal_secure_element_hwservice:hwservice_manager { add find };
 
 # Allow init to access /sys/devices/platform/mt_usb/saving
 allow init sysfs_mtusb_saving:file rw_file_perms;
