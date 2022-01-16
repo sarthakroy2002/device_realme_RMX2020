@@ -253,6 +253,11 @@ vendor/etc/audio_param/Volume_AudioParam.xml
 vendor/etc/audio_param/Volume_ParamUnitDesc.xml
 vendor/etc/aurisys_param/Speech_AudioParam.xml
 
+# Audio (Dirac) - from full_oppo6769-user 10 QP1A.190711.020 RMX2020_11.A.03 release-keys
+vendor/etc/diracmobile.config
+vendor/lib/libDiracAPI_SHARED.so
+vendor/lib/soundfx/libdirac.so
+
 # Bluetooth
 system_ext/lib/vendor.mediatek.hardware.bluetooth.audio@2.1.so
 system_ext/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
