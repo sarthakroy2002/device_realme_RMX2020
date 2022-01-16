@@ -10,3 +10,4 @@ allow hal_graphics_composer_default vendor_sysfs_graphics:file rw_file_perms;
 get_prop(hal_graphics_composer_default, mtk_pq_prop)
 get_prop(hal_graphics_composer_default, mtk_pq_ro_prop)
 get_prop(hal_graphics_composer_default, vendor_debug_prop)
+get_prop(hal_graphics_composer_default, debug_mtk_gpud_prop)

@@ -1,0 +1,2 @@
+get_prop(epdg_wod, mtk_md_version_prop)
+get_prop(epdg_wod, mtk_wfc_support_prop)
