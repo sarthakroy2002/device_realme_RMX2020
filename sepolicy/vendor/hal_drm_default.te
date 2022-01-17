@@ -1,0 +1,3 @@
+# Allow DRM widevine hal to read TEE props
+get_prop(hal_drm_widevine, ro_vendor_mtk_trustonic_tee_prop)
+get_prop(hal_drm_widevine, ro_vendor_mtk_microtrust_tee_prop)
