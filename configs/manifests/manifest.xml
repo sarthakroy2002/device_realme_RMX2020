@@ -121,15 +121,6 @@
         <fqname>@1.0::IUsb/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.mediatek.hardware.gpu</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IGraphicExt</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
         <name>vendor.mediatek.hardware.atci</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IAtcid/default</fqname>
