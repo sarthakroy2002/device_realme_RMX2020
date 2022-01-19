@@ -11,7 +11,7 @@ allow init egis_device:chr_file rw_file_perms;
 allow init silead_device:chr_file rw_file_perms;
 allow init proc_oppo_fp:file r_file_perms;
 allow init mobicore_user_device:chr_file rw_file_perms;
-allow init hal_fingerprint_hwservice:hwservice_manager { add find };
+add_hwservice(init, hal_fingerprint_hwservice)
 binder_call(init, hal_fingerprint_default)
 allow init mtk_hal_rild_hwservice:hwservice_manager { add find };
 allow init rild:binder { call  transfer };
