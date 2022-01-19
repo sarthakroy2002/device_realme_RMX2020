@@ -7,6 +7,7 @@ allow gmscore_app mtk_hal_pq_hwservice:hwservice_manager find;
 binder_call(gmscore_app, mtk_hal_pq)
 
 get_prop(gmscore_app, render_prop)
+get_prop(gmscore_app, debug_mtk_gpud_prop)
 
 # Silent harmless spolicy
 dontaudit gmscore_app hal_memtrack_hwservice:hwservice_manager find;
