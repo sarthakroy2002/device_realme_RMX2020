@@ -214,6 +214,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libsuspend
 
+# Minijail
+PRODUCT_PACKAGES += \
+    libavservices_minijail.vendor
+
 # Libxml2
 PRODUCT_PACKAGES += \
     libxml2.vendor
