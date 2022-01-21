@@ -10,7 +10,7 @@ allow hal_fingerprint_default mobicore_user_device:chr_file rw_file_perms;
 allow hal_fingerprint_default self:netlink_socket create_socket_perms_no_ioctl;
 allow hal_fingerprint_default uhid_device:chr_file { write open ioctl };
 allow hal_fingerprint_default mnt_vendor_file:dir { getattr search };
-binder_call(hal_fingerprint_default, init)
+allow hal_fingerprint_default init:binder { call  transfer };
 r_dir_file(hal_fingerprint_default, mnt_vendor_file)
 r_dir_file(hal_fingerprint_default, sysfs_batteryinfo)
 r_dir_file(hal_fingerprint_default, proc_oppo_fp)
