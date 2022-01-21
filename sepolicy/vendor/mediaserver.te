@@ -1,1 +1,2 @@
 allow mediaserver vendor_file:file rx_file_perms;
+allow mediaserver package_native_service:service_manager find;
