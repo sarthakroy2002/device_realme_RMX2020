@@ -202,6 +202,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libsuspend
 
+# Minijail
+PRODUCT_PACKAGES += \
+    libavservices_minijail.vendor
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.RMX2020
