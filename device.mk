@@ -473,8 +473,8 @@ PRODUCT_COPY_FILES += \
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
-    TetheringConfigOverlay \
-    WifiOverlay
+    TetheringResOverlay \
+    WifiResOverlay
 
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service-lazy

@@ -1,6 +1,6 @@
 runtime_resource_overlay {
-    name: "TetheringConfigOverlay",
-    theme: "TetheringConfigOverlay",
+    name: "WifiResOverlay",
+    theme: "WifiResOverlay",
     sdk_version: "current",
     vendor: true
 }
