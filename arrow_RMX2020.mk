@@ -33,6 +33,9 @@ PRODUCT_MANUFACTURER := realme
 
 TARGET_BOOT_ANIMATION_RES := 720
 
+# ArrowOS additions
+DEVICE_MAINTAINER := sarthakroy2002
+
 # Build info
 BUILD_FINGERPRINT := "google/coral/coral:12/SQ1A.220105.002/7961164:user/release-keys"
 PRODUCT_BUILD_PROP_OVERRIDES += \
