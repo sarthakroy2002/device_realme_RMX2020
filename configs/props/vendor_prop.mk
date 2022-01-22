@@ -408,6 +408,7 @@ PRODUCT_PROPERTY_OVERRIDES +=  \
     vendor.mtk.vdec.waitkeyframeforplay=7 \
     persist.sys.sf.color_saturation=1.1 \
     persist.sys.sf.native_mode=0 \
+    debug.renderengine.backend=skiaglthreaded \
     persist.dbg.volte_avail_ovr=1 \
     persist.dbg.vt_avail_ovr=1 \
     persist.dbg.wfc_avail_ovr=1 \
