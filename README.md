@@ -29,4 +29,4 @@ Other Repos needed for building:
 4. https://github.com/sarthakroy2002/vendor_realme_RMX2020-ims (branch twelve-rmui2)
 5. https://github.com/sarthakroy2002/vendor_realme_RMX2020-firmware (branch rmui2)
 
-Copyright (C) 2021 Lineage OS
+Copyright (C) 2021 ArrowOS

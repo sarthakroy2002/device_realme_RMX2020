@@ -21,11 +21,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile
 $(call inherit-product, device/realme/RMX2020/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common ArrowOS stuff.
+$(call inherit-product, vendor/arrow/config/common.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_RMX2020
+PRODUCT_NAME := arrow_RMX2020
 PRODUCT_DEVICE := RMX2020
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := Realme G70 Series
@@ -44,6 +44,3 @@ PRODUCT_GMS_CLIENTID_BASE := android-realme
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
-
-# Time
-LINEAGE_VERSION_APPEND_TIME_OF_DAY := true
