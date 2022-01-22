@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_RMX2020.mk
+    $(LOCAL_DIR)/arrow_RMX2020.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_RMX2020-user \
-    lineage_RMX2020-userdebug \
-    lineage_RMX2020-eng
+    arrow_RMX2020-user \
+    arrow_RMX2020-userdebug \
+    arrow_RMX2020-eng
