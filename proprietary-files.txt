@@ -255,8 +255,8 @@ vendor/etc/aurisys_param/Speech_AudioParam.xml
 
 # Audio (Dirac) - from full_oppo6769-user 10 QP1A.190711.020 RMX2020_11.A.03 release-keys
 vendor/etc/diracmobile.config
-vendor/lib/libDiracAPI_SHARED.so
 vendor/lib/soundfx/libdirac.so
+vendor/lib/libDiracAPI_SHARED.so
 
 # Bluetooth
 system_ext/lib/vendor.mediatek.hardware.bluetooth.audio@2.1.so
@@ -1064,8 +1064,8 @@ odm/lib/vendor.oplus.hardware.appradio@1.0.so
 odm/lib/vendor.oplus.hardware.radio@1.0.so
 odm/lib64/vendor.oplus.hardware.appradio@1.0.so
 odm/lib64/vendor.oplus.hardware.radio@1.0.so
--vendor/etc/vintf/manifest/oplus_radio_device_manifest.xml
 -vendor/etc/vintf/manifest/oplus_appradio_device_manifest.xml
+-vendor/etc/vintf/manifest/oplus_radio_device_manifest.xml
 
 # Sensors
 odm/lib/sensors.virtual.so
