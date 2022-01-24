@@ -498,6 +498,10 @@ vendor/lib64/vendor.egistec.hardware.fingerprint@4.0.so
 vendor/lib64/vendor.oppo.hardware.biometrics.fingerprint@2.1.so
 vendor/lib64/vendor.silead.hardware.fingerprintext@1.0.so
 
+# Fingerprint - from moto_troika 9/PSB29.105-27/fd362:user/release-keys
+vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-rbs:vendor/fptmp/android.hardware.biometrics.fingerprint@2.1-service.RMX2020
+vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-rbs:vendor/fptmp/vendor.oppo.hardware.biometrics.fingerprint@2.1-service
+
 # Firmware
 vendor/firmware/customfilter/catcher_filter_1_ulwctg_n_FullLog.bin
 vendor/firmware/customfilter/catcher_filter_1_ulwctg_n_PLS_PS_ONLY.bin
