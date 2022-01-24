@@ -32,10 +32,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product, vendor/realme/RMX2020-ims/RMX2020-ims.mk)
 
 # RealmeDirac
-$(call inherit-product, $(DEVICE_PATH)/RealmeDirac/dirac.mk)
+$(call inherit-product, $(DEVICE_PATH)/app/RealmeDirac/dirac.mk)
 
 # Parts
-$(call inherit-product, $(DEVICE_PATH)/RealmeParts/parts.mk)
+$(call inherit-product, $(DEVICE_PATH)/app/RealmeParts/parts.mk)
 
 PRODUCT_SHIPPING_API_LEVEL := 29
 
