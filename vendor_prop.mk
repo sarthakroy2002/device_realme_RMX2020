@@ -262,6 +262,7 @@ PRODUCT_PROPERTY_OVERRIDES +=  \
     vendor.mtk.vdec.waitkeyframeforplay=7 \
     debug.hwui.use_hint_manager=true \
     debug.hwui.target_cpu_time_percent=30 \
+    debug.renderengine.backend=skiaglthreaded \
     persist.sys.sf.color_saturation=1.1 \
     persist.sys.sf.native_mode=0 \
     persist.dbg.volte_avail_ovr=1 \
