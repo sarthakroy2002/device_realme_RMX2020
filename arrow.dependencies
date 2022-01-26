@@ -17,4 +17,8 @@
     "remote": "github",
     "branch": "twelve"
   },
+  {
+    "repository": "android_packages_apps_GCamGOPrebuilt",
+    "target_path": "packages/apps/GCamGOPrebuilt"
+  }
 ]

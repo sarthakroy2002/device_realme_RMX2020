@@ -445,7 +445,7 @@ PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
 # Camera
 PRODUCT_PACKAGES += \
-    Snap
+    GCamGOPrebuilt
 
 # Symbols
 PRODUCT_PACKAGES += \
