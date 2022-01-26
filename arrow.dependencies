@@ -12,12 +12,6 @@
     "target_path": "vendor/realme/RMX2020-ims"
   },
   {
-    "repository": "AOSP-12-RMX2020/device_mediatek_sepolicy_vndr",
-    "target_path": "device/mediatek/sepolicy_vndr",
-    "remote": "github",
-    "branch": "twelve"
-  },
-  {
     "repository": "android_packages_apps_GCamGOPrebuilt",
     "target_path": "packages/apps/GCamGOPrebuilt"
   }
