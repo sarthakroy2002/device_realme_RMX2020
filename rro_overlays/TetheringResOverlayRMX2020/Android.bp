@@ -1,0 +1,6 @@
+runtime_resource_overlay {
+    name: "TetheringResOverlayRMX2020",
+    theme: "TetheringResOverlay",
+    sdk_version: "current",
+    vendor: true
+}

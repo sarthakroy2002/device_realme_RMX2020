@@ -246,10 +246,6 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
     $(DEVICE_PATH)/configs/nfc/libnfc-nxp_RF.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp_RF.conf
 
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(DEVICE_PATH)/overlay
-
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
@@ -331,9 +327,6 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.2.vendor \
     android.hardware.radio.deprecated@1.0.vendor
 
-PRODUCT_PACKAGES += \
-    CarrierConfigOverlay
-
 # Rootdir
 PRODUCT_PACKAGES += \
     perf_profile.sh \
@@ -354,6 +347,19 @@ PRODUCT_PACKAGES += \
 # RenderScript
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
+
+# Runtime Resource Overlays 
+PRODUCT_PACKAGES += \
+    CarrierConfigOverlayRMX2020 \
+    DialerOverlayRMX2020 \
+    DocumentsUIOverlayRMX2020 \
+    FrameworksResOverlayRMX2020 \
+    SettingsOverlayRMX2020 \
+    SettingsProviderOverlayRMX2020 \
+    SystemUIOverlayRMX2020 \
+    TelephonyOverlayRMX2020 \
+    TetheringResOverlayRMX2020 \
+    WifiResOverlayRMX2020
 
 # Seccomp
 PRODUCT_COPY_FILES += \
@@ -425,10 +431,6 @@ PRODUCT_COPY_FILES += \
     prebuilts/vndk/v30/arm64/arch-arm64-armv8-a/shared/vndk-sp/libunwindstack.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libunwindstack-v30.so
 
 # Wi-Fi
-PRODUCT_PACKAGES += \
-    TetheringConfigOverlay \
-    WifiOverlay
-
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.3.vendor \
     android.hardware.wifi.supplicant@1.2.vendor \
