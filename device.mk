@@ -278,10 +278,6 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
     $(DEVICE_PATH)/configs/nfc/libnfc-nxp_RF.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp_RF.conf
 
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(DEVICE_PATH)/overlay
-
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
@@ -376,9 +372,6 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.2.vendor \
     android.hardware.radio.deprecated@1.0.vendor
 
-PRODUCT_PACKAGES += \
-    CarrierConfigOverlay
-
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.oppo.fingerprints.sh \
@@ -407,6 +400,18 @@ PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
     PresencePolling \
     RcsService
+
+# Runtime Resource Overlays 
+PRODUCT_PACKAGES += \
+    CarrierConfigOverlayRMX2020 \
+    DialerOverlayRMX2020 \
+    FrameworksResOverlayRMX2020 \
+    SettingsOverlayRMX2020 \
+    SettingsProviderOverlayRMX2020 \
+    SystemUIOverlayRMX2020 \
+    TelephonyOverlayRMX2020 \
+    TetheringResOverlayRMX2020 \
+    WifiResOverlayRMX2020
 
 # Seccomp
 PRODUCT_COPY_FILES += \
@@ -472,10 +477,6 @@ PRODUCT_COPY_FILES += \
     prebuilts/vndk/v30/arm64/arch-arm64-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libutils-v30.so
 
 # Wi-Fi
-PRODUCT_PACKAGES += \
-    TetheringResOverlay \
-    WifiResOverlay
-
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service-lazy
 
