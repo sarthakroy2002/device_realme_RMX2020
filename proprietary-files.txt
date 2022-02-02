@@ -647,7 +647,6 @@ system_ext/lib/vendor.oplus.hardware.displaypanelfeature@1.0.so
 system_ext/lib64/vendor.oplus.hardware.displaypanelfeature@1.0.so
 vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
-vendor/etc/init/android.hardware.memtrack@1.0-service.rc
 vendor/lib/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so
 vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
 vendor/lib/hw/memtrack.mt6768.so
@@ -935,7 +934,6 @@ vendor/lib64/libmtkcam_hwutils.so
 vendor/lib64/libmtkcam_imem.so
 vendor/lib64/libmtkcam_imgbuf.so
 vendor/lib64/libmtkcam_pipelinemodel_isp.so
-vendor/lib64/libmtkcam_pipelinemodel_session.so
 vendor/lib64/libmtkcam_pipelinepolicy-security.so
 vendor/lib64/libmtkcam_pipelinepolicy-smvr.so
 vendor/lib64/libmtkcam_pipelinepolicy_factory.so
@@ -1533,7 +1531,6 @@ vendor/etc/virtual-spn-conf-by-efpnn.xml
 vendor/etc/virtual-spn-conf-by-efspn.xml
 vendor/etc/virtual-spn-conf-by-imsi.xml
 vendor/lib/hw/dfps.mt6768.so
-vendor/lib/hw/kmsetkey.default.so
 vendor/lib/hw/kmsetkey.trustonic.so
 vendor/lib/hw/libMcGatekeeper.so
 vendor/lib/hw/libSoftGatekeeper.so
