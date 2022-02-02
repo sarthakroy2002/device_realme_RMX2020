@@ -398,7 +398,6 @@ vendor/lib64/libcamdrv_twin.so
 vendor/lib64/libcameracustom.eis.so
 vendor/lib64/libcvface_api.so
 vendor/lib64/libmpbase.so
-vendor/lib64/libstdc++.so
 vendor/lib64/vendor.mediatek.hardware.camera.atms@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.1.so
