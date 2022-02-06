@@ -63,7 +63,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-util \
     android.hardware.audio@6.0-util.vendor \
     android.hardware.soundtrigger@2.3.vendor \
-    android.hardware.bluetooth.audio@2.0-impl \
+    android.hardware.bluetooth.audio@2.1-impl \
     audio_policy.stub \
     audio.bluetooth.default \
     audio.r_submix.default \
