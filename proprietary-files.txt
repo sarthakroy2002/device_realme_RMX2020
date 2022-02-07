@@ -628,16 +628,16 @@ vendor/lib64/libmtkcam_pipelinemodel_utils.so|0d3aff659e7f21a06b3ed9f4081f3ee67b
 vendor/lib64/libmtkcam_pipelinemodel_zsl.so|30accab2e0fc1be5e7da261aa49d8ed3023ebb40
 vendor/lib64/libmtkcam_pipelinepolicy.so|8178ddf6b3be8d78fde1e96ad9f9938b18752436
 
-# DRM (Hardware) - from Redmi/ares/ares:12/SP1A.210812.016/21.11.8:user/release-keys
-vendor/bin/hw/android.hardware.drm@1.4-service.widevine|031392617dfa8cf36c9578e9d2a9cd3d7a1fa9c0
+# DRM (Hardware) - from Redmi/selene/selene:12/SP1A.210812.016/V13.0.1.0.SKUMIXM:user/release-keys
+vendor/bin/hw/android.hardware.drm@1.4-service.widevine|8307cea32c20bdc6e7456a6060ebefcfe743b02c
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc|992f63e9700da29099e0590858a6becaaadb2976
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml|91d7c0996133556cb7f7c5d1b7e5d9e7f07b78b2
 
-# DRM (Widevine) - from Redmi/ares/ares:12/SP1A.210812.016/21.11.8:user/release-keys
-vendor/lib/mediadrm/libwvdrmengine.so|c9e8a9c89cadc8fba0f113334dbe98d648e6546f
-vendor/lib/libwvhidl.so|e6abe18891bd2723f8bef9babebca9c50ce96f6d
-vendor/lib64/mediadrm/libwvdrmengine.so|d3d4ade3f101afe104af918ab2d212d0984c1812
-vendor/lib64/libwvhidl.so|e32b2d1eabbec1d4c8aa22c66a9ae18646d08788
+# DRM (Widevine) - from Redmi/selene/selene:12/SP1A.210812.016/V13.0.1.0.SKUMIXM:user/release-keys
+vendor/lib/mediadrm/libwvdrmengine.so|ef968cd0f6bcb079c4a2802a31d9af6d605dd70d
+vendor/lib/libwvhidl.so|0b823f9347bac0b4b0c3636b328a010cb1930d29
+vendor/lib64/mediadrm/libwvdrmengine.so|4eea74c78d16eceb3470f6bb4f4f0340697aa4ae
+vendor/lib64/libwvhidl.so|00a180a3fed41b35d3102ddbdc9a1a986886860a
 
 # Display (Hardware)
 system_ext/lib/vendor.oplus.hardware.displaypanelfeature@1.0.so
