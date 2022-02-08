@@ -6,7 +6,6 @@ PRODUCT_PROPERTY_OVERRIDES +=  \
     dalvik.vm.heapsize=512m \
     dalvik.vm.heaptargetutilization=0.75 \
     dalvik.vm.mtk-stack-trace-file=/data/anr/mtk_traces.txt \
-    debug.sf.disable_backpressure=1 \
     debug.sf.latch_unsignaled=1 \
     drm.service.enabled=true \
     persist.adb.nonblocking_ffs=0 \
