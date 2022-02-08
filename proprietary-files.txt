@@ -471,10 +471,18 @@ vendor/lib64/hw/hwcomposer.mt6768.so
 vendor/lib64/hw/memtrack.mt6768.so
 
 # EngineerMode
+-lib/libaudio_param_parser-sys.so
+-lib/libaudiotoolkit.so
+-lib/libem_audio_jni.so
 lib/libem_support_jni.so
 -lib/libem_support_jni.so
+-lib/vendor.mediatek.hardware.audio@5.1.so
+-lib64/libaudio_param_parser-sys.so
+-lib64/libaudiotoolkit.so
+-lib64/libem_audio_jni.so
 lib64/libem_support_jni.so
 -lib64/libem_support_jni.so
+-lib64/vendor.mediatek.hardware.audio@5.1.so
 -priv-app/EngineerMode/EngineerMode.apk
 
 # Fingerprint
