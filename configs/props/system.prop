@@ -33,7 +33,6 @@ dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5
 dalvik.vm.dex2oat-threads=6
 
 # Display
-debug.sf.disable_backpressure=1
 debug.sf.enable_hwc_vds=0
 
 # Fingerprint
