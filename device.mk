@@ -89,8 +89,6 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    libldacBT_dec \
-    libldacBT_bco \
     libbluetooth_audio_session.vendor \
     android.hardware.bluetooth.a2dp@1.0 \
     android.hardware.bluetooth@1.0.vendor \
