@@ -6,7 +6,6 @@ PRODUCT_PROPERTY_OVERRIDES +=  \
     dalvik.vm.heaptargetutilization=0.75 \
     dalvik.vm.mtk-stack-trace-file=/data/anr/mtk_traces.txt \
     debug.mtk_tflite.target_nnapi=29 \
-    debug.sf.disable_backpressure=1 \
     debug.sf.latch_unsignaled=0 \
     drm.service.enabled=true \
     init.userspace_reboot.is_supported=false \
