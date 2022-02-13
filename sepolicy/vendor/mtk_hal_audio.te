@@ -6,3 +6,4 @@ allow mtk_hal_audio sia81xx_tuning_if_device:chr_file rw_file_perms;
 allow mtk_hal_audio sysfs_sia81xx_file:dir search;
 allow mtk_hal_audio sysfs_sia81xx_file:file r_file_perms;
 allow mtk_hal_audio proc_oppo_ver:file r_file_perms;
+allow mtk_hal_audio proc_oppo_opname:file r_file_perms;
