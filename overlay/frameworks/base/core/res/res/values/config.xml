@@ -36,7 +36,6 @@
     <!-- Boolean indicating if current platform supports BLE peripheral mode -->
      <bool name="config_bluetooth_le_peripheral_mode_supported">false</bool>
 
-
     <!-- Whether device has screen with higher aspect ratio -->
      <bool name="config_haveHigherAspectRatioScreen">true</bool>
 
@@ -131,11 +130,6 @@
     <!-- Is the device capable of hot swapping an ICC Card -->
      <bool name="config_hotswapCapable">true</bool>
 
-    <!-- Indicate whether closing the lid causes the device to go to sleep and opening
-         it causes the device to wake up.
-         The default is false. -->
-     <bool name="config_lidControlsSleep">true</bool>
-
     <!-- Should the pinner service pin the Camera application? -->
      <bool name="config_pinnerCameraApp">false</bool>
 
@@ -211,24 +205,6 @@
     <!-- When true use the linux /dev/input/event subsystem to detect the switch changes
          on the headphone/microphone jack. When false use the older uevent framework. -->
      <bool name="config_useDevInputEventForAudioJack">true</bool>
-
-    <!-- Enable video pause workaround when enabling/disabling the camera. -->
-     <bool name="config_useVideoPauseWorkaround">false</bool>
-
-    <!-- Wifi driver supports batched scan -->
-     <bool name="config_wifi_batched_scan_supported">false</bool>
-
-    <!-- Boolean indicating whether the wifi chipset has dual frequency band support -->
-     <bool name="config_wifi_dual_band_support">false</bool>
-
-    <!-- Boolean indicating whether single radio chain scan results are to be used for network selection -->
-     <bool name="config_wifi_framework_use_single_radio_chain_scan_results_network_selection">true</bool>
-
-    <!-- Enable ACS (auto channel selection) for Wifi hotspot (SAP) -->
-     <bool name="config_wifi_softap_acs_supported">false</bool>
-
-    <!-- Enable 802.11ac for Wifi hotspot (SAP) -->
-     <bool name="config_wifi_softap_ieee80211ac_supported">false</bool>
 
     <!-- Boolean indicating if restoring network selection should be skipped -->
     <!-- The restoring is handled by modem if it is true-->
@@ -440,28 +416,6 @@
         <item>GPS_LOCK=0</item>
     </string-array>
 
-    <!-- List of regexpressions describing the interface (if any) that represent tetherable
-         bluetooth interfaces.  If the device doesn't want to support tethering over bluetooth this
-         should be empty. -->
-    <string-array name="config_tether_bluetooth_regexs">
-        <item>bt-pan</item>
-        <item>bt-dun</item>
-    </string-array>
-
-    <!-- List of regexpressions describing the interface (if any) that represent tetherable
-         USB interfaces.  If the device doesn't want to support tething over USB this should
-         be empty.  An example would be "usb.*" -->
-    <string-array name="config_tether_usb_regexs">
-        <item>rndis\\d</item>
-    </string-array>
-
-    <!-- List of regexpressions describing the interface (if any) that represent tetherable
-         Wifi interfaces.  If the device doesn't want to support tethering over Wifi this
-         should be empty.  An example would be "softap.*" -->
-    <string-array name="config_tether_wifi_regexs">
-        <item>"wlan\\d"</item>
-    </string-array>
-
     <!-- An Array of "[Connection name],[ConnectivityManager.TYPE_xxxx],
          [associated radio-type],[priority],[restoral-timer(ms)],[dependencyMet]  -->
     <!-- the 5th element "resore-time" indicates the number of milliseconds to delay
@@ -623,12 +577,6 @@
         <item>0</item> <!-- COLOR_MODE_NATURAL -->
         <item>1</item> <!-- COLOR_MODE_BOOSTED -->
     </integer-array>
-
-    <!-- Whether or not the device is capable of multiple levels of vibration intensity.
-         Note that this is different from whether it can control the vibration amplitude as some
-         devices will be able to vary their amplitude but do not possess enough dynamic range to
-         have distinct intensity levels -->
-    <bool name="config_vibration_supports_multiple_intensities">true</bool>
 
     <!-- Exempt ImsService from privacy (location) indicators -->
     <string name="config_systemAudioIntelligence" translatable="false">com.mediatek.ims</string>
