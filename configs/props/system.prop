@@ -38,6 +38,9 @@ debug.sf.enable_hwc_vds=0
 # Fingerprint
 fingerprint.nocleanup=true
 
+# FUSE passthrough
+persist.sys.fuse.passthrough.enable=true
+
 # Iorap
 persist.device_config.runtime_native_boot.iorap_readahead_enable=true
 iorapd.readahead.enable=true
