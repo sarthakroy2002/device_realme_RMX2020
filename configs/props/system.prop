@@ -32,6 +32,9 @@ dalvik.vm.dex2oat-threads=6
 # Display
 debug.sf.enable_hwc_vds=0
 
+# FUSE passthrough
+persist.sys.fuse.passthrough.enable=true
+
 # Iorap
 persist.device_config.runtime_native_boot.iorap_readahead_enable=true
 iorapd.readahead.enable=true
