@@ -68,6 +68,7 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     audio.r_submix.default \
     audio.usb.default \
+    audio_policy.stub \
     libaudiofoundation.vendor \
     libtinycompress \
     libtinyxml \
@@ -114,12 +115,18 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4 \
     android.hardware.camera.provider@2.4.vendor
 
+PRODUCT_PACKAGES += \
+    libstdc++.vendor
+
 # Disable Configstore
 PRODUCT_PACKAGES += \
     disable_configstore
 
 # Display
 PRODUCT_PACKAGES += \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service \
+    android.hardware.memtrack@1.0.vendor \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.common@1.2 \
@@ -200,7 +207,7 @@ PRODUCT_PACKAGES += \
     libkeymaster4.vendor \
     libkeymaster4support.vendor
 
-# KPOC
+# Offline Charging
 PRODUCT_PACKAGES += \
     libsuspend
 
@@ -234,6 +241,7 @@ PRODUCT_PACKAGES += \
     com.android.media.swcodec \
     libsfplugin_ccodec
 
+# Mediatek
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml
 
@@ -392,8 +400,6 @@ PRODUCT_PACKAGES += \
     init.mt6768.usb.rc \
     init.wmt_drv.rc \
     init.wlan_drv.rc \
-    init.oppo.reserve.rc \
-    init.oppo.vendor.motor.rc \
     init.project.rc \
     init.sensor_1_0.rc \
     meta_init.connectivity.rc \
@@ -441,6 +447,9 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0.vendor \
     android.hardware.sensors@2.0-impl \
     android.hardware.sensors@2.0-service \
+
+PRODUCT_PACKAGES += \
+    libsensorndkbridge
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
