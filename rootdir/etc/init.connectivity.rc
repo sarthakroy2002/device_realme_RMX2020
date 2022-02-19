@@ -2,16 +2,11 @@
 
 on post-fs-data
 
-
-#
-# Connectivity related device nodes & configuration (begin)
-#
-
-#/dev/ttyMT2 for Connectivity BT/FM/GPS usage
+# /dev/ttyMT2 for Connectivity BT/FM/GPS usage
     chmod 0660 /dev/ttyMT2
     chown system system /dev/ttyMT2
 
-#/dev/ttyMT1 for GPS 3337 usage
+# /dev/ttyMT1 for GPS 3337 usage
     chmod 0660 /dev/ttyMT1
     chown system system /dev/ttyMT1
 
@@ -30,16 +25,8 @@ on post-fs-data
     chown bluetooth bluetooth /dev/ttyGS2
     chmod 0660 /dev/ttyGS2
 
-#
-# Connectivity related device nodes & configuration (end)
-#
-
-
 on boot
 
-#
-# Connectivity related services (Begin)
-#
 # GPS
 service mnld /vendor/bin/mnld
     class main
@@ -54,11 +41,6 @@ service lbs_dbg /system/bin/lbs_dbg
     group gps inet misc sdcard_rw sdcard_r media_rw system radio
     socket lbs_dbg stream 660 gps system
 
-#service BGW /vendor/bin/BGW
-#    user system
-#    group gps system radio
-#    class main
-
 # Wlan
 service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     -g@android:wpa_wlan0
@@ -69,8 +51,3 @@ service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     class main
     disabled
     oneshot
-
-#
-# Connectivity related services (End)
-#
-
