@@ -1,4 +1,3 @@
-
 # load wifi driver after wmt_loader finish
 on property:vendor.connsys.driver.ready=yes
   insmod /vendor/lib/modules/wmt_chrdev_wifi.ko

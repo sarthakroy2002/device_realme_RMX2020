@@ -3,15 +3,8 @@
 import vendor/etc/init/hw/init.connectivity.rc
 import vendor/etc/init/hw/init.mt6768.usb.rc
 import /vendor/etc/init/hw/init.project.rc
-import vendor/etc/init/hw/init.volte.rc
-import vendor/etc/init/hw/init.mal.rc
 import vendor/etc/init/hw/init.sensor_1_0.rc
-import /vendor/etc/init/hw/init.stnfc.rc
-import /system/etc/init/hw/init.stnfc.rc
-
-# init.modem.rc must be the LAST rc file because vold.post_fs_data_done is set in it
 import vendor/etc/init/hw/init.modem.rc
-# *** DO NOT import the new rc file after this line ***
 
 on early-init
     write /proc/bootprof "INIT:early-init"
@@ -20,14 +13,9 @@ on early-init
     write /sys/devices/platform/10012000.dvfsrc/helio-dvfsrc/dvfsrc_req_ddr_opp 0
 
 on init
-#ifdef ODM_WT_EDIT
-#Mingyao.Xie@ODM_WT.BSP.Storage.otg, 2019/11/01, Modify for monet persist partition
-    #create mountpoint for /mnt/vendor/persist partition
+    
+# create mountpoint for /mnt/vendor/persist partition
     mkdir /mnt/vendor/persist 0771 system system
-#endif /*ODM_WT_EDIT*/
-
-    # if primary storage is physical, set ro.vold.primary_physical to 1
-    # setprop ro.vold.primary_physical 1
 
 # change lk_env permission
     chown root system /proc/lk_env
@@ -60,10 +48,10 @@ on property:ro.boot.product.hardware.sku=nfc
 
 on late-init
     write /proc/bootprof "INIT:late-init"
+
 # enable rcu_expedited
     write /sys/kernel/rcu_expedited 1
 
-# mount different fs start
 
 on charger
     # Turn backlight on 
@@ -82,6 +70,7 @@ on charger
     restorecon_recursive /mnt/vendor/nvcfg
     write /sys/devices/platform/battery_meter/FG_daemon_log_level 7
     write /sys/bus/platform/devices/battery/FG_daemon_log_level 7
+
     # Permissions for System Server and daemons.
     chown system system /sys/power/autosleep
     chown system system /sys/power/state
@@ -153,6 +142,7 @@ on post-fs
     chown radio system /proc/clkmgr/pll_fsel
     chmod 0664 /proc/clkmgr/pll_test
     chmod 0664 /proc/clkmgr/pll_fsel
+    
     #change permission for engineer mode
     chown radio system /proc/freqhopping/dramc
     chown radio system /proc/freqhopping/dumpregs
@@ -255,12 +245,10 @@ on post-fs-data
     chmod 0660 /dev/spm
     chown system system /dev/spm
 
-# GPS
+    # GPS
     chmod 0775 /vendor/xbin/MPED
     chmod 0666 /dev/gps_emi
 
-# -----------------------
-# Add by MTK
     # SCP log
     chmod 0660 /sys/class/misc/scp/scp_mobile_log
     chown root system /sys/class/misc/scp/scp_mobile_log
@@ -281,11 +269,7 @@ on post-fs-data
     chmod 444 /etc/radvd/radvd.conf
 
     # Mali 3D GPU driver
-    #insmod /vendor/lib/modules/mali.ko
     chmod 666 /dev/mali0
-    #chown system graphics /dev/mali
-
-
 
     # Touch Panel
     # chmod 0664 /dev/touch
@@ -308,10 +292,7 @@ on post-fs-data
     chown root radio /dev/ptmx
 
     # M4U
-    #insmod /vendor/lib/modules/m4u.ko
-    #mknod /dev/M4U_device c 188 0
     chmod 0444 /dev/m4u
-    #chown system media /dev/M4U_device
 
     #set mlock limit to infinate (for m4u operation)
     setrlimit 8 -1 -1
@@ -346,8 +327,6 @@ on post-fs-data
     chown root radio /sys/devices/platform/Accdet_Driver/driver/accdet_call_state
 
     #Fingerprint
-    chmod 0666 /dev/goodix_fp
-    #Zhonghua.Hu@ODM_WT.BSP.Fingerprint.BASIC, 2019/10/06, Modify for Fingerprint egis driver
     chmod 0666 /dev/esfp0
     chown system system /dev/esfp0
     chmod 0660 /sys/bus/platform/devices/egis_input/navigation_enable
@@ -366,8 +345,6 @@ on post-fs-data
     mkdir /data/vendor/vcodec/log 0770 media system
 
     #MJC
-    #insmod /vendor/lib/modules/mjc_kernel_driver.ko
-    #mknod /dev/MJC c 168 0
     chmod 0660 /dev/MJC
     chown media system /dev/MJC
 
@@ -660,8 +637,6 @@ on post-fs-data
     chmod 660 /dev/alarm
     chown root system /dev/alarm
 
-# End of adding by MTK drivers
-# -----------------------
 
 on boot
     write /proc/bootprof "INIT:boot"
@@ -957,39 +932,6 @@ on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor "schedplus"
     write /sys/devices/system/cpu/cpufreq/policy4/scaling_governor "schedplus"
 
-#service dpfd /vendor/bin/dpfd
-#	user root
-#	group system media
-
-#
-#  External Modme control related services
-#
-
-#
-#  Modem related services (Begin)
-#
-##Add by T.Zh for ppp daemon
-#service pppd /bin/pppd file /data/misc/ppp/ppp_options
-#    user root
-#    disabled
-#    oneshot
-#
-##
-#
-#  Modem related services (End)
-#
-
-#add for power-off alarm
-#service poad /vendor/bin/poad
-#    class main
-#    user system
-#    group system
-#    oneshot
-
-#service BGW /vendor/xbin/BGW
-#	user system
-#	group gps system radio
-#	class main
 
 # Battery info
 on property:persist.vendor.mediatek.fg.disable=1
