@@ -53,22 +53,19 @@ TARGET_SCREEN_WIDTH := 720
 
 # Audio
 PRODUCT_PACKAGES += \
-    audio.a2dp.default \
-    android.hardware.audio@5.0 \
     android.hardware.audio@5.0.vendor \
     android.hardware.audio.effect@5.0-impl \
     android.hardware.audio.common@6.0-util \
-    android.hardware.soundtrigger@2.2 \
-    android.hardware.soundtrigger@2.2.vendor \
-    android.hardware.bluetooth.audio@2.0-impl \
-    android.hardware.broadcastradio@1.0 \
-    android.hardware.broadcastradio@1.0.vendor \
-    android.hardware.broadcastradio@1.1 \
-    android.hardware.broadcastradio@1.1.vendor \
+    android.hardware.soundtrigger@2.2.vendor 
+
+PRODUCT_PACKAGES += \
+    audio.a2dp.default \
     audio.bluetooth.default \
     audio.r_submix.default \
     audio.usb.default \
-    audio_policy.stub \
+    audio_policy.stub
+
+PRODUCT_PACKAGES += \
     libaudiofoundation.vendor \
     libtinycompress \
     libtinyxml \
@@ -103,16 +100,15 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.a2dp@1.0 \
     android.hardware.bluetooth@1.0.vendor \
-    android.hardware.bluetooth.a2dp@1.0.vendor \
+    android.hardware.bluetooth.audio@2.0-impl \
+    android.hardware.bluetooth.a2dp@1.0.vendor
+
+PRODUCT_PACKAGES += \
     libbtconfigstore
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.device@3.2.vendor \
-    android.hardware.camera.device@3.3.vendor \
-    android.hardware.camera.device@3.4.vendor \
     android.hardware.camera.device@3.5.vendor \
-    android.hardware.camera.provider@2.4 \
     android.hardware.camera.provider@2.4.vendor
 
 PRODUCT_PACKAGES += \
@@ -133,20 +129,15 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-impl \
     android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
+
+PRODUCT_PACKAGES += \
     libvulkan
 
 # DRM
 PRODUCT_PACKAGES += \
     libmockdrmcryptoplugin \
-    android.hardware.drm@1.0 \
-    android.hardware.drm@1.0.vendor \
-    android.hardware.drm@1.1 \
-    android.hardware.drm@1.1.vendor \
-    android.hardware.drm@1.2 \
-    android.hardware.drm@1.2.vendor \
-    android.hardware.drm@1.3 \
-    android.hardware.drm@1.3.vendor \
-    android.hardware.drm@1.4 \
+
+PRODUCT_PACKAGES += \
     android.hardware.drm@1.4.vendor \
     android.hardware.drm@1.4-service.clearkey
 
@@ -173,7 +164,6 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.0 \
     android.hardware.gnss@2.0.vendor \
 
 # Health
@@ -247,13 +237,6 @@ PRODUCT_COPY_FILES += \
 
 # Neutral Networks
 PRODUCT_PACKAGES += \
-    android.hardware.neuralnetworks@1.0 \
-    android.hardware.neuralnetworks@1.0.vendor \
-    android.hardware.neuralnetworks@1.1 \
-    android.hardware.neuralnetworks@1.1.vendor \
-    android.hardware.neuralnetworks@1.2 \
-    android.hardware.neuralnetworks@1.2.vendor \
-    android.hardware.neuralnetworks@1.3 \
     android.hardware.neuralnetworks@1.3.vendor
 
 # NFC
@@ -327,13 +310,6 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.0 \
-    android.hardware.power@1.0.vendor \
-    android.hardware.power@1.1 \
-    android.hardware.power@1.1.vendor \
-    android.hardware.power@1.2 \
-    android.hardware.power@1.2.vendor \
-    android.hardware.power@1.3 \
     android.hardware.power@1.3.vendor
 
 PRODUCT_COPY_FILES += \
@@ -355,33 +331,15 @@ PRODUCT_COPY_FILES += \
 
 # Radio
 PRODUCT_PACKAGES += \
-    android.hardware.broadcastradio@1.0 \
-    android.hardware.broadcastradio@1.1 \
-    android.hardware.radio@1.0 \
-    android.hardware.radio@1.0.vendor \
-    android.hardware.radio@1.1 \
-    android.hardware.radio@1.1.vendor \
-    android.hardware.radio@1.2 \
-    android.hardware.radio@1.2.vendor \
-    android.hardware.radio@1.3 \
-    android.hardware.radio@1.3.vendor \
-    android.hardware.radio@1.4 \
+    android.hardware.broadcastradio@1.1.vendor \
     android.hardware.radio@1.4.vendor \
-    android.hardware.radio@1.5 \
-    android.hardware.radio@1.5.vendor \
-    android.hardware.radio.config@1.0 \
-    android.hardware.radio.config@1.0.vendor \
-    android.hardware.radio.config@1.1 \
-    android.hardware.radio.config@1.1.vendor \
-    android.hardware.radio.config@1.2 \
     android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio.deprecated@1.0 \
     android.hardware.radio.deprecated@1.0.vendor
 
 PRODUCT_PACKAGES += \
     CarrierConfigOverlay
 
-# Ramdisk
+# Rootdir
 PRODUCT_PACKAGES += \
     init.oppo.fingerprints.sh \
     init.oppo.wifi.debug.sh \
@@ -428,12 +386,10 @@ PRODUCT_COPY_FILES += \
 
 # Secure element
 PRODUCT_PACKAGES += \
-    android.hardware.secure_element@1.0 \
     android.hardware.secure_element@1.0.vendor
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@2.0 \
     android.hardware.sensors@2.0.vendor \
     android.hardware.sensors@2.0-impl \
     android.hardware.sensors@2.0-service \
@@ -467,32 +423,27 @@ PRODUCT_PACKAGES += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0 \
-    android.hardware.usb@1.0.vendor \
-    android.hardware.usb@1.1 \
     android.hardware.usb@1.1.vendor
 
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-V1-ndk_platform.vendor
 
-# Video Telephony
-PRODUCT_PACKAGES += \
-    vendor.mediatek.hardware.videotelephony@1.0
-
 # VNDK
 PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v30/arm64/arch-arm-armv8-a/shared/vndk-sp/libunwindstack.so:$(TARGET_COPY_OUT_VENDOR)/lib/libunwindstack-v30.so \
-    prebuilts/vndk/v30/arm64/arch-arm64-armv8-a/shared/vndk-sp/libunwindstack.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libunwindstack-v30.so \
     prebuilts/vndk/v29/arm64/arch-arm-armv8-a/shared/vndk-sp/libunwindstack.so:$(TARGET_COPY_OUT_VENDOR)/lib/libunwindstack-v29.so \
     prebuilts/vndk/v29/arm64/arch-arm-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v29.so \
-    prebuilts/vndk/v30/arm64/arch-arm-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v30.so \
     prebuilts/vndk/v29/arm64/arch-arm-armv8-a/shared/vndk-sp/libcompiler_rt.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcompiler_rt.so \
     prebuilts/vndk/v29/arm64/arch-arm-armv8-a/shared/vndk-core/libmedia_helper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmedia_helper-v29.so \
+    prebuilts/vndk/v30/arm64/arch-arm-armv8-a/shared/vndk-sp/libunwindstack.so:$(TARGET_COPY_OUT_VENDOR)/lib/libunwindstack-v30.so \
+    prebuilts/vndk/v30/arm64/arch-arm-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v30.so
+
+PRODUCT_COPY_FILES += \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libunwindstack.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libunwindstack-v29.so \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libutils-v29.so \
+    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libcompiler_rt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcompiler_rt.so \
     prebuilts/vndk/v30/arm64/arch-arm64-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libutils-v30.so \
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libcompiler_rt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcompiler_rt.so
+    prebuilts/vndk/v30/arm64/arch-arm64-armv8-a/shared/vndk-sp/libunwindstack.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libunwindstack-v30.so
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
@@ -500,24 +451,11 @@ PRODUCT_PACKAGES += \
     WifiOverlay
 
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0 \
-    android.hardware.wifi@1.0.vendor \
-    android.hardware.wifi@1.1 \
-    android.hardware.wifi@1.1.vendor \
-    android.hardware.wifi@1.2 \
-    android.hardware.wifi@1.2.vendor \
-    android.hardware.wifi@1.3 \
     android.hardware.wifi@1.3.vendor \
-    android.hardware.wifi.supplicant@1.0 \
-    android.hardware.wifi.supplicant@1.0.vendor \
-    android.hardware.wifi.supplicant@1.1 \
-    android.hardware.wifi.supplicant@1.1.vendor \
-    android.hardware.wifi.supplicant@1.2 \
     android.hardware.wifi.supplicant@1.2.vendor \
-    android.hardware.wifi.hostapd@1.0 \
-    android.hardware.wifi.hostapd@1.0.vendor \
-    android.hardware.wifi.hostapd@1.1 \
-    android.hardware.wifi.hostapd@1.1.vendor \
+    android.hardware.wifi.hostapd@1.1.vendor
+
+PRODUCT_PACKAGES += \
     libkeystore-engine-wifi-hidl \
     libkeystore-wifi-hidl \
 
