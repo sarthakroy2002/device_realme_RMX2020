@@ -53,6 +53,37 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
+function blob_fixup {
+    case "$1" in
+        lib/libsink.so)
+            "${PATCHELF}" --add-needed "libshim_vtservice.so" "${2}"
+            ;;
+        vendor/lib/hw/audio.primary.mt6768.so)
+            "${PATCHELF}" --replace-needed "libmedia_helper.so" "libmedia_helper-v29.so" "${2}"
+            ;; 
+        vendor/bin/hw/android.hardware.wifi@1.0-service-lazy-mediatek)
+            "${PATCHELF}" --replace-needed "libwifi-hal.so" "libwifi-hal-mtk.so" "${2}"
+            ;;
+        vendor/bin/hw/android.hardware.wifi@1.0-service-lazy-mediatek)
+            ;&
+        vendor/bin/hw/hostapd)
+            ;&
+        vendor/bin/hw/wpa_supplicant)
+            "${PATCHELF}" --add-needed "libcompiler_rt.so" ${2}
+            ;;
+        vendor/bin/hw/camerasloganserver)
+            ;&
+        vendor/lib/libmtkcam_stdutils.so)
+            ;&
+        vendor/lib64/libmtkcam_stdutils.so)
+            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v29.so" "${2}"
+            ;;
+        vendor/bin/hw/camerahalserver)
+            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v30.so" "${2}"
+            ;;
+    esac
+}
+
 # Initialize the helper
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 
