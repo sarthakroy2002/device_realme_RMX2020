@@ -615,9 +615,6 @@ vendor/lib/modules/wlan_drv_gen4m.ko
 vendor/lib/modules/wmt_chrdev_wifi.ko
 vendor/lib/modules/wmt_drv.ko
 
-# Media
-vendor/lib/libstagefright_soft_mpeg2dec.so
-
 # Media-Hardware
 vendor/lib/libstagefrighthw.so
 vendor/lib64/libstagefrighthw.so
