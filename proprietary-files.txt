@@ -416,7 +416,6 @@ vendor/lib64/libmtkcam.featurepipe.capture.so
 vendor/lib64/libmtkcam.featurepipe.depthmap.so
 vendor/lib64/libmtkcam.featurepipe.streaming.so
 vendor/lib64/libmtkcam.logicalmodule.so
-vendor/lib64/libmtkcam_3rdparty.customer.so
 vendor/lib64/libmtkcam_3rdparty.mtk.so
 vendor/lib64/libmtkcam_metadata.so
 vendor/lib64/libmtkcam_metastore.so
@@ -442,6 +441,9 @@ vendor/lib64/monetx_hlt_macro_gc2385_tuning.so
 vendor/lib64/monetx_ofilm_front_ov16a1q_tuning.so
 vendor/lib64/monetx_shengtai_wide_ov8856_tuning.so
 vendor/lib64/monetx_truly_main_s5kgm1sp_tuning.so
+
+# Camera - Patched by Wyroczen to fix Buffer
+vendor/lib64/libmtkcam_3rdparty.customer.so|6de2f5ab49667447671967c9c6483f4e7fbdf290
 
 # Charger - From Redmi/merlin/merlin:11/RP1A.200720.011/V12.5.1.0.RJOMIXM:user/release-keys
 bin/charger:bin/chargeonlymode|bb74c36cee72b1f2e2c8090eb6f21352eba8e83f
