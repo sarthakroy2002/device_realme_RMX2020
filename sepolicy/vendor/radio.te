@@ -13,3 +13,21 @@ get_prop(radio, mtk_vilte_support_prop)
 
 # Allow Radio to read mtk_viwifi_support_prop
 get_prop(radio, mtk_viwifi_support_prop)
+
+# For Engineermode
+get_prop(radio, mtk_default_prop)
+get_prop(radio, mtk_dmc_prop)
+get_prop(radio, mtk_log_tel_dbg_prop)
+get_prop(radio, mtk_mdworldmode_prop)
+get_prop(radio, mtk_ril_mode_prop)
+get_prop(radio, ril_active_md_prop)
+get_prop(radio, vendor_mtk_radio_prop)
+get_prop(radio, mnld_prop)
+get_prop(radio, mtk_fd_support_prop)
+get_prop(radio, mtk_rat_config_prop)
+get_prop(radio, mtk_ss_vendor_prop)
+get_prop(radio, mtk_telephony_addon_prop)
+get_prop(radio, tel_switch_prop)
+get_prop(radio, mtk_aal_ro_prop)
+get_prop(radio, mtk_mdm_prop)
+get_prop(radio, ro_vendor_mtk_wfd_support_prop)
