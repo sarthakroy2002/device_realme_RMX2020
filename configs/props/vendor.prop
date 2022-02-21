@@ -138,6 +138,7 @@ ro.lmk.swap_util_max=90
 ro.lmk.thrashing_limit=30
 ro.lmk.thrashing_limit_decay=50
 ro.lmk.filecache_min_kb=153600
+ro.lmk.stall_limit_critical=40
 
 # Media
 debug.stagefright.ccodec=1
