@@ -54,8 +54,6 @@ on late-init
 
 
 on charger
-    # Turn backlight on 
-    write /sys/class/leds/lcd-backlight/brightness 1000
 
     exec /bin/e2fsck -f -p /dev/block/platform/bootdevice/by-name/cache
     mount ext4 /dev/block/platform/bootdevice/by-name/cache /cache rw wait
@@ -88,6 +86,8 @@ on charger
     chown system system /sys/class/leds/lcd-backlight/brightness
     chown system system /sys/class/leds/red/brightness
     chown system system /sys/class/leds/green/brightness
+
+    start vendor.light-default
 
 on fs
     write /proc/bootprof "INIT:Mount_START"
