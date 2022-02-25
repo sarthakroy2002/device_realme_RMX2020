@@ -202,6 +202,7 @@ vendor/lib/hw/vendor.oppo.hardware.camera.slogan@1.0-impl.so
 vendor/lib/libVDPostureDetection.so
 vendor/lib/libcam.halsensor.hwintegration.so
 vendor/lib/libmpbase.so
+vendor/lib/libstdc++.so
 vendor/lib/vendor.mediatek.hardware.camera.bgservice@1.0.so
 vendor/lib/vendor.mediatek.hardware.camera.bgservice@1.1.so
 vendor/lib/vendor.oppo.hardware.camera.slogan@1.0.so
@@ -257,6 +258,7 @@ vendor/lib64/libcameracustom.eis.so
 vendor/lib64/libcameracustom.plugin.so
 vendor/lib64/libcvface_api.so
 vendor/lib64/libmpbase.so
+vendor/lib64/libstdc++.so
 vendor/lib64/vendor.mediatek.hardware.camera.atms@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.1.so
