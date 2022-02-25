@@ -111,9 +111,6 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.device@3.5.vendor \
     android.hardware.camera.provider@2.4.vendor
 
-PRODUCT_PACKAGES += \
-    libstdc++.vendor
-
 # Disable Configstore
 PRODUCT_PACKAGES += \
     disable_configstore
