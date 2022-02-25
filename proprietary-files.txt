@@ -574,7 +574,6 @@ lib/libimsma_socketwrapper.so
 lib/libmtk_vt_service.so
 lib/libmtk_vt_wrapper.so
 lib/libmtkaudio_utils.so
-lib/libmtkavenhancements.so
 lib/libmtklimiter.so
 lib/libmtkperf_client.so
 lib/libmtkshifter.so
@@ -587,7 +586,6 @@ lib/libvt_avsync.so
 lib64/vendor.mediatek.hardware.videotelephony@1.0.so:system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 lib64/libmtk_vt_wrapper.so
 lib64/libmtkaudio_utils.so
-lib64/libmtkavenhancements.so
 lib64/libmtklimiter.so
 lib64/libmtkperf_client.so
 lib64/libmtkshifter.so
@@ -617,7 +615,21 @@ vendor/lib/modules/wlan_drv_gen4m.ko
 vendor/lib/modules/wmt_chrdev_wifi.ko
 vendor/lib/modules/wmt_drv.ko
 
-# Media-Hardware
+# Media
+lib/libmtkavenhancements.so
+lib64/libmtkavenhancements.so
+lib64/extractors/libmtkadpcmextractor.so
+lib64/extractors/libmtkalacextractor.so
+lib64/extractors/libmtkapeextractor.so
+lib64/extractors/libmtkasfextractor.so
+lib64/extractors/libmtkaviextractor.so
+lib64/extractors/libmtkflvextractor.so
+lib64/extractors/libmtkmp3extractor.so
+lib64/extractors/libmtkmpeg2extractor.so
+lib64/extractors/libmtkmkvextractor.so
+lib64/extractors/libOppomp4extractor.so
+
+# Media (Hardware)
 vendor/lib/libstagefrighthw.so
 vendor/lib64/libstagefrighthw.so
 
