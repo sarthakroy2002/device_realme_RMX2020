@@ -14,6 +14,7 @@ get_prop(radio, mtk_dynims_prop)
 get_prop(radio, mtk_vilte_support_prop)
 get_prop(radio, vendor_vt_prop)
 get_prop(radio, mtk_viwifi_support_prop)
+get_prop(radio, mtk_mobile_management_prop)
 
 # For Engineermode
 get_prop(radio, mtk_default_prop)
