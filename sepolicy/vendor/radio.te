@@ -8,12 +8,6 @@ allow radio vtservice_service:service_manager find;
 allow radio system_app_data_file:dir r_dir_perms;
 allow radio system_app_data_file:file r_file_perms;
 
-# Allow Radio to read mtk_vilte_support_prop
-get_prop(radio, mtk_vilte_support_prop)
-
-# Allow Radio to read mtk_viwifi_support_prop
-get_prop(radio, mtk_viwifi_support_prop)
-
 # For Engineermode
 get_prop(radio, mtk_default_prop)
 get_prop(radio, mtk_dmc_prop)
@@ -31,3 +25,5 @@ get_prop(radio, tel_switch_prop)
 get_prop(radio, mtk_aal_ro_prop)
 get_prop(radio, mtk_mdm_prop)
 get_prop(radio, ro_vendor_mtk_wfd_support_prop)
+get_prop(radio, mtk_viwifi_support_prop)
+get_prop(radio, mtk_vilte_support_prop)
