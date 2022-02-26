@@ -1,5 +1,7 @@
+# OPPO
 vendor.oppo.hardware.cryptoeng::ICryptoeng u:object_r:hal_cryptoeng_hwservice:s0
 vendor.oppo.hardware.hypnus::IHypnusUtil u:object_r:hal_hypnus_hwservice:s0
+vendor.oppo.hardware.wifi.hostapd::IOppoHostapd u:object_r:hal_oppo_hostapd_hwservice:s0
 
 # Fingerprint
 vendor.oppo.hardware.biometrics.fingerprint::IBiometricsFingerprint          u:object_r:hal_fingerprint_hwservice:s0
