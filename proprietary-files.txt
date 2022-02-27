@@ -604,7 +604,12 @@ vendor/lib64/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.0.so
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so
 
-# Kernel-Modules
+# Mediatek Kernel Modules
+vendor/etc/init/init.bt_drv.rc
+vendor/etc/init/init.fmradio_drv.rc
+vendor/etc/init/init.gps_drv.rc
+vendor/etc/init/init.wlan_drv.rc
+vendor/etc/init/init.wmt_drv.rc
 vendor/lib/modules/bt_drv.ko
 vendor/lib/modules/fmradio_drv.ko
 vendor/lib/modules/fpsgo.ko
@@ -855,6 +860,8 @@ vendor/lib64/libnir_neon_driver_ndk.mtk.so|58a4322988d1f224e126a42897a0289a14b50
 # Oppo
 vendor/bin/hw/vendor.oppo.hardware.cryptoeng@1.0-service
 vendor/bin/hw/vendor.oppo.hardware.hypnus@1.0-service
+vendor/bin/init.oppo.wifi.debug.sh
+vendor/bin/init.oppo.fingerprints.sh
 vendor/bin/OppoKeybox
 vendor/etc/init/hw/init.oppo.reserve.rc
 vendor/etc/init/init.oppo.connectivity.rc
@@ -877,8 +884,6 @@ vendor/lib64/vendor.oppo.hardware.wifi.supplicant@1.0.so
 # Power-Hardware
 vendor/lib/hw/power.mt6768.so
 vendor/lib64/hw/power.mt6768.so
-
-# QMI
 
 # Radio
 
@@ -903,11 +908,9 @@ vendor/etc/init/init.thermal_manager.rc
 vendor/etc/init/init.thermalloadalgod.rc
 vendor/lib/libthermalalgo.so
 
-# Thermal-Hardware
+# Thermal (Hardware)
 vendor/lib/hw/thermal.mt6768.so
 vendor/lib64/hw/thermal.mt6768.so
-
-# Time
 
 # Vibrator - from Nokia/Ronin_00WW/RNN_sprout:11/RP1A.200720.011/00WW_1_100:user/release-keys
 vendor/bin/hw/android.hardware.vibrator-service.mediatek|6a99b17250dae08eeeb4a720df65ef61b0542021
