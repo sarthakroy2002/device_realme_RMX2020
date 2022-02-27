@@ -343,12 +343,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.recovery.mt6768.rc
 
-# RcsService
-PRODUCT_PACKAGES += \
-    com.android.ims.rcsmanager \
-    PresencePolling \
-    RcsService
-
 # Releasetoold script
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/egis.sh:install/bin/egis.sh
