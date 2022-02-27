@@ -188,10 +188,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libsuspend
 
-# Minijail
-PRODUCT_PACKAGES += \
-    libavservices_minijail.vendor
-
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.RMX2020
@@ -212,6 +208,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
+
+PRODUCT_PACKAGES += \
+    libavservices_minijail_vendor \
+    libavservices_minijail.vendor
 
 # Media Codec2 modules
 PRODUCT_PACKAGES += \
