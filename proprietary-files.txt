@@ -14,12 +14,6 @@ vendor/lib64/libladder.so|47ab171fde2026c25c0c63f0af9bfcee3fcd74a9
 vendor/lib64/libudf.so|f57a4f63592b62c2de72b377021327756fc5fac1
 
 # Audio
-vendor/etc/dirac/19741/diracmobile.config
-vendor/etc/dirac/19741/diracvdd.bin
-vendor/etc/diracmobile.config
-vendor/etc/diracvdd.bin
-vendor/lib/soundfx/libdirac.so
-vendor/lib/libDiracAPI_SHARED.so
 vendor/lib/libaudio_engineer_test.so
 vendor/lib/libaudio_param_parser-vnd.so
 vendor/lib/libaudiocompensationfilter_vendor.so
@@ -52,21 +46,15 @@ vendor/lib64/libwebrtc_audio_preprocessing.so
 # Audio (Hardware)
 vendor/bin/hw/android.hardware.audio@5.0-service-mediatek
 vendor/etc/init/android.hardware.audio@5.0-service-mediatek.rc
-vendor/lib/hw/android.hardware.audio.effect@5.0-impl.so
 vendor/lib/hw/android.hardware.audio@5.0-impl-mediatek.so
 vendor/lib/hw/audio.primary.mt6768.so
 vendor/lib/hw/audio.r_submix.mt6768.so
 vendor/lib/hw/audio.usb.mt6768.so
-vendor/lib/android.hardware.audio.common-util.so
-vendor/lib/android.hardware.audio.common@5.0-util.so
 vendor/lib/vendor.mediatek.hardware.audio@5.1.so
-vendor/lib64/hw/android.hardware.audio.effect@5.0-impl.so
 vendor/lib64/hw/android.hardware.audio@5.0-impl-mediatek.so
 vendor/lib64/hw/audio.primary.mt6768.so
 vendor/lib64/hw/audio.r_submix.mt6768.so
 vendor/lib64/hw/audio.usb.mt6768.so
-vendor/lib64/android.hardware.audio.common-util.so
-vendor/lib64/android.hardware.audio.common@5.0-util.so
 vendor/lib64/vendor.mediatek.hardware.audio@5.1.so
 
 # Audio (Configs)
@@ -166,6 +154,14 @@ vendor/etc/audio_param/oppo6769_19741/VolumeGainMap_AudioParam.xml
 vendor/etc/audio_param/oppo6769_19741/VolumeGainMap_ParamUnitDesc.xml
 vendor/etc/audio_param/oppo6769_19741/Volume_AudioParam.xml
 vendor/etc/audio_param/oppo6769_19741/Volume_ParamUnitDesc.xml
+
+# Audio (Dirac)
+vendor/etc/dirac/19741/diracmobile.config
+vendor/etc/dirac/19741/diracvdd.bin
+vendor/etc/diracmobile.config
+vendor/etc/diracvdd.bin
+vendor/lib/soundfx/libdirac.so
+vendor/lib/libDiracAPI_SHARED.so
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-mediatek
