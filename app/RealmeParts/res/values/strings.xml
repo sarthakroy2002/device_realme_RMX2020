@@ -36,9 +36,6 @@
     <string name="dc_mode_summary">DC Dimming reduces eye strain in low light conditions but may result in reduced image quality and poor color production.</string>
     <string name="dc_mode_title">DC-Dimming</string>
     <string name="tile_dc_mode">DC-Dimming</string>
-   <!-- DT2W -->
-    <string name="dt2w_title">Double-Tap to wake</string>
-    <string name="dt2w_summary">When Double-tap to wake is enabled, you can touch the screen twice to turn it on</string>
     <!-- HBM mode -->
     <string name="hbm_mode_summary">Peak brightness for better visibility in outdoors</string>
     <string name="hbm_mode_title">High brightness mode</string>

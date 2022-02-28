@@ -93,12 +93,6 @@
             android:summary="@string/srgb_mode_summary"
             android:title="@string/srgb_mode_title" />
 
-        <SwitchPreference
-            android:key="dt2w"
-            android:icon="@drawable/ic_dt2w"
-            android:summary="@string/dt2w_summary"
-            android:title="@string/dt2w_title" />
-
         <Preference
             android:key="doze"
 	    android:icon="@drawable/ic_doze"

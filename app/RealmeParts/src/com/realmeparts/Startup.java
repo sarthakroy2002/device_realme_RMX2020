@@ -60,8 +60,6 @@ public class Startup extends BroadcastReceiver {
         restore(OTGModeSwitch.getFile(), enabled);
         enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_HBM_SWITCH, false);
         restore(HBMModeSwitch.getFile(), enabled);
-        enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_DT2W_SWITCH, false);
-        restore(DT2WModeSwitch.getFile(), enabled);
         enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_CHARGING_SWITCH, false);
         if (enabled) {
             Utils.startService(context, SmartChargingService.class);

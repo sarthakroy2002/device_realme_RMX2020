@@ -163,17 +163,6 @@
                     android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
-        <service
-            android:name="com.realmeparts.DT2WTileService"
-            android:icon="@drawable/ic_dt2w"
-            android:label="@string/dt2w_title"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
-            android:exported="true">
-            <intent-filter>
-                <action
-                    android:name="android.service.quicksettings.action.QS_TILE"/>
-            </intent-filter>
-        </service>
         <service android:name="com.realmeparts.SmartChargingService"
                 android:exported="false">
         </service>
