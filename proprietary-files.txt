@@ -438,16 +438,16 @@ vendor/lib64/libmtkcam_3rdparty.customer.so|6de2f5ab49667447671967c9c6483f4e7fbd
 # Charger - From Redmi/merlin/merlin:11/RP1A.200720.011/V12.5.1.0.RJOMIXM:user/release-keys
 bin/charger:bin/chargeonlymode|bb74c36cee72b1f2e2c8090eb6f21352eba8e83f
 
-# DRM (Hardware) - from Redmi/ares/ares:12/SP1A.210812.016/21.11.8:user/release-keys
-vendor/bin/hw/android.hardware.drm@1.4-service.widevine|031392617dfa8cf36c9578e9d2a9cd3d7a1fa9c0
+# DRM (Hardware) - from realme/RMX3193/RMX3193:12/SP1A.210812.016/R.202202111917:user/release-keys
+vendor/bin/hw/android.hardware.drm@1.4-service.widevine|8307cea32c20bdc6e7456a6060ebefcfe743b02c
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc|992f63e9700da29099e0590858a6becaaadb2976
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml|91d7c0996133556cb7f7c5d1b7e5d9e7f07b78b2
 
-# DRM (Widevine) - from Redmi/ares/ares:12/SP1A.210812.016/21.11.8:user/release-keys
-vendor/lib/mediadrm/libwvdrmengine.so|c9e8a9c89cadc8fba0f113334dbe98d648e6546f
-vendor/lib/libwvhidl.so|e6abe18891bd2723f8bef9babebca9c50ce96f6d
-vendor/lib64/mediadrm/libwvdrmengine.so|d3d4ade3f101afe104af918ab2d212d0984c1812
-vendor/lib64/libwvhidl.so|e32b2d1eabbec1d4c8aa22c66a9ae18646d08788
+# DRM (Widevine) - from realme/RMX3193/RMX3193:12/SP1A.210812.016/R.202202111917:user/release-keys
+vendor/lib/mediadrm/libwvdrmengine.so|0a8dae27c79871c2d163bee5e34278e5d02acb2f
+vendor/lib/libwvhidl.so|0cb77893b553777865f341a255f3f6b37619ae8a
+vendor/lib64/mediadrm/libwvdrmengine.so|2cc07cb4202d54b716b7ca2bf03012d6c6d18cf9
+vendor/lib64/libwvhidl.so|60bfaf3ccac077859955708eadf3d22ac52aadee
 
 # Display (Hardware)
 vendor/lib/hw/gralloc.mt6768.so
