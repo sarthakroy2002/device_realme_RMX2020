@@ -169,10 +169,6 @@ PRODUCT_PACKAGES += \
     libhwbinder.vendor \
     libhidltransport.vendor
 
-# ImsInit hack
-PRODUCT_PACKAGES += \
-    ImsInit
-
 # Keylayouts
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/idc/mtk-kpd.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/mtk-kpd.idc \
