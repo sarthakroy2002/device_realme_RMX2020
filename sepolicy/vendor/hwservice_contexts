@@ -8,3 +8,6 @@ vendor.oppo.hardware.biometrics.fingerprint::IBiometricsFingerprint          u:o
 android.frameworks.fingerprintservice::IFingerprintHalService                u:object_r:hal_fingerprint_hwservice:s0
 vendor.silead.hardware.fingerprintext::ISileadFingerprint                    u:object_r:hal_fingerprint_hwservice:s0
 vendor.egistec.hardware.fingerprint::IBiometricsFingerprintRbs               u:object_r:hal_fingerprint_hwservice:s0
+
+# Mediatek
+vendor.mediatek.hardware.wifi.hostapd::IHostapd u:object_r:hal_mtk_hostapd_hwservice:s0
