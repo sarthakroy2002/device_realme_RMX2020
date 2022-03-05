@@ -87,6 +87,9 @@ function blob_fixup {
         vendor/etc/init/vendor.oppo.hardware.biometrics.fingerprint@2.1-service.rc)
             sed -i '/cpuset/Q' "$2"
             ;;
+        vendor/bin/hw/android.hardware.vibrator-service.mediatek)
+            "${PATCHELF}" --replace-needed "android.hardware.vibrator-V2-ndk_platform.so" "android.hardware.vibrator-V2-ndk.so" "${2}"
+            ;;
     esac
 }
 
