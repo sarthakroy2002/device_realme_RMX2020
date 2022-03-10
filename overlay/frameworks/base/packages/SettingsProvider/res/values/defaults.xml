@@ -27,4 +27,10 @@
     <!-- Set the automatic brightness mode on by default -->
     <bool name="def_screen_brightness_automatic_mode">false</bool>
 
+    <!-- Set Window animation scale to 50% by default -->
+    <fraction name="def_window_animation_scale">50%</fraction>
+
+    <!-- Set Window transition scale to 50% by default -->
+    <fraction name="def_window_transition_scale">50%</fraction>
+
 </resources>
