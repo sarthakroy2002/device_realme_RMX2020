@@ -232,7 +232,7 @@
                 <Limit name="bitrate" range="1-2000000" />
             <Feature name="intra-refresh" />
         </MediaCodec>
-        <MediaCodec name="c2.android.vp8.encoder" type="video/x-vnd.on2.vp8" update="true">
+        <MediaCodec name="c2.android.vp8.encoder" type="video/x-vnd.on2.vp8" update="true" rank="600">
             <Alias name="OMX.google.vp8.encoder" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />

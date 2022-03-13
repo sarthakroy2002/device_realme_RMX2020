@@ -2,7 +2,7 @@
 
 <Included>
     <Encoders>
-        <MediaCodec name="OMX.oppo.h264.encoder" type="video/avc">
+        <MediaCodec name="OMX.oppo.h264.encoder" type="video/avc" rank="600">
             <!-- profiles and levels:  ProfileBaseline : Level41 -->
             <Limit name="size" min="32x32" max="1920x1088" />
             <Limit name="alignment" value="2x2" />
