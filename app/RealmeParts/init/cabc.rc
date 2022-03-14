@@ -1,0 +1,21 @@
+on boot
+    # CABC
+    chown system system /sys/kernel/oppo_display/cabc
+    chmod 0644 /sys/kernel/oppo_display/cabc
+
+    # CABC off
+on property:persist.cabc_profile=0
+    write /sys/kernel/oppo_display/cabc 0
+
+    # CABC on
+on property:persist.cabc_profile=1
+    write /sys/kernel/oppo_display/cabc 1
+
+    # CABC balanced
+on property:persist.cabc_profile=2
+    write /sys/kernel/oppo_display/cabc 2
+
+    # CABC aggressive
+on property:persist.cabc_profile=3
+    write /sys/kernel/oppo_display/cabc 3
+    
