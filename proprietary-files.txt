@@ -1664,18 +1664,18 @@ vendor/etc/virtual-spn-conf-by-efpnn.xml
 vendor/etc/virtual-spn-conf-by-efspn.xml
 vendor/etc/virtual-spn-conf-by-imsi.xml
 
-# Sensors
-vendor/bin/hw/android.hardware.sensors@2.0-service-mediatek
-vendor/etc/init/android.hardware.sensors@2.0-service-mediatek.rc
-vendor/lib/libhwm.so
-vendor/lib/libmxmafa.so
-vendor/lib/sensors.ap.so
-vendor/lib64/hw/sensors.mt6768.so
-vendor/lib64/libhwm.so
-vendor/lib64/libksensor.so
-vendor/lib64/libmxmafa.so
-vendor/lib64/libsensor_custom.so
-vendor/lib64/sensors.ap.so
+# Sensors - from RMX2020-user 10 QP1A.190711.020 RMX2020_11.A.61 release-keys
+vendor/bin/hw/android.hardware.sensors@2.0-service-mediatek|5a90c02a0ec0fc696759491d81af8e08bfc758c3
+vendor/etc/init/android.hardware.sensors@2.0-service-mediatek.rc|327528ee2ffb98ece6b38b0456d50c6523cd64a8
+vendor/lib/libhwm.so|8d90ad30676be6f3a3966db8e9cd526f98aa35d3
+vendor/lib/libmxmafa.so|d4268bd908b73ea82e891252fb26725924d5489d
+vendor/lib/sensors.ap.so|8429f8dcb169e2ee3b0e1d957623801229083bcc
+vendor/lib64/hw/sensors.mt6768.so|567c58dad88b9740535681d4a1673030c4381ce0
+vendor/lib64/libhwm.so|77f2caecee07891f2e0b5d28dba6a5a43f6c2f1c
+vendor/lib64/libksensor.so|4ce3dc70c0770738864bf84029dcb9b764c50d1b
+vendor/lib64/libmxmafa.so|fc381a77d5889e14b5326a25b8f3f406524a79b7
+vendor/lib64/libsensor_custom.so|29e8a96d32a9a5756e9a7811b78fde06730c0dfd
+vendor/lib64/sensors.ap.so|997485771756602594b7156358f3682bc012d326
 
 # Thermal
 vendor/bin/thermal
