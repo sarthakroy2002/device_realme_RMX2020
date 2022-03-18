@@ -223,9 +223,6 @@
     <!-- Radius of the software rounded corners at the bottom of the display in its natural
         orientation. If zero, the value of rounded_corner_radius is used. -->
     <dimen name="rounded_corner_radius_bottom">58.0px</dimen>
-
-    <!-- Adjust the icon padding in status bar for rounded corners --> 
-    <dimen name="rounded_corner_content_padding">14.0dip</dimen>
 	
     <!-- Whether to post reset runnable for all clients. Needed for some older
          vendor fingerprint HAL implementations. -->
