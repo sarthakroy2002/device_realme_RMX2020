@@ -39,6 +39,7 @@ ro.vendor.mtk_zsdhdr_support=1
 
 # Connsys
 persist.vendor.connsys.chipid=-1
+persist.vendor.connsys.coredump.mode=2
 persist.vendor.connsys.dynamic.dump=0
 persist.vendor.connsys.fm_50khz_support=1
 persist.vendor.connsys.fm_chipid=mt6631
