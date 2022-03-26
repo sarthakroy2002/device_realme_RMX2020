@@ -91,7 +91,7 @@ debug.renderengine.backend=skiaglthreaded
 # GPS
 ro.vendor.mtk_agps_app=1
 ro.vendor.mtk_gps_support=1
-ro.vendor.mtk_log_hide_gps=0
+ro.vendor.mtk_log_hide_gps=1
 
 # IMS
 persist.vendor.ims_support=1
