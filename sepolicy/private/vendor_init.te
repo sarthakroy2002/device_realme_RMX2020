@@ -1,0 +1,5 @@
+# Allow vendor_init to read perf_profile prop
+get_prop(system_app, perf_prop)
+
+# Allow vendor_init to read cabc prop
+get_prop(system_app, cabc_prop)
