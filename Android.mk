@@ -34,4 +34,12 @@ $(VULKAN_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(VULKAN_SYMLINK)
 
+KMSETKEY_SYMLINK += $(TARGET_OUT_VENDOR)/lib/hw/kmsetkey.default.so
+KMSETKEY_SYMLINK += $(TARGET_OUT_VENDOR)/lib64/hw/kmsetkey.default.so
+$(KMSETKEY_SYMLINK): $(LOCAL_INSTALLED_MODULE)
+	@mkdir -p $(dir $@)
+	$(hide) ln -sf kmsetkey.trustonic.so $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(KMSETKEY_SYMLINK)
+
 endif
