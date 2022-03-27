@@ -109,6 +109,12 @@
         <fqname>@2.0::ISensors/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>android.hardware.thermal</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IThermal/default</fqname>
+        <fqname>@2.0::IThermal/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>android.hardware.usb</name>
         <transport>hwbinder</transport>
         <fqname>@1.1::IUsb/default</fqname>

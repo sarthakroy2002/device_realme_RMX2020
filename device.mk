@@ -390,6 +390,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libtextclassifier_hash.vendor
 
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@1.0.vendor \
+    android.hardware.thermal@2.0.vendor \
+    android.hardware.thermal@1.0-impl
+
 # TinyXML
 PRODUCT_PACKAGES += \
     libtinyxml
