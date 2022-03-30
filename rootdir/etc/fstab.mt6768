@@ -7,15 +7,15 @@
 
 
 #<src>                                                  <mnt_point>             <type>   <mnt_flags and options>                                                  <fs_mgr_flags> 
-system                                                  /system                 ext4     ro                                                                       wait,,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey
+system                                                  /system                 ext4     ro                                                                       wait,,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey,readahead_size_kb=128
 vendor                                                  /vendor                 ext4     ro                                                                       wait,,avb,logical,first_stage_mount,async_discard
 product                                                 /product                ext4     ro                                                                       wait,logical,first_stage_mount
 system_ext                                              /system_ext             ext4     ro                                                                       wait,logical,first_stage_mount
 odm                                                     /odm                    ext4     ro                                                                       wait,logical,first_stage_mount
 /dev/block/by-name/md_udc                               /metadata               ext4     noatime,nosuid,nodev,discard,data=journal,commit=1                       wait,formattable,first_stage_mount
 /dev/block/by-name/cache                                /cache                  ext4     noatime,nosuid,nodev,noauto_da_alloc,async_discard                       wait,check,formattable
-/dev/block/by-name/userdata                             /data                   ext4     noatime,nosuid,nodev,noauto_da_alloc,async_discard,errors=panic,inlinecrypt wait,check,formattable,quota,latemount,reservedsize=128m,fileencryption=aes-256-xts:aes-256-cts:v1
-/dev/block/by-name/userdata                             /data                   f2fs     noatime,nosuid,nodev,discard,noflush_merge,fsync_mode=nobarrier,reserve_root=134217,resgid=1065,inlinecrypt wait,check,formattable,quota,reservedsize=128m,latemount,checkpoint=fs,fileencryption=aes-256-xts:aes-256-cts:v1
+/dev/block/by-name/userdata                             /data                   ext4     noatime,nosuid,nodev,noauto_da_alloc,async_discard,errors=panic,inlinecrypt wait,check,formattable,quota,latemount,reservedsize=128m,fileencryption=aes-256-xts:aes-256-cts:v1,readahead_size_kb=128
+/dev/block/by-name/userdata                             /data                   f2fs     noatime,nosuid,nodev,discard,noflush_merge,fsync_mode=nobarrier,reserve_root=134217,resgid=1065,inlinecrypt wait,check,formattable,quota,reservedsize=128m,latemount,checkpoint=fs,fileencryption=aes-256-xts:aes-256-cts:v1,readahead_size_kb=128
 /dev/block/by-name/protect1                             /mnt/vendor/protect_f   ext4     noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc                 wait,check,formattable
 /dev/block/by-name/protect2                             /mnt/vendor/protect_s   ext4     noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc                 wait,check,formattable
 /dev/block/by-name/nvdata                               /mnt/vendor/nvdata      ext4     noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc                 wait,check,formattable
