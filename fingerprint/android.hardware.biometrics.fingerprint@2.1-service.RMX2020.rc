@@ -1,47 +1,20 @@
-on boot
-#for goodix_fp.
-    chown system system /dev/goodix_fp
-
-#ifdef VENDOR_EDIT
-#Qingwen.Liu@RM.BSP.Fingerprint.Basic, 2018/11/23, modify for silead_capactiy factoryTest/frrfarTest
-    import /vendor/etc/init/vendor.silead.hardware.fingerprintext@1.0-service.rc
-#endif /* VENDOR_EDIT */
+import /vendor/etc/init/vendor.silead.hardware.fingerprintext@1.0-service.rc
 
 on post-fs-data
-    #ifdef VENDOR_EDIT
-    #Ran.Chen@EXP.BSP.Fingerprint.Basic, 2017/07/12, modify for fpc in TRUSTONIC
-    chown system  system /sys/bus/platform/devices/fpc_interrupt/clk_enable
-    chown system  system /sys/bus/platform/devices/fpc_interrupt/wakelock_enable
-    chown system  system /sys/bus/platform/devices/fpc_interrupt/irq
-    chown system  system /sys/bus/platform/devices/fpc_interrupt/irq_enable
-    chmod 0200 /sys/bus/platform/devices/fpc_interrupt/irq_enable
-    chmod 0200 /sys/bus/platform/devices/fpc_interrupt/clk_enable
-    chmod 0200 /sys/bus/platform/devices/fpc_interrupt/wakelock_enable
-    chmod 0600 /sys/bus/platform/devices/fpc_interrupt/irq
-    #endif /* VENDOR_EDIT */
 
-    #xiaoyu.wang@ODM_HQ.FINGERPRINT.ET520 2018/10/12 add for shendun fingerprint sepolicy
     chmod 0660 /dev/esfp0
     chown system system /dev/esfp0
-    # egis fp egis_input sys nodes 20190110
     chown system system /sys/devices/platform/egis_input/navigation_event
     chown system system /sys/devices/platform/egis_input/navigation_enable
     chmod 0666 /sys/devices/platform/egis_input/navigation_event
     chmod 0666 /sys/devices/platform/egis_input/navigation_enable
 
-    #xiaoyu.wang@ODM_HQ.FINGERPRINT.ET520 2018/10/12 add for shendun fingerprint sepolicy
-
-    #tongze.zhi@ODM_HQ.BSP.FINGERPRINT.GSL6150 2018/10/12 add for fingerprint sepolicy
     mkdir /data/vendor/silead 0770 system system
     chmod 0660 /dev/silead_fp
     chown system system /dev/silead_fp
-    #tongze.zhi@ODM_HQ.BSP.FINGERPRINT.GSL6150 2018/10/12 add for fingerprint sepolicy
-#-----------------------  for optical sensor begin    ---------------------
+
     mkdir /data/vendor/fingerprint 0770 system system
     mkdir /mnt/vendor/persist/fingerprint 0770 system system
-    chown system system /sys/kernel/oppo_display/hbm
-#-----------------------   for optical sensor end     ---------------------
-#add for egis fp save images
     mkdir /data/vendor/egis 0770 system system
 
 service vendor.fps_hal.RMX2020 /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.RMX2020
@@ -51,8 +24,3 @@ service vendor.fps_hal.RMX2020 /vendor/bin/hw/android.hardware.biometrics.finger
     class late_start
     user system
     group system input uhid
-
-service oppo_fingerprints_sh /vendor/bin/sh /vendor/bin/init.oppo.fingerprints.sh
-    class main
-    user root
-    oneshot
