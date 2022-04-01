@@ -12,3 +12,6 @@ allow init sysfs_sensor:file setattr;
 # Allow init to write touchpanel nodes
 allow init proc:file { open write };
 allow init proc_tp:file rw_file_perms;
+
+# Allow init to access /proc/fp_id
+allow init proc_oppo_fp:file rw_file_perms;

@@ -77,9 +77,9 @@ void init_opperator_name_properties()
          * 121 -> NON NFC
          * 122 -> NFC
          * 123 -> NON NFC
-		 * 124 -> NON NFC
-		 * 125 -> NON NFC
-		 * 126 -> NON NFC
+         * 124 -> NON NFC
+         * 125 -> NON NFC
+         * 126 -> NON NFC
          */
         if (opperator_name == "113" || opperator_name == "122") {
             property_override("ro.boot.product.hardware.sku", "nfc");
@@ -90,6 +90,19 @@ void init_opperator_name_properties()
     }
 }
 
+void init_fp_properties()
+{
+    char const *fp_name_file = "/proc/fp_id";
+    std::string fp_name;
+
+    if (ReadFileToString(fp_name_file, &fp_name)) {
+        if (fp_name == "E_520") {
+            property_override("persist.vendor.fingerprint.fp_id", "E_520");
+        }
+    }
+}
+
 void vendor_load_properties() {
     init_opperator_name_properties();
+    init_fp_properties();
 }

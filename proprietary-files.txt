@@ -911,8 +911,7 @@ vendor/lib64/vendor.oppo.hardware.biometrics.fingerprint@2.1.so
 vendor/lib64/vendor.silead.hardware.fingerprintext@1.0.so
 
 # Fingerprint - from moto_troika 9/PSB29.105-27/fd362:user/release-keys
-vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-rbs:vendor/fptmp/android.hardware.biometrics.fingerprint@2.1-service.RMX2020|ad879e7ed06f50c804e79fb9312614c4fdef49e5
-vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-rbs:vendor/fptmp/vendor.oppo.hardware.biometrics.fingerprint@2.1-service|ad879e7ed06f50c804e79fb9312614c4fdef49e5
+vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-rbs|ad879e7ed06f50c804e79fb9312614c4fdef49e5
 
 # Firmware - from RMX2020-user 10 QP1A.190711.020 RMX2020_11.A.61 release-keys
 vendor/firmware/customfilter/catcher_filter_1_ulwctg_n_FullLog.bin|b6b12fe6a3ee6a49c4866ee8c4836013032643a5
