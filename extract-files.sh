@@ -84,6 +84,9 @@ function blob_fixup {
         vendor/etc/init/android.hardware.bluetooth@1.0-service-mediatek.rc)
             sed -i '/vts/Q' "$2"
             ;;
+        vendor/etc/init/vendor.oppo.hardware.biometrics.fingerprint@2.1-service.rc)
+            sed -i '/cpuset/Q' "$2"
+            ;;
     esac
 }
 
