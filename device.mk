@@ -351,10 +351,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.recovery.mt6768.rc
 
-# Releasetoold script
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/egis.sh:install/bin/egis.sh
-
 # RenderScript
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl

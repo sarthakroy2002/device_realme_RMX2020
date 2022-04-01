@@ -14,6 +14,8 @@ persist.vendor.fingerprint.             u:object_r:oppo_fingerprint_prop:s0
 oppo.optical.                           u:object_r:oppo_fingerprint_prop:s0
 vendor.fingerprint.optical.             u:object_r:oppo_fingerprint_prop:s0
 oppo.fingerprint.                       u:object_r:oppo_fingerprint_prop:s0
+init.svc.fps_hal                        u:object_r:oppo_fingerprint_prop:s0
+init.svc.fpexts_hal                     u:object_r:oppo_fingerprint_prop:s0
 
 # RILD
 ro.telephony.default_network u:object_r:radio_prop:s0
