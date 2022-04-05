@@ -124,6 +124,7 @@ ro.lmk.use_minfree_levels=true
 
 # Media
 vendor.mtk.vdec.waitkeyframeforplay=7
+media.stagefright.thumbnail.prefer_hw_codecs=true
 
 # Neural Networks
 ro.vendor.mtk_nn.option=D,E,F,Z
