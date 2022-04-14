@@ -361,6 +361,7 @@ PRODUCT_PROPERTY_OVERRIDES +=  \
     ro.vendor.mtk_fd_support=1 \
     ro.vendor.mtk_fm_50khz_support=1 \
     ro.vendor.mtk_gps_support=1 \
+    ro.vendor.mtk_log_hide_gps=1 \
     ro.vendor.mtk_gwsd_capability=1 \
     ro.vendor.mtk_log_hide_gps=1 \
     ro.vendor.mtk_lte_support=1 \
