@@ -28,7 +28,7 @@ DEVICE_MAINTAINER := sarthakroy2002
 $(call inherit-product-if-exists, vendor/lawnchair/lawnchair.mk)
 
 # Build info
-BUILD_FINGERPRINT := "google/coral/coral:12/SQ1A.220205.002/8010174:user/release-keys"
+BUILD_FINGERPRINT := "google/coral/coral:12/SP2A.220405.003/8210211:user/release-keys"
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=RMX2020 \
     PRODUCT_NAME=RMX2020 \
