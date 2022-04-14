@@ -1264,7 +1264,6 @@ vendor/bin/volte_stack
 vendor/bin/volte_ua
 vendor/bin/vpud
 vendor/bin/wfca
-vendor/data/misc/ProjectConfig.mk
 vendor/etc/.tp/.ht120.mtc
 vendor/etc/apdb/APDB_MT6768_S01__W2044
 vendor/etc/apdb/APDB_MT6768_S01__W2044_ENUM
