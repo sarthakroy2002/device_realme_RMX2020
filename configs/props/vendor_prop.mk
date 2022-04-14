@@ -340,6 +340,7 @@ PRODUCT_PROPERTY_OVERRIDES +=  \
     ro.vendor.mediatek.platform=MT6768 \
     ro.vendor.mediatek.version.branch=alps-mp-r0.mp1.tc16sp-pr2 \
     ro.vendor.mediatek.version.release=alps-mp-r0.mp1.tc16sp-pr2-V1.1 \
+    media.stagefright.thumbnail.prefer_hw_codecs=true \
     ro.vendor.mtk.bt_sap_enable=true \
     ro.vendor.mtk_aal_support=1 \
     ro.vendor.mtk_agps_app=1 \
