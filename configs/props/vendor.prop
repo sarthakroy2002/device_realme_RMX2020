@@ -135,6 +135,9 @@ media.stagefright.thumbnail.prefer_hw_codecs=true
 ro.vendor.mtk_nn.option=D,E,F,Z
 ro.vendor.mtk_nn_support=1
 
+# Netflix
+ro.netflix.bsp_rev=MTK6768-19054-1
+
 # NFC
 ro.vendor.mtk_uicc_clf=1
 
