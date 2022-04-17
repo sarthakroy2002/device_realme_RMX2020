@@ -1495,7 +1495,6 @@ vendor/etc/init/hw/init.oppo.vendor.motor.rc
 vendor/etc/init/init.oppo.connectivity.rc
 vendor/etc/init/vendor.oppo.hardware.cryptoeng@1.0-service_FDE.rc
 vendor/etc/init/vendor.oppo.hardware.hypnus@1.0-service.rc
-vendor/etc/self_init_config/common/self_init_config.xml
 vendor/lib/libhypnusclient.so
 vendor/lib/vendor.oppo.hardware.hypnus@1.0.so
 vendor/lib64/libOPPORectify.so
