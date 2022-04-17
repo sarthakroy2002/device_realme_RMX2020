@@ -503,6 +503,11 @@ vendor/lib64/libmtkcam_sysutils.so
 vendor/lib64/libmtkcam_tuning_utils.so
 vendor/lib64/libmtkcam_ulog.so
 vendor/lib64/libocam_common.so
+vendor/lib64/libOPPORectify.so
+vendor/lib64/liboppo_aisd.so
+vendor/lib64/liboppo_arcSoftBokehEngine.so
+vendor/lib64/liboppo_blank_algo.so
+vendor/lib64/liboppo_platform_hwi.so
 vendor/lib64/libstdc++.so
 vendor/lib64/libstereoinfoaccessor_vsdof.so
 vendor/lib64/libstface_fd_api.so
@@ -1472,30 +1477,6 @@ vendor/lib64/vendor.mediatek.hardware.atci@1.0.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
 
-# Oppo
-vendor/bin/hw/vendor.oppo.hardware.cryptoeng@1.0-service
-vendor/bin/hw/vendor.oppo.hardware.hypnus@1.0-service
-vendor/bin/OppoKeybox
-vendor/etc/init/hw/init.oppo.reserve.rc
-vendor/etc/init/hw/init.oppo.vendor.motor.rc
-vendor/etc/init/init.oppo.connectivity.rc
-vendor/etc/init/vendor.oppo.hardware.cryptoeng@1.0-service_FDE.rc
-vendor/etc/init/vendor.oppo.hardware.hypnus@1.0-service.rc
-vendor/lib/libhypnusclient.so
-vendor/lib/vendor.oppo.hardware.hypnus@1.0.so
-vendor/lib64/libOPPORectify.so
-vendor/lib64/libhypnusclient.so
-vendor/lib64/liboppo_aisd.so
-vendor/lib64/liboppo_arcSoftBokehEngine.so
-vendor/lib64/liboppo_blank_algo.so
-vendor/lib64/liboppo_platform_hwi.so
-vendor/lib64/vendor.oppo.engnative.transfer@1.0.so
-vendor/lib64/vendor.oppo.hardware.commondcs@1.0.so
-vendor/lib64/vendor.oppo.hardware.cryptoeng@1.0.so
-vendor/lib64/vendor.oppo.hardware.hypnus@1.0.so
-vendor/lib64/vendor.oppo.hardware.wifi.hostapd@1.0.so
-vendor/lib64/vendor.oppo.hardware.wifi.supplicant@1.0.so
-
 # Power
 vendor/bin/hw/power_legacy_test_v_1_0
 vendor/bin/hw/power_native_test_v_1_0
@@ -1768,3 +1749,5 @@ vendor/lib64/libwpa_client.so
 vendor/lib64/vendor.mediatek.hardware.wifi.hostapd@2.0.so
 vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.0.so
 vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.1.so
+vendor/lib64/vendor.oppo.hardware.wifi.hostapd@1.0.so
+vendor/lib64/vendor.oppo.hardware.wifi.supplicant@1.0.so
