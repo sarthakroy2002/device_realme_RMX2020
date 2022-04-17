@@ -27,12 +27,4 @@
         <name>android.system.wifi.keystore</name>
         <version>1.0</version>
     </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.oppo.hardware.hypnus</name>
-        <version>1.0</version>
-        <interface>
-            <name>IHypnusUtil</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
 </compatibility-matrix>
