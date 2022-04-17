@@ -891,7 +891,6 @@ vendor/bin/hw/vendor.oppo.hardware.biometrics.fingerprint@2.1-service
 vendor/bin/hw/vendor.silead.hardware.fingerprintext@1.0-service
 vendor/etc/init/vendor.oppo.hardware.biometrics.fingerprint@2.1-service.rc
 vendor/etc/init/vendor.silead.hardware.fingerprintext@1.0-service.rc
-vendor/etc/permissions/com.fingerprints.fpmmi.xml
 vendor/lib/hw/fingerprint.silead.default.so
 vendor/lib/libalipay_factory.so
 vendor/lib/libsl_fp_algo.so
@@ -1496,7 +1495,6 @@ vendor/etc/init/hw/init.oppo.vendor.motor.rc
 vendor/etc/init/init.oppo.connectivity.rc
 vendor/etc/init/vendor.oppo.hardware.cryptoeng@1.0-service_FDE.rc
 vendor/etc/init/vendor.oppo.hardware.hypnus@1.0-service.rc
-vendor/etc/permissions/vendor-oppo-hardware.cryptoeng.xml
 vendor/etc/self_init_config/common/self_init_config.xml
 vendor/lib/libhypnusclient.so
 vendor/lib/vendor.oppo.hardware.hypnus@1.0.so
