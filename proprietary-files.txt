@@ -1488,8 +1488,6 @@ vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
 vendor/bin/hw/vendor.oppo.hardware.cryptoeng@1.0-service
 vendor/bin/hw/vendor.oppo.hardware.hypnus@1.0-service
 vendor/bin/OppoKeybox
-vendor/bin/init.oppo.fingerprints.sh
-vendor/bin/init.oppo.wifi.debug.sh
 vendor/etc/init/hw/init.oppo.reserve.rc
 vendor/etc/init/hw/init.oppo.vendor.motor.rc
 vendor/etc/init/init.oppo.connectivity.rc
