@@ -921,9 +921,9 @@ vendor/firmware/customfilter/catcher_filter_1_ulwctg_n_meta.bin|92f1f3991623391c
 vendor/firmware/emmc/HYNIX-hB8aP>.bin_crc.bin|7fd981827662cca107437a2c013c07e4bfdef2ef
 vendor/firmware/emmc/HYNIX-hC8aP>.bin_crc.bin|f6c7f5422ad0cd9b0256e4f40a9b16956f9dfa02
 vendor/firmware/emmc/HYNIX-hC9aP3.bin_crc.bin|075450a6087b5026808b5f8573119e4c4610044f
-vendor/firmware/emmc/move_target_emmc_fw_to_opporeserve1.sh|aba1bfe54e35b8f50e4c6a6c124f3f560d6501ad
 vendor/firmware/emmc/SAMSUNG-DD68MB.bin_crc.bin|4841efc0613661d7ee4e48935bbef41dc4aebf19
 vendor/firmware/emmc/SAMSUNG-DH6DAB.bin_crc.bin|96f4cc285b8b01987ee9b56401ce9f44c7126331
+vendor/firmware/emmc/move_target_emmc_fw_to_opporeserve1.sh|aba1bfe54e35b8f50e4c6a6c124f3f560d6501ad
 vendor/firmware/tp/19741/hlt_boe_novatek_fw.bin|24b8f8b70380287e293bac0642ef5c2963f441f2
 vendor/firmware/tp/19741/hlt_boe_novatek_mp_fw.bin|9cf91cb755707150c78c3faa0498e228e2db7483
 vendor/firmware/tp/19741/hlt_boe_novatek_signed_fw.bin|a76db1a305c5c9b1ad3e4e4b64bc8ba7d4d17b86
@@ -1643,8 +1643,8 @@ vendor/lib64/vendor.mediatek.hardware.radio_op@1.4.so|507ae087eb52e4b068aebebbf0
 vendor/lib64/vendor.mediatek.hardware.radio_op@2.0.so|15cea88f9d03b7165e0e59193f3a5a7700d61150
 
 # Radio (Configs) - from RMX2020-user 10 QP1A.190711.020 RMX2020_11.A.61 release-keys
-vendor/etc/apdb/APDB_MT6768_S01__W1952|f06c460b74c91acc9d7856cd1f20c1150aeec456
 vendor/etc/apdb/APDB_MT6768_S01__W1952_ENUM|cefb92631c8783349bfd3c4ff6584c8e633420e7
+vendor/etc/apdb/APDB_MT6768_S01__W1952|f06c460b74c91acc9d7856cd1f20c1150aeec456
 vendor/etc/DSM.xml|ffd530540bb633381ae6d75980dc17405a23cbe0
 vendor/etc/DSM_config.xml|a3b5821a6a8e9441018773f4ea834f7e80bf3719
 vendor/etc/ecc_list.xml|d6e20ef31f22b4886ad9cbc97b33f47574fbf0d8
@@ -1678,9 +1678,9 @@ vendor/lib64/sensors.ap.so|997485771756602594b7156358f3682bc012d326
 
 # Thermal - from realme/RMX2020/RMX2020:11/RP1A.200720.011/1627637499567:user/release-keys
 vendor/bin/hw/android.hardware.thermal@2.0-service.mtk|3dea980c62b4e6fdb7c279b9f4237eb8c7ee0fec
-vendor/bin/thermal|882fc822cda14a46ae7732ae2bf4571e2680bf2a
 vendor/bin/thermal_manager|d13cc43436ff6cbf4d90df4d2f16b1e5bf04876d
 vendor/bin/thermalloadalgod|bef00e0aa1cf4581a912d1e71d97bb264afc7cc6
+vendor/bin/thermal|882fc822cda14a46ae7732ae2bf4571e2680bf2a
 vendor/etc/init/android.hardware.thermal@2.0-service.mtk.rc|1274fa9e113cfdfea42c518e178a886a23d5bf98
 vendor/etc/init/init.thermal.rc|cb4f259f720f2481a3e9b4d68d7c72193c554faa
 vendor/etc/init/init.thermal_manager.rc|764c19af5e285345a9fd5b75131fa9588b609d62
