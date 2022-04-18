@@ -897,7 +897,6 @@ vendor/bin/hw/vendor.silead.hardware.fingerprintext@1.0-service
 vendor/etc/init/vendor.oppo.hardware.biometrics.fingerprint@2.1-service.rc
 vendor/etc/init/vendor.silead.hardware.fingerprintext@1.0-service.rc
 vendor/lib/hw/fingerprint.silead.default.so
-vendor/lib/libalipay_factory.so
 vendor/lib/libsl_fp_algo.so
 vendor/lib/libsl_fp_impl.so
 vendor/lib/libsl_fp_nosec.so
@@ -905,7 +904,6 @@ vendor/lib/libsl_fp_prepro.so
 vendor/lib64/hw/fingerprint.silead.default.so
 vendor/lib64/android.frameworks.fingerprintservice@1.0.so
 vendor/lib64/libRbsFlow.so
-vendor/lib64/libalipay_factory.so
 vendor/lib64/libsl_fp_algo.so
 vendor/lib64/libsl_fp_impl.so
 vendor/lib64/libsl_fp_nosec.so
