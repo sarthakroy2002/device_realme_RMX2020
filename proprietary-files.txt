@@ -1299,6 +1299,10 @@ vendor/bin/vpud|6eee630041fc9add9d903682bf4cdca1f10e93c4
 vendor/etc/init/vendor.mediatek.hardware.mtkcodecservice@1.1-service.rc|d134064c9946e529a6145f7906dd4c258e1eaa16
 vendor/etc/init/vpud.rc|35bd2309a6bde2c1a8bb3944d5f0798baef3feb1
 vendor/etc/mtk_omx_core.cfg|e605fb800d916dcd215ab099781dd9c60b3da559
+vendor/etc/seccomp_policy/configstore@1.1.policy|8eb132bd70b3491fdac911aad962cbc58ef2a215
+vendor/etc/seccomp_policy/mediacodec.policy|64a41fbf5ecc47dfccd7bb045f0a8459551d3331
+vendor/etc/seccomp_policy/mediaextractor.policy|6eecbd7a2c589059d4df9b6035033461b85e8784
+vendor/etc/seccomp_policy/mediaswcodec.policy|ad691ac1a44c6f8cf48f9a7422f02104d56a0fa3
 vendor/lib/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-impl.so|64e50dffe03f38121f68702471510047b963f6ac
 vendor/lib/libBnMtkCodec.so|a86d3dd6774fb2117870d86a1de680f41393b694
 vendor/lib/libHEVCdec_sa.ca7.android.so|b873683e1ff4570698f91ad937f3e1760cb7bc27
