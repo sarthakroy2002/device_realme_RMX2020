@@ -859,15 +859,11 @@ vendor/app/SensorHub/lib/arm64/libem_sensor_jni.so|108790d3cdb9773e9f270eaa0878c
 -vendor/app/SensorHub/SensorHub.apk|17f73f711b4c51af549d4379210522a0d9e6302a
 vendor/bin/bin32/vendor.mediatek.hardware.dplanner@2.0-service|11ed64fca22fdf38cff0679aff8a783a379f4100
 vendor/bin/hw/vendor.mediatek.hardware.dplanner@2.0-service|1fe6c61e30e2fa8bda812d1b8dc6fa9617014768
-vendor/bin/hw/vendor.mediatek.hardware.log@1.0-service|a2ea68718804013528c39a7ddf8eec7bae0dd51d
 vendor/bin/hw/vendor_transfer|bf970b12bcc72b3d0a4c03dd711c3a946a0ecbce
 vendor/bin/exp_lock|b0798b177237783133c362fe5dae050f5bf544f7
-vendor/bin/loghidlvendorservice|fb51b4af2dda13990c934971133bf525f9df9b26
 vendor/bin/mrdump_tool|087b085f6217507908fee40b1825c3aee6fab24b
 vendor/etc/init/bootperf.rc|805a0cd61705c8362e2544239e30eb812e2e7dad
-vendor/etc/init/loghidlvendorservice.rc|114800a6bc0da5edb57483e8b9a250c267e134c2
 vendor/etc/init/vendor.mediatek.hardware.dplanner@2.0-service.rc|798aedd88eb1807072631ca1e378b6eda1a3d640
-vendor/etc/init/vendor.mediatek.hardware.log@1.0-service.rc|21ed73772a37a8d3007f9ec57614d50b3a18f6b6
 vendor/etc/init/vendor_engineermode.rc|5bc5eb9cc9e6d0f06839a3a591828f7257e0f6da
 vendor/etc/init/vendor_transfer.rc|0709f26e4b85e436ba6fe76fbd962e643bbee6f0
 -vendor/etc/vintf/manifest/vendor.mediatek.hardware.dplanner@2.0-service.xml|fd83f1ede1d1176146579c5d7824ee693fa95227
@@ -878,7 +874,6 @@ vendor/lib64/vendor.mediatek.hardware.dplanner@2.0.so|e020d50bc831bdf0c7b9257661
 vendor/lib64/vendor.mediatek.hardware.engineermode@1.0.so|59bb8a4f3c416de1be80b9e9d1b7f958cddacc8f
 vendor/lib64/vendor.mediatek.hardware.engineermode@1.1.so|f706ad4b3deaccf39e6ff7aaf289a684cf5d02f6
 vendor/lib64/vendor.mediatek.hardware.engineermode@1.2.so|17594ce52ee9ed9a9db12b14ea5ae04e53cf9f3d
-vendor/lib64/vendor.mediatek.hardware.log@1.0.so|a45efafafe9a4e84c590546fdda11130595c783e
 
 # Factory
 vendor/bin/hw/interfaces.factoryInterface@1.0-service
