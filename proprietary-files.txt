@@ -1484,7 +1484,6 @@ vendor/bin/md_monitor_ctrl
 vendor/etc/init/md_monitor.rc
 vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc
 vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc
-vendor/etc/power_whitelist_cfg.xml
 vendor/lib/hw/android.hardware.power@1.3-impl-mediatek.so
 vendor/lib/hw/power.mt6768.so
 vendor/lib/hw/vendor.mediatek.hardware.mtkpower@1.0-impl.so
