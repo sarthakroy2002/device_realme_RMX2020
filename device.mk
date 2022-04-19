@@ -304,6 +304,7 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.3.vendor
 
 PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/power/power_whitelist_cfg.xml:$(TARGET_COPY_OUT_VENDOR)/etc/power_whitelist_cfg.xml \
     $(DEVICE_PATH)/configs/power/powercontable.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powercontable.xml \
     $(DEVICE_PATH)/configs/power/powerscntbl.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerscntbl.xml
 

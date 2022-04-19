@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<WHITELIST>
+    <PerfService>
+        <Package name="com.imangi.templerun2">
+            <Activity name="Common">
+                <PERF_RES_SCHED_BOOST_VALUE_TA Param1="5"/>
+                <PERF_RES_FPS_FBT_FLOOR_BOUND Param1="1"/>
+                <PERF_RES_FPS_FBT_KMIN Param1="20"/>
+            </Activity>
+        </Package>
+        <Package name="com.andromeda.androbench2">
+            <Activity name="Common">
+                <PERF_RES_POWERHAL_SPORTS_MODE Param1="1"/>
+            </Activity>
+        </Package>
+        <Package name="com.futuremark.pcmark.android.benchmark">
+            <Activity name="Common">
+                <PERF_RES_POWERHAL_SPORTS_MODE Param1="1"/>
+                <PERF_RES_GPU_FREQ_MIN Param1="0"/>
+            </Activity>
+        </Package>
+        <Package name="com.antutu.ABenchMark">
+            <Activity name="Common">
+                <PERF_RES_POWERHAL_SPORTS_MODE Param1="1"/>
+            </Activity>
+        </Package>
+        <Package name="com.antutu.benchmark.full">
+            <Activity name="Common">
+                <PERF_RES_POWERHAL_SPORTS_MODE Param1="1"/>
+            </Activity>
+        </Package>
+        <Package name="com.primatelabs.geekbench">
+            <Activity name="Common">
+                <PERF_RES_POWERHAL_SPORTS_MODE Param1="1"/>
+                <PERF_RES_SCHED_BTASK_ROTATE Param1="1"/>
+            </Activity>
+        </Package>
+        <Package name="com.aurorasoftworks.quadrant.ui.professional">
+            <Activity name="Common">
+                <PERF_RES_POWERHAL_SPORTS_MODE Param1="1"/>
+            </Activity>
+        </Package>
+        <Package name="com.aurorasoftworks.quadrant.ui.advanced">
+            <Activity name="Common">
+                <PERF_RES_POWERHAL_SPORTS_MODE Param1="1"/>
+            </Activity>
+        </Package>
+        <Package name="com.tencent.tmgp.sgame">
+            <Activity name="Common">
+                <PERF_RES_POWERHAL_WHITELIST_APP_LAUNCH_TIME_COLD Param1="25"/>
+                <PERF_RES_FPS_FBT_FLOOR_BOUND Param1="1"/>
+                <PERF_RES_FPS_FBT_KMIN Param1="10"/>
+                <PERF_RES_NET_NETD_BOOST_UID Param1="1"/>
+                <PERF_RES_NET_WIFI_LOW_LATENCY Param1="1"/>
+                <PERF_RES_THERMAL_POLICY Param1="8"/>
+                <PERF_RES_DRAM_CM_MGR Param1="1"/>
+            </Activity>
+        </Package>
+        <Package name="com.netease.ko">
+            <Activity name="Common">
+                <PERF_RES_THERMAL_POLICY Param1="8"/>
+            </Activity>
+        </Package>
+        <Package name="com.netease.hyxd">
+            <Activity name="Common">
+                <PERF_RES_THERMAL_POLICY Param1="8"/>
+                <PERF_RES_FPS_FBT_RESCUE_F Param1="100"/>
+                <PERF_RES_FPS_FBT_RESCUE_PERCENT Param1="50"/>
+                <PERF_RES_DRAM_CM_MGR Param1="1"/>
+                <PERF_RES_FPS_FBT_SHORT_RESCUE_NS Param1="16666666"/>
+                <PERF_RES_FPS_FBT_MIN_RESCUE_PERCENT Param1="50"/>
+            </Activity>
+        </Package>
+        <Package name="com.netease.mrzh">
+            <Activity name="Common">
+                <PERF_RES_THERMAL_POLICY Param1="8"/>
+                <PERF_RES_FPS_FBT_SHORT_RESCUE_NS Param1="16666666"/>
+                <PERF_RES_FPS_FBT_MIN_RESCUE_PERCENT Param1="50"/>
+            </Activity>
+        </Package>
+        <Package name="com.epicgames.fortnite">
+            <Activity name="Common">
+                <PERF_RES_THERMAL_POLICY Param1="8"/>
+            </Activity>
+        </Package>
+        <Package name="com.maimiao.live.tv">
+            <Activity name="Common">
+                <PERF_RES_THERMAL_POLICY Param1="8"/>
+            </Activity>
+        </Package>
+        <Package name="com.tencent.tmgp.cf">
+            <Activity name="Common">
+                <PERF_RES_THERMAL_POLICY Param1="8"/>
+            </Activity>
+        </Package>
+        <Package name="com.tencent.tmgp.pubgmhd">
+            <Activity name="Common">
+                <PERF_RES_THERMAL_POLICY Param1="8"/>
+                <PERF_RES_FPS_FBT_RESCUE_F Param1="100"/>
+                <PERF_RES_FPS_FBT_RESCUE_PERCENT Param1="50"/>
+                <PERF_RES_FPS_FBT_ULTRA_RESCUE Param1="1"/>
+                <PERF_RES_DRAM_CM_MGR Param1="1"/>
+                <PERF_RES_FPS_FBT_SHORT_RESCUE_NS Param1="16666666"/>
+                <PERF_RES_FPS_FBT_MIN_RESCUE_PERCENT Param1="50"/>
+            </Activity>
+        </Package>
+        <Package name="com.gameloft.android.ANMP.GloftA9HM">
+            <Activity name="Common">
+                <PERF_RES_FPS_FBT_SHORT_RESCUE_NS Param1="16666666"/>
+                <PERF_RES_FPS_FBT_MIN_RESCUE_PERCENT Param1="50"/>
+            </Activity>
+        </Package>
+        <Package name="com.tencent.tmgp.pubgm">
+            <Activity name="Common">
+                <PERF_RES_THERMAL_POLICY Param1="8"/>
+            </Activity>
+        </Package>
+        <Package name="com.ludashi.benchmark">
+            <Activity name="Common">
+                <PERF_RES_POWERHAL_SPORTS_MODE Param1="1"/>
+            </Activity>
+        </Package>
+        <Package name="com.ludashi.aibench">
+            <Activity name="Common">
+                <PERF_RES_POWERHAL_SPORTS_MODE Param1="1"/>
+            </Activity>
+        </Package>
+        <Package name="org.benchmark.demo">
+            <Activity name="Common">
+                <PERF_RES_POWERHAL_SPORTS_MODE Param1="1"/>
+            </Activity>
+        </Package>
+        <Package name="org.aibench.neuralscope">
+            <Activity name="Common">
+                <PERF_RES_POWERHAL_SPORTS_MODE Param1="1"/>
+            </Activity>
+        </Package>
+        <Package name="net.kishonti.gfxbench.gl.v40000.corporate">
+            <Activity name="Common">
+                 <PERF_RES_FPS_FBT_BHR_OPP Param1="15"/>
+                 <PERF_RES_DRAM_OPP_MIN Param1="0"/>
+                 <PERF_RES_THERMAL_POLICY Param1="8"/>
+                 <PERF_RES_SCHED_UCLAMP_MIN_TA  Param1="60"/>
+             </Activity>
+        </Package>
+        <Package name="net.kishonti.gfxbench.v50000.corporate">
+            <Activity name="Common">
+                 <PERF_RES_FPS_FBT_BHR_OPP Param1="15"/>
+                 <PERF_RES_DRAM_OPP_MIN Param1="0"/>
+                 <PERF_RES_THERMAL_POLICY Param1="8"/>
+                 <PERF_RES_SCHED_UCLAMP_MIN_TA  Param1="60"/>
+             </Activity>
+        </Package>
+        <Package name="com.glbenchmark.glbenchmark27">
+            <Activity name="Common">
+                 <PERF_RES_FPS_FBT_BHR_OPP Param1="15"/>
+                 <PERF_RES_DRAM_OPP_MIN Param1="0"/>
+                 <PERF_RES_THERMAL_POLICY Param1="8"/>
+                 <PERF_RES_SCHED_UCLAMP_MIN_TA  Param1="60"/>
+             </Activity>
+        </Package>
+        <Package name="com.android.dialer">
+             <Activity name="com.android.incallui.InCallActivity">
+                 <PERF_RES_FPS_FBT_BHR_OPP Param1="15"/>
+             </Activity>
+        </Package>
+        <Package name="com.estrongs.android.pop.pro">
+            <Activity name="Common">
+                 <PERF_RES_IO_BLKDEV_READAHEAD Param1="512"/>
+             </Activity>
+        </Package>
+        <Package name="com.tencent.mobileqq">
+            <Activity name="Common">
+                <PERF_RES_THERMAL_POLICY Param1="8"/>
+                <PERF_RES_FPS_FPSGO_GPU_BLOCK_BOOST Param1="80"/>
+                <PERF_RES_FPS_FPSGO_ADJ_LOADING Param1="1"/>
+                <PERF_RES_FPS_FPSGO_LLF_TH Param1="25"/>
+            </Activity>
+        </Package>
+        <Package name="com.ss.android.ugc.aweme">
+            <Activity name="Common">
+                <PERF_RES_FPS_FPSGO_GPU_BLOCK_BOOST Param1="50"/>
+            </Activity>
+        </Package>
+        <Package name="com.ss.android.ugc.live">
+            <Activity name="Common">
+                <PERF_RES_FPS_FPSGO_GPU_BLOCK_BOOST Param1="30"/>
+            </Activity>
+        </Package>
+        <Package name="com.mojang.minecraftpe">
+            <Activity name="Common">
+                <PERF_RES_GPU_GED_MARGIN_MODE Param1="20"/>
+                <PERF_RES_FPS_FBT_RESCUE_F Param1="100"/>
+                <PERF_RES_FPS_FBT_RESCUE_PERCENT Param1="50"/>
+                <PERF_RES_FPS_FBT_ULTRA_RESCUE Param1="1"/>
+                <PERF_RES_FPS_FBT_SHORT_RESCUE_NS Param1="16666666"/>
+                <PERF_RES_FPS_FBT_MIN_RESCUE_PERCENT Param1="50"/>
+            </Activity>
+        </Package>
+        <Package name="com.tencent.tmgp.speedmobile">
+            <Activity name="Common">
+                <PERF_RES_DRAM_CM_MGR Param1="1"/>
+                <PERF_RES_FPS_FBT_ULTRA_RESCUE Param1="1"/>
+            </Activity>
+        </Package>
+        <Package name="com.android.settings">
+            <Activity name="com.android.settings.SubSettings">
+                <PERF_RES_FPS_FBT_BHR_OPP Param1="15"/>
+                <PERF_RES_DRAM_VCORE_MIN Param1="0"/>
+            </Activity>
+        </Package>
+    </PerfService>
+</WHITELIST>
