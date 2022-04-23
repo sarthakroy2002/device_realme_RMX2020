@@ -8,6 +8,7 @@ oppo.camera.   u:object_r:oppo_camera_prop:s0
 
 # Dirac
 persist.audio.dirac                           u:object_r:dirac_prop:s0
+audio.dirac.logging                           u:object_r:dirac_prop:s0
 
 # Oppo FP props
 persist.vendor.fingerprint.             u:object_r:oppo_fingerprint_prop:s0
