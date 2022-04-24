@@ -333,8 +333,6 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    init.oppo.fingerprints.sh \
-    init.oppo.wifi.debug.sh \
     partition_permission.sh \
     perf_profile.sh \
     throttle.sh \
