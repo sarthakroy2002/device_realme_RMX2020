@@ -1,4 +1,4 @@
-# Device proprietary files - From sys_oplus_mssi_64_cn-user 11 RP1A.200720.011 RMX2020_11_C.06 release-keys, unless pinned
+# Device proprietary files - From sys_oplus_mssi_64_cn-user 11 RP1A.200720.011 RMX2020_11_C.11 release-keys, unless pinned
 
 # ADSP
 vendor/lib64/libadsprpc.so
@@ -370,7 +370,21 @@ vendor/lib64/libVDBlurlessAPI_v2.so
 vendor/lib64/libVDDualCameraBlurless.so
 vendor/lib64/libVDPostureDetection.so
 vendor/lib64/libVDSuperPhotoAPI.so
+vendor/lib64/libcam.feature_utils.so
+vendor/lib64/libcam.hal3a.cctsvr.so
 vendor/lib64/libcam.hal3a.log.so
+vendor/lib64/libcam.hal3a.v3.dng.so
+vendor/lib64/libcam.hal3a.v3.lsctbl.so
+vendor/lib64/libcam.hal3a.v3.nvram.so
+vendor/lib64/libcam.hal3a.v3.so
+vendor/lib64/libcam.halisp.so
+vendor/lib64/libcam.halsensor.hwintegration.so
+vendor/lib64/libcam.halsensor.so
+vendor/lib64/libcam.iopipe.so
+vendor/lib64/libcam.lcs.so
+vendor/lib64/libcam.pdtblgen.so
+vendor/lib64/libcam.utils.sensorprovider.so
+vendor/lib64/libcam.vhdr.so
 vendor/lib64/libcam3a_imem.so
 vendor/lib64/libcamalgo.3dnr.so
 vendor/lib64/libcamalgo.asd.so
@@ -393,9 +407,34 @@ vendor/lib64/libcamdrv_imem.so
 vendor/lib64/libcamdrv_isp.so
 vendor/lib64/libcamdrv_tuning_mgr.so
 vendor/lib64/libcamdrv_twin.so
+vendor/lib64/libcamera_core_hwi.so
 vendor/lib64/libcameracustom.eis.so
+vendor/lib64/libcameracustom.so
 vendor/lib64/libcvface_api.so
 vendor/lib64/libmpbase.so
+vendor/lib64/libmtkcam.featurepipe.capture.so
+vendor/lib64/libmtkcam.featurepipe.depthmap.so
+vendor/lib64/libmtkcam.featurepipe.streaming.so
+vendor/lib64/libmtkcam.logicalmodule.so
+vendor/lib64/libmtkcam_3rdparty.core.so
+vendor/lib64/libmtkcam_3rdparty.customer.so
+vendor/lib64/libmtkcam_3rdparty.mtk.so
+vendor/lib64/libmtkcam_metadata.so
+vendor/lib64/libmtkcam_metastore.so
+vendor/lib64/libmtkcam_modulefactory_aaa.so
+vendor/lib64/libmtkcam_modulefactory_custom.so
+vendor/lib64/libmtkcam_modulefactory_drv.so
+vendor/lib64/libmtkcam_modulefactory_utils.so
+vendor/lib64/libmtkcam_modulehelper.so
+vendor/lib64/libmtkcam_pipeline.so
+vendor/lib64/libmtkcam_pipeline_fbm.so
+vendor/lib64/libmtkcam_pipelinemodel.so
+vendor/lib64/libmtkcam_pipelinemodel_adapter.so
+vendor/lib64/libmtkcam_pipelinemodel_capture.so
+vendor/lib64/libmtkcam_pipelinemodel_session.so
+vendor/lib64/libmtkcam_pipelinemodel_utils.so
+vendor/lib64/libmtkcam_pipelinemodel_zsl.so
+vendor/lib64/libmtkcam_pipelinepolicy.so
 vendor/lib64/vendor.mediatek.hardware.camera.atms@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.1.so
@@ -586,47 +625,6 @@ vendor/etc/camera/M_Attribute_Gender_Age_1.0.model
 vendor/etc/camera/engineer_camera_config
 vendor/etc/camera/gasryuv.model
 vendor/etc/camera/merged_model_post
-
-# Camera - from realme/RMX2027/RMX2027:11/RP1A.200720.011/1606466103020:user/release-keys
-vendor/lib64/libcam.feature_utils.so|06af0da84796c4b4182362b31656b6310e45a628
-vendor/lib64/libcam.hal3a.cctsvr.so|3b54c7432a354dcf412151406099366b0b2fb1b6
-vendor/lib64/libcam.hal3a.v3.dng.so|e8f8d04e1d6b566e2a298f3247cef88fbbe1acad
-vendor/lib64/libcam.hal3a.v3.lsctbl.so|f09f5a72c3a370c73032487ec3de602284d06ee3
-vendor/lib64/libcam.hal3a.v3.nvram.so|528461241a5940ed1f0d1409fa96d15291273e8d
-vendor/lib64/libcam.hal3a.v3.so|c5d3b7a846d05ff86b9b15896e505d61a7c654f2
-vendor/lib64/libcam.halisp.so|a6163c9141986776dbf0943b000645b151779d90
-vendor/lib64/libcam.halsensor.hwintegration.so|a033a01f6505594523c9a4282a70105b62575bd6
-vendor/lib64/libcam.halsensor.so|898e590052b8f55f870b1ff559c7d9c30b61312a
-vendor/lib64/libcam.iopipe.so|8dadb71cf96af84c5742402fb14fc2898cf5b3d4
-vendor/lib64/libcam.lcs.so|cedf9a0aaec5c7dbea129c12e9924caa626724d6
-vendor/lib64/libcam.pdtblgen.so|692cc5bcb082ceb1b2bd59fd7f82831e567cd78a
-vendor/lib64/libcam.utils.sensorprovider.so|162fa03ebbb5e64abd1b83687b07fb1184bbf80f
-vendor/lib64/libcam.vhdr.so|f54168b54ae570c19a445fa72548aa2e58c4589d
-vendor/lib64/libcamera_core_hwi.so|5168fdf4b74d023da35c70c0b650b09bcc0d0716
-vendor/lib64/libcameracustom.so|a3225ce91ec8396c1701856ac968bd82e2156e87
-vendor/lib64/libmtkcam.featurepipe.capture.so|6fb14b4f3ea4940cb21850f9b00d7bd8bb56595a
-vendor/lib64/libmtkcam.featurepipe.depthmap.so|3d1c9c7db7e564cbd6833b96ca4bbca1647be101
-vendor/lib64/libmtkcam.featurepipe.streaming.so|3034d5fcf5379a2eb311a1e49e8868a88e8ad151
-vendor/lib64/libmtkcam.logicalmodule.so|7dcb1783479a116a5834632557e0e245a83ee2ca
-vendor/lib64/libmtkcam_3rdparty.core.so|04cb14931d779adeba836aef3cf1dc4fec7f95bf
-vendor/lib64/libmtkcam_3rdparty.customer.so|1a0987604e2000114a295093555db7cdeaad971c
-vendor/lib64/libmtkcam_3rdparty.mtk.so|f97d20c816d61c9821d6083b5efa0a823f29fd27
-vendor/lib64/libmtkcam_metadata.so|4877a0e4ce52f96f05aef9ccf66b37287aae340c
-vendor/lib64/libmtkcam_metastore.so|511768a4c233b82ed0b51bff8060a6b1202b28ef
-vendor/lib64/libmtkcam_modulefactory_aaa.so|0a225fdbf1ff0257065b427e6b4c91fc839367c2
-vendor/lib64/libmtkcam_modulefactory_custom.so|1752aa0d5dfd0fd1b0853de65e3c4286d90ae810
-vendor/lib64/libmtkcam_modulefactory_drv.so|44b0ae5741567d716884fc66f034bf08774cbc6f
-vendor/lib64/libmtkcam_modulefactory_utils.so|3d49873e2a998eae9df70e27be38cd2d60cadccf
-vendor/lib64/libmtkcam_modulehelper.so|5af1f2b00f30e97f83b2fca3b35ddb30a34cf5da
-vendor/lib64/libmtkcam_pipeline.so|7a21bc2b4d5533fcf0772e80c32d4019942845d7
-vendor/lib64/libmtkcam_pipeline_fbm.so|db1a710a1871e485845f0902b06bf893226dee2f
-vendor/lib64/libmtkcam_pipelinemodel.so|6b608ca24097f589207f137e1de2053f117327ab
-vendor/lib64/libmtkcam_pipelinemodel_adapter.so|8acfc5acd0353d339c21b114bdcc6d9fea543aa0
-vendor/lib64/libmtkcam_pipelinemodel_capture.so|d8e3e904207c8370eab0573acebe01e3183a0e96
-vendor/lib64/libmtkcam_pipelinemodel_session.so|3d2ad11cc98e77c067b67aa29784bf6c01900407
-vendor/lib64/libmtkcam_pipelinemodel_utils.so|0d3aff659e7f21a06b3ed9f4081f3ee67bf7bb42
-vendor/lib64/libmtkcam_pipelinemodel_zsl.so|30accab2e0fc1be5e7da261aa49d8ed3023ebb40
-vendor/lib64/libmtkcam_pipelinepolicy.so|8178ddf6b3be8d78fde1e96ad9f9938b18752436
 
 # DRM (Hardware) - from Redmi/selene/selene:12/SP1A.210812.016/V13.0.1.0.SKUMIXM:user/release-keys
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine|8307cea32c20bdc6e7456a6060ebefcfe743b02c
