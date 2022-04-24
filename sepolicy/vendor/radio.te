@@ -10,6 +10,7 @@ allow radio system_app_data_file:dir r_dir_perms;
 allow radio system_app_data_file:file r_file_perms;
 
 get_prop(radio, mtk_dynims_prop)
+get_prop(radio, vendor_vt_prop)
 
 # For Engineermode
 get_prop(radio, mtk_default_prop)
