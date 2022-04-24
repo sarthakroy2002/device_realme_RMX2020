@@ -1514,14 +1514,12 @@ vendor/etc/ecc_list_OP20.xml
 vendor/etc/ecc_list_preference.xml
 vendor/etc/mtk_omx_core.cfg
 vendor/etc/ncf_pack.ncf
-vendor/etc/partition_permission.sh
 vendor/etc/power_app_cfg.xml
 vendor/etc/slp_conf
 vendor/etc/smsdbvisitor.xml
 vendor/etc/special_pws_channel.xml
 vendor/etc/spk.wav
 vendor/etc/spn-conf-op09.xml
-vendor/etc/throttle.sh
 vendor/etc/virtual-spn-conf-by-efgid1.xml
 vendor/etc/virtual-spn-conf-by-efpnn.xml
 vendor/etc/virtual-spn-conf-by-efspn.xml

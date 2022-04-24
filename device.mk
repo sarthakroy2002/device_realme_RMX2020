@@ -333,9 +333,7 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    partition_permission.sh \
     perf_profile.sh \
-    throttle.sh \
     init.connectivity.rc \
     init.modem.rc \
     init.mt6768.rc \
