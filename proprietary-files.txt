@@ -966,7 +966,6 @@ vendor/lib64/vendor.mediatek.hardware.engineermode@1.2.so
 vendor/lib64/vendor.mediatek.hardware.engineermode@1.3.so
 vendor/lib64/vendor.mediatek.hardware.gpu@1.0.so
 vendor/lib64/vendor.mediatek.hardware.lbs@1.0.so
-vendor/lib64/vendor.mediatek.hardware.log@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mdmonitor@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mms@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mms@1.1.so
@@ -1237,7 +1236,6 @@ vendor/bin/libccu_pascali_qtech_main_ov13b10.dm
 vendor/bin/libccu_pascali_qtech_main_ov13b10.pm
 vendor/bin/libccu_victor_s5k3p9sp_mipi_raw.dm
 vendor/bin/libccu_victor_s5k3p9sp_mipi_raw.pm
-vendor/bin/loghidlvendorservice
 vendor/bin/mcDriverDaemon
 vendor/bin/md_monitor
 vendor/bin/md_monitor_ctrl
@@ -1309,7 +1307,6 @@ vendor/etc/init/init.wod.rc
 vendor/etc/init/init_connectivity.rc
 vendor/etc/init/ipsec_mon.rc
 vendor/etc/init/lbs_hidl_service.rc
-vendor/etc/init/loghidlvendorservice.rc
 vendor/etc/init/md_monitor.rc
 vendor/etc/init/mtk_agpsd_p.rc
 vendor/etc/init/mtkrild.rc
