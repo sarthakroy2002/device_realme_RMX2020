@@ -17,22 +17,7 @@
 -->
 
 <MediaCodecs>
-<!-- Vendor Common Codecs -->
-    <!--#ifdef OPLUS_FEATURE_FFMPEG_INTEGRATION-->
-    <!--//dongdong.ge@PSW.MM.MediaServer.Player. 2020/04/09, Add for ffmpeg integration-->
     <Include href="media_codecs_ffmpeg.xml" />
-    <!--#endif /* OPLUS_FEATURE_FFMPEG_INTEGRATION */-->
-    <!-- #ifdef OPLUS_FEATURE_DOLBY -->
-    <!-- WuHao@MULTIMEDIA.MMSERVER.PLAYER, 2019/09/18, add for dolby -->
-    <Include href="media_codecs_dolby_audio.xml" />
-    <!-- #endif OPLUS_FEATURE_DOLBY -->
-    <!-- #ifdef OPLUS_BUG_STABILITY -->
-    <!-- Xiaofeng.Yang@MULTIMEDIA.MEDIASERVER.VTS.89389, 2020/11/13, Add for ListRoles VTS -->
     <Include href="media_codecs_mediatek_odm.xml" />
-    <!-- #endif OPLUS_BUG_STABILITY -->
-<!-- Vendor Common Codecs -->
-
-<!-- ODM Releated Codecs -->
     <Include href="media_codecs_odm.xml" />
-<!-- ODM Releated Codecs -->
 </MediaCodecs>
