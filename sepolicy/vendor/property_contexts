@@ -20,6 +20,7 @@ init.svc.fpexts_hal                     u:object_r:oppo_fingerprint_prop:s0
 
 # RILD
 ro.telephony.default_network u:object_r:radio_prop:s0
+persist.ss.imsi.info         u:object_r:imsi_prop:s0
 
 # Audio
 audio.tuning.def_path                       u:object_r:audio_tunning_prop:s0
