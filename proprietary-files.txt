@@ -1730,7 +1730,6 @@ vendor/bin/hw/wpa_supplicant
 vendor/bin/hostapd_cli
 vendor/bin/iwpriv
 vendor/bin/stp_dump3
-vendor/bin/wifisar_realme
 vendor/bin/wlan_assistant
 vendor/bin/wmt_launcher
 vendor/bin/wmt_loader
