@@ -46,6 +46,9 @@ service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service
 on property:ro.boot.product.hardware.sku=nfc
     start vendor.nfc_hal_service
 
+on property:ro.boot.product.hardware.sku=""
+    stop vendor.nfc_hal_service
+
 on late-init
     write /proc/bootprof "INIT:late-init"
 
