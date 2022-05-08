@@ -1,2 +1,4 @@
 set_prop(mtk_hal_camera, oppo_camera_prop)
-allow mtk_hal_camera oppo_camera_prop:file read;
+get_prop(mtk_hal_camera, oppo_camera_prop)
+get_prop(mtk_hal_camera, mtk_pq_prop)
+get_prop(mtk_hal_camera, mtk_default_prop)
