@@ -61,7 +61,6 @@ dalvik.vm.mtk-stack-trace-file=/data/anr/mtk_traces.txt
 
 # Display
 debug.sf.latch_unsignaled=1
-ro.surface_flinger.primary_display_orientation=0
 ro.vendor.mtk_aal_support=1
 persist.sys.sf.color_saturation=1.1
 persist.sys.sf.native_mode=0
@@ -141,11 +140,6 @@ ro.netflix.bsp_rev=MTK6768-19054-1
 # NFC
 ro.vendor.mtk_uicc_clf=1
 
-# OPPO
-persist.sys.hypnus.daemon.enable=1
-persist.sys.hypnus.dc=1
-persist.vendor.enable.hans=true
-
 # Performance
 ro.vendor.perf.scroll_opt=true
 
@@ -211,6 +205,7 @@ ro.vendor.mtk_f2fs_enable=0
 ro.vendor.mtk_emmc_support=1
 
 # SurfaceFlinger
+ro.surface_flinger.primary_display_orientation=0
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3 
 ro.surface_flinger.vsync_event_phase_offset_ns=8300000
 ro.surface_flinger.vsync_sf_event_phase_offset_ns=8300000
