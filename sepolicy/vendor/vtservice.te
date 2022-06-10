@@ -1,2 +1,3 @@
 get_prop(vtservice, mtk_viwifi_support_prop)
 get_prop(vtservice, mtk_volte_support_prop)
+allow vtservice mediavts_service:service_manager { add };
