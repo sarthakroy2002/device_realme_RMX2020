@@ -20,7 +20,6 @@
         <permission name="android.permission.NETWORK_SIGNAL_STRENGTH_WAKEUP"/>
         <permission name="android.permission.UPDATE_DEVICE_STATS"/>
     </privapp-permissions>
-
     <privapp-permissions package="com.mediatek.engineermode">
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
         <permission name="android.permission.WRITE_APN_SETTINGS"/>
@@ -31,5 +30,8 @@
         <permission name="android.permission.MASTER_CLEAR"/>
         <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
         <permission name="android.permission.REAL_GET_TASKS"/>
+    </privapp-permissions>
+    <privapp-permissions package="com.android.cellbroadcastreceiver.module">
+        <permission name="android.permission.READ_PHONE_STATE"/>
     </privapp-permissions>
 </permissions>
