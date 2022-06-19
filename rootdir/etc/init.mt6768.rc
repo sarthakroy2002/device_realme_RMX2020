@@ -105,7 +105,6 @@ on fs
     write /proc/sys/vm/swappiness 60
     write /proc/sys/vm/direct_swappiness 60
     write /sys/kernel/mm/swap/vma_ra_enabled false
-    write /sys/block/zram0/disksize 2147483648
 
     swapon_all /vendor/etc/fstab.mt6768
 
