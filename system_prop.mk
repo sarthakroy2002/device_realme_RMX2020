@@ -1,9 +1,4 @@
 
-# Camera
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.camera,org.pixelexperience.faceunlock \
-    vendor.camera.aux.packageblacklist=org.telegram.messenger,com.microsoft.teams,com.discord
-
 # Dex2oat
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     dalvik.vm.dex2oat64.enabled=true \
@@ -15,19 +10,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5,6,7 \
     dalvik.vm.boot-dex2oat-threads=8 \
     dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3,4,5,6,7
-
-# Iorap
-PRODUCT_PROPERTY_OVERRIDES += \
-   iorapd.perfetto.enable=true \
-   iorapd.readahead.enable=true
-
-# Display
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.sf.lcd_density=320
-
-# Fingerprint
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    fingerprint.nocleanup=true
 
 # Hardware Acceleration
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -49,14 +31,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.lmk.psi_complete_stall_ms=150 \
     ro.lmk.swap_free_low_percentage=20 \
     ro.lmk.kill_timeout_ms=100
-
-# NFC
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    persist.sys.nfc.disPowerSave=1 \
-    persist.sys.nfc.default=on \
-    persist.sys.nfc.aid_overflow=true \
-    ro.product.cuptsm=OPPO|ESE|01|02 \
-    persist.sys.nfc.antenna_area=bottom
 
 # OMX
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \

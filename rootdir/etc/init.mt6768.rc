@@ -53,56 +53,21 @@ on post-fs-data
     chmod 0666 /dev/video0
     chmod 0666 /dev/video1
 
-    # Create Goodix FP related directories
-    mkdir /data/gf_data 0700 system system
-    mkdir /data/system/gf_data 0700 system system
-    mkdir /data/images 0700 system system
-
-    # Set permissions for FPC FP
-    chown system  system /sys/bus/platform/devices/fpc_interrupt/clk_enable
-    chown system  system /sys/bus/platform/devices/fpc_interrupt/wakelock_enable
-    chown system  system /sys/bus/platform/devices/fpc_interrupt/irq
-    chown system  system /sys/bus/platform/devices/fpc_interrupt/irq_enable
-    chown system  system /sys/bus/platform/devices/fpc_interrupt/irq_unexpected
-    chmod 0200 /sys/bus/platform/devices/fpc_interrupt/irq_enable
-    chmod 0200 /sys/bus/platform/devices/fpc_interrupt/clk_enable
-    chmod 0200 /sys/bus/platform/devices/fpc_interrupt/wakelock_enable
-    chmod 0600 /sys/bus/platform/devices/fpc_interrupt/irq
-    chmod 0660 /sys/bus/platform/devices/fpc_interrupt/irq_unexpected
-
     # USB-OTG
     chown system system /sys/class/power_supply/usb/otg_switch
     chmod 0666 /sys/class/power_supply/usb/otg_switch
     write /sys/class/power_supply/usb/otg_switch 1
-
-	# HBM
-	chown system system /sys/kernel/oppo_display/hbm
-	chmod 0666 /sys/kernel/oppo_display/hbm
 
     # Disable edge limit control interface
     write /proc/touchpanel/oppo_tp_limit_enable 0
 
     # Services
     stop console
-
-on boot
-    # Set permission for Goodix FP
-    chown system system /dev/goodix_fp
  
 on property:sys.boot_completed=1
     setprop vendor.oppo.biometrics.fingerprint.boot_completed 1
 
-on property:sys.boot_completed=1
-    # Toggle airplane mode on and off on boot to enable volte.
-    # This hack needs ImsInit commit to request ims on boot to work properly
-
-    exec - root -- /system/bin/sh -c "sleep 3"
-    exec - root -- /system/bin/sh -c "settings put global airplane_mode_on 1"
-    exec - root -- /system/bin/sh -c "am broadcast -a android.intent.action.AIRPLANE_MODE --ez state true"
-
-    exec - root -- /system/bin/sh -c "settings put global airplane_mode_on 0"
-    exec - root -- /system/bin/sh -c "am broadcast -a android.intent.action.AIRPLANE_MODE --ez state false"
-    
+on property:sys.boot_completed=1    
     # ZRAM
     swapon_all /vendor/fstab.enableswap
 
@@ -128,31 +93,9 @@ service face_hal /system/bin/true
     oneshot
     disabled
 
-# Import Swap Enable Script from realmeUI
-service swap_enable /system/bin/sh /system/etc/swap_enable.sh
-    class late_start
-    disabled
-    user root
-    group system
-    oneshot
-
 # Disable AOSP RIL if MTK RIL is up
 on property:vendor.ril.mtk=1
     stop vendor.ril-daemon
-
-# Performance profiles
-on property:perf_profile=1
-    exec - root -- /system/bin/perf_profile.sh 1
-
-on property:perf_profile=0
-    exec - root -- /system/bin/perf_profile.sh 0
-
-on property:sys.boot_completed=1
-    chown root root /sys/module/ged/parameters/gx_force_cpu_boost
-    chown root root /proc/cpufreq/cpufreq_power_mode
-    chown root root /proc/cpufreq/cpufreq_cci_mode
-    chmod +x /system/etc/swap_enable.sh
-    start swap_enable
 
 on property:persist.vendor.radio.port_index=""
     setprop sys.usb.config adb

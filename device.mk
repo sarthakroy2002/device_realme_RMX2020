@@ -25,16 +25,7 @@ $(call inherit-product, vendor/realme/RMX2020/RMX2020-vendor.mk)
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
-# Parts
-$(call inherit-product-if-exists, packages/apps/RealmeParts/parts.mk)
-
-# Realme Dirac
-$(call inherit-product-if-exists, packages/apps/RealmeDirac/dirac.mk)
-
 PRODUCT_SHIPPING_API_LEVEL := 29
-
-# VNDK
-PRODUCT_EXTRA_VNDK_VERSIONS := 29
 
 # Dynamic Partition
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -46,8 +37,7 @@ TARGET_SCREEN_WIDTH := 720
 
 # Audio
 PRODUCT_PACKAGES += \
-    audio.a2dp.default \
-    GoogleCameraGo
+    audio.a2dp.default
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/audio/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml \
@@ -75,21 +65,10 @@ PRODUCT_PACKAGES += \
     libhidltransport \
     libhwbinder
 
-# IMS
-PRODUCT_PACKAGES += \
-    mtk-ims \
-    mtk-ims-telephony
-
-# ImsInit hack
-PRODUCT_PACKAGES += \
-    ImsInit
-
 # Init
 PRODUCT_PACKAGES += \
     init.mt6768.rc \
-    fstab.mt6768 \
-    perf_profile.sh \
-    swap_enable.sh
+    fstab.mt6768
 
 # Kernel
 PRODUCT_COPY_FILES += \
@@ -106,24 +85,9 @@ PRODUCT_PACKAGES += \
     libsuspend \
     android.hardware.health@2.0
 
-# Lights
-PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.RMX2020
-
-# NFC
-PRODUCT_PACKAGES += \
-    com.android.nfc_extras \
-    com.gsma.services.nfc  \
-    NfcNci \
-    SecureElement \
-    Tag
-
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay
-
-PRODUCT_PACKAGES += \
-    NotchBarKiller
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -138,12 +102,6 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 PRODUCT_PACKAGES += \
     init.recovery.mt6768.rc
 
-# RcsService
-PRODUCT_PACKAGES += \
-    com.android.ims.rcsmanager \
-    PresencePolling \
-    RcsService
-
 # Screen density
 PRODUCT_AAPT_CONFIG := xxxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
@@ -152,17 +110,7 @@ PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
-# Symbols
-PRODUCT_PACKAGES += \
-    libshim_showlogo
-
-# Vendor overlay
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(DEVICE_PATH)/vendor-overlay/,$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_EXTRA_VNDK_VERSIONS))
-
 # Wi-Fi
 PRODUCT_PACKAGES += \
     android.hardware.wifi.hostapd@1.0 \
-    android.hardware.wifi.hostapd@1.1 \
-    TetheringConfigOverlay \
-    WifiOverlay
+    android.hardware.wifi.hostapd@1.1

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<manifest version="1.0" type="device">
-    <hal override="true">
-        <name>android.hardware.soundtrigger</name>
-        <transport>hwbinder</transport>
-    </hal>
-</manifest>
