@@ -875,17 +875,6 @@ vendor/lib64/vendor.mediatek.hardware.engineermode@1.0.so|59bb8a4f3c416de1be80b9
 vendor/lib64/vendor.mediatek.hardware.engineermode@1.1.so|f706ad4b3deaccf39e6ff7aaf289a684cf5d02f6
 vendor/lib64/vendor.mediatek.hardware.engineermode@1.2.so|17594ce52ee9ed9a9db12b14ea5ae04e53cf9f3d
 
-# Factory
-vendor/bin/hw/interfaces.factoryInterface@1.0-service
-vendor/bin/factoryAta
-vendor/etc/init/factorybsp_service.rc
-vendor/lib64/interfaces.factoryAta@1.0-adapter-helper.so
-vendor/lib64/interfaces.factoryAta@1.0.so
-vendor/lib64/interfaces.factoryInterface@1.0-adapter-helper.so
-vendor/lib64/interfaces.factoryInterface@1.0.so
-vendor/lib64/libFactoryHALCommon.so
-vendor/lib64/libFactoryMetaAta.so
-
 # Fingerprint
 vendor/bin/hw/vendor.oppo.hardware.biometrics.fingerprint@2.1-service
 vendor/bin/hw/vendor.silead.hardware.fingerprintext@1.0-service
