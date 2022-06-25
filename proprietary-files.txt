@@ -1474,8 +1474,6 @@ vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
 
 # Power
-vendor/bin/hw/power_legacy_test_v_1_0
-vendor/bin/hw/power_native_test_v_1_0
 vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service
 vendor/bin/md_monitor
 vendor/bin/md_monitor_ctrl
