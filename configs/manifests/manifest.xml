@@ -142,16 +142,6 @@
         <fqname>@1.0::ISecureElement/SIM2</fqname>
     </hal>
     <hal format="hidl">
-        <name>interfaces.factoryAta</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IFactoryAta/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>interfaces.factoryInterface</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IFactoryInterface/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.egistec.hardware.fingerprint</name>
         <transport>hwbinder</transport>
         <fqname>@4.0::IBiometricsFingerprintRbs/default</fqname>
