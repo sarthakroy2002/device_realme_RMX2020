@@ -17,7 +17,10 @@
 #include "Power.h"
 #include "libpowerhal.h"
 
+#include <android-base/file.h>
 #include <android-base/logging.h>
+
+#include <linux/input.h>
 
 namespace aidl {
 namespace android {
@@ -56,6 +59,11 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
                 /* Device entering non interactive state,
                    disable all hints to save power. */
                 libpowerhal_UserScnDisableAll();
+            break;
+        }
+        case Mode::DOUBLE_TAP_TO_WAKE:
+        {
+            ::android::base::WriteStringToFile(enabled ? "1" : "0", "/proc/touchpanel/double_tap_enable", true);
             break;
         }
         default:
