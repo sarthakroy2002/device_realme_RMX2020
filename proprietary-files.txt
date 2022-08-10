@@ -1500,11 +1500,9 @@ vendor/bin/hw/vendor.mediatek.hardware.mms@1.5-service|18745cd9c4ba6ccb6927d4d29
 vendor/bin/ccci_fsd|d4ebf0ddac19aeef296d43ea74dca63fd28daec3
 vendor/bin/ccci_mdinit|0d85621f9a303aeaae181affe2ef0b0cb3193f5a
 vendor/bin/ccci_rpcd|1a77f48ea7d0dbfe692c9a38e55ff0d1df5f1fd8
-vendor/bin/em_hidl|d088a196da02fdff1ae72497e6696c8fd6b37387
 vendor/bin/gsm0710muxd|635f9feb73bd27d87390a4106a6e243e1bc77a12
 vendor/bin/netdagent|22404910630694c45674fdb3f7b31444f8465412
 vendor/bin/netdc|315b9aacfcd97faf4d89198b785e1274edd0f705
-vendor/etc/init/em_hidl_user.rc|34be0d2a76917728622853c7ca06f35720cf51a0
 vendor/etc/init/gsm0710muxd.rc|eebf0d77e757392aafbc695bbcd9c7a52bf00672
 vendor/etc/init/init.cccifsd.rc|51de4cbf52f6ca14b55f5084f4ecefc050764a67
 vendor/etc/init/init.cccimdinit.rc|c30096c4fed4bc05c4de4147b6169161b37cf0cb
