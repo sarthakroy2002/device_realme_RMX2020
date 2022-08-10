@@ -26,10 +26,8 @@ object Utils {
     const val DOZE_ENABLE = "doze_enable"
 
     const val CATEGORY_PICKUP_SENSOR = "pickup_sensor"
-    const val CATEGORY_PROXIMITY_SENSOR = "proximity_sensor"
 
     const val GESTURE_PICK_UP_KEY = "gesture_pick_up_type"
-    const val GESTURE_POCKET_KEY = "gesture_pocket"
 
     private fun startService(context: Context) {
         Log.d(TAG, "Starting service")
@@ -93,12 +91,8 @@ object Utils {
             .getString(GESTURE_PICK_UP_KEY, "0") == "2"
     }
 
-    fun isPocketEnabled(context: Context?): Boolean {
-        return isGestureEnabled(context, GESTURE_POCKET_KEY)
-    }
-
     private fun areGesturesEnabled(context: Context?): Boolean {
-        return isPickUpEnabled(context) || isPocketEnabled(context)
+        return isPickUpEnabled(context)
     }
 
     fun getSensor(sm: SensorManager, type: String?): Sensor? {

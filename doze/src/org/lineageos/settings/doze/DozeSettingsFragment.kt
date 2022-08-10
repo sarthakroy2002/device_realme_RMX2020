@@ -22,7 +22,6 @@ class DozeSettingsFragment : PreferenceFragment(), Preference.OnPreferenceChange
     private lateinit var switchBar: MainSwitchPreference
 
     private var pickUpPreference: ListPreference? = null
-    private var pocketPreference: SwitchPreference? = null
 
     private val handler = Handler(Looper.getMainLooper())
 
@@ -56,26 +55,15 @@ class DozeSettingsFragment : PreferenceFragment(), Preference.OnPreferenceChange
             preferenceScreen.removePreference(pickupSensorCategory)
         }
 
-        val proximitySensorCategory =
-            preferenceScreen.findPreference<PreferenceCategory>(Utils.CATEGORY_PROXIMITY_SENSOR)
-        if (getString(R.string.pocket_sensor_type).isEmpty()) {
-            preferenceScreen.removePreference(proximitySensorCategory)
-        }
-
         pickUpPreference = findPreference(Utils.GESTURE_PICK_UP_KEY)
         pickUpPreference?.isEnabled = dozeEnabled
         pickUpPreference?.onPreferenceChangeListener = this
-
-        pocketPreference = findPreference(Utils.GESTURE_POCKET_KEY)
-        pocketPreference?.isEnabled = dozeEnabled
-        pocketPreference?.onPreferenceChangeListener = this
 
         // Hide AOD if not supported and set all its dependents otherwise
         if (!Utils.alwaysOnDisplayAvailable(context)) {
             preferenceScreen.removePreference(alwaysOnDisplayPreference)
         } else {
             pickupSensorCategory?.dependency = Utils.ALWAYS_ON_DISPLAY
-            proximitySensorCategory?.dependency = Utils.ALWAYS_ON_DISPLAY
         }
     }
 
@@ -100,7 +88,6 @@ class DozeSettingsFragment : PreferenceFragment(), Preference.OnPreferenceChange
 
         alwaysOnDisplayPreference.isEnabled = isChecked
         pickUpPreference?.isEnabled = isChecked
-        pocketPreference?.isEnabled = isChecked
     }
 
 }
