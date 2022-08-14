@@ -18,10 +18,20 @@
 
 #include <aidl/android/hardware/vibrator/BnVibrator.h>
 
+#include <map>
+
 namespace aidl {
 namespace android {
 namespace hardware {
 namespace vibrator {
+
+static std::map<Effect, int32_t> vibEffects = {
+    /* Stock MediaTek values */
+    { Effect::CLICK, 50 },
+    { Effect::DOUBLE_CLICK, 25 },
+    { Effect::HEAVY_CLICK, 60 },
+    { Effect::TICK, 32 }
+};
 
 class LedVibratorDevice {
 public:

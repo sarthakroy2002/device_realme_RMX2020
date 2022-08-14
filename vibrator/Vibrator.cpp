@@ -110,7 +110,7 @@ int LedVibratorDevice::off()
 
 ndk::ScopedAStatus Vibrator::getCapabilities(int32_t* _aidl_return) {
     LOG(INFO) << "Vibrator reporting capabilities";
-    *_aidl_return = IVibrator::CAP_ON_CALLBACK;
+    *_aidl_return = IVibrator::CAP_ON_CALLBACK | IVibrator::CAP_PERFORM_CALLBACK;
 
     return ndk::ScopedAStatus::ok();
 }
@@ -146,10 +146,42 @@ ndk::ScopedAStatus Vibrator::on(int32_t timeoutMs,
 ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength strength,
                                      const std::shared_ptr<IVibratorCallback>& callback,
                                      int32_t* _aidl_return) {
-    return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
+    int32_t timeoutMs = 0;
+
+    LOG(INFO) << "Vibrator perform effect: " << static_cast<int32_t>(effect);
+
+    if (strength != EffectStrength::LIGHT && strength != EffectStrength::MEDIUM &&
+        strength != EffectStrength::STRONG) {
+        return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
+    }
+
+    if (vibEffects.find(effect) == vibEffects.end())
+        return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
+
+    timeoutMs = vibEffects[effect];
+
+    if (vibDevice.on(timeoutMs) != 0)
+        return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_SERVICE_SPECIFIC));
+
+    if (callback != nullptr) {
+        std::thread([=] {
+            LOG(DEBUG) << "Starting on on another thread";
+            usleep(timeoutMs * 1000);
+            LOG(DEBUG) << "Notifying on complete";
+            if (!callback->onComplete().isOk()) {
+                LOG(ERROR) << "Failed to call onComplete";
+            }
+        }).detach();
+    }
+
+    *_aidl_return = timeoutMs;
+    return ndk::ScopedAStatus::ok();
 }
 
 ndk::ScopedAStatus Vibrator::getSupportedEffects(std::vector<Effect>* _aidl_return) {
+    for (auto const& pair : vibEffects)
+        _aidl_return->push_back(pair.first);
+        
     return ndk::ScopedAStatus::ok();
 }
 
