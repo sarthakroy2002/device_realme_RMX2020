@@ -1364,23 +1364,6 @@ vendor/lib64/libmemsic.so
 vendor/lib64/libutinterface_custom_md.so
 vendor/lib64/libutinterface_md.so
 
-# Modules
-vendor/etc/init/init.bt_drv.rc
-vendor/etc/init/init.fmradio_drv.rc
-vendor/etc/init/init.gps_drv.rc
-vendor/etc/init/init.udc_lib.rc
-vendor/etc/init/init.wlan_drv.rc
-vendor/etc/init/init.wmt_drv.rc
-vendor/lib/modules/bt_drv.ko
-vendor/lib/modules/fmradio_drv.ko
-vendor/lib/modules/fpsgo.ko
-vendor/lib/modules/gps_drv.ko
-vendor/lib/modules/met.ko
-vendor/lib/modules/udc_lib.ko
-vendor/lib/modules/wlan_drv_gen4m.ko
-vendor/lib/modules/wmt_chrdev_wifi.ko
-vendor/lib/modules/wmt_drv.ko
-
 # Neural Networks - from realme/RMX2020/RMX2020:11/RP1A.200720.011/1627637499567:user/release-keys
 vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron|26ea561188e545d13cfd92d9bd80332b820b6977
 vendor/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc|ebdc6355d6d4b243161f536aeafb9392373bde11
