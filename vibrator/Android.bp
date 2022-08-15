@@ -4,7 +4,7 @@ cc_library_static {
     shared_libs: [
         "libbase",
         "libbinder_ndk",
-        "android.hardware.vibrator-V2-ndk_platform",
+        "android.hardware.vibrator-V2-ndk",
     ],
     export_include_dirs: ["include"],
     srcs: [
@@ -22,7 +22,7 @@ cc_binary {
     shared_libs: [
         "libbase",
         "libbinder_ndk",
-        "android.hardware.vibrator-V2-ndk_platform",
+        "android.hardware.vibrator-V2-ndk",
     ],
     static_libs: [
         "android.hardware.vibrator-impl.RMX2020",
