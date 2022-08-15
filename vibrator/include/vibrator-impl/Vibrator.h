@@ -27,10 +27,10 @@ namespace vibrator {
 
 static std::map<Effect, int32_t> vibEffects = {
     /* Stock MediaTek values */
-    { Effect::CLICK, 50 },
-    { Effect::DOUBLE_CLICK, 25 },
-    { Effect::HEAVY_CLICK, 60 },
-    { Effect::TICK, 32 }
+    { Effect::CLICK, 70 },
+    { Effect::DOUBLE_CLICK, 45 },
+    { Effect::HEAVY_CLICK, 90 },
+    { Effect::TICK, 48 }
 };
 
 class LedVibratorDevice {
