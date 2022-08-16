@@ -1,4 +1,5 @@
 set_prop(vendor_init, mtk_emcamera_prop)
+get_prop(vendor_init, mtk_printk_prop)
 allow vendor_init proc_tp:file rw_file_perms;
 
 # Allow vendor init to access persist.vendor.fingerprint.fp_id
