@@ -87,6 +87,12 @@ function blob_fixup {
         vendor/etc/init/vendor.oppo.hardware.biometrics.fingerprint@2.1-service.rc)
             sed -i '/cpuset/Q' "$2"
             ;;
+        vendor/lib64/hw/dfps.mt6768.so)
+            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v30.so" "${2}"
+            ;;
+        vendor/lib64/hw/vendor.mediatek.hardware.pq@2.3-impl.so)
+            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v30.so" "${2}"
+            ;;
     esac
 }
 
