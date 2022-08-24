@@ -13,7 +13,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 $(call inherit-product, vendor/realme/RMX2020/RMX2020-vendor.mk)
 
 # IMS
-#$(call inherit-product, vendor/realme/RMX2020-ims/RMX2020-ims.mk)
+$(call inherit-product, vendor/realme/RMX2020-ims/RMX2020-ims.mk)
 
 # RealmeDirac
 $(call inherit-product, $(DEVICE_PATH)/app/RealmeDirac/dirac.mk)
