@@ -115,4 +115,5 @@ PRODUCT_PROPERTY_OVERRIDES +=  \
     persist.log.tag.GED=S \
     persist.log.tag.hwcomposer=S \
     persist.log.tag.netd=S \
+    persist.log.tag.gralloc4=S \
     persist.log.tag.MDP=S \
