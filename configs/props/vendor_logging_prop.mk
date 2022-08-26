@@ -247,6 +247,7 @@ PRODUCT_VENDOR_PROPERTIES +=  \
     persist.log.tag.libPowerHal=S \
     persist.log.tag.mtkpower@impl=S \
     persist.log.tag.MDP=S \
+    persist.log.tag.gralloc4=S \
     persist.log.tag.thermal_repeater=S \
     persist.log.tag.mtkpower_client=S \
     persist.log.tag.wpfa_iptable_android=S
