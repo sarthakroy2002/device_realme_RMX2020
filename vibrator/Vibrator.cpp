@@ -18,95 +18,12 @@
 
 #include <android-base/logging.h>
 #include <thread>
-#include <fcntl.h>
+#include <fstream>
 
 namespace aidl {
 namespace android {
 namespace hardware {
 namespace vibrator {
-
-static const char LED_DEVICE[] = "/sys/class/leds/vibrator";
-
-LedVibratorDevice::LedVibratorDevice() {
-    char devicename[PATH_MAX];
-    int fd;
-
-    snprintf(devicename, sizeof(devicename), "%s/%s", LED_DEVICE, "activate");
-    fd = TEMP_FAILURE_RETRY(open(devicename, O_RDWR));
-    if (fd < 0) {
-        /* We could not open the vibrator, this is fatal. */
-        LOG(ERROR) << "Could not open vibrator device at path: " << devicename;
-        abort();
-    }
-    close(fd);
-}
-
-int LedVibratorDevice::write_value(const char *file, const char *value) {
-    int fd;
-    int ret;
-
-    fd = TEMP_FAILURE_RETRY(open(file, O_WRONLY));
-    if (fd < 0) {
-        LOG(ERROR) << "open " << file << " failed, errno = " << errno;
-        return -errno;
-    }
-
-    ret = TEMP_FAILURE_RETRY(write(fd, value, strlen(value) + 1));
-    if (ret == -1) {
-        ret = -errno;
-    } else if (ret != strlen(value) + 1) {
-        /* even though EAGAIN is an errno value that could be set
-           by write() in some cases, none of them apply here.  So, this return
-           value can be clearly identified when debugging and suggests the
-           caller that it may try to call vibrator_on() again */
-        ret = -EAGAIN;
-    } else {
-        ret = 0;
-    }
-
-    errno = 0;
-    close(fd);
-
-    return ret;
-}
-
-int LedVibratorDevice::on(int32_t timeoutMs) {
-    char file[PATH_MAX];
-    char value[32];
-    int ret;
-
-    snprintf(file, sizeof(file), "%s/%s", LED_DEVICE, "state");
-    ret = write_value(file, "1");
-    if (ret < 0)
-       goto error;
-
-    snprintf(file, sizeof(file), "%s/%s", LED_DEVICE, "duration");
-    snprintf(value, sizeof(value), "%u\n", timeoutMs);
-    ret = write_value(file, value);
-    if (ret < 0)
-       goto error;
-
-    snprintf(file, sizeof(file), "%s/%s", LED_DEVICE, "activate");
-    ret = write_value(file, "1");
-    if (ret < 0)
-       goto error;
-
-    return 0;
-
-error:
-    LOG(ERROR) << "Failed to turn on vibrator ret: " << ret;
-    return ret;
-}
-
-int LedVibratorDevice::off()
-{
-    char file[PATH_MAX];
-    int ret;
-
-    snprintf(file, sizeof(file), "%s/%s", LED_DEVICE, "activate");
-    ret = write_value(file, "0");
-    return ret;
-}
 
 ndk::ScopedAStatus Vibrator::getCapabilities(int32_t* _aidl_return) {
     LOG(INFO) << "Vibrator reporting capabilities";
@@ -117,38 +34,38 @@ ndk::ScopedAStatus Vibrator::getCapabilities(int32_t* _aidl_return) {
 
 ndk::ScopedAStatus Vibrator::off() {
     LOG(INFO) << "Vibrator off";
-    if (vibDevice.off() != 0)
-        return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_SERVICE_SPECIFIC));
-
-    return ndk::ScopedAStatus::ok();
+    return activate(0);
 }
 
 ndk::ScopedAStatus Vibrator::on(int32_t timeoutMs,
                                 const std::shared_ptr<IVibratorCallback>& callback) {
     LOG(INFO) << "Vibrator on for timeoutMs: " << timeoutMs;
-    if (vibDevice.on(timeoutMs) != 0)
-        return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_SERVICE_SPECIFIC));
+    ndk::ScopedAStatus status;
+    status = activate(timeoutMs);
+
+    if (!status.isOk())
+        return status;
 
     if (callback != nullptr) {
         std::thread([=] {
-            LOG(DEBUG) << "Starting on on another thread";
+            LOG(INFO) << "Starting on on another thread";
             usleep(timeoutMs * 1000);
-            LOG(DEBUG) << "Notifying on complete";
+            LOG(INFO) << "Notifying on complete";
             if (!callback->onComplete().isOk()) {
                 LOG(ERROR) << "Failed to call onComplete";
             }
         }).detach();
     }
-
     return ndk::ScopedAStatus::ok();
 }
 
 ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength strength,
                                      const std::shared_ptr<IVibratorCallback>& callback,
                                      int32_t* _aidl_return) {
-    int32_t timeoutMs = 0;
+    ndk::ScopedAStatus status;
+    int32_t timeoutMs;
 
-    LOG(INFO) << "Vibrator perform effect: " << static_cast<int32_t>(effect);
+    LOG(INFO) << "Vibrator perform";
 
     if (strength != EffectStrength::LIGHT && strength != EffectStrength::MEDIUM &&
         strength != EffectStrength::STRONG) {
@@ -160,17 +77,16 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength strength,
 
     timeoutMs = vibEffects[effect];
 
-    if (vibDevice.on(timeoutMs) != 0)
-        return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_SERVICE_SPECIFIC));
+    status = activate(timeoutMs);
+    if (!status.isOk())
+        return status;
 
     if (callback != nullptr) {
         std::thread([=] {
-            LOG(DEBUG) << "Starting on on another thread";
+            LOG(INFO) << "Starting perform on another thread";
             usleep(timeoutMs * 1000);
-            LOG(DEBUG) << "Notifying on complete";
-            if (!callback->onComplete().isOk()) {
-                LOG(ERROR) << "Failed to call onComplete";
-            }
+            LOG(INFO) << "Notifying perform complete";
+            callback->onComplete();
         }).detach();
     }
 
@@ -181,89 +97,133 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength strength,
 ndk::ScopedAStatus Vibrator::getSupportedEffects(std::vector<Effect>* _aidl_return) {
     for (auto const& pair : vibEffects)
         _aidl_return->push_back(pair.first);
-        
+
     return ndk::ScopedAStatus::ok();
 }
 
-ndk::ScopedAStatus Vibrator::setAmplitude(float amplitude) {
+ndk::ScopedAStatus Vibrator::setAmplitude(float amplitude __unused) {
     return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
 }
 
-ndk::ScopedAStatus Vibrator::setExternalControl(bool enabled) {
+ndk::ScopedAStatus Vibrator::setExternalControl(bool enabled __unused) {
     return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
 }
 
-ndk::ScopedAStatus Vibrator::getCompositionDelayMax(int32_t* maxDelayMs) {
+ndk::ScopedAStatus Vibrator::getCompositionDelayMax(int32_t* maxDelayMs __unused) {
     return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
 }
 
-ndk::ScopedAStatus Vibrator::getCompositionSizeMax(int32_t* maxSize) {
+ndk::ScopedAStatus Vibrator::getCompositionSizeMax(int32_t* maxSize __unused) {
     return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
 }
 
-ndk::ScopedAStatus Vibrator::getSupportedPrimitives(std::vector<CompositePrimitive>* supported) {
+ndk::ScopedAStatus Vibrator::getSupportedPrimitives(std::vector<CompositePrimitive>* supported __unused) {
     return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
 }
 
-ndk::ScopedAStatus Vibrator::getPrimitiveDuration(CompositePrimitive primitive,
-                                                  int32_t* durationMs) {
+ndk::ScopedAStatus Vibrator::getPrimitiveDuration(CompositePrimitive primitive __unused,
+                                                  int32_t* durationMs __unused) {
     return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
 }
 
-ndk::ScopedAStatus Vibrator::compose(const std::vector<CompositeEffect>& composite,
-                                     const std::shared_ptr<IVibratorCallback>& callback) {
+ndk::ScopedAStatus Vibrator::compose(const std::vector<CompositeEffect>& composite __unused,
+                                     const std::shared_ptr<IVibratorCallback>& callback __unused) {
     return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
 }
 
-ndk::ScopedAStatus Vibrator::getSupportedAlwaysOnEffects(std::vector<Effect>* _aidl_return) {
+ndk::ScopedAStatus Vibrator::getSupportedAlwaysOnEffects(std::vector<Effect>* _aidl_return __unused) {
     return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
 }
 
-ndk::ScopedAStatus Vibrator::alwaysOnEnable(int32_t id, Effect effect, EffectStrength strength) {
+ndk::ScopedAStatus Vibrator::alwaysOnEnable(int32_t id __unused, Effect effect __unused, EffectStrength strength __unused) {
     return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
 }
 
-ndk::ScopedAStatus Vibrator::alwaysOnDisable(int32_t id) {
+ndk::ScopedAStatus Vibrator::alwaysOnDisable(int32_t id __unused) {
     return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
 }
 
-ndk::ScopedAStatus Vibrator::getResonantFrequency(float *resonantFreqHz) {
+ndk::ScopedAStatus Vibrator::getResonantFrequency(float *resonantFreqHz __unused) {
     return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
 }
 
-ndk::ScopedAStatus Vibrator::getQFactor(float *qFactor) {
+ndk::ScopedAStatus Vibrator::getQFactor(float *qFactor __unused) {
     return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
 }
 
-ndk::ScopedAStatus Vibrator::getFrequencyResolution(float *freqResolutionHz) {
+ndk::ScopedAStatus Vibrator::getFrequencyResolution(float *freqResolutionHz __unused) {
     return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
 }
 
-ndk::ScopedAStatus Vibrator::getFrequencyMinimum(float *freqMinimumHz) {
+ndk::ScopedAStatus Vibrator::getFrequencyMinimum(float *freqMinimumHz __unused) {
     return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
 }
 
-ndk::ScopedAStatus Vibrator::getBandwidthAmplitudeMap(std::vector<float> *_aidl_return) {
+ndk::ScopedAStatus Vibrator::getBandwidthAmplitudeMap(std::vector<float> *_aidl_return __unused) {
     return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
 }
 
-ndk::ScopedAStatus Vibrator::getPwlePrimitiveDurationMax(int32_t *durationMs) {
+ndk::ScopedAStatus Vibrator::getPwlePrimitiveDurationMax(int32_t *durationMs __unused) {
     return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
 }
 
-ndk::ScopedAStatus Vibrator::getPwleCompositionSizeMax(int32_t *maxSize) {
+ndk::ScopedAStatus Vibrator::getPwleCompositionSizeMax(int32_t *maxSize __unused) {
     return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
 }
 
-ndk::ScopedAStatus Vibrator::getSupportedBraking(std::vector<Braking> *supported) {
+ndk::ScopedAStatus Vibrator::getSupportedBraking(std::vector<Braking> *supported __unused) {
     return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
 }
 
-ndk::ScopedAStatus Vibrator::composePwle(const std::vector<PrimitivePwle> &composite,
-                                         const std::shared_ptr<IVibratorCallback> &callback) {
+ndk::ScopedAStatus Vibrator::composePwle(const std::vector<PrimitivePwle> &composite __unused,
+                                         const std::shared_ptr<IVibratorCallback> &callback __unused) {
     return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
 }
 
+/*
+ * Write value to path and close file.
+ */
+ndk::ScopedAStatus Vibrator::setNode(const std::string path, const std::string value) {
+    std::ofstream file(path);
+
+    if (!file.is_open()) {
+        LOG(ERROR) << "Failed to write " << value.c_str() << " to " << path.c_str();
+        return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_SERVICE_SPECIFIC));
+    }
+
+    file << value << std::endl;
+
+    return ndk::ScopedAStatus::ok();
+}
+
+ndk::ScopedAStatus Vibrator::setNode(std::string path, const int32_t value) {
+    return setNode(path, std::to_string(value));
+}
+
+ndk::ScopedAStatus Vibrator::activate(const int32_t timeoutMs) {
+    ndk::ScopedAStatus status;
+    std::string active = "0";
+
+    if (timeoutMs > 0)
+        active = "1";
+    else
+        goto set_activate;
+
+    status = setNode(kVibratorState, "1");
+    if (!status.isOk())
+        return status;
+
+    status = setNode(kVibratorDuration, timeoutMs);
+    if (!status.isOk())
+        return status;
+
+set_activate:
+    status = setNode(kVibratorActivate, active);
+    if (!status.isOk())
+        return status;
+
+    return ndk::ScopedAStatus::ok();
+}
 }  // namespace vibrator
 }  // namespace hardware
 }  // namespace android

@@ -17,7 +17,6 @@
 #pragma once
 
 #include <aidl/android/hardware/vibrator/BnVibrator.h>
-
 #include <map>
 
 namespace aidl {
@@ -25,26 +24,19 @@ namespace android {
 namespace hardware {
 namespace vibrator {
 
-static std::map<Effect, int32_t> vibEffects = {
-    /* Stock MediaTek values */
-    { Effect::CLICK, 70 },
-    { Effect::DOUBLE_CLICK, 45 },
-    { Effect::HEAVY_CLICK, 90 },
-    { Effect::TICK, 48 }
-};
+const std::string kVibratorState    = "/sys/class/leds/vibrator/state";
+const std::string kVibratorDuration = "/sys/class/leds/vibrator/duration";
+const std::string kVibratorActivate = "/sys/class/leds/vibrator/activate";
 
-class LedVibratorDevice {
-public:
-    LedVibratorDevice();
-    int on(int32_t timeoutMs);
-    int off();
-private:
-    int write_value(const char *file, const char *value);
+static std::map<Effect, int32_t> vibEffects = {
+    { Effect::CLICK, 50 },
+    { Effect::DOUBLE_CLICK, 25 },
+    { Effect::HEAVY_CLICK, 60 },
+    { Effect::TICK, 32 }
 };
 
 class Vibrator : public BnVibrator {
-    class LedVibratorDevice vibDevice;
-
+public:
     ndk::ScopedAStatus getCapabilities(int32_t* _aidl_return) override;
     ndk::ScopedAStatus off() override;
     ndk::ScopedAStatus on(int32_t timeoutMs,
@@ -76,6 +68,10 @@ class Vibrator : public BnVibrator {
     ndk::ScopedAStatus composePwle(const std::vector<PrimitivePwle> &composite,
                                    const std::shared_ptr<IVibratorCallback> &callback) override;
 
+private:
+    static ndk::ScopedAStatus setNode(const std::string path, const std::string value);
+    static ndk::ScopedAStatus setNode(const std::string path, const int32_t value);
+    ndk::ScopedAStatus activate(const int32_t timeoutMs);
 };
 
 }  // namespace vibrator

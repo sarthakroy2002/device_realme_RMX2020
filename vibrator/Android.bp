@@ -9,7 +9,6 @@ cc_library_static {
     export_include_dirs: ["include"],
     srcs: [
         "Vibrator.cpp",
-        "VibratorManager.cpp",
     ],
 }
 
