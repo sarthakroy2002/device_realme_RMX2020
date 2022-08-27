@@ -11,3 +11,6 @@ genfscon proc /fp_id u:object_r:proc_oppo_fp:s0
 
 # Audio
 genfscon sysfs /devices/platform/sia81xx@L u:object_r:sysfs_sia81xx_file:s0
+
+# Vibrator
+genfscon sysfs /kernel/thunderquake_engine/level    u:object_r:sysfs_vibrator:s0
