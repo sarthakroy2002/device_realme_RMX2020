@@ -87,9 +87,6 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-impl \
     android.hardware.bluetooth.a2dp@1.0.vendor
 
-PRODUCT_PACKAGES += \
-    libbtconfigstore
-
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.device@3.5.vendor \
