@@ -351,7 +351,8 @@ PRODUCT_PACKAGES += \
 
 ifneq ($(ARROW_GAPPS),true)
 PRODUCT_PACKAGES += \
-    ApertureOverlayRMX2020
+    ApertureOverlayRMX2020 \
+    ApertureQRScannerOverlayRMX2020
 endif
 
 # Secure element
