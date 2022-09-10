@@ -908,7 +908,6 @@ vendor/firmware/customfilter/catcher_filter_1_ulwctg_n_meta.bin|92f1f3991623391c
 vendor/firmware/emmc/HYNIX-hB8aP>.bin_crc.bin|7fd981827662cca107437a2c013c07e4bfdef2ef
 vendor/firmware/emmc/HYNIX-hC8aP>.bin_crc.bin|f6c7f5422ad0cd9b0256e4f40a9b16956f9dfa02
 vendor/firmware/emmc/HYNIX-hC9aP3.bin_crc.bin|075450a6087b5026808b5f8573119e4c4610044f
-vendor/firmware/emmc/move_target_emmc_fw_to_opporeserve1.sh|aba1bfe54e35b8f50e4c6a6c124f3f560d6501ad
 vendor/firmware/emmc/SAMSUNG-DD68MB.bin_crc.bin|4841efc0613661d7ee4e48935bbef41dc4aebf19
 vendor/firmware/emmc/SAMSUNG-DH6DAB.bin_crc.bin|96f4cc285b8b01987ee9b56401ce9f44c7126331
 vendor/firmware/tp/19741/hlt_boe_novatek_fw.bin|24b8f8b70380287e293bac0642ef5c2963f441f2
