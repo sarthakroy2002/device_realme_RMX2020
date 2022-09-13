@@ -7,5 +7,14 @@ vendor_public_prop(vendor_oplus_camera_prop)
 # Fingerprint
 vendor_public_prop(vendor_oplus_fingerprint_prop)
 
+# Media
+vendor_restricted_prop(vendor_mtk_crossmount_prop)
+vendor_restricted_prop(vendor_mtk_deinterlace_prop)
+vendor_restricted_prop(vendor_mtk_omx_core_prop)
+
+typeattribute vendor_mtk_crossmount_prop             mtk_core_property_type;
+typeattribute vendor_mtk_deinterlace_prop            mtk_core_property_type;
+typeattribute vendor_mtk_omx_core_prop               mtk_core_property_type;
+
 # Radio
 vendor_public_prop(vendor_oplus_radio_prop)
