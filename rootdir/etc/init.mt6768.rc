@@ -297,7 +297,7 @@ on post-fs-data
     setrlimit 8 -1 -1
 
     # CMDQ
-    chmod 0644 /dev/mtk_cmdq
+    chmod 0666 /dev/mtk_cmdq
     chown system system /dev/mtk_cmdq
 
     # MDP SYNC
@@ -566,7 +566,7 @@ on post-fs-data
     chown system media /dev/mt-mdp
 
     # SMI
-    chmod 0660 /dev/MTK_SMI
+    chmod 0666 /dev/MTK_SMI
     chown media media /dev/MTK_SMI
 
     # RRC
