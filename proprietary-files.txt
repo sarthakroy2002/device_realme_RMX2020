@@ -1440,6 +1440,12 @@ vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
 
 # Power
+lib/libperfctl.so
+lib/libpowerhalwrap_jni.so
+lib/libpowerhalwrap.so
+lib64/libperfctl.so
+lib64/libpowerhalwrap_jni.so
+lib64/libpowerhalwrap.so
 vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service
 vendor/bin/md_monitor
 vendor/bin/md_monitor_ctrl
