@@ -1,5 +1,6 @@
 #include <gui/SurfaceComposerClient.h>
 #include <media/AudioTrack.h>
+#include <media/stagefright/MediaMuxer.h>
 
 using namespace android;
 
@@ -62,5 +63,10 @@ void _ZN7android7SurfaceC1ERKNS_2spINS_22IGraphicBufferProducerEEEb(
         _ZN7android7SurfaceC1ERKNS_2spINS_22IGraphicBufferProducerEEEbRKNS1_INS_7IBinderEEE(thisptr, bufferProducer, controlledByApp, nullptr);
 }
 
-int _ZN7android10MediaMuxerC1EiNS0_12OutputFormatE[6] = { 0, 1, 2, 3, 4, NULL };
+void _ZN7android10MediaMuxerC1EiNS_14MediaMuxerBase12OutputFormatE(void* thisptr, int fd, android::MediaMuxer::OutputFormat format);
+
+void _ZN7android10MediaMuxerC1EiNS0_12OutputFormatE(void* thisptr, int fd, android::MediaMuxer::OutputFormat format) {
+        _ZN7android10MediaMuxerC1EiNS_14MediaMuxerBase12OutputFormatE(thisptr, fd, format);
+}
+
 }
