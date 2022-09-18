@@ -9,11 +9,7 @@ allow radio mediavts_service:service_manager find;
 allow radio system_app_data_file:dir r_dir_perms;
 allow radio system_app_data_file:file r_file_perms;
 
-get_prop(radio, mtk_dynims_prop)
 get_prop(radio, vendor_vt_prop)
-
-# For Engineermode
-get_prop(radio, mtk_default_prop)
 get_prop(radio, mtk_dmc_prop)
 get_prop(radio, mtk_log_tel_dbg_prop)
 get_prop(radio, mtk_mdworldmode_prop)
@@ -30,4 +26,5 @@ get_prop(radio, mtk_aal_ro_prop)
 get_prop(radio, mtk_mdm_prop)
 get_prop(radio, ro_vendor_mtk_wfd_support_prop)
 get_prop(radio, mtk_viwifi_support_prop)
-get_prop(radio, mtk_mobile_management_prop)
+get_prop(radio, mtk_vilte_support_prop)
+

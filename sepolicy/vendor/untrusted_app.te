@@ -1,2 +1,0 @@
-allow untrusted_app app_data_file:file { execute };
-allow untrusted_app sysfs:file { getattr  read };
