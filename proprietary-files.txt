@@ -454,6 +454,7 @@ vendor/lib64/libcameracustom.eis.so
 vendor/lib64/libcameracustom.plugin.so
 vendor/lib64/libcvface_api.so
 vendor/lib64/libeffecthal.base.so
+vendor/lib64/libfcell.so
 vendor/lib64/libimageio.so
 vendor/lib64/libimageio_plat_drv.so
 vendor/lib64/libimageio_plat_pipe.so
@@ -1358,15 +1359,10 @@ vendor/lib64/vendor.mediatek.hardware.mtkcodecservice@1.1.so|6076a654ba8588b1344
 # Misc
 vendor/lib/libakl.so
 vendor/lib/libmemsic.so
-vendor/lib/libutinterface_custom_md.so
-vendor/lib/libutinterface_md.so
 vendor/lib64/interfaces.customNvService@1.0-adapter-helper.so
 vendor/lib64/interfaces.customNvService@1.0.so
 vendor/lib64/libakl.so
-vendor/lib64/libfcell.so
 vendor/lib64/libmemsic.so
-vendor/lib64/libutinterface_custom_md.so
-vendor/lib64/libutinterface_md.so
 
 # Neural Networks - from realme/RMX2020/RMX2020:11/RP1A.200720.011/1627637499567:user/release-keys
 vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron|26ea561188e545d13cfd92d9bd80332b820b6977
@@ -1451,11 +1447,11 @@ vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
 
 # Power
 lib/libperfctl.so
-lib/libpowerhalwrap_jni.so
 lib/libpowerhalwrap.so
+lib/libpowerhalwrap_jni.so
 lib64/libperfctl.so
-lib64/libpowerhalwrap_jni.so
 lib64/libpowerhalwrap.so
+lib64/libpowerhalwrap_jni.so
 vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service
 vendor/bin/md_monitor
 vendor/bin/md_monitor_ctrl
@@ -1486,6 +1482,12 @@ vendor/lib64/vendor.mediatek.hardware.mtkpower@1.0.so
 vendor/lib64/vendor.mediatek.hardware.power@1.1.so
 vendor/lib64/vendor.mediatek.hardware.power@2.0.so
 vendor/lib64/vendor.mediatek.hardware.power@2.1.so
+
+# Radio
+vendor/lib/libutinterface_custom_md.so
+vendor/lib/libutinterface_md.so
+vendor/lib64/libutinterface_custom_md.so
+vendor/lib64/libutinterface_md.so
 
 # Radio - from RMX2020-user 10 QP1A.190711.020 RMX2020_11.A.61 release-keys
 vendor/bin/hw/mtkfusionrild|b75243c44cd3dad8b4a06573045981746482b229
