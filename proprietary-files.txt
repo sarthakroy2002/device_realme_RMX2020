@@ -360,7 +360,6 @@ lib64/libaptX_encoder.so:system_ext/lib64/libaptX_encoder.so|9e87fed4eac0e9fe428
 # Camera
 vendor/lib/hw/vendor.mediatek.hardware.camera.bgservice@1.1-impl.so
 vendor/lib/hw/vendor.oppo.hardware.camera.slogan@1.0-impl.so
-vendor/lib/android.frameworks.faceservice@1.0.so
 vendor/lib/libJpgEncPipe.so
 vendor/lib/libVDPostureDetection.so
 vendor/lib/libcam.halsensor.hwintegration.so
