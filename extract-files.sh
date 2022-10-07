@@ -58,8 +58,12 @@ function blob_fixup {
         lib/libsink.so)
             "${PATCHELF}" --add-needed "libshim_vtservice.so" "${2}"
             ;;
-        vendor/lib/hw/audio.primary.mt6768.so)
+        vendor/lib*/hw/audio.primary.mt6768.so)
             "${PATCHELF}" --replace-needed "libmedia_helper.so" "libmedia_helper-v30.so" "${2}"
+            "${PATCHELF}" --replace-needed "libalsautils.so" "libalsautils-v30.so" "${2}"
+            ;;
+        vendor/lib*/hw/audio.usb.mt6768.so)
+            "${PATCHELF}" --replace-needed "libalsautils.so" "libalsautils-v30.so" "${2}"
             ;; 
         vendor/bin/hw/android.hardware.wifi@1.0-service-lazy-mediatek)
             "${PATCHELF}" --replace-needed "libwifi-hal.so" "libwifi-hal-mtk.so" "${2}"
