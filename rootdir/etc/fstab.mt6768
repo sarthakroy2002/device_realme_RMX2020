@@ -7,7 +7,7 @@
 
 
 #<src>                                                  <mnt_point>             <type>   <mnt_flags and options>                                                  <fs_mgr_flags> 
-system                                                  /system                 ext4     ro                                                                       wait,,avb=vbmeta_system,logical,first_stage_mount,async_discard,readahead_size_kb=128
+system                                                  /system                 ext4     ro                                                                       wait,,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-developer-gsi.avbpubkey:/avb/r-developer-gsi.avbpubkey:/avb/s-developer-gsi.avbpubkey,async_discard,readahead_size_kb=128
 vendor                                                  /vendor                 ext4     ro                                                                       wait,,avb,logical,first_stage_mount,async_discard,readahead_size_kb=128
 product                                                 /product                ext4     ro                                                                       wait,logical,first_stage_mount,readahead_size_kb=128
 system_ext                                              /system_ext             ext4     ro                                                                       wait,logical,first_stage_mount,readahead_size_kb=128
