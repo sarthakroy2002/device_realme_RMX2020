@@ -76,7 +76,6 @@ dalvik.vm.heaptargetutilization=0.75
 dalvik.vm.mtk-stack-trace-file=/data/anr/mtk_traces.txt
 
 # Display
-debug.sf.latch_unsignaled=1
 ro.vendor.mtk_aal_support=1
 persist.sys.sf.color_saturation=1.1
 persist.sys.sf.native_mode=0
