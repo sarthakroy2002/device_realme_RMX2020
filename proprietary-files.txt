@@ -1621,31 +1621,27 @@ vendor/lib64/libmxmafa.so|fc381a77d5889e14b5326a25b8f3f406524a79b7
 vendor/lib64/libsensor_custom.so|29e8a96d32a9a5756e9a7811b78fde06730c0dfd
 vendor/lib64/sensors.ap.so|997485771756602594b7156358f3682bc012d326
 
-# Thermal - from realme/RMX2020/RMX2020:11/RP1A.200720.011/1627637499567:user/release-keys
-vendor/bin/hw/android.hardware.thermal@2.0-service.mtk|3dea980c62b4e6fdb7c279b9f4237eb8c7ee0fec
-vendor/bin/thermal|882fc822cda14a46ae7732ae2bf4571e2680bf2a
-vendor/bin/thermal_manager|d13cc43436ff6cbf4d90df4d2f16b1e5bf04876d
-vendor/bin/thermalloadalgod|bef00e0aa1cf4581a912d1e71d97bb264afc7cc6
-vendor/etc/init/android.hardware.thermal@2.0-service.mtk.rc|1274fa9e113cfdfea42c518e178a886a23d5bf98
-vendor/etc/init/init.thermal.rc|cb4f259f720f2481a3e9b4d68d7c72193c554faa
-vendor/etc/init/init.thermal_manager.rc|764c19af5e285345a9fd5b75131fa9588b609d62
-vendor/etc/init/init.thermalloadalgod.rc|d70cde3b8a1a1607f7a99475b3357a894907458f
-vendor/lib/hw/android.hardware.thermal@2.0-impl.so|7b8a43c950e6599c522b762ea1219db7154d15b7
-vendor/lib/hw/thermal.mt6768.so|bda9931f9945c2ef345b3e149f86c8bbc0694dc2
-vendor/lib/libmtcloader.so|99af39de854dc7f8a7b0f6c5da2ddea93d0fcf0f
-vendor/lib/libthermalalgo.so|c1a1dee9681e4ca27e1adde5a09910c7bf64968d
-vendor/lib64/hw/android.hardware.thermal@2.0-impl.so|5b7db7015d400a65771b9008a47d3ed26d788231
-vendor/lib64/hw/thermal.mt6768.so|92ec035bc2a6363b6560390ac5880d1293c578ab
-vendor/lib64/libmtcloader.so|047ac52eb9804d98339b52ed59816c35165b9798
+# Thermal
+vendor/bin/thermal
+vendor/bin/thermal_manager
+vendor/bin/thermalloadalgod
+vendor/etc/init/init.thermal.rc
+vendor/etc/init/init.thermal_manager.rc
+vendor/etc/init/init.thermalloadalgod.rc
+vendor/lib/hw/thermal.mt6768.so
+vendor/lib/libmtcloader.so
+vendor/lib/libthermalalgo.so
+vendor/lib64/hw/thermal.mt6768.so
+vendor/lib64/libmtcloader.so
 
-# Thermal (Configs) - from realme/RMX2020/RMX2020:11/RP1A.200720.011/1627637499567:user/release-keys
-vendor/etc/.tp/.ht120.mtc|a58635f1c483267829792908cb8ad79875177088
-vendor/etc/.tp/.thermal_policy_00|65b4913cb50686d5d0b270dd37f663e81b3bd502
-vendor/etc/.tp/.thermal_policy_03|65b4913cb50686d5d0b270dd37f663e81b3bd502
-vendor/etc/.tp/.thermal_policy_05|65b4913cb50686d5d0b270dd37f663e81b3bd502
-vendor/etc/.tp/.thermal_policy_08|b66e5d6a54979e95ec9cf9ef1d40968857c0a527
-vendor/etc/.tp/thermal.conf|30a41206b48a74805ef44d612a20a6af5bb73b3e
-vendor/etc/.tp/thermal.off.conf|bea5fd83a65bd28d586412d476386b13ddb2680e
+# Thermal (Configs)
+vendor/etc/.tp/.ht120.mtc
+vendor/etc/.tp/.thermal_policy_00
+vendor/etc/.tp/.thermal_policy_03
+vendor/etc/.tp/.thermal_policy_05
+vendor/etc/.tp/.thermal_policy_08
+vendor/etc/.tp/thermal.conf
+vendor/etc/.tp/thermal.off.conf
 
 # Trusted Execution Environment (Trustonic)
 vendor/app/mcRegistry/020f0000000000000000000000000000.drbin
