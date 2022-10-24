@@ -1311,8 +1311,6 @@ vendor/lib/libavcodec.so
 vendor/lib/libavformat.so
 vendor/lib/libavutil.so
 vendor/lib/libbwc.so
-vendor/lib/libffmpeg_omx.so
-vendor/lib/libffmpeg_utils.so
 vendor/lib/libh264dec_customize.so
 vendor/lib/libh264dec_sa.ca7.so
 vendor/lib/libh264dec_sd.ca7.so
@@ -1345,8 +1343,6 @@ vendor/lib64/libavcodec.so
 vendor/lib64/libavformat.so
 vendor/lib64/libavutil.so
 vendor/lib64/libbwc.so
-vendor/lib64/libffmpeg_omx.so
-vendor/lib64/libffmpeg_utils.so
 vendor/lib64/libfft_vendor.so
 vendor/lib64/libhevce_sb.ca7.android.so
 vendor/lib64/librpmbengclient.so
