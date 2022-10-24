@@ -15,6 +15,9 @@ on fs
     wait /dev/block/platform/bootdevice/
     symlink /dev/block/platform/bootdevice/ /dev/block/bootdevice
 
+    # OTG
+    write /sys/class/power_supply/usb/otg_switch 1
+
 on fs && property:ro.debuggable=0
     # distinguish USB shoulde connect or not, i.e. CDP vs SDP
     #ifdef ODM_HQ_EDIT
