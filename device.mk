@@ -161,6 +161,10 @@ PRODUCT_PACKAGES += \
     libhwbinder.vendor \
     libhidltransport.vendor
 
+PRODUCT_PACKAGES += \
+    android.hidl.memory.block@1.0 \
+    android.hidl.memory@1.0-impl
+
 # Inherit several Android Go Configurations (Beneficial for everyone, even on non-Go devices)
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
 PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-image-profile.txt
