@@ -933,9 +933,8 @@ on property:vendor.mtk.md1.status=reset
 service charger /bin/chargeonlymode
     class charger
     critical
-    #seclabel u:r:charger:s0
+    seclabel u:r:charger:s0
     group system graphics
-    seclabel u:r:healthd:s0
 
 # Disable AOSP RIL if MTK RIL is up
 on property:vendor.ril.mtk=1
