@@ -110,6 +110,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libvulkan
 
+PRODUCT_PACKAGES += \
+    libui-v32
+
 # DRM
 PRODUCT_PACKAGES += \
     libmockdrmcryptoplugin \
