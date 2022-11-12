@@ -266,9 +266,6 @@
         <!-- BT Audio HAL -->
         <xi:include href="bluetooth_audio_policy_configuration.xml"/>
 
-        <!-- A2dp Input Audio HAL -->
-        <xi:include href="a2dp_in_audio_policy_configuration.xml"/>
-
         <!-- Usb Audio HAL -->
         <xi:include href="usb_audio_policy_configuration.xml"/>
 
