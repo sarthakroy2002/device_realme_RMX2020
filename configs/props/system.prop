@@ -65,6 +65,7 @@ ro.build.display.wtid.monetx.ato=SW_S98675AA1_V015_M10_R_USRD_ATO
 # LMKD
 ro.config.low_ram=false
 ro.lmk.log_stats=true
+ro.config.per_app_memcg=false
 
 # Order
 ro.product.property_source_order=odm,vendor,product,system
