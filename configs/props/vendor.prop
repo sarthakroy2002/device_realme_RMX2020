@@ -246,3 +246,6 @@ ro.vendor.wfd.dummy.enable=1
 ro.vendor.wfd.iframesize.level=0
 ro.vendor.wifi.sap.interface=ap0
 ro.vendor.wlan.gen=gen4m
+
+# Zygote
+zygote.critical_window.minute=10
