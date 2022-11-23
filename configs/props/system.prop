@@ -7,8 +7,8 @@ ro.config.vc_call_vol_steps=15
 Build.BRAND=MTK
 
 # Camera
-persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera,com.google.camera
-vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.camera,net.sourceforge.opencamera
+persist.vendor.camera.privapp.list=com.android.camera,com.google.camera
+vendor.camera.aux.packagelist=com.android.camera,com.google.camera,net.sourceforge.opencamera
 vendor.camera.aux.packageexcludelist=org.telegram.messenger,com.microsoft.teams,com.discord
 
 # Charger
