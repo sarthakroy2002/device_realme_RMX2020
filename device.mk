@@ -338,7 +338,6 @@ PRODUCT_PACKAGES += \
 
 # Runtime Resource Overlays 
 PRODUCT_PACKAGES += \
-    ApertureOverlayRMX2020 \
     CarrierConfigOverlayRMX2020 \
     DialerOverlayRMX2020 \
     DocumentsUIOverlayRMX2020 \
@@ -349,6 +348,11 @@ PRODUCT_PACKAGES += \
     TelephonyOverlayRMX2020 \
     TetheringResOverlayRMX2020 \
     WifiResOverlayRMX2020
+
+ifneq ($(ARROW_GAPPS),true)
+PRODUCT_PACKAGES += \
+    ApertureOverlayRMX2020
+endif
 
 # Secure element
 PRODUCT_PACKAGES += \
@@ -365,8 +369,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
 # Camera
+ifeq ($(ARROW_GAPPS),true)
 PRODUCT_PACKAGES += \
     GCamGOPrebuilt
+else
+PRODUCT_PACKAGES += \
+    Aperture
+endif
 
 # Symbols
 PRODUCT_PACKAGES += \
