@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "ApertureOverlayRMX2020",
+    system_ext_specific: true,
+}
