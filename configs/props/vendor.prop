@@ -99,9 +99,6 @@ ro.vendor.mtk_fm_50khz_support=1
 # FRP
 ro.frp.pst=/dev/block/platform/bootdevice/by-name/frp
 
-# Graphics
-debug.renderengine.backend=skiaglthreaded
-
 # GPS
 ro.vendor.mtk_agps_app=1
 ro.vendor.mtk_gps_support=1
