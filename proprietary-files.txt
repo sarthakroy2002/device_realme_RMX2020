@@ -865,9 +865,11 @@ vendor/app/SensorHub/lib/arm64/libem_sensor_jni.so
 vendor/bin/bin32/vendor.mediatek.hardware.dplanner@2.0-service
 vendor/bin/hw/vendor.mediatek.hardware.dplanner@2.0-service
 vendor/bin/hw/vendor_transfer
+vendor/bin/em_hidl
 vendor/bin/exp_lock
 vendor/bin/mrdump_tool
 vendor/etc/init/bootperf.rc
+vendor/etc/init/em_hidl_user.rc
 vendor/etc/init/vendor.mediatek.hardware.dplanner@2.0-service.rc
 vendor/etc/init/vendor_engineermode.rc
 vendor/etc/init/vendor_transfer.rc
