@@ -330,19 +330,16 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    perf_profile.sh \
+    init.recovery.mt6768.sh \
+    init.recovery.mt6768.rc \
     init.connectivity.rc \
     init.modem.rc \
     init.mt6768.rc \
     init.mt6768.usb.rc \
     init.sensor_1_0.rc \
     fstab.mt6768 \
-    fstab.ramdisk \
+    fstab.mt6768.ramdisk \
     ueventd.mtk.rc
-
-# Recovery
-PRODUCT_PACKAGES += \
-    init.recovery.mt6768.rc
 
 # Renderscript
 PRODUCT_PACKAGES += \
