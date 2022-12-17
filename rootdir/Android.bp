@@ -47,9 +47,9 @@ prebuilt_etc {
 
 prebuilt_etc {
     name: "fstab.mt6768",
-    required: ["fstab.ramdisk"],
     src: "etc/fstab.mt6768",
     vendor: true,
+    ramdisk_available: true,
 }
 
 prebuilt_etc {
@@ -57,4 +57,18 @@ prebuilt_etc {
     filename: "ueventd.rc",
     src: "etc/ueventd.mtk.rc",
     vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.recovery.mt6768.rc",
+    src: "etc/init.recovery.mt6768.rc",
+    sub_dir: "init",
+    recovery: true,
+}
+
+prebuilt_etc {
+    name: "init.recovery.mt6768.sh",
+    src: "etc/init.recovery.mt6768.sh",
+    sub_dir: "init",
+    recovery: true,
 }

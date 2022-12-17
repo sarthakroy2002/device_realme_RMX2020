@@ -315,6 +315,8 @@ PRODUCT_PACKAGES += \
 
 # Rootdir
 PRODUCT_PACKAGES += \
+    init.recovery.mt6768.sh \
+    init.recovery.mt6768.rc \
     init.connectivity.rc \
     init.modem.rc \
     init.mt6768.rc \
@@ -322,12 +324,8 @@ PRODUCT_PACKAGES += \
     init.project.rc \
     init.sensor_1_0.rc \
     fstab.mt6768 \
-    fstab.ramdisk \
+    fstab.mt6768.ramdisk \
     ueventd.mtk.rc
-
-# Recovery
-PRODUCT_PACKAGES += \
-    init.recovery.mt6768.rc
 
 # RenderScript
 PRODUCT_PACKAGES += \
