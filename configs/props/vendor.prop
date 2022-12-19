@@ -106,9 +106,6 @@ ro.vendor.mtk_widevine_drm_l3_support=1
 # FM Radio
 ro.vendor.mtk_fm_50khz_support=1
 
-# FRP
-ro.frp.pst=/dev/block/platform/bootdevice/by-name/frp
-
 # GPS
 ro.vendor.mtk_agps_app=1
 ro.vendor.mtk_gps_support=1
