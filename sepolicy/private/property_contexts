@@ -1,2 +1,3 @@
 persist.perf_profile u:object_r:perf_prop:s0
+perf_profile u:object_r:perf_prop:s0
 persist.cabc_profile u:object_r:cabc_prop:s0
