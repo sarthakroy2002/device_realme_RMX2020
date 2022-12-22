@@ -1,1 +1,0 @@
-allow kernel opbootfrom_proc:file r_file_perms;
