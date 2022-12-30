@@ -93,6 +93,7 @@ PRODUCT_PACKAGES += \
     libshim_camera_metadata
 
 PRODUCT_PACKAGES += \
+    RemoveCameraPackages \
     Aperture
 
 # Configstore
