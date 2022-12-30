@@ -367,6 +367,9 @@ PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 PRODUCT_PACKAGES += \
     Aperture
 
+PRODUCT_PACKAGES += \
+    RemoveCameraPackages
+
 # Symbols
 PRODUCT_PACKAGES += \
     libshim_vtservice
