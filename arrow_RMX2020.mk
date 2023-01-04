@@ -28,7 +28,7 @@ TARGET_BOOT_ANIMATION_RES := 720
 DEVICE_MAINTAINER := sarthakroy2002
 
 # Build info
-BUILD_FINGERPRINT := "google/sunfish/sunfish:13/TQ1A.221205.011/9244662:user/release-keys"
+BUILD_FINGERPRINT := "google/sunfish/sunfish:13/TQ1A.230105.001/9292298:user/release-keys"
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=RMX2020 \
     PRODUCT_NAME=RMX2020 \
