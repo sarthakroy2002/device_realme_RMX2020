@@ -733,7 +733,6 @@ vendor/etc/camera/Arc_wdc_calib.bin
 vendor/etc/camera/M_Attribute_Gender_Age_1.0.model.hardcode
 vendor/etc/camera/attribute.model
 vendor/etc/camera/engineer_camera_config
-vendor/etc/camera/engineer_camera_config_19747
 vendor/etc/camera/gasryuv.model
 vendor/etc/camera/merged_model_post
 vendor/etc/mmigroup/CommonConf.json
@@ -947,10 +946,8 @@ vendor/firmware/soc1_0_ram_mcu_1a_1_hdr.bin
 vendor/firmware/soc1_0_ram_wifi_1a_1_hdr.bin
 vendor/firmware/txpowerctrl.cfg
 vendor/firmware/txpowerctrl_19741.cfg
-vendor/firmware/txpowerctrl_19747.cfg
 vendor/firmware/wifi.cfg
 vendor/firmware/wifi_19741.cfg
-vendor/firmware/wifi_19747.cfg
 
 # Gatekeeper
 vendor/lib/hw/libMcGatekeeper.so
