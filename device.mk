@@ -314,7 +314,6 @@ PRODUCT_PACKAGES += \
 
 # Rootdir
 PRODUCT_PACKAGES += \
-    init.recovery.mt6768.sh \
     init.recovery.mt6768.rc \
     init.connectivity.rc \
     init.modem.rc \
