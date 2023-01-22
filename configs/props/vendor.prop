@@ -231,6 +231,7 @@ debug.sf.earlyGl.app.duration=24000000
 debug.sf.hwc.min.duration=21000000
 debug.sf.disable_client_composition_cache=1
 debug.sf.enable_gl_backpressure=1
+debug.sf.predict_hwc_composition_strategy=0
 
 # Trusted Execution Environment
 ro.hardware.kmsetkey=trustonic
