@@ -1,7 +1,1 @@
 allow priv_app sw_sync_device:chr_file rw_file_perms;
-
-allow priv_app mtk_hal_pq_hwservice:hwservice_manager find;
-binder_call(priv_app, mtk_hal_pq)
-
-# Allow priv_app to get debug_mtk_gpud_prop
-get_prop(priv_app, debug_mtk_gpud_prop)

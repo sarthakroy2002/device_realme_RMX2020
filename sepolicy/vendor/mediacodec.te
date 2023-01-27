@@ -1,2 +1,1 @@
-allow mediacodec sysfs_bus:dir search;
-allow mediacodec sysfs_emi_ctrl:dir search;
+get_prop(mediacodec, vendor_mtk_vdec_log_prop)

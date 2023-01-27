@@ -1,6 +1,0 @@
-# From ImsService.apk
-mwis                    u:object_r:mwis_service:s0
-mtkIms                  u:object_r:mtk_ims_service:s0
-wfo                     u:object_r:wfo_service:s0
-
-media.VTS               u:object_r:mediavts_service:s0

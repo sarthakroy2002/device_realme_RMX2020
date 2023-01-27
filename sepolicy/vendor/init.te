@@ -1,17 +1,22 @@
-# Allow init to execute same process hal file
-allow init same_process_hal_file:file execute;
+allow init hwservicemanager:binder call;
+allow init self:netlink_kobject_uevent_socket read;
+allow init sysfs_wake_lock:file r_file_perms;
+allow init vendor_data_file:file w_file_perms;
 
-# Allow init to create socket_device(s)
-allow init socket_device:sock_file create_file_perms;
+# Allow init to read/write /sys/vm/*
+allow init proc_vm:file rw_file_perms;
 
-# Allow init to execute vendor file
-allow init vendor_file:file { execute execute_no_trans };
-
+# Allow init to setattr sysfs_sensor
 allow init sysfs_sensor:file setattr;
 
 # Allow init to write touchpanel nodes
-allow init proc:file { open write };
 allow init proc_tp:file rw_file_perms;
+
+# Allow init to read proc_oppo_ver
+allow init proc_oppo_ver:file r_file_perms;
 
 # Allow init to access /proc/fp_id
 allow init proc_oppo_fp:file rw_file_perms;
+
+# Allow init to access sysfs_otg_switch
+allow init sysfs_otg_switch:file rw_file_perms;

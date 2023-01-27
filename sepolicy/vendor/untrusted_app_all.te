@@ -1,4 +1,0 @@
-allow untrusted_app_all sw_sync_device:chr_file rw_file_perms;
-
-allow untrusted_app_all mtk_hal_pq_hwservice:hwservice_manager find;
-binder_call(untrusted_app_all, mtk_hal_pq)

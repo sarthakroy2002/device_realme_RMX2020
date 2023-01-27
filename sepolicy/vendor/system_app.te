@@ -1,25 +1,8 @@
 allow system_app sysfs_zram:dir search;
 allow system_app sysfs_zram:file r_file_perms;
-allow system_app fm_device:chr_file rw_file_perms;
 allow system_app proc_pagetypeinfo:file r_file_perms;
 allow system_app proc_vmallocinfo:file r_file_perms;
 allow system_app proc_tp:dir search;
-allow system_app proc_tp:file { getattr  open  read  write };
-allow system_app sysfs:file { write getattr  open  read };
-
-# Allow system_app to read fps info node
-allow system_app sysfs_fps:dir search;
-allow system_app sysfs_fps:file r_file_perms;
-
-allow system_app sw_sync_device:chr_file rw_file_perms;
-
-# Audio
+allow system_app proc_tp:file rw_file_perms;
 allow system_app sysfs_sia81xx_file:dir { r_dir_perms search };
 allow system_app sysfs_sia81xx_file:file r_file_perms;
-
-allow system_app mtk_hal_pq_hwservice:hwservice_manager find;
-binder_call(system_app, mtk_hal_pq)
-binder_call(system_app, wificond)
-
-# Allow system_app to get debug_mtk_gpud_prop
-get_prop(system_app, debug_mtk_gpud_prop)

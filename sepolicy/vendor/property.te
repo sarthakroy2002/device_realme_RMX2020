@@ -1,18 +1,11 @@
-# Dirac
-type dirac_prop, property_type;
-
-# Oppo props
-type oppo_fingerprint_prop, property_type;
-
 # Audio
-type audio_tunning_prop, property_type;
+vendor_public_prop(vendor_audio_tuning_prop)
 
 # Camera
-type oppo_camera_prop, property_type;
+vendor_public_prop(vendor_oppo_camera_prop)
+
+# Fingerprint
+vendor_public_prop(vendor_oppo_fingerprint_prop)
 
 # RILD
-type imsi_prop, property_type;
-type oppo_network_prop, property_type;
-
-# Sensors
-type oppo_sensor_prop, property_type;
+vendor_public_prop(vendor_oppo_radio_prop)

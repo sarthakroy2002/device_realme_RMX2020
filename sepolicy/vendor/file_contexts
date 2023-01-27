@@ -1,23 +1,26 @@
-# NFC
-/dev/pn553 u:object_r:nfc_device:s0
-
-# Light
-/vendor/bin/hw/android\.hardware\.light-service\.RMX2020      u:object_r:hal_light_default_exec:s0
-
-# EGIS Fingerprint device
-/dev/esfp0  u:object_r:egis_device:s0  
-
-# Silead Fingerprint device
-/dev/silead_fp  u:object_r:silead_device:s0
+# Audio
+/dev/sia81xx_tuning_if 	                                                                    u:object_r:sia81xx_tuning_if_device:s0
 
 # Biometrics
-/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.RMX2020    u:object_r:hal_fingerprint_default_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service-rbs   u:object_r:hal_fingerprint_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.oppo\.hardware\.biometrics\.fingerprint@2\.1-service              u:object_r:hal_fingerprint_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.silead\.hardware\.fingerprintext@1\.0-service          u:object_r:hal_fingerprint_default_exec:s0
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.RMX2020             u:object_r:hal_fingerprint_default_exec:s0
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service-rbs                  u:object_r:hal_fingerprint_default_exec:s0
+/vendor/bin/hw/vendor\.oppo\.hardware\.biometrics\.fingerprint@2\.1-service                 u:object_r:hal_fingerprint_default_exec:s0
+/vendor/bin/hw/vendor\.silead\.hardware\.fingerprintext@1\.0-service                        u:object_r:hal_fingerprint_default_exec:s0
 
-# Audio
-/dev/sia81xx_tuning_if 	u:object_r:sia81xx_tuning_if_device:s0
+# Camera
+/vendor/bin/hw/camerasloganserver                                                           u:object_r:mtk_hal_camera_exec:s0
+/vendor/lib64/hw/vendor.oppo.hardware.camera.slogan@1.0-impl.so                             u:object_r:mtk_hal_camera_exec:s0
 
-# Vibrator
-/vendor/bin/hw/android\.hardware\.vibrator-service\.mediatek                                                             u:object_r:hal_vibrator_default_exec:s0
+# Fingerprint
+/dev/esfp0                                                                                  u:object_r:fp_device:s0  
+/dev/silead_fp                                                                              u:object_r:fp_device:s0
+
+# Light
+/vendor/bin/hw/android\.hardware\.light-service\.RMX2020                                    u:object_r:hal_light_default_exec:s0
+
+# NFC
+/dev/pn553                                                                                  u:object_r:nfc_device:s0
+
+# TEE
+/vendor/bin/hw/vendor.trustonic.tee@1.0-service                                             u:object_r:hal_tee_default_exec:s0
+/vendor/bin/hw/vendor.trustonic.teeregistry@1.0-service                                     u:object_r:hal_teeregistry_default_exec:s0

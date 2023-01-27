@@ -1,2 +1,1 @@
-allow mtk_hal_bluetooth proc_oppo_opname:file r_file_perms;
-allow mtk_hal_bluetooth proc_oppo_ver:file r_file_perms;
+r_dir_file(mtk_hal_bluetooth, proc_oppo_ver)

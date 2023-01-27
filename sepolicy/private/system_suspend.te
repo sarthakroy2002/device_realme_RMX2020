@@ -1,2 +1,0 @@
-# To resolve arbitrary sysfs paths from /sys/class/wakeup/* symlinks.
-allow system_suspend sysfs_type:dir r_dir_perms;

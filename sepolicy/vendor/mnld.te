@@ -1,2 +1,1 @@
-allow mnld proc_oppo_opname:file { getattr open read };
-allow mnld proc_oppo_ver:file { getattr open read };
+r_dir_file(mnld, proc_oppo_ver)

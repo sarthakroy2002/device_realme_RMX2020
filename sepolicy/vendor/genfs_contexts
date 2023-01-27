@@ -1,15 +1,16 @@
-genfscon sysfs /module/primary_display/parameters u:object_r:sysfs_fps:s0
-genfscon proc  /touchpanel u:object_r:proc_tp:s0
-genfscon proc /oppoVersion/prjVersion u:object_r:proc_oppo_ver:s0
-genfscon proc /oppoVersion/operatorName u:object_r:proc_oppo_opname:s0
-genfscon proc /devinfo u:object_r:oppo_devinfo_proc:s0
-genfscon proc /oppoCustom/Sensor u:object_r:oppo_customsensor_proc:s0
-
-# Oppo FP
-genfscon proc /fp_id u:object_r:proc_oppo_fp:s0
-
 # Audio
-genfscon sysfs /devices/platform/sia81xx@L u:object_r:sysfs_sia81xx_file:s0
+genfscon sysfs /devices/platform/sia81xx@L                            u:object_r:sysfs_sia81xx_file:s0
 
-# Vibrator
-genfscon sysfs /kernel/thunderquake_engine/level    u:object_r:sysfs_vibrator:s0
+# Display
+genfscon sysfs /module/primary_display/parameters                     u:object_r:sysfs_fps:s0
+genfscon proc  /touchpanel                                            u:object_r:proc_tp:s0
+
+# Oppo
+genfscon sysfs /class/power_supply/usb/otg_switch                     u:object_r:sysfs_otg_switch:s0
+genfscon proc /oppoVersion/prjVersion                                 u:object_r:proc_oppo_ver:s0
+genfscon proc /oppoVersion/operatorName                               u:object_r:proc_oppo_ver:s0
+genfscon proc /devinfo                                                u:object_r:proc_oppo_devinfo:s0
+genfscon proc /oppoCustom/Sensor                                      u:object_r:proc_oppo_customsensor:s0
+genfscon proc /fp_id                                                  u:object_r:proc_oppo_fp:s0
+genfscon proc /sys/vm/direct_swappiness                               u:object_r:proc_vm:s0
+genfscon proc /sys/vm/dirty_background_bytes                          u:object_r:proc_vm:s0

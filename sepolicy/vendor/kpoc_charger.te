@@ -1,0 +1,1 @@
+allow kpoc_charger MT_pmic_adc_cali_device:chr_file r_file_perms;

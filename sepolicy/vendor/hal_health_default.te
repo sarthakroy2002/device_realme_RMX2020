@@ -1,1 +1,2 @@
+allow hal_health_default sysfs_oppo_charger:file r_file_perms;
 allow hal_health_default sysfs:file rw_file_perms;

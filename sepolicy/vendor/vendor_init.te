@@ -1,6 +1,10 @@
-set_prop(vendor_init, mtk_emcamera_prop)
+allow vendor_init device:file { create write };
 allow vendor_init proc_tp:file rw_file_perms;
+allow vendor_init proc_vm:file rw_file_perms;
+allow vendor_init sysfs_otg_switch:file rw_file_perms;
+get_prop(vendor_init, system_factory_prop)
+set_prop(vendor_init, system_factory_prop)
 
 # Allow vendor init to access persist.vendor.fingerprint.fp_id
-get_prop(vendor_init, oppo_fingerprint_prop) 
-set_prop(vendor_init, oppo_fingerprint_prop) 
+get_prop(vendor_init, system_oppo_fingerprint_prop)
+set_prop(vendor_init, system_oppo_fingerprint_prop)

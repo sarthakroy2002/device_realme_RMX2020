@@ -1,39 +1,37 @@
-# Dirac
-get_prop(hal_audio_default, dirac_prop)
-set_prop(hal_audio_default, dirac_prop)
-
-allow hal_audio_default mtk_hal_power_hwservice:hwservice_manager find;
 binder_call(hal_audio_default, mtk_hal_power)
 
+allow hal_audio_default mtk_hal_power_hwservice:hwservice_manager find;
 allow hal_audio_default hal_audio_default:netlink_kobject_uevent_socket { create bind read setopt };
 allow hal_audio_default property_socket:sock_file write;
 allow hal_audio_default init:unix_stream_socket connectto;
-
 allow hal_audio_default adsp_device:chr_file rw_file_perms;
 allow hal_audio_default audio_ipi_device:chr_file rw_file_perms;
 allow hal_audio_default ccci_device:chr_file rw_file_perms;
 allow hal_audio_default ebc_device:chr_file rw_file_perms;
 allow hal_audio_default vow_device:chr_file rw_file_perms;
-
 allow hal_audio_default persist_data_file:dir search;
 allow hal_audio_default mnt_vendor_file:dir search;
 allow hal_audio_default mtk_audiohal_data_file:dir create_dir_perms;
 allow hal_audio_default mtk_audiohal_data_file:file create_file_perms;
-
 allow hal_audio_default sysfs_boot_mode:file r_file_perms;
-
-allow hal_audio_default audiohal_prop:property_service set;
-get_prop(hal_audio_default, audiohal_prop)
-get_prop(hal_audio_default, mtk_default_prop)
-get_prop(hal_audio_default, tel_switch_prop)
-get_prop(hal_audio_default, vendor_audio_prop)
-set_prop(hal_audio_default, vendor_audio_prop)
-get_prop(hal_audio_default, wmt_prop)
-set_prop(hal_audio_default, audio_tunning_prop)
-
 allow hal_audio_default debugfs_ion:dir search;
-
 allow hal_audio_default sia81xx_tuning_if_device:chr_file rw_file_perms;
 allow hal_audio_default sysfs_sia81xx_file:dir search;
 allow hal_audio_default sysfs_sia81xx_file:file r_file_perms;
 allow hal_audio_default proc_oppo_ver:file r_file_perms;
+
+get_prop(hal_audio_default, system_oppo_audio_prop)
+get_prop(hal_audio_default, system_audio_tuning_prop)
+get_prop(hal_audio_default, system_dirac_prop)
+get_prop(hal_audio_default, vendor_mtk_audiohal_prop)
+get_prop(hal_audio_default, vendor_mtk_service_nvram_init_prop)
+get_prop(hal_audio_default, vendor_mtk_default_prop)
+get_prop(hal_audio_default, vendor_mtk_tel_switch_prop)
+get_prop(hal_audio_default, vendor_mtk_wmt_prop)
+get_prop(hal_audio_default, vendor_audio_tuning_prop)
+
+set_prop(hal_audio_default, system_oppo_audio_prop)
+set_prop(hal_audio_default, system_audio_tuning_prop)
+set_prop(hal_audio_default, system_dirac_prop)
+set_prop(hal_audio_default, vendor_audio_tuning_prop)
+set_prop(hal_audio_default, vendor_mtk_audiohal_prop)

@@ -1,3 +1,2 @@
-allow nvram_daemon proc_oppo_ver:file r_file_perms;
-allow nvram_daemon proc_oppo_opname:file r_file_perms;
-allow nvram_daemon oppo_customsensor_proc:file r_file_perms;
+r_dir_file(nvram_daemon, proc_oppo_ver)
+r_dir_file(nvram_daemon, proc_oppo_customsensor)

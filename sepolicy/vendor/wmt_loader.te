@@ -1,1 +1,1 @@
-allow wmt_loader proc_oppo_ver:file r_file_perms;
+r_dir_file(wmt_loader, proc_oppo_ver)

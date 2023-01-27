@@ -1,3 +1,2 @@
-allow hal_wifi_hostapd_default sysfs_net:lnk_file read;
 allow hal_wifi_hostapd_default hal_oppo_hostapd_hwservice:hwservice_manager { add find };
 allow hal_wifi_hostapd_default hal_mtk_hostapd_hwservice:hwservice_manager { add find };

@@ -1,34 +1,16 @@
-# Camera
-persist.vendor.camera.privapp.list    u:object_r:exported_default_prop:s0
-
-# Oppo Camera props
-dump.bpci_tbl.enable   u:object_r:oppo_camera_prop:s0
-vendor.oppo.camera.   u:object_r:oppo_camera_prop:s0
-oppo.camera.   u:object_r:oppo_camera_prop:s0
-persist.vendor.camera.cam.list  u:object_r:oppo_camera_prop:s0
-
-# Dirac
-persist.audio.dirac                           u:object_r:dirac_prop:s0
-audio.dirac.logging                           u:object_r:dirac_prop:s0
-
-# Oppo FP props
-persist.vendor.fingerprint.             u:object_r:oppo_fingerprint_prop:s0
-oppo.optical.                           u:object_r:oppo_fingerprint_prop:s0
-vendor.fingerprint.optical.             u:object_r:oppo_fingerprint_prop:s0
-oppo.fingerprint.                       u:object_r:oppo_fingerprint_prop:s0
-init.svc.fps_hal                        u:object_r:oppo_fingerprint_prop:s0
-init.svc.fpexts_hal                     u:object_r:oppo_fingerprint_prop:s0
-
-# RILD
-ro.telephony.default_network u:object_r:radio_prop:s0
-persist.ss.imsi.info         u:object_r:imsi_prop:s0
-vendor.oppo.network.carrier_ver  u:object_r:oppo_network_prop:s0
-odm.ril.radio.status.sim2  u:object_r:oppo_network_prop:s0
-
 # Audio
-audio.tuning.def_path                       u:object_r:audio_tunning_prop:s0
-persist.vendor.audio.tuning.def_path        u:object_r:audio_tunning_prop:s0
-sys.oppo.mm.voice.record                    u:object_r:vendor_audio_prop:s0
+persist.vendor.audio.tuning.def_path          u:object_r:vendor_audio_tuning_prop:s0
 
-# Sensors
-sys.oppo.hasPhysicalGyroscope u:object_r:oppo_sensor_prop:s0
+# Camera
+vendor.oppo.camera.                           u:object_r:vendor_oppo_camera_prop:s0
+persist.vendor.camera.                        u:object_r:vendor_oppo_camera_prop:s0
+persist.vendor.camera.privapp.list            u:object_r:vendor_oppo_camera_prop:s0
+
+# Fingerprint
+persist.vendor.fingerprint.                   u:object_r:vendor_oppo_fingerprint_prop:s0
+vendor.fingerprint.optical.                   u:object_r:vendor_oppo_fingerprint_prop:s0
+
+# Radio
+vendor.oppo.network.                          u:object_r:vendor_oppo_radio_prop:s0
+odm.ril.radio.status.sim1                     u:object_r:vendor_oppo_radio_prop:s0
+odm.ril.radio.status.sim2                     u:object_r:vendor_oppo_radio_prop:s0

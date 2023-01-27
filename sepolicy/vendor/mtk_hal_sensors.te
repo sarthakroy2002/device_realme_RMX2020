@@ -1,6 +1,5 @@
-allow mtk_hal_sensors init:unix_stream_socket connectto;
-allow mtk_hal_sensors property_socket:sock_file write;
-allow mtk_hal_sensors oppo_devinfo_proc:file r_file_perms;
-allow mtk_hal_sensors oppo_devinfo_proc:dir search;
+allow mtk_hal_sensors proc_oppo_devinfo:file r_file_perms;
+allow mtk_hal_sensors proc_oppo_devinfo:dir search;
 allow mtk_hal_sensors proc_oppo_ver:file r_file_perms;
-set_prop(mtk_hal_sensors, oppo_sensor_prop)
+get_prop(mtk_hal_sensors, system_oppo_sensor_prop)
+set_prop(mtk_hal_sensors, system_oppo_sensor_prop)

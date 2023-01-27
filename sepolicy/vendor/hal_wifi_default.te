@@ -1,8 +1,6 @@
-allow hal_wifi_default self:capability sys_module;
-
 # Get hotspot prop
-get_prop(hal_wifi_default, mtk_wifi_hotspot_prop)
+get_prop(hal_wifi_default, vendor_mtk_wifi_hotspot_prop)
 
-# Set and get wlan_fw_prop (vendor.wlan.driver.version)
-set_prop(hal_wifi_default, wlan_fw_prop)
-get_prop(hal_wifi_default, wlan_fw_prop)
+# Set and get wlan_fw_prop (vendor.wlan.)
+get_prop(hal_wifi_default, vendor_wlan_fw_prop)
+set_prop(hal_wifi_default, vendor_wlan_fw_prop)

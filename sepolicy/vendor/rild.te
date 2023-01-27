@@ -1,7 +1,5 @@
-allow rild proc_oppo_ver:file r_file_perms;
-allow rild proc_oppo_opname:file r_file_perms;
-get_prop(rild, oppo_network_prop)
-set_prop(rild, oppo_network_prop)
-get_prop(rild, imsi_prop)
-set_prop(rild, imsi_prop)
-get_prop(rild, mtk_md_version_prop)
+r_dir_file(rild, proc_oppo_ver)
+
+get_prop(rild, vendor_oppo_radio_prop)
+set_prop(rild, vendor_oppo_radio_prop)
+get_prop(rild, vendor_mtk_simswitch_emmode_prop)

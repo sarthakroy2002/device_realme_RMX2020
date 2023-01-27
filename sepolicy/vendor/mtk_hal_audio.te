@@ -1,11 +1,11 @@
-set_prop(mtk_hal_audio, audio_tunning_prop)
-set_prop(mtk_hal_audio, dirac_prop)
-get_prop(mtk_hal_audio, dirac_prop)
-get_prop(mtk_hal_audio, service_nvram_init_prop)
-get_prop(mtk_hal_audio, tel_switch_prop)
 allow mtk_hal_audio sia81xx_tuning_if_device:chr_file rw_file_perms;
 allow mtk_hal_audio sysfs_sia81xx_file:dir search;
 allow mtk_hal_audio sysfs_sia81xx_file:file r_file_perms;
 allow mtk_hal_audio proc_oppo_ver:file r_file_perms;
-allow mtk_hal_audio proc_oppo_opname:file r_file_perms;
-allow mtk_hal_audio self:process execmem;
+get_prop(mtk_hal_audio, vendor_audio_tuning_prop)
+get_prop(mtk_hal_audio, system_dirac_prop)
+get_prop(mtk_hal_audio, vendor_mtk_service_nvram_init_prop)
+get_prop(mtk_hal_audio, system_oppo_audio_prop)
+set_prop(mtk_hal_audio, vendor_audio_tuning_prop)
+set_prop(mtk_hal_audio, system_oppo_audio_prop)
+set_prop(mtk_hal_audio, system_dirac_prop)

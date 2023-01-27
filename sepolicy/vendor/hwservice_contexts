@@ -1,5 +1,5 @@
-# OPPO
-vendor.oppo.hardware.wifi.hostapd::IOppoHostapd u:object_r:hal_oppo_hostapd_hwservice:s0
+# Camera
+vendor.oppo.hardware.camera.slogan::ISlogan                                  u:object_r:hal_oppo_camera_hwservice:s0
 
 # Fingerprint
 vendor.oppo.hardware.biometrics.fingerprint::IBiometricsFingerprint          u:object_r:hal_fingerprint_hwservice:s0
@@ -7,5 +7,6 @@ android.frameworks.fingerprintservice::IFingerprintHalService                u:o
 vendor.silead.hardware.fingerprintext::ISileadFingerprint                    u:object_r:hal_fingerprint_hwservice:s0
 vendor.egistec.hardware.fingerprint::IBiometricsFingerprintRbs               u:object_r:hal_fingerprint_hwservice:s0
 
-# Mediatek
-vendor.mediatek.hardware.wifi.hostapd::IHostapd u:object_r:hal_mtk_hostapd_hwservice:s0
+# Wifi
+vendor.mediatek.hardware.wifi.hostapd::IHostapd                              u:object_r:hal_mtk_hostapd_hwservice:s0
+vendor.oppo.hardware.wifi.hostapd::IOppoHostapd                              u:object_r:hal_oppo_hostapd_hwservice:s0

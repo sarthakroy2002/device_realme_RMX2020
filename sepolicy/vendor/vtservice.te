@@ -1,1 +1,0 @@
-allow vtservice mediavts_service:service_manager { add };

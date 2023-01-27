@@ -1,0 +1,20 @@
+# Audio
+system_public_prop(system_audio_tuning_prop)
+system_public_prop(system_oppo_audio_prop)
+system_public_prop(system_dirac_prop)
+
+# Camera
+system_public_prop(system_oppo_camera_prop)
+
+# Factory
+system_public_prop(system_factory_prop)
+
+# Fingerprint
+system_public_prop(system_oppo_fingerprint_prop)
+
+# Parts
+system_public_prop(system_perf_prop)
+system_public_prop(system_cabc_prop)
+
+# Sensors
+system_public_prop(system_oppo_sensor_prop)

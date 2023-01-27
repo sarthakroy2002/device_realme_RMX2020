@@ -1,4 +1,1 @@
-allow platform_app sysfs_fps:file { getattr open read };
-
-# Allow platform_app to get debug_mtk_gpud_prop
-get_prop(platform_app, debug_mtk_gpud_prop)
+allow platform_app sysfs_fps:file r_file_perms;

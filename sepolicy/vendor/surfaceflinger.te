@@ -1,2 +1,0 @@
-get_prop(surfaceflinger, vendor_debug_prop)
-get_prop(surfaceflinger, debug_mtk_gpud_prop)

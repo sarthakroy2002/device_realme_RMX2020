@@ -1,2 +1,1 @@
-allow fuelgauged_nvram proc_oppo_ver:file r_file_perms;
-allow fuelgauged_nvram proc_oppo_opname:file r_file_perms;
+r_dir_file(fuelgauged_nvram, proc_oppo_ver)

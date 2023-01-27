@@ -1,1 +1,2 @@
-type sysfs_mtk_leds, fs_type, sysfs_type;
+type sysfs_oppo_charger, fs_type, sysfs_type;
+type proc_oppo_ver, fs_type, proc_type;

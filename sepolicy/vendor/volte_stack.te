@@ -1,0 +1,1 @@
+allow volte_stack self:capability setuid;

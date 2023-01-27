@@ -1,3 +1,24 @@
-persist.perf_profile u:object_r:perf_prop:s0
-perf_profile u:object_r:perf_prop:s0
-persist.cabc_profile u:object_r:cabc_prop:s0
+# Audio
+audio.tuning.def_path                         u:object_r:system_audio_tuning_prop:s0
+sys.oppo.mm.                                  u:object_r:system_oppo_audio_prop:s0
+persist.audio.dirac                           u:object_r:system_dirac_prop:s0
+
+# Camera
+dump.bpci_tbl.enable                          u:object_r:system_oppo_camera_prop:s0
+oppo.camera.                                  u:object_r:system_oppo_camera_prop:s0
+
+# Factory
+ro.factory_mode                               u:object_r:system_factory_prop:s0
+
+# Fingerprint
+oppo.optical.                                 u:object_r:system_oppo_fingerprint_prop:s0
+oppo.fingerprint.                             u:object_r:system_oppo_fingerprint_prop:s0
+init.svc.fps_hal                              u:object_r:system_oppo_fingerprint_prop:s0
+init.svc.fpexts_hal                           u:object_r:system_oppo_fingerprint_prop:s0
+
+# Parts
+perf_profile                                  u:object_r:system_perf_prop:s0
+persist.cabc_profile                          u:object_r:system_cabc_prop:s0
+
+# Sensors
+sys.oppo.hasPhysicalGyroscope                 u:object_r:system_oppo_sensor_prop:s0

@@ -1,7 +1,7 @@
 binder_call(system_app, storaged)
 
 # Allow system_app to set perf_profile prop
-set_prop(system_app, perf_prop)
+set_prop(system_app, system_perf_prop)
 
 # Allow system_app to set cabc props
-set_prop(system_app, cabc_prop)
+set_prop(system_app, system_cabc_prop)
