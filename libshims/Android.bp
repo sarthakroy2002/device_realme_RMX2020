@@ -2,3 +2,10 @@ cc_library_shared {
     name: "libshim_vtservice",
     srcs: ["libshim_vtservice.cpp"],
 }
+
+cc_library {
+    name: "libshim_camera_metadata",
+    shared_libs: ["libcamera_metadata"],
+    srcs: ["libshim_camera_metadata.cpp"],
+    vendor: true
+}
