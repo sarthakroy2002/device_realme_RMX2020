@@ -99,6 +99,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libstdc++.vendor
 
+PRODUCT_PACKAGES += \
+    libshim_camera_metadata
+
 # Disable Configstore
 PRODUCT_PACKAGES += \
     disable_configstore
