@@ -537,5 +537,8 @@
 
     <!-- Feature flag to store TaskSnapshot in 16 bit pixel format to save memory. -->
     <bool name="config_use16BitTaskSnapshotPixelFormat">true</bool>
+    
+    <!-- Fingerprint from stock ROM -->
+    <string name="config_stockFingerprint" translatable="false">realme/RMX2020/RMX2020:10/QP1A.190711.020/1651798546:user/release-keys</string>
 
 </resources>
