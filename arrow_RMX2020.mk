@@ -19,7 +19,7 @@ $(call inherit-product, vendor/arrow/config/common.mk)
 PRODUCT_NAME := arrow_RMX2020
 PRODUCT_DEVICE := RMX2020
 PRODUCT_BRAND := realme
-PRODUCT_MODEL := realme Monet
+PRODUCT_MODEL := RMX2020
 PRODUCT_MANUFACTURER := realme
 
 PRODUCT_SYSTEM_MODEL := RMX2020
