@@ -166,6 +166,9 @@ on post-fs
     symlink /dev/block/mmcblk0boot0 /dev/block/platform/bootdevice/by-name/preloader_a
     symlink /dev/block/mmcblk0boot1 /dev/block/platform/bootdevice/by-name/preloader_b
 
+    # allow ccci_mdinit access ccci_dump
+    chown root system /proc/ccci_dump
+
 on post-fs-data
     write /proc/bootprof "INIT:post-fs-data"
 
