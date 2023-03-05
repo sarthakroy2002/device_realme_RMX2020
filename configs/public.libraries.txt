@@ -11,3 +11,5 @@ libprotobuf-cpp-full.so
 libprotobuf-cpp-lite.so
 libarmnn_ndk.mtk.so
 libcmdl_ndk.mtk.so
+libstdc++.so
+libnir_neon_driver_ndk.mtk.so
