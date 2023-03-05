@@ -1281,7 +1281,6 @@ vendor/bin/vpud
 vendor/etc/init/vendor.mediatek.hardware.mtkcodecservice@1.1-service.rc
 vendor/etc/init/vpud.rc
 vendor/etc/seccomp_policy/mediacodec.policy
-vendor/etc/seccomp_policy/mediaextractor.policy
 vendor/etc/seccomp_policy/mediaswcodec.policy
 vendor/etc/mtk_omx_core.cfg
 vendor/lib/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-impl.so
