@@ -1,2 +1,20 @@
 on boot
+    # OTG
     chown system system /sys/class/power_supply/usb/otg_switch
+
+    # CABC
+    chown system system /sys/kernel/oppo_display/cabc
+    chmod 0644 /sys/kernel/oppo_display/cabc
+
+# CABC Modes
+on property:persist.cabc_profile=*
+    write /sys/kernel/oppo_display/cabc ${persist.cabc_profile}
+
+# Performance profiles
+on property:persist.perf_profile=*
+    exec - root -- /system/bin/perf_profile.sh ${persist.perf_profile}
+
+on property:sys.boot_completed=1
+    chown root root /sys/module/ged/parameters/gx_force_cpu_boost
+    chown root root /proc/cpufreq/cpufreq_power_mode
+    chown root root /proc/cpufreq/cpufreq_cci_mode

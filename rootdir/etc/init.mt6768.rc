@@ -946,18 +946,6 @@ service charger /bin/chargeonlymode
 on property:vendor.ril.mtk=1
     stop vendor.ril-daemon
 
-# Performance profiles
-on property:perf_profile=1
-    exec - root -- /system/bin/perf_profile.sh 1
-
-on property:perf_profile=0
-    exec - root -- /system/bin/perf_profile.sh 0
-
-on property:sys.boot_completed=1
-    chown root root /sys/module/ged/parameters/gx_force_cpu_boost
-    chown root root /proc/cpufreq/cpufreq_power_mode
-    chown root root /proc/cpufreq/cpufreq_cci_mode
-
 on property:persist.sys.dt2w=0
     write /proc/touchpanel/double_tap_enable 0
 
