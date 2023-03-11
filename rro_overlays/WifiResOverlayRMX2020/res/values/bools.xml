@@ -25,5 +25,8 @@
 
      <!-- Enable 80211ac for Wifi hotspot (SAP) -->
     <bool translatable="false" name="config_wifi_softap_ieee80211ac_supported">true</bool>
+
+    <!-- True if the firmware supports p2p MAC randomization -->
+    <bool translatable="false" name="config_wifi_p2p_mac_randomization_supported">true</bool>
     
 </resources>
