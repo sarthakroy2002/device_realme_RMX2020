@@ -209,7 +209,7 @@
 
     <!-- Boolean indicating if restoring network selection should be skipped -->
     <!-- The restoring is handled by modem if it is true-->
-     <bool name="skip_restoring_network_selection">false</bool>
+     <bool name="skip_restoring_network_selection">true</bool>
  	
 	<!-- Whether to cleanup fingerprints upon connection to the daemon and when user switches -->
     <bool name="config_cleanupUnusedFingerprints">false</bool>
