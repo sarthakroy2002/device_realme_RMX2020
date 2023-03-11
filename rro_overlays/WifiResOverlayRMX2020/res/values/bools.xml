@@ -31,5 +31,8 @@
 
     <!-- Enable ACS (auto channel selection) for Wifi hotspot (SAP) -->
     <bool translatable="false" name="config_wifi_softap_acs_supported">true</bool>
+
+    <!-- Boolean indicating whether 802.11r Fast BSS Transition is enabled on this platform -->
+    <bool translatable="false" name="config_wifi_fast_bss_transition_enabled">true</bool>
     
 </resources>
