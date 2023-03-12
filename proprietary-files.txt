@@ -1182,25 +1182,15 @@ vendor/lib64/libOpenCL.so
 # IMS
 bin/vtservice
 etc/init/init.vtservice.rc
-lib/vendor.mediatek.hardware.videotelephony@1.0.so:system_ext/lib/vendor.mediatek.hardware.videotelephony@1.0.so
-lib/libcomutils.so
-lib/libimsma.so
-lib/libimsma_adapt.so
-lib/libimsma_rtp.so
-lib/libimsma_socketwrapper.so
 lib/libmtk_vt_service.so
 lib/libmtk_vt_wrapper.so
 lib/libmtkaudio_utils.so
 lib/libmtklimiter.so
 lib/libmtkperf_client.so
 lib/libmtkshifter.so
-lib/libsignal.so
-lib/libsink.so
-lib/libsource.so
 lib/libvcodec_cap.so
 lib/libvcodec_capenc.so
 lib/libvt_avsync.so
-lib64/vendor.mediatek.hardware.videotelephony@1.0.so:system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 lib64/libmtk_vt_wrapper.so
 lib64/libmtkaudio_utils.so
 lib64/libmtklimiter.so
@@ -1242,6 +1232,18 @@ vendor/lib64/libverno.so
 vendor/lib64/libwo.so
 vendor/lib64/libwpfa.so
 vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
+
+# IMS - from realme/RMX2020/RMX2020:11/RP1A.200720.011/1648050486506:user/release-keys
+lib/libsink.so|3bead07276110d282e3b5d9055caa7d3bf2839fd
+lib/libcomutils.so|b1eb6f3f832bfa2eaf246d3a682a0908e62cdca1
+lib/libimsma.so|5d348e67e9f748fab5b5f1c40cc29ead33217172
+lib/libimsma_adapt.so|0832a7e521c1c4c96f585e6102fa9d7fdfa1a210
+lib/libimsma_rtp.so|7f016a6d5f5b74b979b00b5f21b08dcbaaacd651
+lib/libimsma_socketwrapper.so|44f042ce96a8fd1e3022880ba5dcbe3a23283eb7
+lib/libsignal.so|79abd79460f3c257787618a3070d67b03ac794a0
+lib/libsource.so|9baa104d77e0698e0097e746f9b42b38ec673600
+system_ext/lib/vendor.mediatek.hardware.videotelephony@1.0.so|5335199e474bb95305d80b6ae13c8cf6b480f842
+system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so|76c66b62da8a5cc622cac1b954c206ef18aa359a
 
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.0-service.trustonic
