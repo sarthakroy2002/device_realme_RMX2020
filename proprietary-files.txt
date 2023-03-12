@@ -417,6 +417,7 @@ vendor/lib64/lib3a.n3d3a.so
 vendor/lib64/libFaceBeautyCap.so
 vendor/lib64/libJpgEncPipe.so
 vendor/lib64/libMegviiHumBokehPost-mtk.so
+vendor/lib64/libOPPORectify.so
 vendor/lib64/libPerfectlyClearCrux.so
 vendor/lib64/libPolarrRender.so
 vendor/lib64/libSonyIMX230PdafLibrary.so
@@ -542,7 +543,6 @@ vendor/lib64/libmtkcam_sysutils.so
 vendor/lib64/libmtkcam_tuning_utils.so
 vendor/lib64/libmtkcam_ulog.so
 vendor/lib64/libocam_common.so
-vendor/lib64/libOPPORectify.so
 vendor/lib64/liboppo_aisd.so
 vendor/lib64/liboppo_arcSoftBokehEngine.so
 vendor/lib64/liboppo_blank_algo.so
@@ -1485,12 +1485,6 @@ vendor/lib64/vendor.mediatek.hardware.power@2.0.so
 vendor/lib64/vendor.mediatek.hardware.power@2.1.so
 
 # Radio
-vendor/lib/libutinterface_custom_md.so
-vendor/lib/libutinterface_md.so
-vendor/lib64/libutinterface_custom_md.so
-vendor/lib64/libutinterface_md.so
-
-# Radio
 vendor/bin/hw/mtkfusionrild
 vendor/bin/hw/vendor.mediatek.hardware.mms@1.5-service
 vendor/bin/ccci_fsd
@@ -1530,6 +1524,8 @@ vendor/lib/libmtksysutils.so
 vendor/lib/libssl-ss.so
 vendor/lib/libstorage_otp.so
 vendor/lib/libsysenv.so
+vendor/lib/libutinterface_custom_md.so
+vendor/lib/libutinterface_md.so
 vendor/lib/vendor.mediatek.hardware.mms@1.0.so
 vendor/lib/vendor.mediatek.hardware.mms@1.1.so
 vendor/lib/vendor.mediatek.hardware.mms@1.2.so
@@ -1570,6 +1566,8 @@ vendor/lib64/libratconfig.so
 vendor/lib64/librilfusion.so
 vendor/lib64/libssl-ss.so
 vendor/lib64/libsysenv.so
+vendor/lib64/libutinterface_custom_md.so
+vendor/lib64/libutinterface_md.so
 vendor/lib64/vendor.mediatek.hardware.mms@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mms@1.1.so
 vendor/lib64/vendor.mediatek.hardware.mms@1.2.so
