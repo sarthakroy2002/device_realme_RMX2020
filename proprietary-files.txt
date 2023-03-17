@@ -353,10 +353,6 @@ vendor/lib64/libbluetooth_relayer.so
 vendor/lib64/libbluetoothem_mtk.so
 vendor/lib64/libbt-vendor.so
 
-# Bluetooth (aptX) - from realme/RMX2020/RMX2020:11/RP1A.200720.011/1627637499567:user/release-keys
-lib64/libaptXHD_encoder.so:system_ext/lib64/libaptXHD_encoder.so|043c055498f6e6e2b0564ad35ea17b012844cbce
-lib64/libaptX_encoder.so:system_ext/lib64/libaptX_encoder.so|9e87fed4eac0e9fe428eaf8d0db7a1af89d521e1
-
 # Camera
 vendor/lib/hw/vendor.mediatek.hardware.camera.bgservice@1.1-impl.so
 vendor/lib/hw/vendor.oppo.hardware.camera.slogan@1.0-impl.so
