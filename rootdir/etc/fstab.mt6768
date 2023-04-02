@@ -55,4 +55,4 @@ odm                                                     /odm                    
 /dev/block/platform/bootdevice/by-name/otp              /otp                    emmc     defaults                                                                 defaults
 /devices/platform/externdevice*                         auto                    auto     defaults                                                                 voldmanaged=sdcard1:auto
 /devices/platform/mt_usb*                               auto                    auto     defaults                                                                 voldmanaged=usbotg:auto
-/dev/block/zram0                                        none                    swap     defaults                                                                 zramsize=55%,max_comp_streams=8,zram_backingdev_size=512M
+/dev/block/zram0                                        none                    swap     defaults                                                                 zramsize=55%,zram_backingdev_size=512M
