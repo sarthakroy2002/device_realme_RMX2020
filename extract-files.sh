@@ -56,7 +56,7 @@ fi
 function blob_fixup {
     case "$1" in
         lib/libsink.so)
-            patchelf --add-needed "libshim_vtservice.so" "${2}"
+            grep -q "libshim_vtservice.so" "${2}" || patchelf --add-needed "libshim_vtservice.so" "${2}"
             ;;
         vendor/lib*/hw/audio.primary.mt6768.so)
             patchelf --replace-needed "libmedia_helper.so" "libmedia_helper-v30.so" "${2}"
@@ -73,7 +73,7 @@ function blob_fixup {
         vendor/bin/hw/hostapd)
             ;&
         vendor/bin/hw/wpa_supplicant)
-            patchelf --add-needed "libcompiler_rt.so" ${2}
+            grep -q "libcompiler_rt.so" "${2}" || patchelf --add-needed "libcompiler_rt.so" ${2}
             ;;
         vendor/bin/hw/camerasloganserver)
             ;&
