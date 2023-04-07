@@ -29,6 +29,7 @@ debug.sf.enable_hwc_vds=0
 persist.sys.fuse.passthrough.enable=true
 
 # Radio
+persist.sys.radio.force_lte_ca=true
 persist.sys.fflag.override.settings_provider_model=false
 
 # IPO
