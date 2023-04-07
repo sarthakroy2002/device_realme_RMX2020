@@ -45,6 +45,7 @@ persist.radio.data_con_rprt=1
 persist.radio.calls.on.ims=1
 
 # RIL
+persist.sys.radio.force_lte_ca=true
 persist.sys.fflag.override.settings_provider_model=false
 
 # IPO
