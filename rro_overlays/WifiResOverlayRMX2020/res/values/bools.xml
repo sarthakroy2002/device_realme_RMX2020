@@ -38,9 +38,9 @@
     <!-- Wifi driver supports IEEE80211AC for softap -->
     <bool name="config_wifi_softap_ieee80211ac_supported">true</bool>
 
-    <!-- Wifi driver supports WPA3 Simultaneous Authentication of Equals (WPA3-SAE) for softap -->
-    <bool name="config_wifi_softap_sae_supported">true</bool>
-
     <!-- boolean indicating whether or not to reset max client setting configuration during cloud configuration restore -->
     <bool translatable="false" name ="config_wifiSoftapResetMaxClientSettingConfig">false</bool>
+
+    <!-- Disable WPA2 to WPA3 auto-upgrade -->
+    <bool translatable="false" name="config_wifiSaeUpgradeEnabled">false</bool>
 </resources>
