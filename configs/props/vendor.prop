@@ -104,9 +104,6 @@ ro.vendor.mtk_agps_app=1
 ro.vendor.mtk_gps_support=1
 ro.vendor.mtk_log_hide_gps=1
 
-# HWUI
-ro.hwui.render_ahead=20
-
 # IMS
 persist.vendor.ims_support=1
 persist.vendor.mims_support=2
