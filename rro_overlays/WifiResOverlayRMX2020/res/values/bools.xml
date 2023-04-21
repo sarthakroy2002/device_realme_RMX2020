@@ -38,4 +38,10 @@
     <!-- Disable WPA2 to WPA3 auto-upgrade -->
     <bool translatable="false" name="config_wifiSaeUpgradeEnabled">false</bool>
 
+    <!-- Disable WPA2 to WPA3 auto-upgrade offload to capable Driver/Firmware -->
+    <bool translatable="false" name="config_wifiSaeUpgradeOffloadEnabled">false</bool>
+
+    <!-- Wifi driver supports WPA3 Simultaneous Authentication of Equals (WPA3-SAE) for softap -->
+    <bool translatable="false" name="config_wifi_softap_sae_supported">false</bool>
+
 </resources>
