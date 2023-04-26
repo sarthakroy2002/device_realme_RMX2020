@@ -85,13 +85,7 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength strength,
     if (vibStrengths.find(strength) == vibStrengths.end())
         return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
 
-    if (mVibratorStrengthSupported) {
-        // Vibration strength is relative to the max strength reported by the kernel.
-        int vib_strength = static_cast<int>(mVibratorStrengthMax * vibStrengths[strength] / 10.0 + 0.5);
-        status = setNode(kVibratorStrength, vib_strength);
-        if (!status.isOk())
-            return status;
-    }
+    setAmplitude(vibStrengths[strength]);
 
     timeoutMs = vibEffects[effect];
 
@@ -128,8 +122,27 @@ ndk::ScopedAStatus Vibrator::getSupportedEffects(std::vector<Effect>* /* _aidl_r
     return ndk::ScopedAStatus::ok();
 }
 
+#ifdef VIBRATOR_SUPPORTS_EFFECTS
+ndk::ScopedAStatus Vibrator::setAmplitude(float amplitude) {
+    int32_t intensity;
+
+    if (amplitude <= 0.0f || amplitude > 1.0f)
+        return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_ILLEGAL_ARGUMENT));
+
+    LOG(VERBOSE) << "Setting amplitude: " << amplitude;
+
+    intensity = amplitude * mVibratorStrengthMax;
+
+    LOG(VERBOSE) << "Setting intensity: " << intensity;
+
+    if (mVibratorStrengthSupported)
+        setNode(kVibratorStrength, intensity);
+
+    return ndk::ScopedAStatus::ok();
+#else
 ndk::ScopedAStatus Vibrator::setAmplitude(float amplitude __unused) {
     return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
+#endif
 }
 
 ndk::ScopedAStatus Vibrator::setExternalControl(bool enabled __unused) {
