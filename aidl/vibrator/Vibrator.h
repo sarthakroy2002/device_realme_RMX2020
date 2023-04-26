@@ -36,7 +36,6 @@ const std::string kVibratorStrengthMax = "/sys/kernel/thunderquake_engine/max";
 
 static std::map<Effect, int32_t> vibEffects = {
     { Effect::CLICK, 50 },
-    { Effect::HEAVY_CLICK, 60 },
     { Effect::TICK, 32 }
 };
 
