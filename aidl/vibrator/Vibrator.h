@@ -26,6 +26,9 @@ namespace android {
 namespace hardware {
 namespace vibrator {
 
+const std::string kVibratorPropPrefix   = "ro.vendor.vibrator.hal.";
+const std::string kVibratorPropDuration = ".duration";
+
 const std::string kVibratorState       = "/sys/class/leds/vibrator/state";
 const std::string kVibratorDuration    = "/sys/class/leds/vibrator/duration";
 const std::string kVibratorActivate    = "/sys/class/leds/vibrator/activate";
@@ -33,11 +36,6 @@ const std::string kVibratorActivate    = "/sys/class/leds/vibrator/activate";
 #ifdef VIBRATOR_SUPPORTS_EFFECTS
 const std::string kVibratorStrength    = "/sys/kernel/thunderquake_engine/level";
 const std::string kVibratorStrengthMax = "/sys/kernel/thunderquake_engine/max";
-
-static std::map<Effect, int32_t> vibEffects = {
-    { Effect::CLICK, 50 },
-    { Effect::TICK, 32 }
-};
 
 static std::map<EffectStrength, float> vibStrengths = {
     { EffectStrength::LIGHT, 0.25 },
@@ -83,9 +81,14 @@ public:
                                    const std::shared_ptr<IVibratorCallback> &callback) override;
 private:
     static ndk::ScopedAStatus setNode(const std::string path, const int32_t value);
+    static int getIntProperty(const std::string& key, const int fallback);
 #ifdef VIBRATOR_SUPPORTS_EFFECTS
     static bool exists(const std::string path);
     static int getNode(const std::string path, const int fallback);
+    std::map<Effect, int32_t> vibEffects = {
+        { Effect::CLICK, getIntProperty("click" + kVibratorPropDuration, 50) },
+        { Effect::TICK, getIntProperty("tick" + kVibratorPropDuration, 32) },
+    };
     bool mVibratorStrengthSupported;
     int mVibratorStrengthMax;
 #endif

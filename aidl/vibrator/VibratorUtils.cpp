@@ -17,6 +17,7 @@
 #include "Vibrator.h"
 
 #include <android-base/logging.h>
+#include <android-base/properties.h>
 #include <fstream>
 
 namespace aidl {
@@ -79,6 +80,10 @@ int Vibrator::getNode(const std::string path, const int fallback) {
     return value;
 }
 #endif
+
+int Vibrator::getIntProperty(const std::string& key, const int fallback) {
+    return ::android::base::GetIntProperty(kVibratorPropPrefix + key, fallback);
+}
 
 }  // namespace vibrator
 }  // namespace hardware
