@@ -14,47 +14,56 @@
  * limitations under the License.
  */
 
-#include "vibrator-impl/Vibrator.h"
+#include "Vibrator.h"
 
 #include <android-base/logging.h>
 #include <thread>
-#include <fstream>
 
 namespace aidl {
 namespace android {
 namespace hardware {
 namespace vibrator {
 
+#ifdef VIBRATOR_SUPPORTS_EFFECTS
 Vibrator::Vibrator() {
-    mVibratorStrengthSupported = nodeExists(kVibratorStrength);
+    if (exists(kVibratorStrength)) {
+        mVibratorStrengthSupported = true;
+        mVibratorStrengthMax = getNode(kVibratorStrengthMax, 9);
+    }
 }
+#endif
 
 ndk::ScopedAStatus Vibrator::getCapabilities(int32_t* _aidl_return) {
-    LOG(INFO) << "Vibrator reporting capabilities";
-    *_aidl_return = IVibrator::CAP_ON_CALLBACK | IVibrator::CAP_PERFORM_CALLBACK;
+    LOG(VERBOSE) << "Vibrator reporting capabilities";
+    *_aidl_return = IVibrator::CAP_ON_CALLBACK;
+
+    #ifdef VIBRATOR_SUPPORTS_EFFECTS
+    *_aidl_return |= IVibrator::CAP_PERFORM_CALLBACK;
+    #endif
 
     return ndk::ScopedAStatus::ok();
 }
 
 ndk::ScopedAStatus Vibrator::off() {
-    LOG(INFO) << "Vibrator off";
-    return activate(0);
+    LOG(VERBOSE) << "Vibrator off";
+    return setNode(kVibratorActivate, 0);
 }
 
 ndk::ScopedAStatus Vibrator::on(int32_t timeoutMs,
                                 const std::shared_ptr<IVibratorCallback>& callback) {
-    LOG(INFO) << "Vibrator on for timeoutMs: " << timeoutMs;
     ndk::ScopedAStatus status;
-    status = activate(timeoutMs);
 
+    LOG(VERBOSE) << "Vibrator on for timeoutMs: " << timeoutMs;
+
+    status = activate(timeoutMs);
     if (!status.isOk())
         return status;
 
     if (callback != nullptr) {
         std::thread([=] {
-            LOG(INFO) << "Starting on on another thread";
+            LOG(VERBOSE) << "Starting on on another thread";
             usleep(timeoutMs * 1000);
-            LOG(INFO) << "Notifying on complete";
+            LOG(VERBOSE) << "Notifying on complete";
             if (!callback->onComplete().isOk()) {
                 LOG(ERROR) << "Failed to call onComplete";
             }
@@ -63,24 +72,23 @@ ndk::ScopedAStatus Vibrator::on(int32_t timeoutMs,
     return ndk::ScopedAStatus::ok();
 }
 
+#ifdef VIBRATOR_SUPPORTS_EFFECTS
 ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength strength,
                                      const std::shared_ptr<IVibratorCallback>& callback,
                                      int32_t* _aidl_return) {
     ndk::ScopedAStatus status;
     int32_t timeoutMs;
 
-    LOG(INFO) << "Vibrator perform";
-
-    if (strength != EffectStrength::LIGHT && strength != EffectStrength::MEDIUM &&
-        strength != EffectStrength::STRONG) {
-        return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
-    }
-
     if (vibEffects.find(effect) == vibEffects.end())
         return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
 
+    if (vibStrengths.find(strength) == vibStrengths.end())
+        return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
+
     if (mVibratorStrengthSupported) {
-        status = setNode(kVibratorStrength, vibStrengths[strength]);
+        // Vibration strength is relative to the max strength reported by the kernel.
+        int vib_strength = static_cast<int>(mVibratorStrengthMax * vibStrengths[strength] / 10.0 + 0.5);
+        status = setNode(kVibratorStrength, vib_strength);
         if (!status.isOk())
             return status;
     }
@@ -102,12 +110,21 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength strength,
 
     *_aidl_return = timeoutMs;
     return ndk::ScopedAStatus::ok();
+#else
+ndk::ScopedAStatus Vibrator::perform(Effect /* effect */, EffectStrength /* strength */,
+                                     const std::shared_ptr<IVibratorCallback>& /* callback */,
+                                     int32_t* /* _aidl_return */) {
+    return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
+#endif
 }
 
+#ifdef VIBRATOR_SUPPORTS_EFFECTS
 ndk::ScopedAStatus Vibrator::getSupportedEffects(std::vector<Effect>* _aidl_return) {
     for (auto const& pair : vibEffects)
         _aidl_return->push_back(pair.first);
-
+#else
+ndk::ScopedAStatus Vibrator::getSupportedEffects(std::vector<Effect>* /* _aidl_return */) {
+#endif
     return ndk::ScopedAStatus::ok();
 }
 
@@ -190,55 +207,6 @@ ndk::ScopedAStatus Vibrator::composePwle(const std::vector<PrimitivePwle> &compo
     return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
 }
 
-/*
- * Write value to path and close file.
- */
-ndk::ScopedAStatus Vibrator::setNode(const std::string path, const std::string value) {
-    std::ofstream file(path);
-
-    if (!file.is_open()) {
-        LOG(ERROR) << "Failed to write " << value.c_str() << " to " << path.c_str();
-        return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_SERVICE_SPECIFIC));
-    }
-
-    file << value << std::endl;
-
-    return ndk::ScopedAStatus::ok();
-}
-
-ndk::ScopedAStatus Vibrator::setNode(std::string path, const int32_t value) {
-    return setNode(path, std::to_string(value));
-}
-
-bool Vibrator::nodeExists(const std::string path) {
-    std::ofstream file(path);
-    return file.is_open();
-}
-
-ndk::ScopedAStatus Vibrator::activate(const int32_t timeoutMs) {
-    ndk::ScopedAStatus status;
-    std::string active = "0";
-
-    if (timeoutMs > 0)
-        active = "1";
-    else
-        goto set_activate;
-
-    status = setNode(kVibratorState, "1");
-    if (!status.isOk())
-        return status;
-
-    status = setNode(kVibratorDuration, timeoutMs);
-    if (!status.isOk())
-        return status;
-
-set_activate:
-    status = setNode(kVibratorActivate, active);
-    if (!status.isOk())
-        return status;
-
-    return ndk::ScopedAStatus::ok();
-}
 }  // namespace vibrator
 }  // namespace hardware
 }  // namespace android

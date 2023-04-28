@@ -386,6 +386,7 @@ PRODUCT_PACKAGES += \
     android.hardware.usb@1.1.vendor
 
 # Vibrator
+TARGET_VIBRATOR_SUPPORTS_EFFECTS := true
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.RMX2020
 

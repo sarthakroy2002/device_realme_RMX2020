@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include "vibrator-impl/Vibrator.h"
+#include "Vibrator.h"
 
 #include <android-base/logging.h>
 #include <android/binder_manager.h>
@@ -29,7 +29,7 @@ int main() {
     auto vib = ndk::SharedRefBase::make<Vibrator>();
     const std::string vibName = std::string() + Vibrator::descriptor + "/default";
     binder_status_t status = AServiceManager_addService(vib->asBinder().get(), vibName.c_str());
-    CHECK(status == STATUS_OK);
+    CHECK_EQ(status, STATUS_OK);
 
     ABinderProcess_joinThreadPool();
     return EXIT_FAILURE;  // should not reach
