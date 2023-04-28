@@ -88,6 +88,7 @@ private:
     std::map<Effect, int32_t> vibEffects = {
         { Effect::CLICK, getIntProperty("click" + kVibratorPropDuration, 50) },
         { Effect::TICK, getIntProperty("tick" + kVibratorPropDuration, 32) },
+        { Effect::TEXTURE_TICK, getIntProperty("texture_tick" + kVibratorPropDuration, 25) },
     };
     bool mVibratorStrengthSupported;
     int mVibratorStrengthMax;
