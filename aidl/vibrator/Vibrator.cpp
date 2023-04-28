@@ -101,9 +101,9 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength strength,
 
     if (callback != nullptr) {
         std::thread([=] {
-            LOG(INFO) << "Starting perform on another thread";
+            LOG(VERBOSE) << "Starting perform on another thread";
             usleep(timeoutMs * 1000);
-            LOG(INFO) << "Notifying perform complete";
+            LOG(VERBOSE) << "Notifying perform complete";
             callback->onComplete();
         }).detach();
     }
