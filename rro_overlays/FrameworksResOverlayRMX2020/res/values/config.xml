@@ -54,13 +54,6 @@
     <!-- Flag specifying whether WFC over IMS is available on device -->
      <bool name="config_device_wfc_ims_available">false</bool>
 
-    <!-- Whether the display blanks itself when transition from a doze to a non-doze state -->
-     <bool name="config_displayBlanksAfterDoze">true</bool>
-
-    <!-- If true, the doze component is not started until after the screen has been turned off
-         and the screen off animation has been performed. -->
-     <bool name="config_dozeAfterScreenOffByDefault">true</bool>
-
     <!-- Flag specifying whether or not IMS will use the ImsResolver dynamically -->
      <bool name="config_eap_sim_based_auth_supported">true</bool>
 
