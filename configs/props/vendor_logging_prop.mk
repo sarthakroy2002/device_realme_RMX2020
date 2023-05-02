@@ -1,4 +1,4 @@
-PRODUCT_PROPERTY_OVERRIDES +=  \
+PRODUCT_VENDOR_PROPERTIES +=  \
     persist.log.tag.C2K_RIL-SIM=S \
     persist.log.tag.CarrierExpressServiceImpl=S \
     persist.log.tag.CarrierExpressServiceImplExt=S \
