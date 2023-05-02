@@ -43,6 +43,7 @@ PRODUCT_VENDOR_PROPERTIES +=  \
     persist.log.tag.ImsVTProvider=S \
     persist.log.tag.IsimFileHandler=S \
     persist.log.tag.IsimRecords=S \
+    persist.log.tag.lsc_nvram=S \
     persist.log.tag.MTKSST=S \
     persist.log.tag.MtkAdnRecord=S \
     persist.log.tag.MtkCsimFH=S \
