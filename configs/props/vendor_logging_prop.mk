@@ -96,6 +96,7 @@ PRODUCT_VENDOR_PROPERTIES +=  \
     persist.log.tag.SIMRecords=S \
     persist.log.tag.SpnOverride=S \
     persist.log.tag.StNfcHal=S \
+    persist.log.tag.stp_dump=S \
     persist.log.tag.SuppMsgMgr=S \
     persist.log.tag.thermal_repeater=S \
     persist.log.tag.TeleConfCtrler=S \
