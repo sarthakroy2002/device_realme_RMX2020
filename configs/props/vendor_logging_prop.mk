@@ -216,6 +216,7 @@ PRODUCT_VENDOR_PROPERTIES +=  \
     persist.log.tag.SimSwitchOP18=S \
     persist.log.tag.SlotQueueEntry=S \
     persist.log.tag.SpnOverride=S \
+    persist.log.tag.stp_dump=S \
     persist.log.tag.UiccCard=S \
     persist.log.tag.UiccController=S \
     persist.log.tag.UxUtility=S \
