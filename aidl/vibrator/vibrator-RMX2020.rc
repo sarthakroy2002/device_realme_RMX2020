@@ -1,7 +1,0 @@
-on init
-    chown system system /sys/kernel/thunderquake_engine/level
-
-service vendor.vibrator-RMX2020 /vendor/bin/hw/android.hardware.vibrator-service.RMX2020
-    class hal
-    user system
-    group system

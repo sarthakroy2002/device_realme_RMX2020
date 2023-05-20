@@ -20,4 +20,4 @@
 /dev/sia81xx_tuning_if 	u:object_r:sia81xx_tuning_if_device:s0
 
 # Vibrator
-/vendor/bin/hw/android\.hardware\.vibrator-service\.RMX2020                                                             u:object_r:hal_vibrator_default_exec:s0
+/vendor/bin/hw/android\.hardware\.vibrator-service\.mediatek                                                             u:object_r:hal_vibrator_default_exec:s0
