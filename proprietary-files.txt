@@ -643,29 +643,6 @@ vendor/bin/mtkcam-debug
 vendor/etc/init/camerahalserver.rc
 vendor/etc/init/camerasloganserver.rc
 
-# Camera (Configs)
-vendor/etc/mmigroup/CommonConf.json
-vendor/etc/mmigroup/CommonParam.json
-vendor/etc/mmigroup/MMIGroupADBCmdTest.json
-vendor/etc/mmigroup/MMIGroupAudioAta.json
-vendor/etc/mmigroup/MMIGroupAudioManual.json
-vendor/etc/mmigroup/MMIGroupCameraAta.json
-vendor/etc/mmigroup/MMIGroupCameraManual.json
-vendor/etc/mmigroup/MMIGroupIQC.json
-vendor/etc/mmigroup/MMIGroupManualTest.json
-vendor/etc/mmigroup/MMIGroupMmiAta.json
-vendor/etc/mmigroup/MMIGroupMmiAtaManual.json
-vendor/etc/mmigroup/MMIGroupMmiManual.json
-vendor/etc/mmigroup/MMIGroupNormal.json
-vendor/etc/mmigroup/MMIGroupPcbaAta.json
-vendor/etc/mmigroup/MMIGroupPcbaManual.json
-vendor/etc/mmigroup/MMIGroupSensorAta.json
-vendor/etc/mmigroup/MMIGroupSensorManual.json
-vendor/etc/mmigroup/MainMenuConfig.json
-vendor/etc/mmigroup/factoryInterfaceConfig.json
-vendor/etc/mmigroup/rec.wav
-vendor/etc/mmigroup/spk.wav
-
 # Camera (Feature)
 vendor/lib64/libfeature.face.so
 vendor/lib64/libfeature.stereo.provider.so
