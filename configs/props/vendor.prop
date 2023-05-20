@@ -93,6 +93,9 @@ ro.vendor.mtk_widevine_drm_l3_support=1
 # EGL
 ro.hardware.egl=mali
 
+# fastbootd
+ro.fastbootd.available=true
+
 # FM Radio
 ro.vendor.mtk_fm_50khz_support=1
 
