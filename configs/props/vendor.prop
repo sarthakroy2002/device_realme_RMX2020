@@ -83,6 +83,9 @@ drm.service.enabled=true
 ro.netflix.bsp_rev=MTK6768-19054-1
 ro.vendor.mtk_widevine_drm_l3_support=1
 
+# fastbootd
+ro.fastbootd.available=true
+
 # FM Radio
 ro.vendor.mtk_fm_50khz_support=1
 
