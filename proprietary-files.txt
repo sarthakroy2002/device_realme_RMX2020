@@ -825,13 +825,6 @@ vendor/lib64/vendor.mediatek.hardware.pq@2.1.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.2.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.3.so
 
-# Doeapp
-vendor/bin/dconfig
-vendor/bin/dexecutor
-vendor/bin/doeapp-memtester
-vendor/bin/doeapp-sat
-vendor/bin/dtc_vendor
-
 # DRM - from realme/RMX3193/RMX3193:12/SP1A.210812.016/R.202202111917:user/release-keys
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine|8307cea32c20bdc6e7456a6060ebefcfe743b02c
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc|992f63e9700da29099e0590858a6becaaadb2976
@@ -840,42 +833,6 @@ vendor/lib/mediadrm/libwvdrmengine.so|0a8dae27c79871c2d163bee5e34278e5d02acb2f
 vendor/lib/libwvhidl.so|0cb77893b553777865f341a255f3f6b37619ae8a
 vendor/lib64/mediadrm/libwvdrmengine.so|2cc07cb4202d54b716b7ca2bf03012d6c6d18cf9
 vendor/lib64/libwvhidl.so|60bfaf3ccac077859955708eadf3d22ac52aadee
-
-# Engineering
--lib/libaudio_param_parser-sys.so
--lib/libaudiotoolkit.so
--lib/libem_audio_jni.so
--lib/libem_support_jni.so
--lib/vendor.mediatek.hardware.audio@5.1.so
--lib64/libaudio_param_parser-sys.so
--lib64/libaudiotoolkit.so
--lib64/libem_audio_jni.so
--lib64/libem_support_jni.so
--lib64/vendor.mediatek.hardware.audio@5.1.so
--priv-app/EngineerMode/EngineerMode.apk
-vendor/app/EmCamera/lib/arm64/libem_camera_jni.so
--vendor/app/EmCamera/EmCamera.apk
-vendor/app/SensorHub/lib/arm64/libem_sensor_jni.so
--vendor/app/SensorHub/SensorHub.apk
-vendor/bin/bin32/vendor.mediatek.hardware.dplanner@2.0-service
-vendor/bin/hw/vendor.mediatek.hardware.dplanner@2.0-service
-vendor/bin/hw/vendor_transfer
-vendor/bin/em_hidl
-vendor/bin/exp_lock
-vendor/bin/mrdump_tool
-vendor/etc/init/bootperf.rc
-vendor/etc/init/em_hidl_user.rc
-vendor/etc/init/vendor.mediatek.hardware.dplanner@2.0-service.rc
-vendor/etc/init/vendor_engineermode.rc
-vendor/etc/init/vendor_transfer.rc
--vendor/etc/vintf/manifest/vendor.mediatek.hardware.dplanner@2.0-service.xml
-vendor/lib/vendor.mediatek.hardware.dplanner@2.0.so
-vendor/lib64/libem_camera_jni.so
-vendor/lib64/libem_sensor_jni.so
-vendor/lib64/vendor.mediatek.hardware.dplanner@2.0.so
-vendor/lib64/vendor.mediatek.hardware.engineermode@1.0.so
-vendor/lib64/vendor.mediatek.hardware.engineermode@1.1.so
-vendor/lib64/vendor.mediatek.hardware.engineermode@1.2.so
 
 # Fingerprint
 vendor/bin/hw/vendor.oppo.hardware.biometrics.fingerprint@2.1-service

@@ -22,17 +22,6 @@
         <permission name="android.permission.LOCATION_BYPASS"/>
         <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
     </privapp-permissions>
-    <privapp-permissions package="com.mediatek.engineermode">
-        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
-        <permission name="android.permission.WRITE_APN_SETTINGS"/>
-        <permission name="android.permission.MANAGE_USB"/>
-        <permission name="android.permission.WRITE_MEDIA_STORAGE"/>
-        <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
-        <permission name="android.permission.FORCE_STOP_PACKAGES"/>
-        <permission name="android.permission.MASTER_CLEAR"/>
-        <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
-        <permission name="android.permission.REAL_GET_TASKS"/>
-    </privapp-permissions>
     <privapp-permissions package="com.android.cellbroadcastreceiver.module">
         <permission name="android.permission.READ_PHONE_STATE"/>
     </privapp-permissions>

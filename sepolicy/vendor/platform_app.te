@@ -2,25 +2,3 @@ allow platform_app sysfs_fps:file { getattr open read };
 
 # Allow platform_app to get debug_mtk_gpud_prop
 get_prop(platform_app, debug_mtk_gpud_prop)
-
-# Engineermode
-allow platform_app rild:binder { call transfer };
-allow platform_app mtk_hal_rild_hwservice:hwservice_manager find;
-dontaudit platform_app hal_telephony_hwservice:hwservice_manager find;
-get_prop(platform_app, mtk_default_prop)
-get_prop(platform_app, mtk_dmc_prop)
-get_prop(platform_app, mtk_log_tel_dbg_prop)
-get_prop(platform_app, mtk_mdworldmode_prop)
-get_prop(platform_app, mtk_ril_mode_prop)
-get_prop(platform_app, ril_active_md_prop)
-get_prop(platform_app, vendor_mtk_radio_prop)
-get_prop(platform_app, mnld_prop)
-get_prop(platform_app, mtk_fd_support_prop)
-get_prop(platform_app, mtk_rat_config_prop)
-get_prop(platform_app, mtk_ss_vendor_prop)
-get_prop(platform_app, mtk_telephony_addon_prop)
-get_prop(platform_app, tel_switch_prop)
-get_prop(platform_app, mtk_aal_ro_prop)
-get_prop(platform_app, mtk_mdm_prop)
-get_prop(platform_app, mtk_vilte_support_prop)
-get_prop(platform_app, ro_vendor_mtk_wfd_support_prop)
