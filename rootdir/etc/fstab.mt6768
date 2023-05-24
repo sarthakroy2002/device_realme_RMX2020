@@ -7,14 +7,14 @@
 
 
 #<src>                                                  <mnt_point>             <type>   <mnt_flags and options>                                                  <fs_mgr_flags> 
-system                                                  /system                 ext4     ro                                                                       wait,,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-developer-gsi.avbpubkey:/avb/r-developer-gsi.avbpubkey:/avb/s-developer-gsi.avbpubkey,async_discard,readahead_size_kb=128
-vendor                                                  /vendor                 ext4     ro                                                                       wait,,avb,logical,first_stage_mount,async_discard,readahead_size_kb=128
+system                                                  /system                 ext4     ro                                                                       wait,,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-developer-gsi.avbpubkey:/avb/r-developer-gsi.avbpubkey:/avb/s-developer-gsi.avbpubkey,discard,readahead_size_kb=128
+vendor                                                  /vendor                 ext4     ro                                                                       wait,,avb,logical,first_stage_mount,discard,readahead_size_kb=128
 product                                                 /product                ext4     ro                                                                       wait,logical,first_stage_mount,readahead_size_kb=128
 system_ext                                              /system_ext             ext4     ro                                                                       wait,logical,first_stage_mount,readahead_size_kb=128
 odm                                                     /odm                    ext4     ro                                                                       wait,logical,first_stage_mount,readahead_size_kb=128
-/dev/block/platform/bootdevice/by-name/md_udc           /metadata               ext4     noatime,nosuid,nodev,async_discard,data=journal,commit=1                 wait,formattable,first_stage_mount
-/dev/block/platform/bootdevice/by-name/cache            /cache                  ext4     noatime,nosuid,nodev,noauto_da_alloc,async_discard                       wait,check,formattable
-/dev/block/platform/bootdevice/by-name/userdata         /data                   ext4     noatime,nosuid,nodev,noauto_da_alloc,async_discard,errors=panic          latemount,wait,check,formattable,reservedsize=128m,fileencryption=aes-256-xts,readahead_size_kb=128
+/dev/block/platform/bootdevice/by-name/md_udc           /metadata               ext4     noatime,nosuid,nodev,discard,data=journal,commit=1                 wait,formattable,first_stage_mount
+/dev/block/platform/bootdevice/by-name/cache            /cache                  ext4     noatime,nosuid,nodev,noauto_da_alloc,discard                       wait,check,formattable
+/dev/block/platform/bootdevice/by-name/userdata         /data                   ext4     noatime,nosuid,nodev,noauto_da_alloc,discard,errors=panic          latemount,wait,check,formattable,reservedsize=128m,fileencryption=aes-256-xts,readahead_size_kb=128
 /dev/block/platform/bootdevice/by-name/userdata         /data                   f2fs     noatime,nosuid,nodev,discard,noflush_merge,fsync_mode=nobarrier,reserve_root=134217,resgid=1065 wait,check,formattable,reservedsize=128m,latemount,fileencryption=aes-256-xts,readahead_size_kb=128
 /dev/block/platform/bootdevice/by-name/dtbo             /dtbo                   emmc     defaults                                                                 defaults
 /dev/block/platform/bootdevice/by-name/vbmeta           /vbmeta                 emmc     defaults                                                                 defaults
@@ -22,11 +22,11 @@ odm                                                     /odm                    
 /dev/block/platform/bootdevice/by-name/boot             /boot                   emmc     defaults                                                                 first_stage_mount,nofail,
 /dev/block/platform/bootdevice/by-name/vbmeta_vendor    /vbmeta_vendor          emmc     defaults                                                                 first_stage_mount,nofail,
 /dev/block/platform/bootdevice/by-name/vbmeta_system    /vbmeta_system          emmc     defaults                                                                 first_stage_mount,nofail,,avb=vbmeta
-/dev/block/platform/bootdevice/by-name/protect1         /mnt/vendor/protect_f   ext4     noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc,async_discard   wait,check,formattable
-/dev/block/platform/bootdevice/by-name/protect2         /mnt/vendor/protect_s   ext4     noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc,async_discard   wait,check,formattable
-/dev/block/platform/bootdevice/by-name/nvdata           /mnt/vendor/nvdata      ext4     noatime,nosuid,nodev,noauto_da_alloc,async_discard                       wait,check,formattable
-/dev/block/platform/bootdevice/by-name/nvcfg            /mnt/vendor/nvcfg       ext4     noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc,async_discard   wait,check,formattable
-/dev/block/platform/bootdevice/by-name/persist          /mnt/vendor/persist     ext4     noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc,async_discard   wait,check,formattable
+/dev/block/platform/bootdevice/by-name/protect1         /mnt/vendor/protect_f   ext4     noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc,discard   wait,check,formattable
+/dev/block/platform/bootdevice/by-name/protect2         /mnt/vendor/protect_s   ext4     noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc,discard   wait,check,formattable
+/dev/block/platform/bootdevice/by-name/nvdata           /mnt/vendor/nvdata      ext4     noatime,nosuid,nodev,noauto_da_alloc,discard                       wait,check,formattable
+/dev/block/platform/bootdevice/by-name/nvcfg            /mnt/vendor/nvcfg       ext4     noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc,discard   wait,check,formattable
+/dev/block/platform/bootdevice/by-name/persist          /mnt/vendor/persist     ext4     noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc,discard   wait,check,formattable
 /dev/block/platform/bootdevice/by-name/my_custom        /my_custom              ext4     ro                                                                       wait,nofail
 /dev/block/platform/bootdevice/by-name/special_preload  /special_preload        ext4     ro                                                                       wait,nofail
 /dev/block/platform/bootdevice/by-name/opporeserve2     /mnt/vendor/opporeserve ext4     noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc                 wait,check,formattable
