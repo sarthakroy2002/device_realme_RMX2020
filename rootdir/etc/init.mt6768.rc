@@ -60,7 +60,7 @@ on late-init
 
 on charger
 
-    exec /bin/e2fsck -f -p /dev/block/platform/bootdevice/by-name/cache
+    exec /system/bin/e2fsck -f -p /dev/block/platform/bootdevice/by-name/cache
     mount ext4 /dev/block/platform/bootdevice/by-name/cache /cache rw wait
     chmod 0660 /dev/spm
     chown system system /dev/spm
@@ -99,7 +99,7 @@ on fs
     write /sys/kernel/debug/tracing/trace_marker "B|1|Mount"
     wait_for_prop hwservicemanager.ready "true"
     mount_all /vendor/etc/fstab.mt6768 --early
-    exec /bin/tune2fs -O has_journal -u 10010 -r 4096 /dev/block/platform/bootdevice/by-name/userdata
+    exec /system/bin/tune2fs -O has_journal -u 10010 -r 4096 /dev/block/platform/bootdevice/by-name/userdata
     write /sys/kernel/debug/tracing/trace_marker "E"
     write /proc/bootprof "INIT:Mount_END"
     write /sys/block/zram0/comp_algorithm lz4
