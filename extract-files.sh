@@ -59,14 +59,14 @@ function blob_fixup {
             grep -q "libshim_vtservice.so" "${2}" || patchelf --add-needed "libshim_vtservice.so" "${2}"
             ;;
         vendor/lib*/hw/audio.primary.mt6768.so)
-            patchelf --replace-needed "libmedia_helper.so" "libmedia_helper-v30.so" "${2}"
-            patchelf --replace-needed "libalsautils.so" "libalsautils-v30.so" "${2}"
+            grep -q "libmedia_helper-v30.so" "${2}" || patchelf --replace-needed "libmedia_helper.so" "libmedia_helper-v30.so" "${2}"
+            grep -q "libalsautils-v30.so" "${2}" || patchelf --replace-needed "libalsautils.so" "libalsautils-v30.so" "${2}"
             ;;
         vendor/lib*/hw/audio.usb.mt6768.so)
-            patchelf --replace-needed "libalsautils.so" "libalsautils-v30.so" "${2}"
+            grep -q "libalsautils-v30.so" "${2}" || patchelf --replace-needed "libalsautils.so" "libalsautils-v30.so" "${2}"
             ;; 
         vendor/bin/hw/android.hardware.wifi@1.0-service-lazy-mediatek)
-            patchelf --replace-needed "libwifi-hal.so" "libwifi-hal-mtk.so" "${2}"
+            grep -q "libwifi-hal-mtk.so" "${2}" || patchelf --replace-needed "libwifi-hal.so" "libwifi-hal-mtk.so" "${2}"
             ;;
         vendor/bin/hw/android.hardware.wifi@1.0-service-lazy-mediatek)
             ;&
@@ -80,10 +80,10 @@ function blob_fixup {
         vendor/lib/libmtkcam_stdutils.so)
             ;&
         vendor/lib64/libmtkcam_stdutils.so)
-            patchelf --replace-needed "libutils.so" "libutils-v29.so" "${2}"
+            grep -q "libutils-v29.so" "${2}" || patchelf --replace-needed "libutils.so" "libutils-v29.so" "${2}"
             ;;
         vendor/bin/hw/camerahalserver)
-            patchelf --replace-needed "libutils.so" "libutils-v30.so" "${2}"
+            grep -q "libutils-v30.so" "${2}" || patchelf --replace-needed "libutils.so" "libutils-v30.so" "${2}"
             ;;
         vendor/lib64/hw/android.hardware.camera.provider@2.4-impl-mediatek.so)
             grep -q libshim_camera_metadata.so "$2" || patchelf --add-needed libshim_camera_metadata.so "$2"
@@ -95,13 +95,13 @@ function blob_fixup {
             sed -i '/cpuset/Q' "$2"
             ;;
         vendor/lib64/hw/dfps.mt6768.so)
-            patchelf --replace-needed "libutils.so" "libutils-v30.so" "${2}"
+            grep -q "libutils-v30.so" "${2}" || patchelf --replace-needed "libutils.so" "libutils-v30.so" "${2}"
             ;;
         vendor/lib64/hw/vendor.mediatek.hardware.pq@2.3-impl.so)
-            patchelf --replace-needed "libutils.so" "libutils-v30.so" "${2}"
+            grep -q "libutils-v30.so" "${2}" || patchelf --replace-needed "libutils.so" "libutils-v30.so" "${2}"
             ;;
         vendor/lib/libMtkOmxVdecEx.so)
-            patchelf --replace-needed "libui.so" "libui-v32.so" "$2"
+            grep -q "libui-v32.so" "${2}" || patchelf --replace-needed "libui.so" "libui-v32.so" "$2"
             ;;
         vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc)
             ;&
