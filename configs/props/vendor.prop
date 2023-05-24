@@ -132,10 +132,9 @@ persist.vendor.log.tel_dbg=1
 persist.vendor.logmuch=true
 
 # Low Memory Killer
-ro.lmk.psi_complete_stall_ms=150
-ro.lmk.swap_free_low_percentage=20
-ro.lmk.thrashing_limit=30
-ro.lmk.thrashing_limit_decay=20
+ro.lmk.log_stats=true
+ro.lmk.use_minfree_levels=true
+ro.lmk.kill_heaviest_task=true
 ro.lmk.kill_timeout_ms=100
 
 # Media

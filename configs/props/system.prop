@@ -56,9 +56,8 @@ sys.ipo.disable=1
 # Kernel
 ro.kernel.zio=38,108,105,16
 
-# LMKD
+# Low Memory Killer
 ro.config.low_ram=false
-ro.lmk.log_stats=true
 ro.config.per_app_memcg=false
 
 # Order
