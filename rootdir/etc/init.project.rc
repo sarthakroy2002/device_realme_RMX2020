@@ -1,12 +1,11 @@
-# MTK project .rc configure
-
 on init
     mkdir /mnt/media_rw/usbotg 0700 media_rw media_rw
     mkdir /storage/usbotg 0700 root root
 
 on post-fs-data
 
-#Camera
+    # Camera
+    
     chmod 0660 /dev/MAINAF
     chown system camera /dev/MAINAF
 
@@ -28,18 +27,12 @@ on post-fs-data
     chmod 0660 /dev/BU64745GWZAF
     chown system camera /dev/BU64745GWZAF
 
-#ifdef ODM_WT_EDIT
-#/*Tian.Tian@ODM_WT.Camera.Driver, 2019/10/17, add for dual cam cali */
     mkdir mnt/vendor/persist/camera 0777 system camera
-#endif
 
-#ifdef ODM_WT_EDIT
-#Tongxing.Liu@ODM_WT.BSP.Touchscreen.Base,2020/01/08,Modify firmware path permissions. */
     mkdir /vendor/firmware/tp/19741 0666 root shell
-#endif
 
-#Flashlight
-# Xingyu.Liu@Camera.Driver, 2019/10/10, add for [wingtech ATO factory app camera]
+    # Flashlight
+
 	chmod 0666 /sys/class/flashlightdrv/kd_camera_flashlight/flash1
 	chown media system /sys/class/flashlightdrv/kd_camera_flashlight/flash1
 
@@ -49,9 +42,11 @@ on post-fs-data
 	chmod 0666 /sys/class/flashlightdrv/kd_camera_flashlight/flash3
 	chown media system /sys/class/flashlightdrv/kd_camera_flashlight/flash3
 
-#SMB
+    # SMB
     chown system system /proc/smb/ScreenComm
     chmod 0660 /proc/smb/ScreenComm
+
+    # SPM
 
     chmod 0660 /dev/spm
     chown system system /dev/spm

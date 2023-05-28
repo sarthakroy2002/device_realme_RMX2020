@@ -1,7 +1,8 @@
-# MTK platform .rc configure
 on post-fs-data
-    # calibration
+    
+    # Calibration
     mkdir /data/vendor/sensor 0774 system system
+    
     # Sensor
     chmod 0660 /dev/hwmsensor
     chmod 0660 /dev/msensor

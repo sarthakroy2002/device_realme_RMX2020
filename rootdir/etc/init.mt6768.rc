@@ -1,5 +1,3 @@
-# MTK platform .rc configure
-
 import /vendor/etc/init/hw/init.connectivity.rc
 import /vendor/etc/init/hw/init.mt6768.usb.rc
 import /vendor/etc/init/hw/init.project.rc
@@ -8,7 +6,6 @@ import /vendor/etc/init/hw/init.modem.rc
 
 on early-init
     write /proc/bootprof "INIT:early-init"
-    # boot perf. tune
     write /proc/perfmgr/boost_ctrl/cpu_ctrl/boot_freq "0 0 0 0"
     write /sys/devices/platform/10012000.dvfsrc/helio-dvfsrc/dvfsrc_req_ddr_opp 0
     mount debugfs debugfs /sys/kernel/debug
@@ -16,18 +13,18 @@ on early-init
 
 on init
     
-# create mountpoint for /mnt/vendor/persist partition
+    # create mountpoint for /mnt/vendor/persist partition
     mkdir /mnt/vendor/persist 0771 system system
 
-# change lk_env permission
+    # change lk_env permission
     chown root system /proc/lk_env
     chmod 0660 /proc/lk_env
 
-# increase sysctl_rmem_max and sysctl_wmem_max values to 2M
+    # increase sysctl_rmem_max and sysctl_wmem_max values to 2M
     write /proc/sys/net/core/wmem_max 8388608
     write /proc/sys/net/core/rmem_max 8388608
 
-# update cpus for cpuset cgroup
+    # update cpus for cpuset cgroup
     write /dev/cpuset/foreground/cpus 0-7
     write /dev/cpuset/foreground/boost/cpus 0-7
     write /dev/cpuset/background/cpus 0-3
@@ -35,7 +32,7 @@ on init
     write /dev/stune/top-app/schedtune.boost 1
     write /dev/cpuset/top-app/cpus 0-7
 
-# Disable Carrier Video Calling
+    # Disable Carrier Video Calling
     setprop persist.vendor.vilte_support 0
 
 service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service
@@ -54,12 +51,11 @@ on property:ro.boot.product.hardware.sku=""
 on late-init
     write /proc/bootprof "INIT:late-init"
 
-# enable rcu_expedited
+    # enable rcu_expedited
     write /sys/kernel/rcu_expedited 1
 
 
 on charger
-
     exec /system/bin/e2fsck -f -p /dev/block/platform/bootdevice/by-name/cache
     mount ext4 /dev/block/platform/bootdevice/by-name/cache /cache rw wait
     chmod 0660 /dev/spm
@@ -122,7 +118,7 @@ on late-fs
 on post-fs
     write /proc/bootprof "INIT:post-fs"
 
-    #persist
+    # persist
     chown system system /mnt/vendor/persist
     chmod 0771 /mnt/vendor/persist
 
@@ -141,23 +137,23 @@ on post-fs
     write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "3 100"
     write /proc/perfmgr/boost_ctrl/eas_ctrl/sched_stune_task_thresh 0
 
-    #change permissions for mediaserver
+    # change permissions for mediaserver
     chown root media /proc/clkmgr/mipi_test
 
-    #change permission for engineer mode
+    # change permission for engineer mode
     chown radio system /proc/clkmgr/pll_test
     chown radio system /proc/clkmgr/pll_fsel
     chmod 0664 /proc/clkmgr/pll_test
     chmod 0664 /proc/clkmgr/pll_fsel
     
-    #change permission for engineer mode
+    # change permission for engineer mode
     chown radio system /proc/freqhopping/dramc
     chown radio system /proc/freqhopping/dumpregs
     chown radio system /proc/freqhopping/freqhopping_debug
     chown radio system /proc/freqhopping/status
     chown radio system /proc/freqhopping/userdef
 
-# change owner
+    # change owner
     chown system system /proc/bootprof
     chmod 0664 /proc/bootprof
     chown root system /proc/mtprof/cputime
@@ -482,7 +478,8 @@ on post-fs-data
     # bluetooth
     chown bluetooth bluetooth /dev/hid-keyboard
     chmod 0660 /dev/hid-keyboard
-    #Use uinput's default permission
+
+    # Use uinput's default permission
     chown system net_bt_admin /dev/uinput
 
     # UIBC
@@ -722,11 +719,11 @@ on boot
     chmod 0220 /sys/power/tuxonice/do_hibernate
 
 
-# Smartbook Handler Framework
+    # Smartbook Handler Framework
     chown system system /sys/power/sb_state
     chmod 0660 /sys/power/sb_state
 
-# HMP CPU hotplug strategy
+    # HMP CPU hotplug strategy
     chown system system /proc/hps/num_base_perf_serv
     chmod 0660 /proc/hps/num_base_perf_serv
     chown system system /proc/hps/num_limit_power_serv
@@ -748,7 +745,7 @@ on boot
     chown system system /proc/hps/down_times
     chmod 0660 /proc/hps/down_times
 
-# PPM
+    # PPM
     chown system system /proc/ppm/mode
     chmod 0660 /proc/ppm/mode
     chown system system /proc/ppm/policy/perfserv_min_perf_idx
@@ -782,7 +779,7 @@ on boot
     chown system system /proc/ppm/policy/hica_settings/L_ONLY_to_4L_LL/loading_hold_time
     chmod 0660 /proc/ppm/policy/hica_settings/L_ONLY_to_4L_LL/loading_hold_time
 
-# cpu_loading
+    # cpu_loading
     chown system system /proc/cpu_loading/onoff
     chmod 0664 /proc/cpu_loading/onoff
     chown system system /proc/cpu_loading/overThrhld
@@ -794,7 +791,7 @@ on boot
     chown system system /proc/cpu_loading/uevent_enable
     chmod 0664 /proc/cpu_loading/uevent_enable
 
-# CPU freq
+    # CPU freq
     chown system system /proc/cpufreq/cpufreq_limited_by_hevc
     chmod 0660 /proc/cpufreq/cpufreq_limited_by_hevc
     chown system system /proc/cpufreq/cpufreq_limited_max_freq_by_user
@@ -804,7 +801,7 @@ on boot
     chown system system /proc/cpufreq/enable_hw_gov
     chmod 0660 /proc/cpufreq/enable_hw_gov
 
-# BW monitor
+    # BW monitor
     chown system system /proc/fliperfs/cg_enable
     chmod 0664 /proc/fliperfs/cg_enable
     chown system system /proc/fliperfs/cg_threshold
@@ -814,7 +811,7 @@ on boot
     chown system system /proc/fliperfs/perf
     chmod 0664 /proc/fliperfs/perf
 
-# perfmgr
+    # perfmgr
     chown system system /proc/perfmgr/smart/hps_is_heavy
     chmod 0660 /proc/perfmgr/smart/hps_is_heavy
     chown system system /proc/perfmgr/smart/hps_check_duration
@@ -826,7 +823,7 @@ on boot
     chown system system /sys/power/dcm_state
     chmod 0660 /sys/power/dcm_state
 
-# Netlog tool
+    # Netlog tool
    # change permissions about terminal
     chown root radio /proc/net/vlan/config
     chmod 0640 /proc/net/vlan/config
@@ -846,21 +843,21 @@ on boot
     chown root radio /proc/net/netfilter/nfnetlink_log
     chown root radio /proc/net/netfilter/nfnetlink_queue
 
-# WMT proc
+    # WMT proc
     chown shell system /proc/driver/wmt_dbg
     chown shell system /proc/driver/wmt_aee
 
-# define device for EMCSMDLOGGER
+    # define device for EMCSMDLOGGER
     chown system radio /dev/ttyGS3
     chmod 0660 /dev/ttyGS3
 
-# Define device for ATCID
+    # Define device for ATCID
     chmod 660 /dev/ttyGS0
     chown system radio /dev/ttyGS0
     chmod 660 /dev/ttyGS1
     chown system radio /dev/ttyGS1
 	
-# Add for MT_pmic_adc_cali
+    # Add for MT_pmic_adc_cali
     chown root system /dev/MT_pmic_adc_cali
     chmod 660 /dev/MT_pmic_adc_cali
 	
@@ -873,7 +870,7 @@ on property:sys.boot_completed=1
     write /proc/bootprof "0"
     write /proc/mtprintk ${persist.vendor.uartconsole.enable}
 
-## mtk printk uart controller
+# MTK printk uart controller
 on property:persist.vendor.uartconsole.enable=*
     write /proc/mtprintk ${persist.vendor.uartconsole.enable}
 
@@ -894,7 +891,6 @@ on property:sys.boot_completed=1
 
 # start EAS+
 on property:sys.boot_completed=1
-
     write /sys/devices/system/cpu/eas/enable 2
     write /proc/cpufreq/cpufreq_sched_disable 0
     chown system system /dev/stune/foreground/schedtune.prefer_idle
@@ -941,10 +937,11 @@ on property:persist.vendor.mediatek.fg.log.enable=1
 on property:vendor.mtk.md1.status=reset
     setprop persist.vendor.atm.mdmode normal
 
-# FPSGO FBT Game
+# FPSGO
 on boot
     insmod /vendor/lib/modules/fpsgo.ko
 
+# Charger Service
 service charger /bin/chargeonlymode
     class charger
     critical
@@ -955,6 +952,7 @@ service charger /bin/chargeonlymode
 on property:vendor.ril.mtk=1
     stop vendor.ril-daemon
 
+# DT2W Service
 on property:persist.sys.dt2w=0
     write /proc/touchpanel/double_tap_enable 0
 

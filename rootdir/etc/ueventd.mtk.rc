@@ -1,62 +1,56 @@
-#change partition permission
+# Partitions
 /dev/block/mmcblk0                                              0660    root    system
 /dev/block/mmcblk0boot0                                         0660    root    system
 /dev/block/mmcblk0boot1                                         0660    root    system
 /dev/misc-sd                                                    0660    root    system
-/dev/block/platform/bootdevice/by-name/misc2     0660    root    system
-/dev/block/platform/bootdevice/by-name/boot      0640    root    system
-/dev/block/platform/bootdevice/by-name/recovery  0640    root    system
-/dev/block/platform/bootdevice/by-name/secro     0640    root    system
-/dev/block/platform/bootdevice/by-name/seccfg    0660    root    system
-/dev/block/platform/bootdevice/by-name/proinfo   0660    root    system
-/dev/block/platform/bootdevice/by-name/nvram     0660    root    system
-/dev/block/platform/bootdevice/by-name/para      0660    root    system
-/dev/block/platform/bootdevice/by-name/logo      0660    root    system
-/dev/block/platform/bootdevice/by-name/frp       0660    root    system
-/dev/block/platform/bootdevice/by-name/md1img    0640    root    system
-/dev/block/platform/bootdevice/by-name/md1img_1  0640    root    system
-/dev/block/platform/bootdevice/by-name/md1img_a  0640    root    system
-/dev/block/platform/bootdevice/by-name/md1img_b  0640    root    system
-/dev/block/platform/bootdevice/by-name/md1dsp    0660    root    system
-/dev/block/platform/bootdevice/by-name/boot_para 0640    root    system
+/dev/block/platform/bootdevice/by-name/misc2                    0660    root    system
+/dev/block/platform/bootdevice/by-name/boot                     0640    root    system
+/dev/block/platform/bootdevice/by-name/recovery                 0640    root    system
+/dev/block/platform/bootdevice/by-name/secro                    0640    root    system
+/dev/block/platform/bootdevice/by-name/seccfg                   0660    root    system
+/dev/block/platform/bootdevice/by-name/proinfo                  0660    root    system
+/dev/block/platform/bootdevice/by-name/nvram                    0660    root    system
+/dev/block/platform/bootdevice/by-name/para                     0660    root    system
+/dev/block/platform/bootdevice/by-name/logo                     0660    root    system
+/dev/block/platform/bootdevice/by-name/frp                      0660    root    system
+/dev/block/platform/bootdevice/by-name/md1img                   0640    root    system
+/dev/block/platform/bootdevice/by-name/md1img_1                 0640    root    system
+/dev/block/platform/bootdevice/by-name/md1img_a                 0640    root    system
+/dev/block/platform/bootdevice/by-name/md1img_b                 0640    root    system
+/dev/block/platform/bootdevice/by-name/md1dsp                   0660    root    system
+/dev/block/platform/bootdevice/by-name/boot_para                0640    root    system
 
-#ifdef ODM_WT_EDIT
-#Kaitong.Zhang@ODM_WT.AD.ENGINEERINGMODE,2019/10/25,add for enginer hardwareinfo
-/dev/hardwareinfo         0660   root      system
-#endif
+# Engineering hardwareinfo
+/dev/hardwareinfo                                               0660    root    system
 
 # OTP
-/dev/otp                  0660   system     system
-/dev/block/platform/bootdevice/by-name/otp       0660    root    system
+/dev/otp                                                        0660    system  system
+/dev/block/platform/bootdevice/by-name/otp                      0660    root    system
 
-# Connectivity
-/dev/stpwmt               0660   system     system
-/dev/wmtdetect            0660   system     system
-/dev/fw_log_wmt           0660   system     system
+# WiFi
+/dev/stpwmt                                                     0660    system  system
+/dev/wmtdetect                                                  0660    system  system
+/dev/fw_log_wmt                                                 0660    system  system
+/dev/wmtWifi                                                    0660    wifi    wifi
+/dev/fw_log_wifi                                                0660    wifi    wifi
 
 # BT
-/dev/stpbt                0660   bluetooth  bluetooth
-/dev/fw_log_bt            0660   bluetooth  bluetooth
+/dev/stpbt             0660    bluetooth  bluetooth
+/dev/fw_log_bt         0660    bluetooth  bluetooth
 
 # GPS
-/dev/stpgps               0660   gps        gps
-/dev/gps                  0660   gps        system
-/dev/fw_log_gps           0660   gps        gps
+/dev/stpgps            0660   gps        gps
+/dev/gps               0660   gps        system
+/dev/fw_log_gps        0660   gps        gps
 
 # ANT
 /dev/stpant               0660   system     system
 
-# WIFI
-/dev/wmtWifi              0660   wifi     wifi
-/dev/fw_log_wifi          0660   wifi     wifi
-
 # FMRadio
 /dev/fm                   0660   system   system
 
-#ifdef ODM_WT_EDIT
-# Zengchao.Duan@ODM_WT.MM.AudioDriver.HAL, 2019/10/22, MonetX audio sia8108 bringup
+# Audio 
 /dev/sia81xx_tuning_if    0666   system     audio
-#endif
 
 # NFC
 /dev/msr3110              0666   root       root
@@ -78,7 +72,7 @@
 /dev/t-base-tui           0666   system     system
 
 # add the read write right of ttyUSB*
-/dev/bus/usb/*     	  0660   root       usb
+/dev/bus/usb/*     	      0660   root       usb
 /dev/ttyUSB0              0660   radio      radio
 /dev/ttyUSB1              0660   radio      radio
 /dev/ttyUSB2              0660   radio      radio
@@ -101,50 +95,50 @@
 /dev/ccci_aud             0660   audio      audio
 /dev/ccci2_aud            0660   audio      audio
 /dev/ccci3_aud            0660   audio      audio
-/dev/ccci_raw_audio            0660   audio      audio
-/dev/ccci3_raw_audio            0660   audio      audio
+/dev/ccci_raw_audio       0660   audio      audio
+/dev/ccci3_raw_audio      0660   audio      audio
 /dev/eemcs_aud            0660   audio      audio
 /dev/irtx                 0660   system     system
 /dev/ir-learning          0660   system     system
-# SGX device node
+
+# SGX
 /dev/pvrsrvkm             0666   root       root
 /dev/pvr_sync             0666   root       root
 
-
-/sys/devices/platform/leds-mt65xx/leds/green   delay_on      0664  system   system
-/sys/devices/platform/leds-mt65xx/leds/green   delay_off      0664  system   system
-/sys/devices/platform/leds-mt65xx/leds/red   delay_on      0664  system   system
-/sys/devices/platform/leds-mt65xx/leds/red   delay_off      0664  system   system
+# Lights
+/sys/devices/platform/leds-mt65xx/leds/green  delay_on      0664  system   system
+/sys/devices/platform/leds-mt65xx/leds/green  delay_off     0664  system   system
+/sys/devices/platform/leds-mt65xx/leds/red    delay_on      0664  system   system
+/sys/devices/platform/leds-mt65xx/leds/red    delay_off     0664  system   system
 /sys/devices/platform/leds-mt65xx/leds/blue   delay_on      0664  system   system
-/sys/devices/platform/leds-mt65xx/leds/blue   delay_off      0664  system   system
-/sys/class/leds/green   delay_on      0664  system   system
-/sys/class/leds/green   delay_off      0664  system   system
-/sys/class/leds/red   delay_on      0664  system   system
-/sys/class/leds/red   delay_off      0664  system   system
-/sys/class/leds/blue   delay_on      0664  system   system
-/sys/class/leds/blue   delay_off      0664  system   system
+/sys/devices/platform/leds-mt65xx/leds/blue   delay_off     0664  system   system
+/sys/class/leds/green                         delay_on      0664  system   system
+/sys/class/leds/green                         delay_off     0664  system   system
+/sys/class/leds/red                           delay_on      0664  system   system
+/sys/class/leds/red                           delay_off     0664  system   system
+/sys/class/leds/blue                          delay_on      0664  system   system
+/sys/class/leds/blue                          delay_off     0664  system   system
 
 #GPIO
 /dev/mtgpio               0600   radio      root
 
-
-#FOR VIA MODEM
+# Modem
 /dev/ttySDIO*             0660   radio      sdcard_rw
 /dev/ttyRB*               0660   radio      radio
 
-# Mali node
+# Mali
 /dev/mali                 0666   system     graphics
 
-# Change ION driver permission
+# ION
 /dev/ion                  0666   system     graphics
 
-#touch
+# Touch
 /dev/touch                0660   root       system
 /dev/hotknot              0660   root       system
 
-#hang_detect
+# hang_detect
 /dev/RT_Monitor           0600   system     system
 /dev/kick_powerkey        0600   system     system
 
-#MTK In-House TEE
+# MTK In-House TEE
 /dev/ttyACM0              0660   radio      radio

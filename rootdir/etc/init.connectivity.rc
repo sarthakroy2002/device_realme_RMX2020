@@ -1,27 +1,25 @@
-# MTK connectivity .rc configure
-
 on post-fs-data
 
-# /dev/ttyMT2 for Connectivity BT/FM/GPS usage
+    # /dev/ttyMT2 for Connectivity BT/FM/GPS usage
     chmod 0660 /dev/ttyMT2
     chown system system /dev/ttyMT2
 
-# /dev/ttyMT1 for GPS 3337 usage
+    # /dev/ttyMT1 for GPS 3337 usage
     chmod 0660 /dev/ttyMT1
     chown system system /dev/ttyMT1
 
-# GPS
+    # GPS
     mkdir /data/vendor/gps 0770 gps system
 
-# GPS EMI
+    # GPS EMI
     chmod 666 /dev/gps_emi
 
-# WiFi
+    # WiFi
     mkdir /data/vendor/wifi 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa/sockets 0770 wifi wifi
 
-# BT relayer mode used VCOM
+    # BT relayer mode used VCOM
     chown bluetooth bluetooth /dev/ttyGS2
     chmod 0660 /dev/ttyGS2
 
@@ -33,13 +31,6 @@ service mnld /vendor/bin/mnld
     user gps
     group gps inet misc sdcard_rw sdcard_r media_rw system radio wakelock
     socket mnld stream 660 gps system
-
-# GPS Debug Process
-service lbs_dbg /system/bin/lbs_dbg
-    class main
-    user system
-    group gps inet misc sdcard_rw sdcard_r media_rw system radio
-    socket lbs_dbg stream 660 gps system
 
 # Wlan
 service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
