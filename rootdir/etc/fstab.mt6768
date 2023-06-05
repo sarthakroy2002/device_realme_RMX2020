@@ -8,10 +8,20 @@
 
 #<src>                                                  <mnt_point>             <type>   <mnt_flags and options>                                                  <fs_mgr_flags> 
 system                                                  /system                 ext4     ro                                                                       wait,,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-developer-gsi.avbpubkey:/avb/r-developer-gsi.avbpubkey:/avb/s-developer-gsi.avbpubkey,discard,readahead_size_kb=128
+system                                                  /system                 erofs    ro                                                                       wait,,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-developer-gsi.avbpubkey:/avb/r-developer-gsi.avbpubkey:/avb/s-developer-gsi.avbpubkey,readahead_size_kb=128
+
 vendor                                                  /vendor                 ext4     ro                                                                       wait,,avb,logical,first_stage_mount,discard,readahead_size_kb=128
+vendor                                                  /vendor                 erofs    ro                                                                       wait,,avb,logical,first_stage_mount,readahead_size_kb=128
+
 product                                                 /product                ext4     ro                                                                       wait,logical,first_stage_mount,readahead_size_kb=128
+product                                                 /product                erofs    ro                                                                       wait,logical,first_stage_mount,readahead_size_kb=128
+
 system_ext                                              /system_ext             ext4     ro                                                                       wait,logical,first_stage_mount,readahead_size_kb=128
+system_ext                                              /system_ext             erofs    ro                                                                       wait,logical,first_stage_mount,readahead_size_kb=128
+
 odm                                                     /odm                    ext4     ro                                                                       wait,logical,first_stage_mount,readahead_size_kb=128
+odm                                                     /odm                    erofs    ro                                                                       wait,logical,first_stage_mount,readahead_size_kb=128
+
 /dev/block/platform/bootdevice/by-name/md_udc           /metadata               ext4     noatime,nosuid,nodev,discard,data=journal,commit=1                 wait,formattable,first_stage_mount
 /dev/block/platform/bootdevice/by-name/cache            /cache                  ext4     noatime,nosuid,nodev,noauto_da_alloc,discard                       wait,check,formattable
 /dev/block/platform/bootdevice/by-name/userdata         /data                   ext4     noatime,nosuid,nodev,noauto_da_alloc,discard,errors=panic          latemount,wait,check,formattable,reservedsize=128m,fileencryption=aes-256-xts,readahead_size_kb=128
