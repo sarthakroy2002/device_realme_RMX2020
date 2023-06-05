@@ -27,9 +27,6 @@ odm                                                     /odm                    
 /dev/block/platform/bootdevice/by-name/nvdata           /mnt/vendor/nvdata      ext4     noatime,nosuid,nodev,noauto_da_alloc,discard                       wait,check,formattable
 /dev/block/platform/bootdevice/by-name/nvcfg            /mnt/vendor/nvcfg       ext4     noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc,discard   wait,check,formattable
 /dev/block/platform/bootdevice/by-name/persist          /mnt/vendor/persist     ext4     noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc,discard   wait,check,formattable
-/dev/block/platform/bootdevice/by-name/my_custom        /my_custom              ext4     ro                                                                       wait,nofail
-/dev/block/platform/bootdevice/by-name/special_preload  /special_preload        ext4     ro                                                                       wait,nofail
-/dev/block/platform/bootdevice/by-name/opporeserve2     /mnt/vendor/opporeserve ext4     noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc                 wait,check,formattable
 /dev/block/platform/bootdevice/by-name/frp              /persistent             emmc     defaults                                                                 defaults
 /dev/block/platform/bootdevice/by-name/nvram            /nvram                  emmc     defaults                                                                 defaults
 /dev/block/platform/bootdevice/by-name/proinfo          /proinfo                emmc     defaults                                                                 defaults
