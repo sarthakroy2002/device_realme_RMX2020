@@ -111,6 +111,9 @@ function blob_fixup {
         vendor/etc/init/camerahalserver.rc)
             sed -i 's|writepid /dev/cpuset/camera-daemon/tasks /dev/stune/top-app/tasks|task_profiles CameraServiceCapacity MaxPerformance|g' "$2"
             ;;
+        lib/libshowlogo.so)
+            grep -q "libshim_showlogo.so" "${2}" || patchelf --add-needed "libshim_showlogo.so" "${2}"
+            ;;
     esac
 }
 
