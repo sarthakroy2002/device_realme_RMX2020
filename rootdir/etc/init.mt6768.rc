@@ -941,13 +941,6 @@ on property:vendor.mtk.md1.status=reset
 on boot
     insmod /vendor/lib/modules/fpsgo.ko
 
-# Charger Service
-service charger /bin/chargeonlymode
-    class charger
-    critical
-    seclabel u:r:charger:s0
-    group system graphics
-
 # Disable AOSP RIL if MTK RIL is up
 on property:vendor.ril.mtk=1
     stop vendor.ril-daemon

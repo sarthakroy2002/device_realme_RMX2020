@@ -287,9 +287,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_nfc/com.android.nfc_extras.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
-# Pixel Charger
-TARGET_INCLUDE_PIXEL_CHARGER := true
-
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.3.vendor
