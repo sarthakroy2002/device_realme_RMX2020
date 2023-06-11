@@ -1085,6 +1085,12 @@ lib/libsource.so|9baa104d77e0698e0097e746f9b42b38ec673600
 system_ext/lib/vendor.mediatek.hardware.videotelephony@1.0.so|5335199e474bb95305d80b6ae13c8cf6b480f842
 system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so|76c66b62da8a5cc622cac1b954c206ef18aa359a
 
+# Kernel Power Off Charging (KPOC)
+bin/kpoc_charger
+etc/init/kpoc_charger.rc
+lib/libshowlogo.so
+lib/libsysenv_system.so
+
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.0-service.trustonic
 vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service
