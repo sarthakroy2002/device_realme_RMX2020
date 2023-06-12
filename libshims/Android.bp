@@ -28,5 +28,6 @@ cc_library_shared {
     srcs: ["libshim_showlogo.cpp"],
     shared_libs: [
         "libgui",
+        "libutils",
     ],
 }
