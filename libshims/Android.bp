@@ -29,5 +29,6 @@ cc_library_shared {
     shared_libs: [
         "libgui",
         "libutils",
+        "libui",
     ],
 }

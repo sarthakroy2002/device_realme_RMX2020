@@ -1,4 +1,5 @@
 #include <gui/SurfaceComposerClient.h>
+#include <ui/Size.h>
 
 using namespace android;
 
@@ -32,5 +33,13 @@ extern "C" {
   void _ZNK7android14SurfaceControl10getSurfaceEv(void) {
     _ZN7android14SurfaceControl10getSurfaceEv();
   }
+
+  status_t _ZN7android21SurfaceComposerClient11Transaction5applyEbb(void* thisptr, bool synchronous, bool oneWay);
+
+  status_t _ZN7android21SurfaceComposerClient11Transaction5applyEb(void* thisptr, bool synchronous) {
+    return _ZN7android21SurfaceComposerClient11Transaction5applyEbb(thisptr, synchronous, false /* oneWay */);
+  }
+
+  ui::Size _ZN7android2ui4Size7INVALIDE;
 
 }
