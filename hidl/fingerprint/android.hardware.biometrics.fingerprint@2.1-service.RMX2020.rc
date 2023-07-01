@@ -39,3 +39,9 @@ on property:persist.vendor.fingerprint.fp_id=E_520 && property:init.svc.fps_hal=
 	stop fpexts_hal
 	stop vendor.fps_hal.RMX2020
 	start ets_hal
+
+on property:persist.vendor.fingerprint.available=false
+    stop fps_hal
+    stop fpexts_hal
+    stop vendor.fps_hal.RMX2020
+    stop ets_hal

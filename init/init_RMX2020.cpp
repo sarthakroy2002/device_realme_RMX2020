@@ -34,6 +34,9 @@
 #include <unistd.h>
 #include <sys/stat.h>
 #include <sys/types.h>
+#include <filesystem>
+#include <fstream>
+#include <iostream>
 
 #include <android-base/file.h>
 #include <android-base/logging.h>
@@ -92,13 +95,43 @@ void init_opperator_name_properties()
     }
 }
 
+std::string read_cmdline(const std::string& key) {
+    std::ifstream cmdline("/proc/cmdline");
+    std::string line;
+    std::string value;
+
+    if (cmdline.is_open()) {
+        while (std::getline(cmdline, line)) {
+            std::stringstream ss(line);
+            std::string token;
+
+            while (std::getline(ss, token, ' ')) {
+                std::string::size_type pos = token.find(key);
+                if (pos != std::string::npos) {
+                    value = token.substr(pos + key.length() + 1);
+                    return value;
+                }
+            }
+        }
+    }
+
+    return value;
+}
+
 void init_fp_properties()
 {
     char const *fp_name_file = "/proc/fp_id";
     std::string fp_name;
+    int avail = 0;
+    std::string boardid = read_cmdline("board_id");
+
+    if (boardid != "S98670BA1" && boardid != "S98670JA1" && boardid != "S98670LA1") {
+        property_override("persist.vendor.fingerprint.available", "false");
+        avail = 1;
+    }
 
     if (ReadFileToString(fp_name_file, &fp_name)) {
-        if (fp_name == "E_520") {
+        if (fp_name == "E_520" && avail == 0) {
             property_override("persist.vendor.fingerprint.fp_id", "E_520");
         }
     }
