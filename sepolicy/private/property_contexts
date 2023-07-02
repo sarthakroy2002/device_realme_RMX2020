@@ -18,6 +18,7 @@ init.svc.fpexts_hal                           u:object_r:system_oppo_fingerprint
 
 # Parts
 perf_profile                                  u:object_r:system_perf_prop:s0
+persist.perf_profile                          u:object_r:system_perf_prop:s0
 persist.cabc_profile                          u:object_r:system_cabc_prop:s0
 
 # Sensors
