@@ -37,6 +37,7 @@
 #include <filesystem>
 #include <fstream>
 #include <iostream>
+#include <vector>
 
 #include <android-base/file.h>
 #include <android-base/logging.h>
@@ -50,6 +51,16 @@
 using android::base::GetProperty;
 using android::base::ReadFileToString;
 
+std::vector<std::string> ro_props_default_source_order = {
+    "",
+    "odm.",
+    "system.",
+    "product.",
+    "system_ext.",
+    "vendor.",
+    "vendor_dlkm.",
+};
+
 void property_override(char const prop[], char const value[])
 {
     prop_info *pi;
@@ -59,6 +70,23 @@ void property_override(char const prop[], char const value[])
         __system_property_update(pi, value, strlen(value));
     else
         __system_property_add(prop, strlen(prop), value, strlen(value));
+}
+
+void set_device_props(const std::string device, const std::string model,
+        const std::string name, const std::string marketname) {
+    const auto set_ro_product_prop = [](const std::string &source,
+                                        const std::string &prop,
+                                        const std::string &value) {
+        auto prop_name = "ro.product." + source + prop;
+        property_override(prop_name.c_str(), value.c_str());
+    };
+
+    for (const auto &source : ro_props_default_source_order) {
+        set_ro_product_prop(source, "device", device);
+        set_ro_product_prop(source, "model", model);
+        set_ro_product_prop(source, "name", name);
+        set_ro_product_prop(source, "marketname", marketname);
+    }
 }
 
 void init_opperator_name_properties()
@@ -142,6 +170,8 @@ void init_fp_properties()
 
     if (!found) {
         property_override("persist.vendor.fingerprint.available", "false");
+        set_device_props("RMX2027", "RMX2027", "RMX2027", "RMX2027");
+        property_override("ro.build.fingerprint", "realme/RMX2027/RMX2027:10/QP1A.190711.020/1651798546:user/release-keys");
         avail = 1;
     }
 
