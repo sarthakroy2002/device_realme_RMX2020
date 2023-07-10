@@ -124,8 +124,23 @@ void init_fp_properties()
     std::string fp_name;
     int avail = 0;
     std::string boardid = read_cmdline("board_id");
+    std::string boardIds[] ={
+        "S98670AA1","S98670BA1","S98670CA1",
+	    "S98670GA1","S98670HA1","S98670JA1",
+	    "S98670KA1","S98670LA1","S98670MA1",
+	    "S98670NA1","S98670PA1","S98670WA1",
+	    "S986703A1","S986704A1"
+    };
 
-    if (boardid != "S98670BA1" && boardid != "S98670JA1" && boardid != "S98670LA1") {
+    bool found = false;
+    for (int i = 0; i < sizeof(boardIds) / sizeof(boardIds[0]); ++i) {
+        if (boardIds[i] == boardid) {
+            found = true;
+            break;
+        }
+    }
+
+    if (!found) {
         property_override("persist.vendor.fingerprint.available", "false");
         avail = 1;
     }

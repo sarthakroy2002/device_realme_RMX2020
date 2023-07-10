@@ -41,6 +41,8 @@ on property:persist.vendor.fingerprint.fp_id=E_520 && property:init.svc.fps_hal=
 	start ets_hal
 
 on property:persist.vendor.fingerprint.available=false
+    mount none /vendor/lost+found /vendor/etc/vintf/manifest/android.hardware.biometrics.fingerprint@2.1-service.RMX2020.xml bind
+    mount none /vendor/lost+found /vendor/etc/permissions/android.hardware.fingerprint.xml bind
     stop fps_hal
     stop fpexts_hal
     stop vendor.fps_hal.RMX2020
