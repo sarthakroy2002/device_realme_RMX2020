@@ -171,8 +171,11 @@ void init_fp_properties()
     if (!found) {
         property_override("persist.vendor.fingerprint.available", "false");
         set_device_props("RMX2027", "RMX2027", "RMX2027", "RMX2027");
+        property_override("ro.device", "RMX2027");
         property_override("ro.build.fingerprint", "realme/RMX2027/RMX2027:10/QP1A.190711.020/1651798546:user/release-keys");
         avail = 1;
+    }else{
+        property_override("ro.device", "RMX2020");
     }
 
     if (ReadFileToString(fp_name_file, &fp_name)) {

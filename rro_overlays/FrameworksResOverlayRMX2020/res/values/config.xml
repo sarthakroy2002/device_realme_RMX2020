@@ -199,10 +199,7 @@
     <!-- Boolean indicating if restoring network selection should be skipped -->
     <!-- The restoring is handled by modem if it is true-->
      <bool name="skip_restoring_network_selection">true</bool>
- 	
-	<!-- Whether to cleanup fingerprints upon connection to the daemon and when user switches -->
-    <bool name="config_cleanupUnusedFingerprints">false</bool>
-    
+ 	    
     <!--  Maximum number of supported users -->
      <integer name="config_multiuserMaximumUsers">5</integer>
 	 
@@ -352,14 +349,6 @@
     <!-- The default peak refresh rate for a given device. -->
     <integer name="config_defaultPeakRefreshRate">60</integer>
 
-    <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
-         when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
-         where: IDs are unique per device, Modality as defined in BiometricAuthenticator.java,
-         and Strength as defined in Authenticators.java -->
-    <string-array name="config_biometric_sensors" translatable="false" >
-        <item>0:2:15</item> <!-- ID0:Fingerprint:Strong -->
-    </string-array>
-
     <!-- Enable Zram writeback feature to allow unused pages in zram be written to flash. -->
     <bool name="config_zramWriteback">true</bool>
 
@@ -485,9 +474,6 @@
          Used to decide if we show pulse settings -->
     <bool name="config_ledCanPulse">false</bool>
 
-    <!-- Whether to cancel fingerprint operation if not idle -->
-    <bool name="config_fpCancelIfNotIdle">true</bool>
-
     <!-- List of comma separated package names for which we the system will not show crash like
          tts, etc. dialogs. -->
     <string name="config_appsNotReportingCrashes">com.google.android.tts</string>
@@ -527,7 +513,4 @@
     <!-- Feature flag to store TaskSnapshot in 16 bit pixel format to save memory. -->
     <bool name="config_use16BitTaskSnapshotPixelFormat">true</bool>
     
-    <!-- Fingerprint from stock ROM -->
-    <string name="config_stockFingerprint" translatable="false">realme/RMX2020/RMX2020:10/QP1A.190711.020/1651798546:user/release-keys</string>
-
 </resources>

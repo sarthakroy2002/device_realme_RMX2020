@@ -318,9 +318,13 @@ PRODUCT_PACKAGES += \
     CarrierConfigOverlayRMX2020 \
     DialerOverlayRMX2020 \
     DocumentsUIOverlayRMX2020 \
+    FingerprintFrameworksResOverlayRMX2020 \
+    FingerprintSystemUIOverlayRMX2020 \
     FrameworksResOverlayRMX2020 \
+    FrameworksResOverlayRMX2027 \
     SettingsOverlayRMX2020 \
     SettingsProviderOverlayRMX2020 \
+    SettingsProviderOverlayRMX2027 \
     SystemUIOverlayRMX2020 \
     TelephonyOverlayRMX2020 \
     TetheringResOverlayRMX2020 \
