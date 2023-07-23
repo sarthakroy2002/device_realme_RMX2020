@@ -275,6 +275,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(DEVICE_PATH)/configs/power/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
+# PowerOffAlarm
+PRODUCT_PACKAGES += PowerOffAlarm
+
 # Properties
 -include $(DEVICE_PATH)/configs/props/vendor_logging_prop.mk
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
