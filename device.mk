@@ -27,6 +27,11 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 # Dynamic Partition
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Android Extras
+PRODUCT_PACKAGES += \
+    ThemePicker \
+    messaging
+
 # APN
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
@@ -332,11 +337,6 @@ PRODUCT_PACKAGES += \
     TelephonyOverlayRMX2020 \
     TetheringResOverlayRMX2020 \
     WifiResOverlayRMX2020
-
-ifneq ($(ARROW_GAPPS),true)
-PRODUCT_PACKAGES += \
-    ApertureQRScannerOverlayRMX2020
-endif
 
 # Secure element
 PRODUCT_PACKAGES += \
