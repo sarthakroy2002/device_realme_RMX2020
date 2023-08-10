@@ -1,4 +1,4 @@
-# Device proprietary files - From sys_oplus_mssi_64_cn-user 11 RP1A.200720.011 RMX2020_11_C.11 release-keys, unless pinned
+# Device proprietary files - From RMX2020-user 11 RP1A.200720.011 RMX2020_11_C.12 release-keys, unless pinned
 
 # ADSP
 vendor/lib64/libadsprpc.so
