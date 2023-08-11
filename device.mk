@@ -12,6 +12,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 # Call proprietary blob setup
 $(call inherit-product, vendor/realme/RMX2020/RMX2020-vendor.mk)
 
+# Enable updating of APEXes
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+
+# Disable APEX compression
+# Keep this after including updatable_apex.mk
+PRODUCT_COMPRESSED_APEX := false
+
 # IMS
 $(call inherit-product, vendor/realme/RMX2020-ims/RMX2020-ims.mk)
 
