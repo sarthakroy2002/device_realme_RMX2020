@@ -8,6 +8,7 @@ PRODUCT_VENDOR_PROPERTIES +=  \
     persist.log.tag.CapaSwitch=S \
     persist.log.tag.CarrierExpressServiceImpl=S \
     persist.log.tag.CarrierExpressServiceImplExt=S \
+    persist.log.tag.ccci_mdinit=S \
     persist.log.tag.CountryDetector=S \
     persist.log.tag.DSSelector=S \
     persist.log.tag.DSSelectorOP01=S \
@@ -246,6 +247,7 @@ PRODUCT_VENDOR_PROPERTIES +=  \
     persist.log.tag.libPowerHal=S \
     persist.log.tag.mtkpower@impl=S \
     persist.log.tag.MDP=S \
+    persist.log.tag.thermal_repeater=S \
     persist.log.tag.mtkpower_client=S \
     persist.log.tag.wpfa_iptable_android=S
 	
