@@ -31,4 +31,8 @@
         <permission name="android.permission.MASTER_CLEAR"/>
         <permission name="android.permission.REAL_GET_TASKS"/>
     </privapp-permissions>
+
+    <privapp-permissions package="com.android.cellbroadcastreceiver.module">
+        <permission name="android.permission.READ_PHONE_STATE"/>
+    </privapp-permissions>
 </permissions>
