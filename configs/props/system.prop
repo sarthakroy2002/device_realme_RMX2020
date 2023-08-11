@@ -2,21 +2,14 @@
 ro.camera.sound.forced=0
 ro.audio.silent=0
 ro.config.vc_call_vol_steps=7
-persist.bluetooth.bluetooth_audio_hal.disabled=true
 
 # Brand
 Build.BRAND=MTK
 
 # Camera
 persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera,com.google.camera
-vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.camera,org.pixelexperience.faceunlock
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.camera
 vendor.camera.aux.packageexcludelist=org.telegram.messenger,com.microsoft.teams,com.discord
-
-# Charger
-ro.charger.enable_suspend=true
-
-# Graphics
-ro.opengles.version=196610
 
 # Dex
 dalvik.vm.dex2oat64.enabled=true
@@ -32,23 +25,10 @@ dalvik.vm.dex2oat-threads=6
 # Display
 debug.sf.enable_hwc_vds=0
 
-# Fingerprint
-fingerprint.nocleanup=true
-
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
 
-# IMS 
-persist.dbg.volte_avail_ovr=1
-persist.dbg.vt_avail_ovr=1
-persist.dbg.wfc_avail_ovr=1
-persist.dbg.ims_volte_enable=1
-persist.radio.rat_on=combine
-persist.radio.data_ltd_sys_ind=1
-persist.radio.data_con_rprt=1
-persist.radio.calls.on.ims=1
-
-# RIL
+# Radio
 persist.sys.fflag.override.settings_provider_model=false
 
 # IPO
@@ -58,7 +38,7 @@ sys.ipo.disable=1
 # Kernel
 ro.kernel.zio=38,108,105,16
 
-# OPPO
+# OPLUS
 ro.build.display.wtid.mp=SW_S98670AA1_V010_USRD_TEST
 ro.build.display.wtid.ato=SW_S98670AA1_V010_USRD_TEST
 ro.build.display.wtid.monet.mp=SW_S98670AA1_V006_M10_R_USRD_MP
@@ -73,15 +53,9 @@ ro.lmk.log_stats=true
 # Order
 ro.product.property_source_order=odm,vendor,product,system
 
-# Performance
-ro.mtk_perf_simple_start_win=1
-ro.mtk_perf_fast_start_win=1
-ro.mtk_perf_response_time=1
-
 # Product
 ro.product.board=oppo6769
 ro.board.platform=mt6768
-ro.hardware.egl=mali
 
 # System
 persist.sys.binary_xml=false
@@ -99,17 +73,6 @@ ro.mediatek.wlan.p2p=1
 mediatek.wlan.ctia=0
 wifi.tethering.interface=ap0
 wifi.direct.interface=p2p0
-
-# Tweak the memory management of the device, enable more background apps.. etc..
-ro.config.fha_enable=true
-ro.sys.fw.bg_apps_limit=32
-ro.config.dha_cached_max=16
-ro.config.dha_empty_max=42
-ro.config.dha_empty_init=32
-ro.config.dha_lmk_scale=0.545
-ro.config.dha_th_rate=2.3
-ro.config.sdha_apps_bg_max=64
-ro.config.sdha_apps_bg_min=8
 
 # ZRAM
 ro.zram.mark_idle_delay_mins=60
