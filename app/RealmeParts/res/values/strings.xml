@@ -26,43 +26,19 @@
     <string name="cabc_normal">On</string>
     <string name="cabc_balanced">Balanced Mode</string>
     <string name="cabc_aggressive">Super power saving mode</string>
-    <!-- Charging -->
-    <string name="smart_charging_main_title">Battery</string>
-    <string name="smart_charging_title">Smart Charging</string>
-    <string name="smart_charging_summary">Helps in cooling down &amp; also protects from over charging the device</string>
-    <string name="reset_stats_title">Reset battery stats</string>
-    <string name="reset_stats_summary">Battery stats will get reset when charging limit is reached</string>
-    <!-- DC dimming -->
-    <string name="dc_mode_summary">DC Dimming reduces eye strain in low light conditions but may result in reduced image quality and poor color production.</string>
-    <string name="dc_mode_title">DC-Dimming</string>
-    <string name="tile_dc_mode">DC-Dimming</string>
-    <!-- HBM mode -->
-    <string name="hbm_mode_summary">Peak brightness for better visibility in outdoors</string>
-    <string name="hbm_mode_title">High brightness mode</string>
-    <string name="tile_hbm_mode">High brightness mode</string>
-    <!-- srgb mode -->
-    <string name="srgb_mode_summary">sRGB mode for simpler colour display</string>
-    <string name="srgb_mode_title">sRGB mode</string>
-    <string name="tile_srgb_mode">sRGB</string>
+    
     <!-- otg mode -->
     <string name="otg_mode_summary">Enable USB-OTG power supply for external headphones and flash drives</string>
     <string name="otg_mode_title">Enable USB-OTG</string>
     <string name="tile_otg_mode">Enable USB-OTG</string>
+
     <!-- perf profiles -->
     <string name="perf_title">Device Performance</string>
     <string name="perf_profile_title">Performance Profile</string>
     <string name="mode_balance">Balanced</string>
     <string name="mode_battery">Power save</string>
     <string name="mode_perf">Performance</string>
-    <!-- Refresh rate -->
-    <string name="refresh_title">Screen Refresh Rate</string>
-    <string name="tile_refresh_rate">Refresh Rate</string>
-    <string name="refresh_rate_60_title">60Hz</string>
-    <string name="refresh_rate_60_summary">Less smoothness but slightly extended battery life</string>
-    <string name="refresh_rate_90_title">90Hz</string>
-    <string name="refresh_rate_90_summary">Maximum smoothness with higher refresh rate but Apps&#47;Games can still limit to 60 FPS</string>
-    <string name="refresh_rate_90Forced_title">Smooth Display</string>
-    <string name="refresh_rate_90Forced_summary">Force display to 90Hz which improves touch responsiveness &amp; animation quality. Increases battery usage. </string>
+
     <!-- fps info -->
     <string name="fps_info_title">FPS overlay</string>
     <string name="fps_info_summary">Show overlay with current frames per second</string>

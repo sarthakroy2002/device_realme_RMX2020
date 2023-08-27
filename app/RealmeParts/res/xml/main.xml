@@ -12,43 +12,6 @@
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory
-        android:key="charging"
-        android:title="@string/smart_charging_main_title">
-
-        <SwitchPreference
-            android:key="smart_charging"
-            android:icon="@drawable/ic_charging_main"
-            android:summary="@string/smart_charging_summary"
-            android:title="@string/smart_charging_title" />
-
-        <com.realmeparts.SecureSettingListPreference
-            android:key="charging_speed"
-            android:icon="@drawable/ic_charging_speed"
-            android:title="Charging Speed"
-            android:dialogTitle="Select Charging Speed"
-            android:entries="@array/charging_speed_entries"
-            android:entryValues="@array/charging_speed_values"
-            android:defaultValue="0"
-            android:summary="%s" />
-
-        <com.realmeparts.SeekBarPreference
-            android:key="seek_bar"
-            android:title="Select charging limit"
-            android:layout="@layout/preference_slider"
-            android:defaultValue="95"
-            android:max="100"
-            android:min="80"
-            android:layout_gravity="center_vertical"
-            android:layout_width="match_parent"/>
-
-        <SwitchPreference
-            android:key="reset_stats"
-            android:icon="@drawable/ic_info_outline_24dp"
-            android:title="@string/reset_stats_title"
-            android:summary="@string/reset_stats_summary" />
-    </PreferenceCategory>
-
-    <PreferenceCategory
         android:key="perf"
         android:title="@string/perf_title">
 
@@ -75,24 +38,6 @@
             android:defaultValue="0"
             android:title="@string/cabc_title" />
 
-        <SwitchPreference
-            android:icon="@drawable/dc_mode_icon"
-            android:key="dc"
-            android:summary="@string/dc_mode_summary"
-            android:title="@string/dc_mode_title" />
-
-        <SwitchPreference
-            android:key="hbm"
-            android:icon="@drawable/ic_hbm"
-            android:summary="@string/hbm_mode_summary"
-            android:title="@string/hbm_mode_title" />
-
-        <SwitchPreference
-            android:icon="@drawable/srgb_mode_icon"
-            android:key="srgb"
-            android:summary="@string/srgb_mode_summary"
-            android:title="@string/srgb_mode_title" />
-
         <Preference
             android:key="doze"
 	    android:icon="@drawable/ic_doze"
@@ -102,33 +47,6 @@
                  android:targetPackage="com.realmeparts"
                  android:targetClass="com.realmeparts.doze.DozeSettingsActivity"/>
         </Preference>
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="refresh_rate"
-        android:title="@string/refresh_title">
-
-        <com.realmeparts.RadioButtonPreference
-            android:icon="@drawable/refresh_rate_60_icon"
-            android:key="refresh_rate_60"
-            android:checked="false"
-            android:title="@string/refresh_rate_60_title"
-            android:summary="@string/refresh_rate_60_summary" />
-
-        <com.realmeparts.RadioButtonPreference
-            android:icon="@drawable/refresh_rate_90_icon"
-            android:key="refresh_rate_90"
-            android:checked="true"
-            android:enabled="true"
-            android:title="@string/refresh_rate_90_title"
-            android:summary="@string/refresh_rate_90_summary"  />
-
-        <SwitchPreference
-            android:key="refresh_rate_90Forced"
-            android:icon="@drawable/refresh_rate_90forced_icon"
-            android:summary="@string/refresh_rate_90Forced_summary"
-            android:title="@string/refresh_rate_90Forced_title" />
 
     </PreferenceCategory>
 

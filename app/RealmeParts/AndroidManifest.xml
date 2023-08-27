@@ -80,53 +80,9 @@
 
         <!-- Quick Settings Tiles -->
         <service
-            android:name="com.realmeparts.DCModeTileService"
-            android:icon="@drawable/ic_dc_tile"
-            android:label="@string/tile_dc_mode"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
-            android:exported="true">
-            <intent-filter>
-                <action
-                    android:name="android.service.quicksettings.action.QS_TILE"/>
-            </intent-filter>
-        </service>
-        <service
-            android:name="com.realmeparts.SRGBModeTileService"
-            android:icon="@drawable/ic_srgb_tile"
-            android:label="@string/tile_srgb_mode"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
-            android:exported="true">
-            <intent-filter>
-                <action
-                    android:name="android.service.quicksettings.action.QS_TILE"/>
-            </intent-filter>
-        </service>
-        <service
-            android:name="com.realmeparts.HBMModeTileService"
-            android:icon="@drawable/ic_hbm"
-            android:label="@string/tile_hbm_mode"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
-            android:exported="true">
-            <intent-filter>
-                <action
-                    android:name="android.service.quicksettings.action.QS_TILE"/>
-            </intent-filter>
-        </service>
-        <service
             android:name="com.realmeparts.PerfProfileTileService"
             android:icon="@drawable/ic_perf_profile"
             android:label="@string/perf_profile_title"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
-            android:exported="true">
-            <intent-filter>
-                <action
-                    android:name="android.service.quicksettings.action.QS_TILE"/>
-            </intent-filter>
-        </service>
-        <service
-            android:name="com.realmeparts.RefreshRateTileService"
-            android:icon="@drawable/ic_refresh_tile_60"
-            android:label="@string/tile_refresh_rate"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
             android:exported="true">
             <intent-filter>
@@ -159,12 +115,6 @@
                 <action
                     android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
-        </service>
-        <service android:name="com.realmeparts.SmartChargingService"
-                android:exported="false">
-        </service>
-        <service android:name="com.realmeparts.HBMService"
-                android:exported="false">
         </service>
         <service android:name="com.realmeparts.doze.DozeService"
                 android:exported="false">
