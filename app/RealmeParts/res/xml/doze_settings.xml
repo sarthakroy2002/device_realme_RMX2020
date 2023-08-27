@@ -19,6 +19,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/ambient_display_title">
 
+    <com.android.settingslib.widget.TopIntroPreference
+        android:key="doze_top_intro"
+        android:title="@string/ambient_display_enable_summary"/>gi
+
     <com.android.settingslib.widget.MainSwitchPreference
         android:defaultValue="false"
         android:key="doze_enable"
