@@ -11,8 +11,8 @@
      limitations under the License.
 -->
 <resources>
-    <string name="device_title">Realme Settings</string>
-    <string name="device_summary">Adjust Realme specific device settings</string>
+    <string name="device_title">Device Settings</string>
+    <string name="device_summary">Adjust device specific settings</string>
     <string name="display_title">Display</string>
     <string name="misc_title">Misc settings</string>
 
