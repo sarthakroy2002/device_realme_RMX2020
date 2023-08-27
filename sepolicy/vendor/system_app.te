@@ -4,6 +4,8 @@ allow system_app proc_pagetypeinfo:file r_file_perms;
 allow system_app proc_vmallocinfo:file r_file_perms;
 allow system_app proc_tp:dir search;
 allow system_app proc_tp:file rw_file_perms;
+allow system_app sysfs_oppo_charger:dir search;
+allow system_app sysfs_oppo_charger:file rw_file_perms;
 allow system_app sysfs_fps:dir search;
 allow system_app sysfs_fps:file r_file_perms;
 allow system_app sysfs_sia81xx_file:dir { r_dir_perms search };
