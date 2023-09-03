@@ -76,6 +76,9 @@ function blob_fixup() {
         vendor/lib64/hw/vendor.mediatek.hardware.pq@2.6-impl.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v30.so" "${2}"
             ;;
+        vendor/lib/libMtkOmxVdecEx.so)
+            patchelf --replace-needed "libui.so" "libui-v32.so" "$2"
+            ;;
     esac
 }
 
