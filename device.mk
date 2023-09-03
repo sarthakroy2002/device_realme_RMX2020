@@ -403,10 +403,6 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/mediatek \
     $(DEVICE_PATH)
 
-# Camera
-PRODUCT_PACKAGES += \
-    Snap
-
 # Symbols
 PRODUCT_PACKAGES += \
     libshim_vtservice
