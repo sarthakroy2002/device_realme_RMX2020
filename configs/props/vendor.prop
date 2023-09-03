@@ -56,7 +56,6 @@ dalvik.vm.heaptargetutilization=0.75
 dalvik.vm.mtk-stack-trace-file=/data/anr/mtk_traces.txt
 
 # Display
-debug.renderengine.backend=skiaglthreaded
 debug.sf.latch_unsignaled=0
 debug.sf.late.sf.duration=27600000
 debug.sf.late.app.duration=20000000
