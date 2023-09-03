@@ -8,6 +8,8 @@ type proc_oppo_fp, fs_type, proc_type;
 type proc_oppo_sensor, file_type, proc_type;
 type proc_oplus_mtkcali, file_type, proc_type;
 type sysfs_mtusb_saving, fs_type, sysfs_type;
+type sysfs_mtk_cpufreq, fs_type, sysfs_type;
+type sysfs_mtk_gpufreq, fs_type, sysfs_type;
 
 # Audio
 type sysfs_sia81xx_file, fs_type, sysfs_type;

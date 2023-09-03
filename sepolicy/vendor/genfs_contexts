@@ -7,6 +7,8 @@ genfscon proc /oppoCustom/Sensor u:object_r:proc_oppo_sensor:s0
 genfscon proc /oplusSensorFeature/is_support_mtk_cali u:object_r:proc_oplus_mtkcali:s0
 genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:mt6358-pmic/mt635x-auxadc/wakeup/wakeup4/event_count u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/mt_usb/saving u:object_r:sysfs_mtusb_saving:s0
+genfscon sysfs /devices/system/cpu/cpufreq/mtk/.cluster_(min|max)_freq  u:object_r:sysfs_mtk_cpufreq:s0
+genfscon sysfs /kernel/gpu/gpu_(min|max)_clock          u:object_r:sysfs_mtk_gpufreq:s0
 
 # Audio
 genfscon sysfs /devices/platform/sia81xx@L u:object_r:sysfs_sia81xx_file:s0
