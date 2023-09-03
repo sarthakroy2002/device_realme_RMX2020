@@ -1091,11 +1091,6 @@ vendor/lib64/hw/android.hardware.thermal@2.0-impl.so
 vendor/lib/hw/thermal.mt6768.so
 vendor/lib64/hw/thermal.mt6768.so
 
-# Vibrator - from Nokia/Ronin_00WW/RNN_sprout:11/RP1A.200720.011/00WW_1_100:user/release-keys
-vendor/bin/hw/android.hardware.vibrator-service.mediatek|6a99b17250dae08eeeb4a720df65ef61b0542021
-vendor/etc/init/vibrator-mtk-default.rc|63f7577081fc8aca1d3cae9a32a77021ff041796
--vendor/etc/vintf/manifest/vibrator-mtk-default.xml|1a42ecd34f950e3737c61247b2d1d85039643729
-
 # WiFi - from Redmi/merlin/merlin:11/RP1A.200720.011/V12.0.5.0.RJOCNXM:user/release-keys
 vendor/bin/hw/hostapd|22d0e25a3779bd1a8335402f689e5ed2d3eca83a
 vendor/bin/hw/wpa_supplicant|4ae39a767cd12d610032eab6b34aed869f6e7e47
