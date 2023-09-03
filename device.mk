@@ -302,14 +302,10 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-V1.vendor \
-    android.hardware.power-V1-ndk_platform.vendor \
-    android.hardware.power@1.3.vendor
+    android.hardware.power-service.example
 
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/power/power_app_cfg:$(TARGET_COPY_OUT_VENDOR)/etc/power_app_cfg \
-    $(DEVICE_PATH)/configs/power/powercontable.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powercontable.xml \
-    $(DEVICE_PATH)/configs/power/powerscntbl.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerscntbl.xml
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.3.vendor
 
 # PowerOffAlarm
 PRODUCT_PACKAGES += PowerOffAlarm

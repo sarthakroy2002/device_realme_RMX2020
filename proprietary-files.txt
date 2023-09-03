@@ -787,7 +787,6 @@ vendor/bin/hw/vendor.mediatek.hardware.dplanner@2.0-service
 vendor/bin/hw/vendor.mediatek.hardware.gpu@1.0-service
 vendor/bin/hw/vendor.mediatek.hardware.mms@1.5-service
 vendor/bin/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-service
-vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service
 vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
 vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc
@@ -798,8 +797,6 @@ vendor/etc/init/vendor.mediatek.hardware.dplanner@2.0-service.rc
 vendor/etc/init/vendor.mediatek.hardware.gpu@1.0-service.rc
 vendor/etc/init/vendor.mediatek.hardware.mms@1.5-service.rc
 vendor/etc/init/vendor.mediatek.hardware.mtkcodecservice@1.1-service.rc
-vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc
-vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc
 vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
 vendor/etc/permissions/com.mediatek.hardware.vow.xml
@@ -808,7 +805,6 @@ vendor/etc/permissions/com.mediatek.hardware.vow.xml
 vendor/lib/hw/vendor.mediatek.hardware.dfps@1.0-impl.so
 vendor/lib/hw/vendor.mediatek.hardware.mms@1.5-impl.so
 vendor/lib/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-impl.so
-vendor/lib/hw/vendor.mediatek.hardware.mtkpower@1.1-impl.so
 vendor/lib/hw/vendor.mediatek.hardware.nvram@1.1-impl.so
 vendor/lib/hw/vendor.mediatek.hardware.pq@2.6-impl.so
 vendor/lib/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
@@ -896,11 +892,9 @@ vendor/lib/vendor.mediatek.hardware.pq@2.6.so
 vendor/lib64/hw/vendor.mediatek.hardware.dfps@1.0-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.mms@1.5-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-impl.so
-vendor/lib64/hw/vendor.mediatek.hardware.mtkpower@1.1-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.nvram@1.1-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.pq@2.6-impl.so
 vendor/lib64/mtkcam/libmtkcam_streaminfo_plugin-p1stt.so
-vendor/lib64/android.hardware.power-service-mediatek.so
 vendor/lib64/libMtkOmxCore.so
 vendor/lib64/libMtkSpeechEnh.so
 vendor/lib64/libmtk-ril.so
@@ -1048,11 +1042,6 @@ vendor/lib64/liboppo_arcSoftBokehEngine_new.so
 vendor/lib64/liboppo_blank_algo.so
 vendor/lib64/liboppo_platform_hwi.so
 
-# Power (Hardware)
--vendor/etc/vintf/manifest/power-default.xml:vendor/etc/vintf/manifest/power-mtk-default.xml
-vendor/lib/hw/power.mt6768.so
-vendor/lib64/hw/power.mt6768.so
-
 # Radio
 odm/lib/vendor.oplus.hardware.appradio@1.0.so
 odm/lib/vendor.oplus.hardware.radio@1.0.so
@@ -1155,8 +1144,6 @@ vendor/app/mcRegistry/9073f03a9618383bb1856eb3f990babd.drbin
 vendor/app/mcRegistry/9073f03a9618383bb1856eb3f990babd.tlbin
 vendor/app/mcRegistry/98fb95bcb4bf42d26473eae48690d7ea.tabin
 vendor/bin/hw/mtkfusionrild
-vendor/bin/hw/power_native_test_v_1_0
-vendor/bin/hw/power_native_test_v_1_1
 vendor/bin/hw/vendor.trustonic.tee@1.1-service
 vendor/bin/hw/vtservice_hidl
 vendor/bin/atcid
@@ -1641,10 +1628,7 @@ vendor/lib/libnvram_platform.so
 vendor/lib/libnvram_sec.so
 vendor/lib/libocam_common.so
 vendor/lib/liboplus_audio_config.so
-vendor/lib/libperfctl_vendor.so
 vendor/lib/libpixelflinger.so
-vendor/lib/libpowerhal.so
-vendor/lib/libpowerhalwrap_vendor.so
 vendor/lib/libpq_cust_base.so
 vendor/lib/libpq_prot.so
 vendor/lib/librgbwlightsensor.so
@@ -1861,10 +1845,7 @@ vendor/lib64/libnvram_platform.so
 vendor/lib64/libnvram_sec.so
 vendor/lib64/libocam_common.so
 vendor/lib64/liboplus_audio_config.so
-vendor/lib64/libperfctl_vendor.so
 vendor/lib64/libpixelflinger.so
-vendor/lib64/libpowerhal.so
-vendor/lib64/libpowerhalwrap_vendor.so
 vendor/lib64/libpq_cust_base.so
 vendor/lib64/libpq_prot.so
 vendor/lib64/libratconfig.so
