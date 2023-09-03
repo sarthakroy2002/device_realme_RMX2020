@@ -7,6 +7,7 @@ vendor/lib64/libadsprpc.so
 vendor/lib64/libudf.so|f57a4f63592b62c2de72b377021327756fc5fac1
 
 # Audio
+vendor/lib/libalsautils.so:vendor/lib/libalsautils-mtk.so
 vendor/lib/libaudio_engineer_test.so
 vendor/lib/libaudio_param_parser-vnd.so
 vendor/lib/libaudiocompensationfilter_vendor.so
@@ -21,6 +22,7 @@ vendor/lib/libaudioprimarydevicehalifclient.so
 vendor/lib/libaudiotoolkit_vendor.so
 vendor/lib/liboplus_audio_config.so
 vendor/lib/libtinyxml.so
+vendor/lib64/libalsautils.so:vendor/lib64/libalsautils-mtk.so
 vendor/lib64/libaudio_engineer_test.so
 vendor/lib64/libaudio_param_parser-vnd.so
 vendor/lib64/libaudiocompensationfilter_vendor.so

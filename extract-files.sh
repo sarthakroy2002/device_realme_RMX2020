@@ -60,7 +60,10 @@ function blob_fixup() {
             ;;
         vendor/lib*/hw/audio.primary.mt6768.so)
             "${PATCHELF}" --replace-needed "libmedia_helper.so" "libmedia_helper-v30.so" "${2}"
+            "${PATCHELF}" --replace-needed "libalsautils.so" "libalsautils-mtk.so" "${2}"
             ;;
+        vendor/lib*/hw/audio.usb.mt6768.so)
+            "${PATCHELF}" --replace-needed "libalsautils.so" "libalsautils-mtk.so" "${2}"
         vendor/lib*/libmtkcam_stdutils.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v30.so" "${2}"
             ;;
