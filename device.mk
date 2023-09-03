@@ -305,6 +305,10 @@ PRODUCT_PACKAGES += \
     android.hardware.power-service.example
 
 PRODUCT_PACKAGES += \
+    libmtkperf_client_vendor \
+    libmtkperf_client
+
+PRODUCT_PACKAGES += \
     android.hardware.power@1.3.vendor
 
 # PowerOffAlarm
@@ -329,6 +333,7 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.5.vendor \
     android.hardware.radio.config@1.2.vendor \
     android.hardware.radio.deprecated@1.0.vendor
+
 
 # Ramdisk
 PRODUCT_PACKAGES += \
