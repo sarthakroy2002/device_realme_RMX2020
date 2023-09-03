@@ -81,7 +81,10 @@ function blob_fixup() {
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v30.so" "${2}"
             ;;
         vendor/lib/libMtkOmxVdecEx.so)
-            patchelf --replace-needed "libui.so" "libui-v32.so" "$2"
+            "${PATCHELF}" --replace-needed "libui.so" "libui-v32.so" "$2"
+            ;;
+        vendor/lib64/hw/android.hardware.thermal@2.0-impl.so)
+            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "$2"
             ;;
     esac
 }
