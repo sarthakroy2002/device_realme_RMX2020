@@ -92,6 +92,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libshim_camera_metadata
 
+PRODUCT_PACKAGES += \
+    Aperture
+
 # Configstore
 PRODUCT_PACKAGES += \
     disable_configstore
