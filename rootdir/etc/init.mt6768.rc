@@ -948,15 +948,6 @@ on property:sys.boot_completed=1 && property:ro.boot.atm=enable
 on property:vendor.mtk.md1.status=reset
     setprop persist.vendor.atm.mdmode normal
 
-# Mediacodec
-service vendor.media.omx /vendor/bin/hw/android.hardware.media.omx@1.0-service
-    override
-    class main
-    user mediacodec
-    group camera drmrpc mediadrm
-    ioprio rt 4
-    writepid /dev/cpuset/foreground/tasks
-
 
 # Disable AOSP RIL if MTK RIL is up
 on property:vendor.ril.mtk=1
