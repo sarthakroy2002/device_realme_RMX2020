@@ -15,12 +15,6 @@ $(call inherit-product, vendor/realme/RMX2020/RMX2020-vendor.mk)
 # IMS
 $(call inherit-product, vendor/realme/RMX2020-ims/RMX2020-ims.mk)
 
-# RealmeDirac
-$(call inherit-product-if-exists, packages/apps/RealmeDirac/dirac.mk)
-
-# RealmeParts
-$(call inherit-product-if-exists, packages/apps/RealmeParts/parts.mk)
-
 PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Dynamic Partition
