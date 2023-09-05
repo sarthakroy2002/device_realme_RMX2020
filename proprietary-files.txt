@@ -466,7 +466,6 @@ vendor/bin/hw/camerahalserver
 # Camera-configs
 vendor/etc/camera/faceBeautyParam/fb_default
 vendor/etc/camera/faceBeautyParam/fb_default_19741
-vendor/etc/camera/faceBeautyParam/fb_default_19747
 vendor/etc/camera/fb_model/000.png
 vendor/etc/camera/fb_model/000_pre.bin
 vendor/etc/camera/fb_model/000_pre.png
@@ -724,7 +723,6 @@ vendor/firmware/soc3_0_ram_mcu_1a_1_hdr.bin
 vendor/firmware/soc3_0_ram_mcu_e1_hdr.bin
 vendor/firmware/wifi_132780.cfg
 vendor/firmware/wifi_19741.cfg
-vendor/firmware/wifi_19747.cfg
 
 # GPS
 vendor/bin/hw/android.hardware.gnss@2.1-service-mediatek
