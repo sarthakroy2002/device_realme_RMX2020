@@ -645,11 +645,6 @@ vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so|f9a1c4433877
 vendor/lib64/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so|fcd8bb4a81e0325976121558bd8fec691e68c54e
 vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so|bef0c783e7a56a318d07f7a18c0a8b5d235be44c
 
-# MTK EngineerMode
--lib/libem_support_jni.so
--lib64/libem_support_jni.so
--priv-app/EngineerMode/EngineerMode.apk
-
 # Fingerprint
 odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service
 odm/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc
