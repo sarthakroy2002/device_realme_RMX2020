@@ -1,6 +1,3 @@
-# Dirac
-type dirac_prop, property_type;
-
 # Audio
 type audio_tunning_prop, property_type;
 
