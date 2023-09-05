@@ -1013,10 +1013,6 @@ vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron
 vendor/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc
 -vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-mtk-gpu.xml
 
-# OMX
-vendor/bin/hw/android.hardware.media.omx@1.0-service
-vendor/etc/init/android.hardware.media.omx@1.0-service.rc
-
 # Oppo
 vendor/etc/test_path/oppo6779_19537/mixer_paths.xml
 vendor/lib/liboppo_arcSoftBokehEngine_new.so
