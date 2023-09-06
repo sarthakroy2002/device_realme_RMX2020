@@ -1,18 +1,16 @@
 binder_call(hal_fingerprint_default, hal_fingerprint_default)
 typeattribute hal_fingerprint_default data_between_core_and_vendor_violators;
+r_dir_file(hal_fingerprint_default, mnt_vendor_file);
 
-add_hwservice(hal_fingerprint_default, hal_fingerprint_hwservice)
+allow hal_fingerprint_default self:netlink_kobject_uevent_socket { bind create read setopt };
+allow hal_fingerprint_default fp_device:chr_file rw_file_perms;
 allow hal_fingerprint_default tee_device:chr_file rw_file_perms;
-allow hal_fingerprint_default egis_device:chr_file rw_file_perms;
-allow hal_fingerprint_default silead_device:chr_file rw_file_perms;
+allow hal_fingerprint_default input_device:dir r_dir_perms;
+allow hal_fingerprint_default input_device:chr_file rw_file_perms;
 allow hal_fingerprint_default uhid_device:chr_file rw_file_perms;
-allow hal_fingerprint_default mobicore_user_device:chr_file rw_file_perms;
-allow hal_fingerprint_default self:netlink_socket create_socket_perms_no_ioctl;
-allow hal_fingerprint_default uhid_device:chr_file { write open ioctl };
-allow hal_fingerprint_default mnt_vendor_file:dir { getattr search };
-allow hal_fingerprint_default init:binder { call  transfer };
-r_dir_file(hal_fingerprint_default, mnt_vendor_file)
-r_dir_file(hal_fingerprint_default, sysfs_batteryinfo)
-r_dir_file(hal_fingerprint_default, proc_oppo_fp)
-set_prop(hal_fingerprint_default, oppo_fingerprint_prop)
+allow hal_fingerprint_default proc_oplus_fp:file r_file_perms;
+
+set_prop(hal_fingerprint_default, vendor_oplus_fingerprint_prop);
+set_prop(hal_fingerprint_default, system_oplus_fingerprint_prop);
+
 add_hwservice(hal_fingerprint_default, hal_commondcs_hwservice)

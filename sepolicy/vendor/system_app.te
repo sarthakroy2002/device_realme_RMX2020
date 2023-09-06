@@ -1,15 +1,6 @@
 allow system_app sysfs_zram:dir search;
 allow system_app sysfs_zram:file r_file_perms;
-allow system_app fm_device:chr_file rw_file_perms;
 allow system_app proc_pagetypeinfo:file r_file_perms;
 allow system_app proc_vmallocinfo:file r_file_perms;
-allow system_app sysfs:file rw_file_perms;
-allow system_app sw_sync_device:chr_file rw_file_perms;
-
-# Audio
 allow system_app sysfs_sia81xx_file:dir { r_dir_perms search };
 allow system_app sysfs_sia81xx_file:file r_file_perms;
-
-allow system_app mtk_hal_pq_hwservice:hwservice_manager find;
-binder_call(system_app, mtk_hal_pq)
-binder_call(system_app, wificond)

@@ -1,4 +1,0 @@
-get_prop(vtservice, mtk_viwifi_support_prop)
-get_prop(vtservice, mtk_volte_support_prop)
-add_service(vtservice, vtservice_service)
-allow vtservice mtk_ims_service:service_manager find;

@@ -1,2 +1,2 @@
-allow mtk_hal_pq oppo_devinfo_proc:file r_file_perms;
-allow mtk_hal_pq oppo_devinfo_proc:dir { search };
+r_dir_file(mtk_hal_pq, proc_oplus_ver)
+r_dir_file(mtk_hal_pq, proc_oplus_devinfo)

@@ -1,1 +1,0 @@
-allow secure_element init:binder { call  transfer };

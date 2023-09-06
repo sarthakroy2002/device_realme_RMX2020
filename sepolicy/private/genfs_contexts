@@ -1,1 +1,1 @@
-genfscon sysfs /devices/platform/leds-mt65xx/leds/lcd-backlight u:object_r:sysfs_mtk_leds:s0
+genfscon sysfs /devices/platform/leds-mt65xx/leds/lcd-backlight u:object_r:sysfs_leds:s0

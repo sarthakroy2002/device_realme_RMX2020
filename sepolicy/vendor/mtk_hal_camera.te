@@ -1,7 +1,5 @@
-set_prop(mtk_hal_camera, oppo_camera_prop)
-allow mtk_hal_camera oppo_camera_prop:file read;
-allow mtk_hal_camera proc_oppo_ver:file r_file_perms;
-allow mtk_hal_camera proc_oppo_opname:file r_file_perms;
-allow mtk_hal_camera hal_oplus_orms_hwservice:hwservice_manager find;
-get_prop(mtk_hal_camera, mtk_pq_prop)
-get_prop(mtk_hal_camera, mtk_cameraa_prop)
+r_dir_file(mtk_hal_camera, proc_oplus_ver)
+get_prop(mtk_hal_camera, vendor_oplus_camera_prop)
+get_prop(mtk_hal_camera, system_oplus_camera_prop)
+set_prop(mtk_hal_camera, vendor_oplus_camera_prop)
+set_prop(mtk_hal_camera, system_oplus_camera_prop)

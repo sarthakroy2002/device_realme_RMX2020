@@ -1,27 +1,25 @@
-# NFC
-/dev/pn553 u:object_r:nfc_device:s0
-
-# Light
-/vendor/bin/hw/android\.hardware\.light-service\.RMX2020      u:object_r:hal_light_default_exec:s0
-
-# USB HAL
-/(vendor|system/vendor)/bin/hw/android\.hardware\.usb@1\.0-service\.RMX2020       u:object_r:hal_usb_default_exec:s0
-
 # Audio
-/dev/sia81xx_tuning_if 	u:object_r:sia81xx_tuning_if_device:s0
-
-# Latency
-/dev/cpu_dma_latency                                                                                    u:object_r:latency_device:s0
-
-# Oplus Sensor
-/dev/m_virtual_sensor_misc  u:object_r:m_virtual_sensor_device:s0 
-
-# EGIS Fingerprint device
-/dev/esfp0  u:object_r:egis_device:s0  
-
-# Silead Fingerprint device
-/dev/silead_fp  u:object_r:silead_device:s0
+/dev/sia81xx_tuning_if 	                                                                                  u:object_r:sia81xx_tuning_if_device:s0
 
 # Biometrics
-/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.RMX2020    u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.RMX2020           u:object_r:hal_fingerprint_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.oplus\.hardware\.biometrics\.fingerprint@2\.1-service              u:object_r:hal_fingerprint_default_exec:s0
+
+# Fingerprint
+/dev/esfp0                                                                                                u:object_r:fp_device:s0  
+/dev/silead_fp                                                                                            u:object_r:fp_device:s0
+
+# Latency
+/dev/cpu_dma_latency                                                                                      u:object_r:latency_device:s0
+
+# Light
+/vendor/bin/hw/android\.hardware\.light-service\.RMX2020                                                  u:object_r:hal_light_default_exec:s0
+
+# NFC
+/dev/pn553                                                                                                u:object_r:nfc_device:s0
+
+# Sensor
+/dev/m_virtual_sensor_misc(/.*)?                                                                          u:object_r:m_virtual_sensor_device:s0 
+
+# USB
+/(vendor|system/vendor)/bin/hw/android\.hardware\.usb@1\.0-service\.RMX2020                               u:object_r:hal_usb_default_exec:s0

@@ -1,8 +1,6 @@
-allow rild proc_oppo_ver:file r_file_perms;
-allow rild proc_oppo_opname:file r_file_perms;
-allow rild hal_oplus_radio_hwservice:hwservice_manager { add find };
-allow rild hal_oplus_appradio_hwservice:hwservice_manager { add find };
-set_prop(rild, oppo_network_prop)
-get_prop(rild, mtk_simswitch_emmode_prop)
-get_prop(rild, mtk_md_version_prop)
-set_prop(rild, ril_md_prop)
+r_dir_file(rild, proc_oplus_ver)
+
+get_prop(rild, vendor_oplus_radio_prop)
+set_prop(rild, vendor_oplus_radio_prop)
+get_prop(rild, vendor_mtk_simswitch_emmode_prop)
+
