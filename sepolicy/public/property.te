@@ -1,0 +1,8 @@
+# Audio
+system_public_prop(system_audio_tuning_prop)
+
+# Camera
+system_public_prop(system_oplus_camera_prop)
+
+# Fingerprint
+system_public_prop(system_oplus_fingerprint_prop)

@@ -1,4 +1,3 @@
-# Audio
 allow audioserver sia81xx_tuning_if_device:chr_file rw_file_perms;
 allow audioserver sysfs_sia81xx_file:dir search;
 allow audioserver sysfs_sia81xx_file:file r_file_perms;

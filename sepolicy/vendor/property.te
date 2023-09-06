@@ -1,14 +1,11 @@
 # Audio
-type audio_tunning_prop, property_type;
+vendor_public_prop(vendor_audio_tuning_prop)
 
 # Camera
-type oppo_camera_prop, property_type, property_type;
-type mtk_cameraa_prop, property_type;
-# Oppo props
-type oppo_fingerprint_prop, property_type;
+vendor_public_prop(vendor_oplus_camera_prop)
 
-# Wifi
-type vendor_wifi_version, property_type;
+# Fingerprint
+vendor_public_prop(vendor_oplus_fingerprint_prop)
 
-# Oppo Network
-type oppo_network_prop, property_type;
+# Radio
+vendor_public_prop(vendor_oplus_radio_prop)

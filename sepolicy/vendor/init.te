@@ -1,42 +1,7 @@
-# Allow init to create socket_device(s)
-allow init socket_device:sock_file create_file_perms;
-
-# Allow init to execute vendor file
-allow init vendor_file:file { execute execute_no_trans };
-
-# Allow init to rename vendor data file
-allow init vendor_data_file:file { rename };
-
-allow init sysfs_sensor:file setattr;
-add_hwservice(init, hidl_base_hwservice)
-add_hwservice(init, hal_tee_hwservice)
-allow init egis_device:chr_file rw_file_perms;
-allow init silead_device:chr_file rw_file_perms;
-allow init proc_oppo_fp:file rw_file_perms;
-allow init mobicore_user_device:chr_file rw_file_perms;
-allow init hal_fingerprint_hwservice:hwservice_manager { add  find };
-allow init hal_fingerprint_default:binder { call };
-allow init mtk_hal_rild_hwservice:hwservice_manager { add find };
-allow init rild:binder { call  transfer };
-allow init secure_element:binder call;
-
-# Allow init to binder call hwservicemanager
-allow init hwservicemanager:binder { transfer call };
-
-allow init same_process_hal_file:file execute;
-
-# Allow init to write touchpanel nodes
-allow init proc:file { open write };
-allow init proc_tp:file rw_file_perms;
-
-# Allow init to add/find hal_secure_element_hwservice
-allow init hal_secure_element_hwservice:hwservice_manager { add find };
-
-# Allow init to find hal_telephony_hwservice
-allow init hal_telephony_hwservice:hwservice_manager { find };
-
-# Allow init to access /sys/devices/platform/mt_usb/saving
-allow init sysfs_mtusb_saving:file rw_file_perms;
-
-# Allow init to find hal_commondcs_hwservice
-allow init hal_commondcs_hwservice:hwservice_manager find;
+allow init hwservicemanager:binder call;
+allow init self:netlink_kobject_uevent_socket read;
+allow init sysfs_wake_lock:file r_file_perms;
+allow init vendor_data_file:file w_file_perms;
+allow init sysfs_mmc_host:file rw_file_perms;
+allow init proc_vm:file rw_file_perms;
+allow init sysfs_otg_switch:file rw_file_perms;

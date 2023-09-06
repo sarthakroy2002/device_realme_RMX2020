@@ -1,20 +1,50 @@
-genfscon sysfs /module/primary_display/parameters u:object_r:sysfs_fps:s0
-genfscon proc  /touchpanel u:object_r:proc_tp:s0
-genfscon proc /oppoVersion/prjVersion u:object_r:proc_oppo_ver:s0
-genfscon proc /oppoVersion/operatorName u:object_r:proc_oppo_opname:s0
-genfscon proc /devinfo u:object_r:oppo_devinfo_proc:s0
-genfscon proc /oppoCustom/Sensor u:object_r:proc_oppo_sensor:s0
-genfscon proc /oplusSensorFeature/is_support_mtk_cali u:object_r:proc_oplus_mtkcali:s0
-genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:mt6358-pmic/mt635x-auxadc/wakeup/wakeup4/event_count u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/mt_usb/saving u:object_r:sysfs_mtusb_saving:s0
-genfscon sysfs /devices/system/cpu/cpufreq/mtk/.cluster_(min|max)_freq  u:object_r:sysfs_mtk_cpufreq:s0
-genfscon sysfs /kernel/gpu/gpu_(min|max)_clock          u:object_r:sysfs_mtk_gpufreq:s0
+# Audio
+genfscon sysfs /devices/platform/sia81xx@L                                  u:object_r:sysfs_sia81xx_file:s0
+
+# Display
+genfscon proc  /touchpanel                                                  u:object_r:proc_tp:s0
 
 # Graphics
-genfscon sysfs /devices/platform/13040000.mali            u:object_r:sysfs_gpu:s0
+genfscon sysfs /devices/platform/13040000.mali                              u:object_r:sysfs_gpu:s0
 
-# Audio
-genfscon sysfs /devices/platform/sia81xx@L u:object_r:sysfs_sia81xx_file:s0
+# Health
+genfscon sysfs /devices/platform/mt_charger/power_supply/ac                                                                     u:object_r:sysfs_ac_supply:s0
+genfscon sysfs /devices/platform/mt_charger/power_supply/usb                                                                    u:object_r:sysfs_usb_supply:s0
+genfscon sysfs /devices/platform/mt_charger/power_supply/main                                                                   u:object_r:sysfs_main_supply:s0
+genfscon sysfs /devices/platform/mt_charger/power_supply/charger                                                                u:object_r:sysfs_charger_supply:s0
+genfscon sysfs /devices/platform/battery/power_supply/battery                                                                   u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/battery/power_supply/bms     	       	       	       	       	       	       	       	       	u:object_r:sysfs_bms_supply:s0
+genfscon sysfs /devices/platform/11004000.i2c7/i2c-7/7-0055/power_supply/parallel                                               u:object_r:sysfs_parallel_supply:s0
 
-# Oppo FP
-genfscon proc /fp_id u:object_r:proc_oppo_fp:s0
+# OPLUS
+genfscon proc /fp_id                                                        u:object_r:proc_oplus_fp:s0
+genfscon proc /oppoVersion/prjVersion                                       u:object_r:proc_oplus_ver:s0
+genfscon proc /oppoVersion/operatorName                                     u:object_r:proc_oplus_ver:s0
+genfscon proc /devinfo                                                      u:object_r:proc_oplus_devinfo:s0
+genfscon proc /oplusSensorFeature/is_support_mtk_cali                       u:object_r:proc_oplus_mtkcali:s0
+genfscon sysfs /devices/virtual/oplus_sensor/m_virtual_sensor_misc          u:object_r:sysfs_virtual_sensor:s0
+genfscon sysfs /devices/platform/charger/power_supply/usb/otg_switch        u:object_r:sysfs_otg_switch:s0
+
+# Power
+genfscon sysfs /devices/system/cpu/cpufreq/mtk/.cluster_(min|max)_freq      u:object_r:sysfs_mtk_cpufreq:s0
+genfscon sysfs /kernel/gpu/gpu_(min|max)_clock                              u:object_r:sysfs_mtk_gpufreq:s0
+
+# VM
+genfscon proc /sys/vm/direct_swappiness                                     u:object_r:proc_vm:s0
+genfscon proc /sys/vm/dirty_background_bytes                                u:object_r:proc_vm:s0
+
+# mmc_host
+genfscon sysfs /devices/platform/bootdevice/host0/target0:0:0/0:0:0:2/block/sdc/queue/discard_max_bytes u:object_r:sysfs_mmc_host:s0
+
+# Wakeup (https://lkml.org/lkml/2019/8/6/1275)
+genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:mt6358-pmic/mt6358-rtc/wakeup 					u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:mt6358-pmic/mt635x-auxadc/wakeup 				u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/10238000.gce/wakeup 										u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11004000.i2c7/i2c-7/7-0055/power_supply/parallel/wakeup 					u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11004000.i2c7/i2c-7/7-0060/tcpc/type_c_port0/wakeup 						u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:mt6358-pmic/mt6358-rtc/rtc/rtc0/wakeup 				u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11004000.i2c7/i2c-7/7-0021/tcpc/type_c_port0/dual-role-type_c_port0/wakeup 			u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11004000.i2c7/i2c-7/7-0060/tcpc/type_c_port0/dual-role-type_c_port0/wakeup 			u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/battery/power_supply/bms/wakeup								u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/mt_charger/power_supply/main/wakeup								u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/input/input4/wakeup										u:object_r:sysfs_wakeup:s0

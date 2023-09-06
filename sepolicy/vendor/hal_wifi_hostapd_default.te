@@ -1,2 +1,0 @@
-allow hal_wifi_hostapd_default sysfs_net:lnk_file read;
-add_hwservice(hal_wifi_hostapd_default, default_android_hwservice)

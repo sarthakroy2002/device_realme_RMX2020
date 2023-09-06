@@ -1,28 +1,15 @@
-# Camera
-persist.vendor.camera.privapp.list    u:object_r:exported_default_prop:s0
-
-# Oppo Camera props
-dump.bpci_tbl.enable   u:object_r:oppo_camera_prop:s0
-vendor.oppo.camera.   u:object_r:oppo_camera_prop:s0
-oppo.camera.   u:object_r:oppo_camera_prop:s0
-
-# MTK Camera props
-persist.vendor.mtkcam.aosp_hal_version  u:object_r:mtk_cameraa_prop:s0
-
-# RILD
-ro.telephony.default_network u:object_r:radio_prop:s0
-vendor.oppo.network.carrier_ver u:object_r:oppo_network_prop:s0
-
 # Audio
-audio.tuning.def_path                       u:object_r:audio_tunning_prop:s0
-persist.vendor.audio.tuning.def_path        u:object_r:audio_tunning_prop:s0
+persist.vendor.audio.tuning.def_path           u:object_r:vendor_audio_tuning_prop:s0
 
-# Oppo FP props
-persist.vendor.fingerprint.             u:object_r:oppo_fingerprint_prop:s0
-oppo.optical.                           u:object_r:oppo_fingerprint_prop:s0
-vendor.fingerprint.optical.             u:object_r:oppo_fingerprint_prop:s0
-oppo.fingerprint.                       u:object_r:oppo_fingerprint_prop:s0
+# Camera
+vendor.oppo.camera.                            u:object_r:vendor_oplus_camera_prop:s0
+persist.vendor.camera.                         u:object_r:vendor_oplus_camera_prop:s0
+persist.vendor.camera.privapp.list             u:object_r:vendor_oplus_camera_prop:s0
+persist.vendor.mtkcam.aosp_hal_version         u:object_r:vendor_oplus_camera_prop:s0
 
-# Wifi
-vendor.wlan.firmware.version u:object_r:vendor_wifi_version:s0
-vendor.wlan.driver.version u:object_r:vendor_wifi_version:s0
+# Fingerprint
+persist.vendor.fingerprint.                    u:object_r:vendor_oplus_fingerprint_prop:s0
+vendor.fingerprint.optical.                    u:object_r:vendor_oplus_fingerprint_prop:s0
+
+# Radio
+vendor.oppo.network.                           u:object_r:vendor_oplus_radio_prop:s0

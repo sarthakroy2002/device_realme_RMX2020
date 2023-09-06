@@ -1,5 +1,0 @@
-# Allow graphics allocator to get debug prop
-get_prop(hal_graphics_allocator_default, vendor_debug_prop)
-
-# Allow graphics allocator to get debug_mtk_gpud_prop
-get_prop(hal_graphics_allocator_default, debug_mtk_gpud_prop)

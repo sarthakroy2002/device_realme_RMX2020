@@ -1,24 +1,21 @@
+type sysfs_sia81xx_file, fs_type, sysfs_type;
+type proc_vm, fs_type, proc_type;
 type proc_tp, fs_type, proc_type;
-type sysfs_light, fs_type, sysfs_type, mlstrustedobject;
-type sysfs_graphics, sysfs_type, fs_type, mlstrustedobject;
-type proc_oppo_ver, file_type, proc_type;
-type proc_oppo_opname, file_type, proc_type;
-type oppo_devinfo_proc, file_type, proc_type;
-type proc_oppo_fp, fs_type, proc_type;
-type proc_oppo_sensor, file_type, proc_type;
-type proc_oplus_mtkcali, file_type, proc_type;
-type sysfs_mtusb_saving, fs_type, sysfs_type;
+type proc_oplus_fp, fs_type, proc_type;
+type proc_oplus_ver, fs_type, proc_type;
+type proc_oplus_devinfo, fs_type, proc_type;
+type proc_oplus_mtkcali, fs_type, proc_type;
+type sysfs_virtual_sensor, fs_type, sysfs_type;
+type sysfs_otg_switch, fs_type, sysfs_type;
 type sysfs_mtk_cpufreq, fs_type, sysfs_type;
 type sysfs_mtk_gpufreq, fs_type, sysfs_type;
-
-# Audio
-type sysfs_sia81xx_file, fs_type, sysfs_type;
-
-# Display node
-type vendor_sysfs_graphics, fs_type, sysfs_type;
-
-# Latency
+type sysfs_ac_supply, fs_type, sysfs_type;
+type sysfs_battery_supply, fs_type, sysfs_type;
+type sysfs_usb_supply, fs_type, sysfs_type;
+type sysfs_charger_supply, fs_type, sysfs_type;
+type sysfs_bms_supply, fs_type, sysfs_type;
+type sysfs_parallel_supply, fs_type, sysfs_type;
+type sysfs_main_supply, fs_type, sysfs_type;
+type sysfs_mmc_host, fs_type, sysfs_type;
 type latency_device, dev_type;
-
-# PPS
 type pps_socket, file_type;
