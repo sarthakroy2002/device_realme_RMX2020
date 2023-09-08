@@ -20,7 +20,7 @@ odm                                                     /odm                    
 /dev/block/by-name/nvdata                               /mnt/vendor/nvdata      ext4     noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc                 wait,check,formattable
 /dev/block/by-name/nvcfg                                /mnt/vendor/nvcfg       ext4     noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc                 wait,check,formattable
 /dev/block/by-name/persist                              /mnt/vendor/persist     ext4     noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc                 wait,check,formattable
-/devices/platform/externdevice*                         auto                    auto     defaults                                                                 voldmanaged=sdcard1:auto
+/devices/platform/externdevice*                         auto                    auto     defaults                                                                 voldmanaged=sdcard1:auto,encryptable=userdata
 /devices/platform/mt_usb*                               auto                    auto     defaults                                                                 voldmanaged=usbotg:auto
 /dev/block/by-name/frp                                  /persistent             emmc     defaults                                                                 defaults
 /dev/block/by-name/nvram                                /nvram                  emmc     defaults                                                                 defaults
