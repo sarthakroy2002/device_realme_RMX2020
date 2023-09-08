@@ -959,9 +959,3 @@ service charger /bin/chargeonlymode
     #seclabel u:r:charger:s0
     group system graphics
     seclabel u:r:healthd:s0
-
-on property:persist.sys.dt2w=0
-    write /proc/touchpanel/double_tap_enable 0
-
-on property:persist.sys.dt2w=1
-    write /proc/touchpanel/double_tap_enable 1
