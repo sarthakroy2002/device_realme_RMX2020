@@ -956,6 +956,5 @@ on property:vendor.ril.mtk=1
 service charger /bin/chargeonlymode
     class charger
     critical
-    #seclabel u:r:charger:s0
+    seclabel u:r:charger:s0
     group system graphics
-    seclabel u:r:healthd:s0
