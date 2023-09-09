@@ -646,7 +646,7 @@ vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so|bef0c783e7
 
 # Fingerprint
 odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service
-odm/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc
+odm/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc|28c3a9b37ccbe6af6f023db41d301854ac2538ad
 odm/lib/hw/fingerprint.goodix_G2.default.so
 odm/lib/hw/fingerprint.goodix_G3.default.so
 odm/lib/hw/fingerprint.goodix_G5.default.so
