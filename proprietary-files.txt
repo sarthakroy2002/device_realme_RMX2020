@@ -633,9 +633,7 @@ vendor/lib64/libwvhidl.so|00a180a3fed41b35d3102ddbdc9a1a986886860a
 system_ext/lib/vendor.oplus.hardware.displaypanelfeature@1.0.so
 system_ext/lib64/vendor.oplus.hardware.displaypanelfeature@1.0.so
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
-vendor/lib/hw/memtrack.mt6768.so
 vendor/lib64/hw/hwcomposer.mt6768.so
-vendor/lib64/hw/memtrack.mt6768.so
 
 # Display (Hardware) - from realme/RMX3193/RMX3193:12/SP1A.210812.016/R.202202111917:user/release-keys
 vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek|b5ed2172cf761f04896a68c93b58ae87f407a3e9
