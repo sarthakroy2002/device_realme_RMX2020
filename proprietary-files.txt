@@ -1122,11 +1122,6 @@ vendor/bin/ccci_fsd
 vendor/bin/ccci_mdinit
 vendor/bin/ccci_rpcd
 vendor/bin/charon
-vendor/bin/dconfig
-vendor/bin/dexecutor
-vendor/bin/doeapp-memtester
-vendor/bin/doeapp-sat
-vendor/bin/dtc_vendor
 vendor/bin/epdg_wod
 vendor/bin/factory
 vendor/bin/fuelgauged
