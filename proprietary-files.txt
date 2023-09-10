@@ -754,10 +754,6 @@ vendor/lib64/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.0.so
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so
 
-# Lights
-vendor/lib/hw/lights.mt6768.so
-vendor/lib64/hw/lights.mt6768.so
-
 # Media (Hardware)
 vendor/lib/libstagefrighthw.so
 vendor/lib64/libstagefrighthw.so
