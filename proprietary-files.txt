@@ -624,8 +624,6 @@ vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc|992f63e9700da29099e
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml|91d7c0996133556cb7f7c5d1b7e5d9e7f07b78b2
 
 # DRM (Widevine) - from Redmi/selene/selene:12/SP1A.210812.016/V13.0.1.0.SKUMIXM:user/release-keys
-vendor/lib/mediadrm/libwvdrmengine.so|ef968cd0f6bcb079c4a2802a31d9af6d605dd70d
-vendor/lib/libwvhidl.so|0b823f9347bac0b4b0c3636b328a010cb1930d29
 vendor/lib64/mediadrm/libwvdrmengine.so|4eea74c78d16eceb3470f6bb4f4f0340697aa4ae
 vendor/lib64/libwvhidl.so|00a180a3fed41b35d3102ddbdc9a1a986886860a
 
