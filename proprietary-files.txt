@@ -1480,7 +1480,6 @@ vendor/lib/libaal_mtk.so
 vendor/lib/libaalservice.so
 vendor/lib/libaedv.so
 vendor/lib/libakm.so
-vendor/lib/libarmnn_ndk.mtk.so
 vendor/lib/libaurisysdemo.so
 vendor/lib/libbessound_hd_mtk_vendor.so
 vendor/lib/libblisrc32_vendor.so
@@ -1490,7 +1489,6 @@ vendor/lib/libcares_naptr.so
 vendor/lib/libcarrierconfig.so
 vendor/lib/libccci_util.so
 vendor/lib/libcharon-ss.so
-vendor/lib/libcmdl_ndk.mtk.so
 vendor/lib/libcrypto-ss.so
 vendor/lib/libcurl-ss.so
 vendor/lib/libcurl_xcap_md.so
@@ -1559,11 +1557,6 @@ vendor/lib/libmp4enc_xa.ca7.so
 vendor/lib/libmsbc_mtk.so
 vendor/lib/libmsnr.so
 vendor/lib/libmtcloader.so
-vendor/lib/libneuroeara.so
-vendor/lib/libneuropilot_hal_utils.so
-vendor/lib/libneuropilot_jni_R.so
-vendor/lib/libnir_neon_driver.so
-vendor/lib/libnir_neon_driver_ndk.mtk.so
 vendor/lib/libnvram.so
 vendor/lib/libnvram_daemon_callback.so
 vendor/lib/libnvram_platform.so
