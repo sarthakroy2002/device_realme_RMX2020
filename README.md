@@ -19,14 +19,4 @@ Rear Camera  | Dual : 13 MP; 2MP(depth); 2MP(Macro- only Narzo 10A and C3 Global
 Front Camera | Single: 5 MP
 Release Month | 2020, February 14 | 2020, May 22 
 
-Vendor tree repo: https://github.com/sarthakroy2002/vendor_realme_RMX2020 (branch lineage-19.0-rmui2)
-
-Other Repos needed for building:
-
-1. https://github.com/Realme-G70-Series/android_packages_apps_RealmeParts (branch aosp12)
-2. https://github.com/Realme-G70-Series/android_packages_apps_RealmeDirac (branch lineage-19.0)
-3. https://github.com/AOSP-12-RMX2020/device_mediatek_sepolicy_vndr (branch twelve)
-4. https://github.com/sarthakroy2002/vendor_realme_RMX2020-ims (branch twelve-rmui2)
-5. https://github.com/sarthakroy2002/vendor_realme_RMX2020-firmware (branch rmui2)
-
 Copyright (C) 2021 ArrowOS
