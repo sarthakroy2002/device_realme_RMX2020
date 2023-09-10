@@ -923,10 +923,6 @@ vendor/lib64/libmtkutils.so
 vendor/lib64/vendor.mediatek.hardware.aee@1.0.so
 vendor/lib64/vendor.mediatek.hardware.atci@1.0.so
 vendor/lib64/vendor.mediatek.hardware.dfps@1.0.so
-vendor/lib64/vendor.mediatek.hardware.engineermode@1.0.so
-vendor/lib64/vendor.mediatek.hardware.engineermode@1.1.so
-vendor/lib64/vendor.mediatek.hardware.engineermode@1.2.so
-vendor/lib64/vendor.mediatek.hardware.engineermode@1.3.so
 vendor/lib64/vendor.mediatek.hardware.gpu@1.0.so
 vendor/lib64/vendor.mediatek.hardware.lbs@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mdmonitor@1.0.so
@@ -1114,7 +1110,6 @@ vendor/bin/ccci_mdinit
 vendor/bin/ccci_rpcd
 vendor/bin/charon
 vendor/bin/epdg_wod
-vendor/bin/factory
 vendor/bin/fuelgauged
 vendor/bin/fuelgauged_nvram
 vendor/bin/gsm0710muxd
@@ -1177,7 +1172,6 @@ vendor/bin/mcDriverDaemon
 vendor/bin/md_monitor
 vendor/bin/md_monitor_ctrl
 vendor/bin/mnld
-vendor/bin/mrdump_tool
 vendor/bin/mtk_agpsd
 vendor/bin/muxreport
 vendor/bin/netdagent
@@ -1186,7 +1180,6 @@ vendor/bin/nvram_daemon
 vendor/bin/ppl_agent
 vendor/bin/recordevent
 vendor/bin/replayevent
-vendor/bin/rttv
 vendor/bin/starter
 vendor/bin/stroke
 vendor/bin/volte_imcb
@@ -1220,7 +1213,6 @@ vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Vodafone.xml
 vendor/etc/gnss/agps_profiles_conf2.xml
 vendor/etc/init/atcid.rc
 vendor/etc/init/audiocmdservice_atci.rc
-vendor/etc/init/bootperf.rc
 vendor/etc/init/camerahalserver.rc
 vendor/etc/init/fuelgauged_init.rc
 vendor/etc/init/fuelgauged_nvram_init.rc

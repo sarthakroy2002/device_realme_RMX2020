@@ -168,14 +168,6 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.mediatek.hardware.engineermode</name>
-        <version>1.3</version>
-        <interface>
-            <name>IEmd</name>
-            <instance>EmHidlServer</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>vendor.mediatek.hardware.gpu</name>
         <version>1.0</version>
         <interface>
