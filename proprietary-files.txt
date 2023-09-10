@@ -1176,7 +1176,6 @@ vendor/bin/libccu_victor_s5k3p9sp_mipi_raw.pm
 vendor/bin/mcDriverDaemon
 vendor/bin/md_monitor
 vendor/bin/md_monitor_ctrl
-vendor/bin/meta_tst
 vendor/bin/mnld
 vendor/bin/mrdump_tool
 vendor/bin/mtk_agpsd
