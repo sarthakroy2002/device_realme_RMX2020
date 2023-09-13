@@ -7,7 +7,6 @@
 -->
 
 <MediaCodecs>
-    <Include href="media_codecs_ffmpeg.xml" />
     <Include href="media_codecs_mediatek_odm.xml" />
     <Include href="media_codecs_odm.xml" />
 </MediaCodecs>
