@@ -938,9 +938,3 @@ on property:vendor.mtk.md1.status=reset
 # Disable AOSP RIL if MTK RIL is up
 on property:vendor.ril.mtk=1
     stop vendor.ril-daemon
-
-service charger /bin/chargeonlymode
-    class charger
-    critical
-    seclabel u:r:charger:s0
-    group system graphics
