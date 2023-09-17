@@ -72,7 +72,7 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    libbluetooth_audio_session.vendor \
+    libbluetooth_audio_session \
     android.hardware.bluetooth.a2dp@1.0 \
     android.hardware.bluetooth@1.0.vendor \
     android.hardware.bluetooth.a2dp@1.0.vendor
@@ -143,8 +143,7 @@ PRODUCT_PACKAGES += \
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-service \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.0-impl-2.1
+    android.hardware.health@2.1-impl
 
 PRODUCT_PACKAGES += \
     libsuspend
@@ -415,8 +414,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.3.vendor \
     android.hardware.wifi.supplicant@1.3.vendor \
-    android.hardware.wifi.hostapd@1.2.vendor \
-    android.hardware.wifi@1.3-impl
+    android.hardware.wifi.hostapd@1.2.vendor
 
 PRODUCT_PACKAGES += \
     libkeystore-engine-wifi-hidl \
