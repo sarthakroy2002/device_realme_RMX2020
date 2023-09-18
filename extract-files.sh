@@ -80,8 +80,13 @@ function blob_fixup() {
         vendor/lib64/hw/vendor.mediatek.hardware.pq@2.6-impl.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v30.so" "${2}"
             ;;
+        vendor/lib/libMtkOmxCore.so)
+            sed -i "s/mtk.vendor.omx.core.log/ro.vendor.mtk.omx.log\x00\x00/" "$2"
+            ;;
         vendor/lib/libMtkOmxVdecEx.so)
             "${PATCHELF}" --replace-needed "libui.so" "libui-v32.so" "$2"
+            sed -i "s/ro.mtk_crossmount_support/ro.vendor.mtk_crossmount\x00/" "$2"
+            sed -i "s/ro.mtk_deinterlace_support/ro.vendor.mtk_deinterlace\x00/" "$2"
             ;;
         vendor/lib64/hw/android.hardware.thermal@2.0-impl.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "$2"
