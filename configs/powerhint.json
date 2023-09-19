@@ -5,7 +5,7 @@
       "Path": "/sys/devices/system/cpu/cpufreq/mtk/lcluster_max_freq",
       "Values": [
         "-1",
-        "1800000",
+        "1700000",
         "1625000",
         "1500000",
         "1450000",
@@ -29,7 +29,7 @@
       "Name": "CPULittleClusterMinFreq",
       "Path": "/sys/devices/system/cpu/cpufreq/mtk/lcluster_min_freq",
       "Values": [
-        "1800000",
+        "1700000",
         "1625000",
         "1500000",
         "1450000",
@@ -396,7 +396,7 @@
       "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "CPULittleClusterMaxFreq",
       "Duration": 0,
-      "Value": "1800000"
+      "Value": "1700000"
     },
     {
       "PowerHint": "SUSTAINED_PERFORMANCE",
@@ -498,13 +498,13 @@
       "PowerHint": "LAUNCH",
       "Node": "CPULittleClusterMaxFreq",
       "Duration": 3000,
-      "Value": "1800000"
+      "Value": "1700000"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPULittleClusterMinFreq",
       "Duration": 3000,
-      "Value": "1800000"
+      "Value": "1700000"
     },
     {
       "PowerHint": "LAUNCH",
