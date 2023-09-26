@@ -1,1 +1,2 @@
 r_dir_file(nvram_daemon, proc_oplus_ver)
+r_dir_file(nvram_daemon, proc_oplus_sensor)
