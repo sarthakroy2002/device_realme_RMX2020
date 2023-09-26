@@ -98,7 +98,8 @@ PRODUCT_PACKAGES += \
 
 # Charger
 PRODUCT_PACKAGES += \
-    charger_res_images_vendor
+    charger_res_images_vendor \
+    product_charger_res_images_vendor
 
 # Configstore
 PRODUCT_PACKAGES += \
