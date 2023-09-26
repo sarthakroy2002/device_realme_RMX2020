@@ -23,6 +23,7 @@ genfscon proc /oppoVersion/prjVersion                                       u:ob
 genfscon proc /oppoVersion/operatorName                                     u:object_r:proc_oplus_ver:s0
 genfscon proc /devinfo                                                      u:object_r:proc_oplus_devinfo:s0
 genfscon proc /oplusSensorFeature/is_support_mtk_cali                       u:object_r:proc_oplus_mtkcali:s0
+genfscon proc /oppoCustom/Sensor                                            u:object_r:proc_oplus_sensor:s0
 genfscon sysfs /devices/virtual/oplus_sensor/m_virtual_sensor_misc          u:object_r:sysfs_virtual_sensor:s0
 genfscon sysfs /devices/platform/charger/power_supply/usb/otg_switch        u:object_r:sysfs_otg_switch:s0
 

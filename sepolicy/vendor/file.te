@@ -5,6 +5,7 @@ type proc_oplus_fp, fs_type, proc_type;
 type proc_oplus_ver, fs_type, proc_type;
 type proc_oplus_devinfo, fs_type, proc_type;
 type proc_oplus_mtkcali, fs_type, proc_type;
+type proc_oplus_sensor, fs_type, proc_type;
 type sysfs_virtual_sensor, fs_type, sysfs_type;
 type sysfs_otg_switch, fs_type, sysfs_type;
 type sysfs_mtk_cpufreq, fs_type, sysfs_type;
