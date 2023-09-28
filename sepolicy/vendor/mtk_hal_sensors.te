@@ -2,6 +2,7 @@ allow mtk_hal_sensors proc_oplus_devinfo:file r_file_perms;
 allow mtk_hal_sensors proc_oplus_devinfo:dir search;
 allow mtk_hal_sensors proc_oplus_ver:file r_file_perms;
 allow mtk_hal_sensors proc_oplus_mtkcali:file r_file_perms;
+allow mtk_hal_sensors proc_oplus_sensor:file r_file_perms;
 allow mtk_hal_sensors m_virtual_sensor_device:chr_file r_file_perms;
 allow mtk_hal_sensors sysfs_virtual_sensor:dir search;
 allow mtk_hal_sensors sysfs_virtual_sensor:file rw_file_perms;
