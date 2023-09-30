@@ -711,11 +711,13 @@ vendor/firmware/gt9886_firmware_6893v01.bin
 vendor/firmware/mt6631_fm_v1_coeff.bin
 vendor/firmware/mt6631_fm_v1_patch.bin
 vendor/firmware/soc1_0_patch_mcu_1a_1_hdr.bin
-vendor/firmware/soc1_0_ram_bt_1a_1_hdr.bin
 vendor/firmware/soc1_0_ram_mcu_1a_1_hdr.bin
 vendor/firmware/soc1_0_ram_wifi_1a_1_hdr.bin
 vendor/firmware/wifi_132780.cfg
 vendor/firmware/wifi_19741.cfg
+
+# Firmware - from A145PXXU1AWA3
+vendor/firmware/soc1_0_ram_bt_1a_1_hdr.bin|9cd0d79cde76a59ddd8545b1621af1176c5f9605
 
 # GPS
 vendor/bin/hw/android.hardware.gnss@2.1-service-mediatek
