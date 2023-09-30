@@ -6,3 +6,5 @@ allow init sysfs_mmc_host:file rw_file_perms;
 allow init proc_vm:file rw_file_perms;
 allow init sysfs_otg_switch:file rw_file_perms;
 allow init sysfs_mtusb_saving:file rw_file_perms;
+allow init sysfs_sensor:file rw_file_perms;
+allow init sysfs_virtual_sensor:file rw_file_perms;
