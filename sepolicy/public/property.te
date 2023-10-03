@@ -1,5 +1,6 @@
 # Audio
 system_public_prop(system_audio_tuning_prop)
+system_public_prop(system_oplus_audio_prop)
 
 # Camera
 system_public_prop(system_oplus_camera_prop)
