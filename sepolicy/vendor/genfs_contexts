@@ -52,8 +52,12 @@ genfscon sysfs /devices/platform/1100f000.i2c3/i2c-3/3-0028/wakeup              
 genfscon sysfs /devices/platform/battery/power_supply/bms/wakeup								                        u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/mt_charger/power_supply/main/wakeup								                    u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/input/input4/wakeup															            u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/charger/power_supply/usb/wakeup16             					                        u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/charger/wakeup/wakeup18                                                                u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/charger/wakeup/wakeup19                       					                        u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/charger/power_supply/battery/wakeup17          					                    u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/charger/power_supply/ac/wakeup14                                                       u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/charger/power_supply/ac/wakeup15               					                    u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/charger/power_supply/battery/wakeup16                                                  u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/charger/power_supply/battery/wakeup17          					                    u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/charger/power_supply/usb/wakeup15                                                      u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/charger/power_supply/usb/wakeup16             					                        u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/11012000.spi2/spi_master/spi2/spi2.0/wakeup     					                    u:object_r:sysfs_wakeup:s0
