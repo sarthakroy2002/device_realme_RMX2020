@@ -7,3 +7,6 @@ system_public_prop(system_oplus_camera_prop)
 
 # Fingerprint
 system_public_prop(system_oplus_fingerprint_prop)
+
+# Sensors
+system_public_prop(system_oplus_sensor_prop)
