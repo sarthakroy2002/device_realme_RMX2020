@@ -21,6 +21,7 @@ allow hal_audio_default sysfs_sia81xx_file:file r_file_perms;
 allow hal_audio_default proc_oplus_ver:file r_file_perms;
 
 get_prop(hal_audio_default, system_audio_tuning_prop)
+get_prop(hal_audio_default, system_oplus_audio_prop)
 get_prop(hal_audio_default, vendor_mtk_audiohal_prop)
 get_prop(hal_audio_default, vendor_mtk_service_nvram_init_prop)
 get_prop(hal_audio_default, vendor_mtk_default_prop)
@@ -29,5 +30,6 @@ get_prop(hal_audio_default, vendor_mtk_wmt_prop)
 get_prop(hal_audio_default, vendor_audio_tuning_prop)
 
 set_prop(hal_audio_default, system_audio_tuning_prop)
+set_prop(hal_audio_default, system_oplus_audio_prop)
 set_prop(hal_audio_default, vendor_audio_tuning_prop)
 set_prop(hal_audio_default, vendor_mtk_audiohal_prop)
