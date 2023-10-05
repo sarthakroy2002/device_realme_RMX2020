@@ -411,9 +411,9 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi-service-lazy
 
 PRODUCT_PACKAGES += \
+    hostapd \
     android.hardware.wifi@1.3.vendor \
-    android.hardware.wifi.supplicant@1.3.vendor \
-    android.hardware.wifi.hostapd@1.2.vendor
+    android.hardware.wifi.supplicant@1.3.vendor
 
 PRODUCT_PACKAGES += \
     libkeystore-engine-wifi-hidl \
