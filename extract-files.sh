@@ -101,6 +101,13 @@ function blob_fixup() {
         vendor/lib64/mediadrm/libwvdrmengine.so)
             "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite-3.9.1.so" "libprotobuf-cpp-full-3.9.1.so" "${2}"
             ;;
+        vendor/bin/mnld)
+            ;&
+        vendor/lib64/libaalservice.so)
+            ;&
+        vendor/lib64/libcam.utils.sensorprovider.so)
+            "${PATCHELF}" --replace-needed "libsensorndkbridge.so" "libsensorndkbridge-v30.so" "${2}"
+            ;;
     esac
 }
 
