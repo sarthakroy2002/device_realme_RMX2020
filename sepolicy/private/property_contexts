@@ -2,6 +2,9 @@
 audio.tuning.def_path                   u:object_r:system_audio_tuning_prop:s0
 sys.oppo.mm.                            u:object_r:system_oplus_audio_prop:s0
 
+# Bluetooth
+bluetooth.hci.erroneous_data_reporting.enabled        u:object_r:bluetooth_config_prop:s0
+
 # Camera
 dump.bpci_tbl.                          u:object_r:system_oplus_camera_prop:s0
 oppo.camera.                            u:object_r:system_oplus_camera_prop:s0
