@@ -87,7 +87,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.6.vendor
 
 PRODUCT_PACKAGES += \
-    libstdc++.vendor
+    libstdc++_vendor
 
 PRODUCT_PACKAGES += \
     libshim_camera_metadata
