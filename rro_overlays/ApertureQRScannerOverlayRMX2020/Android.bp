@@ -1,6 +1,0 @@
-runtime_resource_overlay {
-    name: "ApertureQRScannerOverlayRMX2020",
-    sdk_version: "current",
-    resource_dirs: ["res"],
-    system_ext_specific: true,
-}

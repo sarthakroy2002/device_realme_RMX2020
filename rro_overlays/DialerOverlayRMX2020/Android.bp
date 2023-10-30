@@ -1,6 +1,0 @@
-runtime_resource_overlay {
-    name: "DialerOverlayRMX2020",
-    sdk_version: "current",
-    resource_dirs: ["res"],
-    vendor: true,
-}
