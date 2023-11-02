@@ -4,15 +4,15 @@
       "Name": "mtktsbattery",
       "Type": "BATTERY",
       "HotThreshold": [
-        "NAN",
-        "NAN",
-        "NAN",
+        "NaN",
+        "NaN",
+        "NaN",
         50.0,
-        "NAN",
-        "NAN",
+        "NaN",
+        "NaN",
         90.0
       ],
-      "VrThreshold": "NAN",
+      "VrThreshold": "NaN",
       "Multiplier": 0.001
     },
     {
@@ -20,15 +20,15 @@
       "Type": "CPU",
       "ZoneName": "mtktscpu",
       "HotThreshold": [
-        "NAN",
-        "NAN",
-        "NAN",
+        "NaN",
+        "NaN",
+        "NaN",
         85.0,
-        "NAN",
-        "NAN",
+        "NaN",
+        "NaN",
         117.0
       ],
-      "VrThreshold": "NAN",
+      "VrThreshold": "NaN",
       "Multiplier": 0.001
     },
     {
@@ -36,15 +36,15 @@
       "Type": "GPU",
       "ZoneName": "mtktscpu",
       "HotThreshold": [
-        "NAN",
-        "NAN",
-        "NAN",
+        "NaN",
+        "NaN",
+        "NaN",
         85.0,
-        "NAN",
-        "NAN",
+        "NaN",
+        "NaN",
         117.0
       ],
-      "VrThreshold": "NAN",
+      "VrThreshold": "NaN",
       "Multiplier": 0.001
     },
     {
@@ -52,45 +52,45 @@
       "Type": "NPU",
       "ZoneName": "mtktscpu",
       "HotThreshold": [
-        "NAN",
-        "NAN",
-        "NAN",
-        "NAN",
-        "NAN",
-        "NAN",
-        "NAN"
+        "NaN",
+        "NaN",
+        "NaN",
+        "NaN",
+        "NaN",
+        "NaN",
+        "NaN"
       ],
-      "VrThreshold": "NAN",
+      "VrThreshold": "NaN",
       "Multiplier": 0.001
     },
     {
       "Name": "mtktsbtsmdpa",
       "Type": "POWER_AMPLIFIER",
       "HotThreshold": [
-        "NAN",
-        "NAN",
-        "NAN",
-        "NAN",
-        "NAN",
-        "NAN",
-        "NAN"
+        "NaN",
+        "NaN",
+        "NaN",
+        "NaN",
+        "NaN",
+        "NaN",
+        "NaN"
       ],
-      "VrThreshold": "NAN",
+      "VrThreshold": "NaN",
       "Multiplier": 0.001
     },
     {
       "Name": "mtktsAP",
       "Type": "SKIN",
       "HotThreshold": [
-        "NAN",
-        "NAN",
-        "NAN",
+        "NaN",
+        "NaN",
+        "NaN",
         50.0,
-        "NAN",
-        "NAN",
+        "NaN",
+        "NaN",
         90.0
       ],
-      "VrThreshold": "NAN",
+      "VrThreshold": "NaN",
       "Multiplier": 0.001
     }
   ],
