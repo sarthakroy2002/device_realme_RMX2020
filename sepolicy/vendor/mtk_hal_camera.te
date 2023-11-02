@@ -1,5 +1,6 @@
 r_dir_file(mtk_hal_camera, proc_oplus_ver)
 get_prop(mtk_hal_camera, vendor_oplus_camera_prop)
 get_prop(mtk_hal_camera, system_oplus_camera_prop)
+get_prop(mtk_hal_camera, system_oplus_prop)
 set_prop(mtk_hal_camera, vendor_oplus_camera_prop)
 set_prop(mtk_hal_camera, system_oplus_camera_prop)
