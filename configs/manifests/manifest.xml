@@ -95,11 +95,6 @@
         <fqname>@1.2::ISecureElement/SIM2</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.sensors</name>
-        <transport>hwbinder</transport>
-        <fqname>@2.0::ISensors/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.mediatek.hardware.bluetooth.audio</name>
         <transport>hwbinder</transport>
         <fqname>@2.1::IBluetoothAudioProvidersFactory/default</fqname>

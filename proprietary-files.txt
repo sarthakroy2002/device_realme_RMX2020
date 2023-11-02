@@ -1398,8 +1398,6 @@ vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc
 odm/lib/sensors.virtual.so
 odm/lib64/libmxmafa.so
 odm/lib64/sensors.virtual.so
-vendor/bin/hw/android.hardware.sensors@2.0-service-mediatek
-vendor/etc/init/android.hardware.sensors@2.0-service-mediatek.rc
 vendor/lib/libakm.so
 vendor/lib/libhwm.so
 vendor/lib/libmemsic.so
