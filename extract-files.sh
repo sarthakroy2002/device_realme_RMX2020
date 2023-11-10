@@ -65,18 +65,16 @@ function blob_fixup() {
         vendor/lib*/hw/audio.usb.mt6768.so)
             "${PATCHELF}" --replace-needed "libalsautils.so" "libalsautils-mtk.so" "${2}"
             ;;
-        vendor/lib*/libmtkcam_stdutils.so)
-            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v30.so" "${2}"
-            ;;
         vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so)
             grep -q libshim_camera_metadata.so "$2" || patchelf --add-needed libshim_camera_metadata.so "$2"
             ;;
         vendor/etc/init/android.hardware.bluetooth@1.0-service-mediatek.rc)
             sed -i '/vts/Q' "$2"
             ;;
+        vendor/lib*/libmtkcam_stdutils.so)
+            ;&
         vendor/lib64/hw/dfps.mt6768.so)
-            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v30.so" "${2}"
-            ;;
+            ;&
         vendor/lib64/hw/vendor.mediatek.hardware.pq@2.6-impl.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v30.so" "${2}"
             ;;
@@ -96,8 +94,7 @@ function blob_fixup() {
             sed -i "s/\x34\xE8\x87\x40\xB9/\x34\x28\x02\x80\x52/" "$2"
             ;;
         vendor/lib64/libwvhidl.so)
-            "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite-3.9.1.so" "libprotobuf-cpp-full-3.9.1.so" "${2}"
-            ;;
+            ;&
         vendor/lib64/mediadrm/libwvdrmengine.so)
             "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite-3.9.1.so" "libprotobuf-cpp-full-3.9.1.so" "${2}"
             ;;
