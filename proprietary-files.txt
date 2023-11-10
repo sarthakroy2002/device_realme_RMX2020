@@ -1039,6 +1039,10 @@ vendor/lib64/hw/android.hardware.thermal@2.0-impl.so
 vendor/lib/hw/thermal.mt6768.so
 vendor/lib64/hw/thermal.mt6768.so
 
+# USB
+vendor/bin/hw/android.hardware.usb@1.1-service-mediatek
+vendor/etc/init/android.hardware.usb@1.1-service-mediatek.rc
+
 # WiFi - from Redmi/merlin/merlin:11/RP1A.200720.011/V12.0.5.0.RJOCNXM:user/release-keys
 vendor/bin/hw/wpa_supplicant|4ae39a767cd12d610032eab6b34aed869f6e7e47
 vendor/bin/stp_dump3|73ff60240688d76fc005a59716db1bdcdf63627f
