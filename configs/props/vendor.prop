@@ -1,6 +1,9 @@
 # ADB
 persist.adb.nonblocking_ffs=1
 
+# APK Verity
+ro.apk_verity.mode=2
+
 # Audio
 ro.vendor.mtk_besloudness_support=0
 ro.vendor.mtk_audio_alac_support=1
