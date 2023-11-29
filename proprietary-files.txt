@@ -1006,9 +1006,7 @@ odm/lib64/vendor.oplus.hardware.radio@1.0.so
 odm/lib/sensors.virtual.so
 odm/lib64/libmxmafa.so
 odm/lib64/sensors.virtual.so
-vendor/lib/libsensorndkbridge.so:vendor/lib/libsensorndkbridge-v30.so
 vendor/lib64/hw/sensors.mt6768.so
-vendor/lib64/libsensorndkbridge.so:vendor/lib64/libsensorndkbridge-v30.so
 vendor/lib64/libsensor_custom.so
 
 # Thermal
