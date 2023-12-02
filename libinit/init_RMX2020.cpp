@@ -47,8 +47,7 @@
 using android::base::GetProperty;
 using android::base::ReadFileToString;
 
-void property_override(char const prop[], char const value[])
-{
+void property_override(char const prop[], char const value[]) {
     prop_info *pi;
 
     pi = (prop_info*) __system_property_find(prop);
@@ -58,37 +57,24 @@ void property_override(char const prop[], char const value[])
         __system_property_add(prop, strlen(prop), value, strlen(value));
 }
 
-void init_opperator_name_properties()
-{
-    char const *opperator_name_file = "/proc/oppoVersion/operatorName";
-    std::string opperator_name;
+void init_operator_name_properties() {
+    char const *operator_name_file = "/proc/oppoVersion/operatorName";
+    std::string operator_name;
 
-    if (ReadFileToString(opperator_name_file, &opperator_name)) {
+    if (ReadFileToString(operator_name_file, &operator_name)) {
         /*
          * Setup ro.separate.soft value to their OPPO project version
          * For current OPPO project version, here the following mapping:
          *
-         * 101 -> NON NFC
-         * 111 -> NON NFC
-         * 112 -> NON NFC
-         * 113 -> NFC
-         * 114 -> NON NFC
-         * 115 -> NON NFC
-         * 116 -> NON NFC
-         * 117 -> NON NFC
-         * 121 -> NON NFC
-         * 122 -> NFC
-         * 123 -> NON NFC
-		 * 124 -> NON NFC
-		 * 125 -> NON NFC
-		 * 126 -> NON NFC
+         * 101, 111, 112, 114, 115, 116, 117, 121, 123, 124, 125, 126 -> NON NFC
+         * 113, 122 -> NFC
          */
-        if (opperator_name == "113" || opperator_name == "122") {
+        if (operator_name == "113" || operator_name == "122") {
             property_override("ro.boot.product.hardware.sku", "nfc");
         }
     }
     else {
-        LOG(ERROR) << "Unable to read operatorName from " << opperator_name_file;
+        LOG(ERROR) << "Unable to read operatorName from " << operator_name_file;
     }
 }
 
@@ -104,7 +90,7 @@ void set_avoid_gfxaccel_config() {
 
 void vendor_load_properties() {
     set_avoid_gfxaccel_config();
-    init_opperator_name_properties();
+    init_operator_name_properties();
 #ifdef __ANDROID_RECOVERY__
     std::string buildtype = GetProperty("ro.build.type", "userdebug");
     if (buildtype != "user") {
