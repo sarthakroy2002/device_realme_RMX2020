@@ -5,6 +5,9 @@ vendor.oplus.hardware.commondcs::ICommonDcsHalService                        u:o
 vendor.oplus.hardware.biometrics.fingerprint::IBiometricsFingerprint         u:object_r:hal_fingerprint_hwservice:s0
 vendor.oplus.hardware.biometrics.fingerprintservice::IFingerprintHalService  u:object_r:hal_fingerprint_hwservice:s0
 
+# ORMS
+vendor.oplus.hardware.orms::IOrmsHalProxy                                    u:object_r:hal_orms_hwservice:s0
+
 # Radio
 vendor.oplus.hardware.radio::IOplusRadio                                     u:object_r:hal_telephony_hwservice:s0
 vendor.oplus.hardware.appradio::IOplusAppRadio                               u:object_r:hal_telephony_hwservice:s0
