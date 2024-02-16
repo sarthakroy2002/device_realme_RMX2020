@@ -1,11 +1,11 @@
 # MTK platform .rc configure
 
-import vendor/etc/init/hw/init.connectivity.rc
-import vendor/etc/init/hw/init.mt6768.usb.rc
-import vendor/etc/init/hw/init.volte.rc
-import vendor/etc/init/hw/init.mal.rc
-import vendor/etc/init/hw/init.sensor_1_0.rc
-import vendor/etc/init/hw/init.modem.rc
+import /vendor/etc/init/hw/init.connectivity.rc
+import /vendor/etc/init/hw/init.mt6768.usb.rc
+import /vendor/etc/init/hw/init.volte.rc
+import /vendor/etc/init/hw/init.mal.rc
+import /vendor/etc/init/hw/init.sensor_1_0.rc
+import /vendor/etc/init/hw/init.modem.rc
 
 
 on early-init
