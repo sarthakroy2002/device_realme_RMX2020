@@ -3,5 +3,4 @@ allow cameraserver property_socket:sock_file write;
 
 get_prop(cameraserver, vendor_mtk_camera_prop)
 get_prop(cameraserver, exported_default_prop)
-get_prop(cameraserver, vendor_audio_prop)
 set_prop(cameraserver, system_prop)
