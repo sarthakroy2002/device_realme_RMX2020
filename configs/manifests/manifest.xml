@@ -244,11 +244,6 @@
         <fqname>@1.0::IVideoTelephony/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.mediatek.hardware.wifi.supplicant</name>
-        <transport>hwbinder</transport>
-        <fqname>@2.0::ISupplicant/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.oplus.hardware.biometrics.fingerprint</name>
         <transport>hwbinder</transport>
         <fqname>@2.1::IBiometricsFingerprint/default</fqname>

@@ -396,8 +396,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     hostapd \
+    wpa_supplicant \
     android.hardware.wifi@1.3.vendor \
-    android.hardware.wifi.supplicant@1.3.vendor
+    android.hardware.wifi.supplicant@1.4.vendor
 
 PRODUCT_PACKAGES += \
     libkeystore-engine-wifi-hidl \
