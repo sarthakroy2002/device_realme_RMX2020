@@ -346,7 +346,7 @@ PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service.RMX2020
+    android.hardware.usb@1.3-service.basic
 
 # Vibrator
 $(call soong_config_set,mediatek_vibrator,supports_effects,true)
