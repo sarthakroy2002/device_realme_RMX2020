@@ -9,9 +9,6 @@
 /dev/esfp0                                                                                                u:object_r:fp_device:s0  
 /dev/silead_fp                                                                                            u:object_r:fp_device:s0
 
-# Health
-/(vendor|system/vendor)/bin/hw/android\.hardware\.health-service\.RMX2020                                 u:object_r:hal_health_default_exec:s0
-
 # Latency
 /dev/cpu_dma_latency                                                                                      u:object_r:latency_device:s0
 

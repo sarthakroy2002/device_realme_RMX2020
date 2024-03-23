@@ -140,8 +140,8 @@ PRODUCT_PACKAGES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health-service.RMX2020 \
-    android.hardware.health-service.RMX2020-recovery
+    android.hardware.health-service.mediatek \
+    android.hardware.health-service.mediatek-recovery
 
 # HIDL
 PRODUCT_PACKAGES += \
