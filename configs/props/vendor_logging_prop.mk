@@ -82,6 +82,7 @@ PRODUCT_VENDOR_PROPERTIES +=  \
     persist.log.tag.NetLnkEventHdlr=S \
     persist.log.tag.NetworkPolicy=S \
     persist.log.tag.NetworkStats=S \
+    persist.log.tag.OpenGLRenderer=S \
     persist.log.tag.OperatorUtils=S \
     persist.log.tag.PQ_DS=S \
     persist.log.tag.Phone=S \
