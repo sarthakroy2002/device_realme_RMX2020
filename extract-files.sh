@@ -102,6 +102,9 @@ function blob_fixup() {
         vendor/lib64/libcam.utils.sensorprovider.so)
             grep -q "libshim_sensors.so" "$2" || "$PATCHELF" --add-needed "libshim_sensors.so" "$2"
             ;;
+        vendor/lib64/libwifi-hal-mtk.so)
+            "${PATCHELF}" --set-soname "libwifi-hal-mtk.so" "${2}"
+            ;;
     esac
 }
 
