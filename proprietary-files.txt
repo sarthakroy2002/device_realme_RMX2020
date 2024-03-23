@@ -973,7 +973,6 @@ vendor/etc/init/init.vtservice_hidl.rc|f2e992214ed5bb99c2c2a135cf1f0996dba8a8a0
 -vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so|5e228669d2c575e38fc02a13404f31bc22494b87
 
 # NFC - from full_oppo6769-user 10 QP1A.190711.020 RMX2020_11.A.03 release-keys
-etc/nfcee_access.xml|0f05fc11d3060d453a6912c9b75b6f0a767c61a1
 vendor/etc/init/init.pn8x.nfc.rc|fc9a68fc3124d08aa434e6a70eb11268b5950998
 vendor/lib/libpn553_fw.so|b5dc428ab06493832d147987d4eea813710d9428
 vendor/lib/nfc_nci.pn54x.default.so|9722c71a3f4f62348ac159f5977902078f27606e
