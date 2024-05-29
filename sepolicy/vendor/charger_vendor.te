@@ -1,0 +1,4 @@
+r_dir_file(charger_vendor, sysfs_power_supply)
+r_dir_file(charger_vendor, sysfs_batteryinfo)
+r_dir_file(charger_vendor, gpu_device)
+allow charger_vendor dri_device:chr_file rw_file_perms;
