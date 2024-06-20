@@ -85,7 +85,6 @@ debug.sf.hwc.min.duration=21000000
 debug.sf.use_phase_offsets_as_durations=1
 debug.sf.predict_hwc_composition_strategy=0
 debug.sf.treat_170m_as_sRGB=1
-media.stagefright.thumbnail.prefer_hw_codecs=true
 persist.sys.sf.color_saturation=1.1
 persist.sys.sf.native_mode=0
 ro.surface_flinger.enable_frame_rate_override=false
@@ -133,15 +132,17 @@ ro.lmk.thrashing_limit=30
 ro.lmk.thrashing_limit_decay=50
 ro.lmk.swap_util_max=90
 
+# Media
+debug.stagefright.ccodec=1
+media.stagefright.thumbnail.prefer_hw_codecs=true
+ro.vendor.mtk_config_max_dram_size=0x800000000
+vendor.mtk.vdec.waitkeyframeforplay=7
+
 # Neural Networks
 debug.mtk_tflite.target_nnapi=29
 ro.vendor.mtk_nn.option=D,E,F,Z
 ro.vendor.mtk_nn_quant_preferred=1
 ro.vendor.mtk_nn_support=1
-
-# OMX
-ro.vendor.mtk_config_max_dram_size=0x800000000
-vendor.mtk.vdec.waitkeyframeforplay=7
 
 # Partitions
 ro.vendor.mtk_emmc_support=1
