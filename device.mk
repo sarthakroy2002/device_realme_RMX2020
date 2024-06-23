@@ -80,6 +80,10 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.6.vendor
 
 PRODUCT_PACKAGES += \
+    libexpat.vendor \
+    libpng.vendor
+
+PRODUCT_PACKAGES += \
     libshim_camera_metadata
 
 PRODUCT_PACKAGES += \
@@ -99,8 +103,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-resources \
     android.hardware.graphics.composer@2.1-resources.vendor \
-    android.hardware.graphics.composer@2.1-service \
+    android.hardware.graphics.composer@2.1-service
+
+PRODUCT_PACKAGES += \
     libdrm.vendor \
+    libion.vendor \
+    libui.vendor \
     libvulkan
 
 PRODUCT_PACKAGES += \
@@ -129,11 +137,17 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor \
     android.hardware.gatekeeper@1.0-impl
 
+PRODUCT_PACKAGES += \
+    libgatekeeper.vendor
+
 # GNSS
 PRODUCT_PACKAGES += \
     android.hardware.gnss.measurement_corrections@1.1.vendor \
     android.hardware.gnss.visibility_control@1.0.vendor \
     android.hardware.gnss@2.1.vendor
+
+PRODUCT_PACKAGES += \
+    libcurl.vendor
 
 # Health
 PRODUCT_PACKAGES += \
@@ -145,6 +159,7 @@ PRODUCT_PACKAGES += \
     android.hidl.allocator@1.0 \
     android.hidl.allocator@1.0.vendor \
     libhidltransport \
+    libhidlmemory.vendor \
     libhwbinder \
     libhwbinder.vendor \
     libhidltransport.vendor
@@ -166,7 +181,8 @@ PRODUCT_PACKAGES += \
     libkeymaster_portable.vendor:64 \
     libkeymaster_messages.vendor:64 \
     libsoft_attestation_cert.vendor:64 \
-    libpuresoftkeymasterdevice.vendor:64
+    libpuresoftkeymasterdevice.vendor:64 \
+    libnetutils.vendor
 
 # Libxml2
 PRODUCT_PACKAGES += \
@@ -343,6 +359,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libsensorndkbridge \
+    libpower.vendor \
     libshim_sensors
 
 PRODUCT_COPY_FILES += \
@@ -387,6 +404,10 @@ PRODUCT_COPY_FILES += \
     prebuilts/vndk/v30/arm64/arch-arm64-armv8-a/shared/vndk-sp/libunwindstack.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libunwindstack-v30.so \
     prebuilts/vndk/v30/arm64/arch-arm64-armv8-a/shared/vndk-core/libmedia_helper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmedia_helper-v30.so \
     prebuilts/vndk/v30/arm64/arch-arm64-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libutils-v30.so
+
+PRODUCT_PACKAGES += \
+    libunwindstack.vendor \
+    libutilscallstack.vendor
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
