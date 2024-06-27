@@ -912,6 +912,13 @@ on property:sys.boot_completed=1
 on property:sys.boot_completed=1
     setprop vendor.powerhal.init 1
 
+service vendor.charger /system/bin/charger
+    class charger
+    user system
+    group system graphics wakelock input
+    capabilities SYS_BOOT
+    seclabel u:r:charger:s0
+
 # Battery info
 on property:persist.vendor.mediatek.fg.disable=1
     write /sys/devices/platform/battery_meter/FG_daemon_disable 1

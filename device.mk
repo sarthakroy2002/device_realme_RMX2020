@@ -90,11 +90,6 @@ PRODUCT_PACKAGES += \
     RemoveCameraPackages \
     Aperture
 
-# Charger
-PRODUCT_PACKAGES += \
-    charger_res_images_vendor \
-    product_charger_res_images_vendor
-
 # Configstore
 PRODUCT_PACKAGES += \
     disable_configstore
@@ -151,8 +146,9 @@ PRODUCT_PACKAGES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health-service.mediatek \
-    android.hardware.health-service.mediatek-recovery
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-impl.recovery \
+    android.hardware.health@2.1-service
 
 # HIDL
 PRODUCT_PACKAGES += \
