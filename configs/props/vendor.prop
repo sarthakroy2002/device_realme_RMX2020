@@ -74,7 +74,7 @@ dalvik.vm.heaptargetutilization=0.75
 dalvik.vm.mtk-stack-trace-file=/data/anr/mtk_traces.txt
 
 # Display
-debug.sf.latch_unsignaled=0
+debug.sf.auto_latch_unsignaled=0
 debug.sf.late.sf.duration=30000000
 debug.sf.late.app.duration=24000000
 debug.sf.early.sf.duration=30000000
