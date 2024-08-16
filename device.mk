@@ -74,6 +74,9 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0.vendor \
     android.hardware.bluetooth.a2dp@1.0.vendor
 
+# Bootanimation
+TARGET_BOOT_ANIMATION_RES := 720
+
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.device@3.6.vendor \
@@ -87,7 +90,6 @@ PRODUCT_PACKAGES += \
     libshim_camera_metadata
 
 PRODUCT_PACKAGES += \
-    RemoveCameraPackages \
     Aperture
 
 # Configstore
