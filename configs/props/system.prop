@@ -1,6 +1,6 @@
 # Audio
-ro.camera.sound.forced=0
 ro.audio.silent=0
+ro.camera.sound.forced=0
 ro.config.vc_call_vol_steps=15
 
 # Brand
@@ -8,19 +8,19 @@ Build.BRAND=MTK
 
 # Camera
 persist.vendor.camera.privapp.list=com.android.camera,com.google.camera,org.lineageos.aperture
-vendor.camera.aux.packagelist=com.android.camera,com.google.camera,org.lineageos.aperture
 vendor.camera.aux.packageexcludelist=org.telegram.messenger,com.microsoft.teams,com.discord
+vendor.camera.aux.packagelist=com.android.camera,com.google.camera,org.lineageos.aperture
 
 # Dex
+dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5
+dalvik.vm.dex2oat-threads=6
 dalvik.vm.dex2oat64.enabled=true
-persist.bg.dexopt.enable=true
 dalvik.vm.dexopt.secondary=true
-pm.dexopt.install=speed-profile
+persist.bg.dexopt.enable=true
 pm.dexopt.bg-dexopt=speed-profile
 pm.dexopt.boot=verify
 pm.dexopt.first-boot=quicken
-dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5
-dalvik.vm.dex2oat-threads=6
+pm.dexopt.install=speed-profile
 
 # Display
 debug.sf.enable_hwc_vds=0
@@ -30,23 +30,23 @@ persist.sys.brightness.low.gamma=true
 persist.sys.fuse.passthrough.enable=true
 
 # Radio
-persist.sys.radio.force_lte_ca=true
 persist.sys.fflag.override.settings_provider_model=false
+persist.sys.radio.force_lte_ca=true
 
 # IPO
-sys.ipo.pwrdncap=2
 sys.ipo.disable=1
+sys.ipo.pwrdncap=2
 
 # Kernel
 ro.kernel.zio=38,108,105,16
 
 # OPLUS
-ro.build.display.wtid.mp=SW_S98670AA1_V010_USRD_TEST
 ro.build.display.wtid.ato=SW_S98670AA1_V010_USRD_TEST
-ro.build.display.wtid.monet.mp=SW_S98670AA1_V006_M10_R_USRD_MP
 ro.build.display.wtid.monet.ato=SW_S98670AA1_V017_M10_R_USRD_ATO
-ro.build.display.wtid.monetx.mp=SW_S98675AA1_V010_M10_R_USRD_MP
+ro.build.display.wtid.monet.mp=SW_S98670AA1_V006_M10_R_USRD_MP
 ro.build.display.wtid.monetx.ato=SW_S98675AA1_V015_M10_R_USRD_ATO
+ro.build.display.wtid.monetx.mp=SW_S98675AA1_V010_M10_R_USRD_MP
+ro.build.display.wtid.mp=SW_S98670AA1_V010_USRD_TEST
 
 # LMKD
 ro.config.low_ram=false
@@ -56,29 +56,29 @@ ro.lmk.log_stats=true
 ro.product.property_source_order=odm,vendor,product,system
 
 # Product
-ro.product.board=oppo6769
 ro.board.platform=mt6768
+ro.product.board=oppo6769
 
 # System
 persist.sys.binary_xml=false
 
-# USB 
-ro.sys.usb.mtp.whql.enable=0
-ro.sys.usb.storage.type=mtp
+# USB
 ro.sys.usb.bicr=no
 ro.sys.usb.charging.only=yes
+ro.sys.usb.mtp.whql.enable=0
+ro.sys.usb.storage.type=mtp
 
 # Wifi
-wifi.interface=wlan0
-ro.mediatek.wlan.wsc=1
-ro.mediatek.wlan.p2p=1
 mediatek.wlan.ctia=0
-wifi.tethering.interface=ap0
+ro.mediatek.wlan.p2p=1
+ro.mediatek.wlan.wsc=1
 wifi.direct.interface=p2p0
+wifi.interface=wlan0
+wifi.tethering.interface=ap0
 
 # ZRAM
-ro.zram.mark_idle_delay_mins=60
 ro.zram.first_wb_delay_mins=180
+ro.zram.mark_idle_delay_mins=60
 ro.zram.periodic_wb_delay_hours=24
 
 # Zygote

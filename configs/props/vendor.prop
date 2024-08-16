@@ -5,11 +5,11 @@ persist.adb.nonblocking_ffs=1
 ro.apk_verity.mode=2
 
 # Audio
-ro.vendor.mtk_besloudness_support=0
+ro.vendor.camera3.zsl.default=140
 ro.vendor.mtk_audio_alac_support=1
 ro.vendor.mtk_audio_ape_support=1
 ro.vendor.mtk_audio_tuning_tool_ver=V2.2
-ro.vendor.camera3.zsl.default=140
+ro.vendor.mtk_besloudness_support=0
 
 # Bluetooth
 bluetooth.device.class_of_device=90,2,12
@@ -45,13 +45,13 @@ persist.vendor.camera3.pipeline.bufnum.min.low_ram.imgo=6
 persist.vendor.camera3.pipeline.bufnum.min.low_ram.lcso=6
 persist.vendor.camera3.pipeline.bufnum.min.low_ram.rrzo=6
 persist.vendor.camera3.pipeline.bufnum.min.low_ram.rsso=6
+ro.mtk_cam_stereo_camera_support=1
 ro.vendor.mtk_camera_app_version=3
 ro.vendor.mtk_slow_motion_support=1
-ro.mtk_cam_stereo_camera_support=1
-vendor.camera.mdp.cz.enable=1
-vendor.camera.mdp.dre.enable=0
 ro.vendor.smvr.p2batch.hd=4
 ro.vendor.smvr.p2batch.vga=8
+vendor.camera.mdp.cz.enable=1
+vendor.camera.mdp.dre.enable=0
 
 # Connectivity
 persist.vendor.connsys.chipid=-1
@@ -75,16 +75,16 @@ dalvik.vm.mtk-stack-trace-file=/data/anr/mtk_traces.txt
 
 # Display
 debug.sf.auto_latch_unsignaled=0
-debug.sf.late.sf.duration=30000000
-debug.sf.late.app.duration=24000000
-debug.sf.early.sf.duration=30000000
 debug.sf.early.app.duration=24000000
-debug.sf.earlyGl.sf.duration=30000000
+debug.sf.early.sf.duration=30000000
 debug.sf.earlyGl.app.duration=24000000
+debug.sf.earlyGl.sf.duration=30000000
 debug.sf.hwc.min.duration=21000000
-debug.sf.use_phase_offsets_as_durations=1
+debug.sf.late.app.duration=24000000
+debug.sf.late.sf.duration=30000000
 debug.sf.predict_hwc_composition_strategy=0
 debug.sf.treat_170m_as_sRGB=1
+debug.sf.use_phase_offsets_as_durations=1
 persist.sys.sf.color_saturation=1.1
 persist.sys.sf.native_mode=0
 ro.surface_flinger.enable_frame_rate_override=false
@@ -128,9 +128,9 @@ ro.lmk.downgrade_pressure=60
 ro.lmk.kill_timeout_ms=100
 ro.lmk.psi_complete_stall_ms=150
 ro.lmk.swap_free_low_percentage=20
+ro.lmk.swap_util_max=90
 ro.lmk.thrashing_limit=30
 ro.lmk.thrashing_limit_decay=50
-ro.lmk.swap_util_max=90
 
 # Media
 debug.stagefright.ccodec=1
@@ -160,6 +160,12 @@ ro.vendor.mtk_pq_color_mode=1
 ro.vendor.mtk_pq_support=0
 
 # Radio
+persist.dbg.ims_volte_enable=1
+persist.radio.calls.on.ims=1
+persist.radio.data_con_rprt=1
+persist.radio.data_ltd_sys_ind=1
+persist.radio.multisim.config=dsds
+persist.radio.rat_on=combine
 persist.vendor.ims_support=1
 persist.vendor.log.tel_log_ctrl=1
 persist.vendor.md_c2k_cap_dep_check=0
@@ -181,30 +187,6 @@ persist.vendor.radio.smart.data.switch=1
 persist.vendor.vilte_support=0
 persist.vendor.viwifi_support=1
 persist.vendor.volte_support=1
-persist.dbg.ims_volte_enable=1
-persist.radio.rat_on=combine
-persist.radio.data_ltd_sys_ind=1
-persist.radio.data_con_rprt=1
-persist.radio.calls.on.ims=1
-ro.vendor.mtk_lte_support=1
-ro.vendor.mtk_md1_support=9
-ro.vendor.mtk_md_world_mode_support=1
-ro.vendor.mtk_modem_monitor_support=1
-ro.vendor.mtk_exchange_support=1
-ro.vendor.mtk_external_sim_only_slots=0
-ro.vendor.mtk_external_sim_support=1
-ro.vendor.radio.max.multisim=dsds
-ro.vendor.sim_me_lock_mode=3
-ro.vendor.sim_refresh_reset_by_modem=1
-ro.vendor.mtk_privacy_protection_lock=1
-ro.vendor.mtk_protocol1_rat_config=Lf/Lt/W/G
-ro.vendor.mtk_ps1_rat=Lf/Lt/W/G
-ro.vendor.mtk_ril_mode=c6m_1rild
-ro.vendor.mtk_rild_read_imsi=1
-ro.vendor.mtk_sim_card_onoff=2
-ro.vendor.mtk_sim_hot_swap_common_slot=1
-ro.vendor.mtk_single_bin_modem_support=1
-persist.radio.multisim.config=dsds
 ro.telephony.default_network=9,9,9,9
 ro.telephony.iwlan_operation_mode=default
 ro.telephony.sim.count=2
@@ -217,13 +199,31 @@ ro.vendor.mtk_c2k_lte_mode=0
 ro.vendor.mtk_data_config=1
 ro.vendor.mtk_eccci_c2k=1
 ro.vendor.mtk_embms_support=1
+ro.vendor.mtk_exchange_support=1
+ro.vendor.mtk_external_sim_only_slots=0
+ro.vendor.mtk_external_sim_support=1
 ro.vendor.mtk_fd_support=1
+ro.vendor.mtk_lte_support=1
+ro.vendor.mtk_md1_support=9
+ro.vendor.mtk_md_world_mode_support=1
+ro.vendor.mtk_modem_monitor_support=1
+ro.vendor.mtk_privacy_protection_lock=1
+ro.vendor.mtk_protocol1_rat_config=Lf/Lt/W/G
+ro.vendor.mtk_ps1_rat=Lf/Lt/W/G
+ro.vendor.mtk_ril_mode=c6m_1rild
+ro.vendor.mtk_rild_read_imsi=1
+ro.vendor.mtk_sim_card_onoff=2
+ro.vendor.mtk_sim_hot_swap_common_slot=1
+ro.vendor.mtk_single_bin_modem_support=1
 ro.vendor.mtk_wapi_support=1
 ro.vendor.mtk_wappush_support=1
 ro.vendor.mtk_world_phone_policy=0
 ro.vendor.mtk_zsdhdr_support=1
 ro.vendor.num_md_protocol=2
 ro.vendor.pref_scale_enable_cfg=1
+ro.vendor.radio.max.multisim=dsds
+ro.vendor.sim_me_lock_mode=3
+ro.vendor.sim_refresh_reset_by_modem=1
 telephony.active_modems.max_count=2
 
 # TEE
@@ -232,15 +232,15 @@ ro.vendor.mtk_tee_gp_support=1
 ro.vendor.mtk_trustonic_tee_support=1
 
 # Wifi
-ro.vendor.mtk_wfd_support=1
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
-wifi.concurrent.interface=ap0
+ro.vendor.mtk_wfd_support=1
 ro.vendor.wfd.dummy.enable=1
 ro.vendor.wfd.iframesize.level=0
 ro.vendor.wifi.sap.interface=ap0
 ro.vendor.wlan.gen=gen4m
+wifi.concurrent.interface=ap0
 
 # Zygote
 zygote.critical_window.minute=10
