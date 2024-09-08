@@ -381,6 +381,9 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0.vendor \
     android.hardware.thermal@1.0-impl
 
+# Update
+PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.RMX2020
