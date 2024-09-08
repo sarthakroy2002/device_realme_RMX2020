@@ -382,6 +382,7 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl
 
 # Update
+AB_OTA_UPDATER := false
 PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
 
 # USB
