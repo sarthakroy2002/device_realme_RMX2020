@@ -18,9 +18,6 @@
 # NFC
 /dev/pn553                                                                                                u:object_r:nfc_device:s0
 
-# Power
-/(vendor|system/vendor)/bin/hw/android\.hardware\.power-service\.RMX2020-libperfmgr                      u:object_r:hal_power_default_exec:s0
-
 # Sensor
 /dev/m_virtual_sensor_misc(/.*)?                                                                          u:object_r:m_virtual_sensor_device:s0 
 
