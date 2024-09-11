@@ -1,0 +1,68 @@
+<compatibility-matrix version="2.0" type="framework">
+    <hal format="hidl" optional="true">
+        <name>vendor.nxp.hardware.nfc</name>
+        <version>1.1</version>
+        <interface>
+            <name>INqNfc</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.nxp.nxpese</name>
+        <version>1.0</version>
+        <interface>
+            <name>INxpEse</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.oplus.hardware.appradio</name>
+        <version>1.0</version>
+        <interface>
+            <name>IOplusAppRadio</name>
+            <instance>oplus_app_slot1</instance>
+            <instance>oplus_app_slot2</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.oplus.hardware.biometrics.fingerprint</name>
+        <version>2.1</version>
+        <interface>
+            <name>IBiometricsFingerprint</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.oplus.hardware.oplusSensor</name>
+        <version>1.0</version>
+        <interface>
+            <name>ISensorFeature</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.oplus.hardware.radio</name>
+        <version>1.0</version>
+        <interface>
+            <name>IOplusRadio</name>
+            <instance>oplus_slot1</instance>
+            <instance>oplus_slot2</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.trustonic.tee</name>
+        <version>1.1</version>
+        <interface>
+            <name>ITee</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.trustonic.tee.tui</name>
+        <version>1.0</version>
+        <interface>
+            <name>ITui</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+</compatibility-matrix>
