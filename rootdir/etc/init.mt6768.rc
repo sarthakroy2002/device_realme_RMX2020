@@ -48,6 +48,10 @@ on property:ro.boot.product.hardware.sku=nfc
     start secure_element_hal_service
     start vendor.nfc_hal_service
 
+on init && property:persist.vendor.fingerprint.available=false
+    mount none /vendor/lost+found /vendor/etc/vintf/manifest/android.hardware.biometrics.fingerprint@2.1-service.RMX2020.xml bind
+    mount none /vendor/lost+found /vendor/etc/permissions/android.hardware.fingerprint.xml bind
+
 on late-init
     write /proc/bootprof "INIT:late-init"
     

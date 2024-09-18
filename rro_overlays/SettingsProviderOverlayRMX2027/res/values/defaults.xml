@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (c) 2015, The Android Open Source Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+-->
+<resources>
+
+    <!-- Default for Settings.Global.DEVICE_NAME $1=MANUFACTURER $2=MODEL-->
+    <string name="def_device_name">realme C3</string>
+
+    <!-- Default for Settings.Global.DEVICE_NAME $1=MODEL-->
+    <string name="def_device_name_simple">realme C3</string>
+
+</resources>

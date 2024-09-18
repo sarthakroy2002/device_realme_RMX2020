@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2022 The Android Open Source Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.fingerprint.overlay.RMX2020">
+
+    <application android:hasCode="false" />
+    <overlay
+      android:targetPackage="android"
+      android:requiredSystemPropertyName="persist.vendor.fingerprint.available"
+      android:requiredSystemPropertyValue="true"
+      android:isStatic="true"
+      android:priority="900"/>
+</manifest>
