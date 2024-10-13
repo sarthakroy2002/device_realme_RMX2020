@@ -10,5 +10,6 @@ allow init sysfs_sensor:file rw_file_perms;
 allow init sysfs_sensor:file setattr;
 allow init sysfs_virtual_sensor:file rw_file_perms;
 allow init sysfs_virtual_sensor:file setattr;
+allow init proc_oplus_ver:file r_file_perms;
 get_prop(init, vendor_oplus_fingerprint_prop)
 set_prop(init, vendor_oplus_fingerprint_prop)

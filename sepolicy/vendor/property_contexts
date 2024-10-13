@@ -13,6 +13,7 @@ persist.vendor.fingerprint.                    u:object_r:vendor_oplus_fingerpri
 vendor.fingerprint.optical.                    u:object_r:vendor_oplus_fingerprint_prop:s0
 persist.vendor.silead_newalgo.support          u:object_r:vendor_oplus_fingerprint_prop:s0
 vendor.silead.fp.                              u:object_r:vendor_oplus_fingerprint_prop:s0
+vendor.oppo.biometrics.fingerprint.            u:object_r:vendor_oplus_fingerprint_prop:s0
 
 # Media
 ro.vendor.mtk.omx.log                          u:object_r:vendor_mtk_omx_core_prop:s0
