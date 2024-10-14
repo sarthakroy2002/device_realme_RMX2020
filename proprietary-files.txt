@@ -728,12 +728,12 @@ vendor/lib64/hw/gps.default.so
 
 # Graphics
 vendor/lib/egl/egl.cfg
-vendor/lib/egl/libGLES_mali.so
+vendor/lib/egl/libGLES_mali.so;SYMLINK=vendor/lib/hw/vulkan.mt6768.so
 vendor/lib/egl/libGLES_meow.so
 vendor/lib/egl/libMEOW_gift.so
 vendor/lib/egl/libMEOW_trace.so
 vendor/lib/libOpenCL.so
-vendor/lib64/egl/libGLES_mali.so
+vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/hw/vulkan.mt6768.so
 vendor/lib64/egl/libGLES_meow.so
 vendor/lib64/egl/libMEOW_gift.so
 vendor/lib64/egl/libMEOW_trace.so
@@ -1429,9 +1429,9 @@ vendor/etc/virtual-spn-conf-by-efpnn.xml
 vendor/etc/virtual-spn-conf-by-efspn.xml
 vendor/etc/virtual-spn-conf-by-imsi.xml
 vendor/lib/hw/dfps.mt6768.so
-vendor/lib/hw/kmsetkey.trustonic.so
-vendor/lib/hw/libMcGatekeeper.so
-vendor/lib/hw/libSoftGatekeeper.so
+vendor/lib/hw/kmsetkey.trustonic.so;SYMLINK=vendor/lib/hw/kmsetkey.default.so
+vendor/lib/hw/libMcGatekeeper.so;SYMLINK=vendor/lib/hw/gatekeeper.mt6768.so
+vendor/lib/hw/libSoftGatekeeper.so;SYMLINK=vendor/lib/hw/gatekeeper.default.so
 vendor/lib/arm.graphics-V1-ndk_platform.so
 vendor/lib/lib3a.ae.core.so
 vendor/lib/lib3a.ae.so
@@ -1633,9 +1633,9 @@ vendor/lib/pascali_qtech_main_ov13b10_tuning.so
 vendor/lib/victor_s5k3p9sp_mipi_raw_IdxMgr.so
 vendor/lib/victor_s5k3p9sp_mipi_raw_tuning.so
 vendor/lib64/hw/dfps.mt6768.so
-vendor/lib64/hw/kmsetkey.trustonic.so
-vendor/lib64/hw/libMcGatekeeper.so
-vendor/lib64/hw/libSoftGatekeeper.so
+vendor/lib64/hw/kmsetkey.trustonic.so;SYMLINK=vendor/lib64/hw/kmsetkey.default.so
+vendor/lib64/hw/libMcGatekeeper.so;SYMLINK=vendor/lib64/hw/gatekeeper.mt6768.so
+vendor/lib64/hw/libSoftGatekeeper.so;SYMLINK=vendor/lib64/hw/gatekeeper.default.so
 vendor/lib64/arm.graphics-V1-ndk_platform.so
 vendor/lib64/lbs_hidl_service-impl.so
 vendor/lib64/lib3a.ae.core.so
