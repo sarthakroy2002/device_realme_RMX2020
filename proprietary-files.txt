@@ -966,11 +966,11 @@ system_ext/etc/init/init.vtservice.rc|50a2249906edc06059b443513db47a2ddc0490dc
 -system_ext/lib64/libvcodec_capenc.so|5527525dfcd25169bc380ac53d8181ffa1429c6f
 -system_ext/lib64/libvt_avsync.so|632cb05532ef2e022072d91bff3c1ae47c888b7e
 -system_ext/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so|fc3f645734d4e37fa50b77233d63c7b2eb166014
--system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE=vendor.mediatek.hardware.videotelephony@1.0.system_ext|aee568e770a3835af2df2262c9dc8bb2911da324
+-system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so|aee568e770a3835af2df2262c9dc8bb2911da324
 vendor/bin/hw/vtservice_hidl|047b26f80b338b7d0869840d243eefebe82d56f5
 vendor/etc/init/init.vtservice_hidl.rc|f2e992214ed5bb99c2c2a135cf1f0996dba8a8a0
 vendor/lib64/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so|bb9ff554802e7bffb72cf24604109dafcf0019fc
-vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so|5e228669d2c575e38fc02a13404f31bc22494b87
+vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=_vendor|5e228669d2c575e38fc02a13404f31bc22494b87
 
 # NFC - from full_oppo6769-user 10 QP1A.190711.020 RMX2020_11.A.03 release-keys
 vendor/etc/init/init.pn8x.nfc.rc|fc9a68fc3124d08aa434e6a70eb11268b5950998
