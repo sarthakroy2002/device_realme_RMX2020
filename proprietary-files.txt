@@ -39,8 +39,6 @@ vendor/lib64/liboplus_audio_config.so
 vendor/lib64/libtinyxml.so
 
 # Audio (Hardware)
-system_ext/lib/vendor.mediatek.hardware.audio@6.1.so
-system_ext/lib64/vendor.mediatek.hardware.audio@6.1.so
 vendor/lib/hw/audio.primary.mt6768.so
 vendor/lib/hw/audio.r_submix.mt6768.so
 vendor/lib/hw/audio.usb.mt6768.so
@@ -256,8 +254,6 @@ vendor/etc/audio_param/Volume_ParamUnitDesc.xml
 vendor/etc/aurisys_param/Speech_AudioParam.xml
 
 # Bluetooth
-system_ext/lib/vendor.mediatek.hardware.bluetooth.audio@2.1.so
-system_ext/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-mediatek
 vendor/etc/init/android.hardware.bluetooth@1.0-service-mediatek.rc
 vendor/etc/audio_policy_configuration_bluetooth_legacy_hal.xml
