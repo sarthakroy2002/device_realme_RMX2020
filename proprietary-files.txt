@@ -469,8 +469,6 @@ vendor/lib64/mediadrm/libwvdrmengine.so|3fd3de4406f52d8988d779b58e2510dd2ac1b281
 vendor/lib64/libwvhidl.so|1f58f2ddcea8274b901d957296560bde5eb0b8ad
 
 # Display (Hardware)
-system_ext/lib/vendor.oplus.hardware.displaypanelfeature@1.0.so
-system_ext/lib64/vendor.oplus.hardware.displaypanelfeature@1.0.so
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
 vendor/lib64/hw/hwcomposer.mt6768.so
 
