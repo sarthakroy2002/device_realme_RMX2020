@@ -1,7 +1,7 @@
 # Device proprietary files - From RMX2020-user 11 RP1A.200720.011 RMX2020_11_C.12 release-keys, unless pinned
 
 # ADSP
-vendor/lib64/libadsprpc.so
+vendor/lib64/libadsprpc.so;DISABLE_DEPS
 
 # AEE - from Redmi/ares/ares:12/SP1A.210812.016/21.11.8:user/release-keys
 vendor/lib64/libudf.so|f57a4f63592b62c2de72b377021327756fc5fac1
@@ -280,7 +280,7 @@ vendor/lib64/libbt-vendor.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
 
 # CDSP
-vendor/lib64/libcdsprpc.so
+vendor/lib64/libcdsprpc.so;DISABLE_DEPS
 
 # Camera
 odm/lib/libormshalclient.so
