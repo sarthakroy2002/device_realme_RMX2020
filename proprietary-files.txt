@@ -717,7 +717,7 @@ vendor/firmware/wifi_132780.cfg
 vendor/firmware/wifi_19741.cfg
 
 # Firmware - from A145PXXU1AWA3
-vendor/firmware/soc1_0_ram_bt_1a_1_hdr.bin|9cd0d79cde76a59ddd8545b1621af1176c5f9605
+vendor/firmware/soc1_0_ram_bt_1a_1_hdr.bin|8c5d8e93ad8a03c6de5aaaad8ef58d53e75c8378
 
 # GPS
 vendor/bin/hw/android.hardware.gnss@2.1-service-mediatek
@@ -961,7 +961,7 @@ system_ext/etc/init/init.vtservice.rc|50a2249906edc06059b443513db47a2ddc0490dc
 -system_ext/lib64/libmtk_vt_wrapper.so|af4d486c516c920ea99c362aebbf04180e96035c
 -system_ext/lib64/libsignal.so|0f55bb64c660fe4cda2b695121580b054f026e73
 -system_ext/lib64/libsink.so|6bd8c55847116a9a37e223ea2a6e5ce1379e53f7
--system_ext/lib64/libsource.so|66a481fd2e260a820899d60cf9190fb986d36768
+-system_ext/lib64/libsource.so|66a481fd2e260a820899d60cf9190fb986d36768|c4fa65eea73987da6d279fe89b8fec23ad2c0bf1
 -system_ext/lib64/libvcodec_cap.so|6973253cb2e4ddf365451ed2ac8db9d04085bc4a
 -system_ext/lib64/libvcodec_capenc.so|5527525dfcd25169bc380ac53d8181ffa1429c6f
 -system_ext/lib64/libvt_avsync.so|632cb05532ef2e022072d91bff3c1ae47c888b7e
@@ -1037,7 +1037,7 @@ vendor/bin/wlan_assistant|79b03b7525d0cd46f1235787d532acfc628951f4
 vendor/bin/wmt_launcher|d11c065c19a322f61821ad78ba7d27e8ded3dacb
 vendor/bin/wmt_loader|e095e09057aab66d5d59200189a01e7247c3fabe
 vendor/etc/init/wlan_assistant.rc|32ed0c40b58acc747c83bf467dde7f72634e9732
-vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so;FIX_SONAME|e2f6ff7a054982880b9902cae684bcf0dad509fb
+vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so;FIX_SONAME|e2f6ff7a054982880b9902cae684bcf0dad509fb|54d649e1bc7d79a84d713dd53b3d059b6e4d2661
 vendor/lib64/libwifitest.so|e3eebbde7e588375ea4f1eb03e0e60cc8a396142
 
 # Misc
