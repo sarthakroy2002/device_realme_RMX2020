@@ -90,9 +90,23 @@ public:
             mClientCallback->onEnumerate(deviceId, fingerId, groupId, remaining);
         return Void();
     }
+    
+    Return<void> onTouchUp(uint64_t deviceId) {
+    return mClientCallback->onAcquired(
+        deviceId,
+        android::hardware::biometrics::fingerprint::V2_1::
+            FingerprintAcquiredInfo::ACQUIRED_VENDOR,
+        0);
+    }
+    
+    Return<void> onTouchDown(uint64_t deviceId) {
+    return mClientCallback->onAcquired(
+        deviceId,
+        android::hardware::biometrics::fingerprint::V2_1::
+            FingerprintAcquiredInfo::ACQUIRED_VENDOR,
+        1);
+    }
 
-    Return<void> onTouchUp(uint64_t deviceId) { return Void(); }
-    Return<void> onTouchDown(uint64_t deviceId) { return Void(); }
     Return<void> onSyncTemplates(uint64_t deviceId, const hidl_vec<uint32_t>& fingerId, uint32_t remaining) {
         ALOGE("onSyncTemplates %" PRIu64 " %zu %" PRIu32, deviceId, fingerId.size(), remaining);
         myDeviceId = deviceId;
