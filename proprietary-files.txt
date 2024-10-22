@@ -792,7 +792,7 @@ vendor/lib64/vendor.mediatek.hardware.pq@2.6.so
 -system_ext/bin/vtservice|59adc81ee1ad1f3fb4942cd6e8e7100325002eb2
 system_ext/etc/init/init.vtservice.rc|50a2249906edc06059b443513db47a2ddc0490dc
 -system_ext/lib64/libcomutils.so|6d9cd979f33ef01cb26861a38a59e76e1c2a3acb
--system_ext/lib64/libimsma.so|932cbe88083fae23b159bf0e3fe17d7efb93495b
+-system_ext/lib64/libimsma.so;DISABLE_DEPS|932cbe88083fae23b159bf0e3fe17d7efb93495b
 -system_ext/lib64/libimsma_adapt.so|754ad1c39fb4dba9d3eb69ac00112e7600d68580
 -system_ext/lib64/libimsma_rtp.so|20ee91f090661fb26e6625ad2fef828441956b82
 -system_ext/lib64/libimsma_socketwrapper.so|1f9b83322c41e5b0a7b3130f74a38ddb14f578d8
@@ -814,11 +814,11 @@ vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=_vendo
 # NFC - from full_oppo6769-user 10 QP1A.190711.020 RMX2020_11.A.03 release-keys
 vendor/etc/init/init.pn8x.nfc.rc|fc9a68fc3124d08aa434e6a70eb11268b5950998
 vendor/lib/libpn553_fw.so|b5dc428ab06493832d147987d4eea813710d9428
-vendor/lib/nfc_nci.pn54x.default.so|9722c71a3f4f62348ac159f5977902078f27606e
-vendor/lib64/nfc_nci.pn54x.default.so|96a172cc2a9f400deb85cce1b72de8e9778ed5d9
+vendor/lib/nfc_nci.pn54x.default.so;DISABLE_DEPS|9722c71a3f4f62348ac159f5977902078f27606e
+vendor/lib64/nfc_nci.pn54x.default.so;DISABLE_DEPS|96a172cc2a9f400deb85cce1b72de8e9778ed5d9
 
 # Neural-networks
-vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron
+vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron;DISABLE_DEPS
 vendor/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc
 vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-mtk-gpu.xml
 
@@ -1429,7 +1429,7 @@ vendor/lib64/libmsbc_mtk.so
 vendor/lib64/libmsnr.so
 vendor/lib64/libmtcloader.so
 vendor/lib64/libneuroeara.so
-vendor/lib64/libneuron_adapter.so
+vendor/lib64/libneuron_adapter.so;DISABLE_DEPS
 vendor/lib64/libneuron_platform.so
 vendor/lib64/libneuropilot_hal_utils.so
 vendor/lib64/libneuropilot_jni_R.so
