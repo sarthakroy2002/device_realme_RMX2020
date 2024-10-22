@@ -494,7 +494,7 @@ odm/lib/libgf_hal_G3.so
 odm/lib/libgf_hal_G5.so
 odm/lib/libgf_hal_G6.so
 odm/lib/libsl_fp_impl.so
-odm/lib/vendor.oplus.hardware.biometrics.fingerprint@2.1.so
+odm/lib/vendor.oplus.hardware.biometrics.fingerprint@2.1.so;MODULE_SUFFIX=_odm
 odm/lib/vendor.oplus.hardware.biometrics.fingerprintservice@1.0.so
 odm/lib/vendor.oplus.hardware.commondcs@1.0.so
 odm/lib64/hw/fingerprint.goodix_G2.default.so
@@ -510,7 +510,7 @@ odm/lib64/libgf_hal_G3.so
 odm/lib64/libgf_hal_G5.so
 odm/lib64/libgf_hal_G6.so
 odm/lib64/libsl_fp_impl.so
-odm/lib64/vendor.oplus.hardware.biometrics.fingerprint@2.1.so
+odm/lib64/vendor.oplus.hardware.biometrics.fingerprint@2.1.so;MODULE_SUFFIX=_odm
 odm/lib64/vendor.oplus.hardware.biometrics.fingerprintservice@1.0.so
 odm/lib64/vendor.oplus.hardware.commondcs@1.0.so
 

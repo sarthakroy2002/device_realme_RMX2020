@@ -42,6 +42,9 @@ function lib_to_package_fixup_vendor_variants() {
         vendor.mediatek.hardware.videotelephony@1.0)
             echo "${1}_vendor"
             ;;
+        vendor.oplus.hardware.biometrics.fingerprint@2.1)
+            echo "${1}_odm"
+            ;;
         *)
             return 1
             ;;
