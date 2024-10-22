@@ -1,0 +1,51 @@
+//
+// Copyright (C) 2024 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_prebuilt_library_shared {
+	name: "libutils-v30",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["libutils-v30.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	vendor: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libmedia_helper-v30",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["libmedia_helper-v30.so"],
+		},
+	},
+	compile_multilib: "32",
+	check_elf_files: false,
+	vendor: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libui-v32",
+	shared_libs: ["android.hardware.graphics.common-V2-ndk_platform", "android.hardware.common-V2-ndk_platform"],
+	strip: {
+			none: true,
+	},
+	target: {
+			android_arm: {
+					srcs: ["libui-v32.so"],
+			},
+	},
+	compile_multilib: "32",
+	check_elf_files: false,
+	vendor: true,
+}

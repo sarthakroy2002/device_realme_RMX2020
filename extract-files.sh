@@ -56,7 +56,7 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-        vendor/lib*/hw/audio.primary.mt6768.so)
+        vendor/lib/hw/audio.primary.mt6768.so)
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libmedia_helper.so" "libmedia_helper-v30.so" "${2}"
             "${PATCHELF}" --replace-needed "libalsautils.so" "libalsautils-mtk.so" "${2}"
@@ -73,7 +73,7 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             sed -i '/vts/Q' "$2"
             ;;
-        vendor/lib*/libmtkcam_stdutils.so \
+        vendor/lib64/libmtkcam_stdutils.so \
         |vendor/lib64/hw/dfps.mt6768.so \
         |vendor/lib64/hw/vendor.mediatek.hardware.pq@2.6-impl.so)
             [ "$2" = "" ] && return 0
