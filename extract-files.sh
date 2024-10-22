@@ -89,10 +89,6 @@ function blob_fixup() {
             sed -i "s/ro.mtk_crossmount_support/ro.vendor.mtk_crossmount\x00/" "$2"
             sed -i "s/ro.mtk_deinterlace_support/ro.vendor.mtk_deinterlace\x00/" "$2"
             ;;
-        vendor/lib64/hw/android.hardware.thermal@2.0-impl.so)
-            [ "$2" = "" ] && return 0
-            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "$2"
-            ;;
         vendor/lib64/libmtkcam_featurepolicy.so)
             [ "$2" = "" ] && return 0
             # evaluateCaptureConfiguration()
