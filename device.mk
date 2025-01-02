@@ -65,23 +65,12 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    libbluetooth_audio_session \
-    android.hardware.bluetooth.a2dp@1.0 \
-    android.hardware.bluetooth@1.0.vendor \
-    android.hardware.bluetooth.a2dp@1.0.vendor
+    libbluetooth_audio_session
 
 # Bootanimation
 TARGET_BOOT_ANIMATION_RES := 720
 
 # Camera
-PRODUCT_PACKAGES += \
-    android.hardware.camera.device@3.6.vendor \
-    android.hardware.camera.provider@2.6.vendor
-
-PRODUCT_PACKAGES += \
-    libexpat.vendor \
-    libpng.vendor
-
 PRODUCT_PACKAGES += \
     libshim_camera_metadata
 
@@ -99,9 +88,6 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-service
 
 PRODUCT_PACKAGES += \
-    libdrm.vendor \
-    libion.vendor \
-    libui.vendor \
     libvulkan
 
 PRODUCT_PACKAGES += \
@@ -113,7 +99,6 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.4.vendor \
     android.hardware.drm-service.clearkey
 
 # Fastbootd
@@ -132,15 +117,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libgatekeeper.vendor
-
-# GNSS
-PRODUCT_PACKAGES += \
-    android.hardware.gnss.measurement_corrections@1.1.vendor \
-    android.hardware.gnss.visibility_control@1.0.vendor \
-    android.hardware.gnss@2.1.vendor
-
-PRODUCT_PACKAGES += \
-    libcurl.vendor
 
 # Health
 PRODUCT_PACKAGES += \
@@ -178,10 +154,6 @@ PRODUCT_PACKAGES += \
     libpuresoftkeymasterdevice.vendor:64 \
     libnetutils.vendor
 
-# Libxml2
-PRODUCT_PACKAGES += \
-    libxml2.vendor
-
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.RMX2020
@@ -197,10 +169,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libavservices_minijail_vendor \
     libavservices_minijail.vendor
-
-# Net
-PRODUCT_PACKAGES += \
-    libpcap.vendor
 
 # Neutral Networks
 PRODUCT_PACKAGES += \
@@ -287,9 +255,6 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.mtkpower@1.0.vendor \
     vendor.mediatek.hardware.mtkpower@1.1.vendor
 
-PRODUCT_PACKAGES += \
-    android.hardware.power@1.3.vendor
-
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
@@ -308,13 +273,6 @@ PRODUCT_PACKAGES += \
 # Public Libraries
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
-
-# Radio
-PRODUCT_PACKAGES += \
-    android.hardware.broadcastradio@1.1.vendor \
-    android.hardware.radio@1.5.vendor \
-    android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio.deprecated@1.0.vendor
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -352,13 +310,10 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.frameworks.sensorservice@1.0 \
-    android.frameworks.sensorservice@1.0.vendor \
-    android.hardware.sensors@2.0.vendor
+    android.frameworks.sensorservice@1.0
 
 PRODUCT_PACKAGES += \
     libsensorndkbridge \
-    libpower.vendor \
     libshim_sensors
 
 PRODUCT_COPY_FILES += \
@@ -417,9 +372,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     hostapd \
-    wpa_supplicant \
-    android.hardware.wifi@1.3.vendor \
-    android.hardware.wifi.supplicant@1.4.vendor
+    wpa_supplicant
 
 PRODUCT_PACKAGES += \
     libkeystore-engine-wifi-hidl \
