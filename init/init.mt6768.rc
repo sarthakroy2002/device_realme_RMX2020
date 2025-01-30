@@ -155,7 +155,6 @@ on post-fs
 on late-fs
     setprop init.userspace_reboot.userdata_remount.timeoutmillis 10000
     mount_all /vendor/etc/fstab.mt6768 --late
-    exec /system/bin/tune2fs -O has_journal -u 10010 -r 4096 /dev/block/platform/bootdevice/by-name/userdata
 
 on post-fs-data
     # boot time fs tune
