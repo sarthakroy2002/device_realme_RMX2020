@@ -1,0 +1,16 @@
+# FM
+ro.fm.chip=0x6631
+ro.fm.band=1
+ro.fm.low_band=875
+ro.fm.high_band=1080
+ro.fm.seek_space=1
+ro.fm.max_scan_num=40
+ro.fm.seek_lev=4
+ro.fm.scan_sort=0
+ro.fm.short_ana_sup=1
+ro.fm.rssi_th_l2=-102
+ro.fm.fake_chans=4
+ro.fm.fake_chan_0=9210 -205
+ro.fm.fake_chan_1=9600 -152
+ro.fm.fake_chan_2=10400 -152
+ro.fm.fake_chan_3=10750 -205
