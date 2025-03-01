@@ -1,0 +1,10 @@
+allow hal_sensors_default proc_oplus_devinfo:file r_file_perms;
+allow hal_sensors_default proc_oplus_devinfo:dir search;
+allow hal_sensors_default proc_oplus_ver:file r_file_perms;
+allow hal_sensors_default proc_oplus_mtkcali:file r_file_perms;
+allow hal_sensors_default proc_oplus_sensor:file r_file_perms;
+allow hal_sensors_default m_virtual_sensor_device:chr_file r_file_perms;
+allow hal_sensors_default sysfs_virtual_sensor:dir search;
+allow hal_sensors_default sysfs_virtual_sensor:file rw_file_perms;
+get_prop(hal_sensors_default, system_oplus_sensor_prop)
+set_prop(hal_sensors_default, system_oplus_sensor_prop)
