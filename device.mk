@@ -352,7 +352,7 @@ PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.RMX2020
 
 # Vibrator
-TARGET_VIBRATOR_SUPPORTS_EFFECTS := true
+$(call soong_config_set,mediatek_vibrator,supports_effects,true)
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.mediatek
 
