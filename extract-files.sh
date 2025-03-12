@@ -100,7 +100,7 @@ function blob_fixup() {
             "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite-3.9.1.so" "libprotobuf-cpp-full-3.9.1.so" "${2}"
             ;;
         vendor/bin/mnld \
-        |vendor/lib64/libaalservice.so \
+        |vendor/lib*/libaalservice.so \
         |vendor/lib64/libcam.utils.sensorprovider.so)
             [ "$2" = "" ] && return 0
             grep -q "libshim_sensors.so" "$2" || "$PATCHELF" --add-needed "libshim_sensors.so" "$2"
