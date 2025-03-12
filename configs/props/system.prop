@@ -24,6 +24,7 @@ pm.dexopt.install=speed-profile
 
 # Display
 debug.sf.enable_hwc_vds=0
+sys.brightness.disable_gamma_conversion=true
 
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
