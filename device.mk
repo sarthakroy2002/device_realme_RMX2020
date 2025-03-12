@@ -72,9 +72,6 @@ TARGET_BOOT_ANIMATION_RES := 720
 
 # Camera
 PRODUCT_PACKAGES += \
-    libshim_camera_metadata
-
-PRODUCT_PACKAGES += \
     Aperture
 
 # Configstore

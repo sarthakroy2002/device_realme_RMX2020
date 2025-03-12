@@ -67,7 +67,7 @@ function blob_fixup() {
             ;;
         vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so)
             [ "$2" = "" ] && return 0
-            grep -q libshim_camera_metadata.so "$2" || patchelf --add-needed libshim_camera_metadata.so "$2"
+            grep -q "libcamera_metadata_shim.so" "${2}" || "${PATCHELF}" --add-needed "libcamera_metadata_shim.so" "${2}"
             ;;
         vendor/etc/init/android.hardware.bluetooth@1.0-service-mediatek.rc)
             [ "$2" = "" ] && return 0
