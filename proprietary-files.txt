@@ -1007,7 +1007,6 @@ vendor/bin/wfca
 vendor/etc/.tp/.ht120.mtc
 vendor/etc/apdb/APDB_MT6768_S01__W2044
 vendor/etc/apdb/APDB_MT6768_S01__W2044_ENUM
-vendor/etc/aurisys_param/Speech_AudioParam.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_ATnT_Mexico.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_ATnT_US.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_CT.xml
@@ -1215,7 +1214,6 @@ vendor/lib/libnvram_daemon_callback.so
 vendor/lib/libnvram_platform.so
 vendor/lib/libnvram_sec.so
 vendor/lib/libocam_common.so
-vendor/lib/liboplus_audio_config.so
 vendor/lib/libpixelflinger.so
 vendor/lib/libpq_cust_base.so
 vendor/lib/libpq_prot.so
@@ -1432,7 +1430,6 @@ vendor/lib64/libnvram_daemon_callback.so
 vendor/lib64/libnvram_platform.so
 vendor/lib64/libnvram_sec.so
 vendor/lib64/libocam_common.so
-vendor/lib64/liboplus_audio_config.so
 vendor/lib64/libpixelflinger.so
 vendor/lib64/libpq_cust_base.so
 vendor/lib64/libpq_prot.so
