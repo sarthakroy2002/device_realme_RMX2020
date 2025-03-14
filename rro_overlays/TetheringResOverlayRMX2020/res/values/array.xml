@@ -7,6 +7,7 @@
          USB interfaces.  If the device doesn't want to support tethering over USB this should
          be empty.  An example would be "usb.*" -->
     <string-array name="config_tether_usb_regexs">
+        <item>usb\\d</item>
         <item>"rndis\\d"</item>
     </string-array>
 
