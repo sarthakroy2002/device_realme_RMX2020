@@ -1231,8 +1231,8 @@ vendor/lib/libtflite_mtk.so
 vendor/lib/libtflite_mtk_static_R.so
 vendor/lib/libthha.so;DISABLE_DEPS
 vendor/lib/libudf.so
-vendor/lib/libutinterface_custom_md.so
-vendor/lib/libutinterface_md.so
+vendor/lib/libutinterface_custom_md.so;DISABLE_DEPS
+vendor/lib/libutinterface_md.so;DISABLE_DEPS
 vendor/lib/libvc1dec_sa.ca7.so;DISABLE_DEPS
 vendor/lib/libvcodec_oal.so;DISABLE_DEPS
 vendor/lib/libvcodec_utility.so
@@ -1447,8 +1447,8 @@ vendor/lib64/libsysenv.so
 vendor/lib64/libtflite_mtk.so
 vendor/lib64/libtflite_mtk_static_R.so
 vendor/lib64/libthha.so;DISABLE_DEPS
-vendor/lib64/libutinterface_custom_md.so
-vendor/lib64/libutinterface_md.so
+vendor/lib64/libutinterface_custom_md.so;DISABLE_DEPS
+vendor/lib64/libutinterface_md.so;DISABLE_DEPS
 vendor/lib64/libvcodec_oal.so;DISABLE_DEPS
 vendor/lib64/libverno.so
 vendor/lib64/libwapi.so
