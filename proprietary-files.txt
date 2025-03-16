@@ -662,7 +662,7 @@ vendor/lib/libmtkcam_pipelinemodel_isp.so
 vendor/lib/libmtkcam_prerelease.so
 vendor/lib/libmtkcam_rsc.so
 vendor/lib/libmtkcam_scenariorecorder.so
-vendor/lib/libmtkcam_stdutils.so
+vendor/lib/libmtkcam_stdutils.so;DISABLE_CHECKELF
 vendor/lib/libmtkcam_streamutils.so
 vendor/lib/libmtkcam_synchelper.so
 vendor/lib/libmtkcam_sysutils.so
@@ -740,7 +740,7 @@ vendor/lib64/libmtkcam_pipelinepolicy_factory.so
 vendor/lib64/libmtkcam_prerelease.so
 vendor/lib64/libmtkcam_rsc.so
 vendor/lib64/libmtkcam_scenariorecorder.so
-vendor/lib64/libmtkcam_stdutils.so
+vendor/lib64/libmtkcam_stdutils.so;DISABLE_CHECKELF
 vendor/lib64/libmtkcam_streamutils.so
 vendor/lib64/libmtkcam_synchelper.so
 vendor/lib64/libmtkcam_sysutils.so
