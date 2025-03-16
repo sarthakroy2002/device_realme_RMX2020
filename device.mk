@@ -308,8 +308,7 @@ PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0
 
 PRODUCT_PACKAGES += \
-    libsensorndkbridge \
-    libshim_sensors
+    libsensorndkbridge
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \

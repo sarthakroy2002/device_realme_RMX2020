@@ -101,9 +101,9 @@ function blob_fixup() {
             ;;
         vendor/bin/mnld \
         |vendor/lib*/libaalservice.so \
-        |vendor/lib64/libcam.utils.sensorprovider.so)
+        |vendor/lib*/libcam.utils.sensorprovider.so)
             [ "$2" = "" ] && return 0
-            grep -q "libshim_sensors.so" "$2" || "$PATCHELF" --add-needed "libshim_sensors.so" "$2"
+            grep -q "android.hardware.sensors@1.0-convert-shared.so" "$2" || "$PATCHELF" --add-needed "android.hardware.sensors@1.0-convert-shared.so" "$2"
             ;;
         system_ext/lib64/libsource.so)
             [ "$2" = "" ] && return 0
