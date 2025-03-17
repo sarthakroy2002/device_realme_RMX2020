@@ -862,6 +862,9 @@ vendor/etc/init/init.thermal_manager.rc
 vendor/etc/init/init.thermalloadalgod.rc
 vendor/lib/libthermalalgo.so
 
+# VNDK
+system/lib64/libutils.so:vendor/lib64/libutils-v30.so
+
 # WiFi - from Redmi/merlin/merlin:11/RP1A.200720.011/V12.0.5.0.RJOCNXM:user/release-keys
 vendor/bin/stp_dump3|73ff60240688d76fc005a59716db1bdcdf63627f
 vendor/bin/wlan_assistant|79b03b7525d0cd46f1235787d532acfc628951f4

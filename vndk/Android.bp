@@ -5,21 +5,6 @@
 //
 
 cc_prebuilt_library_shared {
-	name: "libutils-v30",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["libutils-v30.so"],
-		},
-	},
-	compile_multilib: "64",
-	check_elf_files: false,
-	vendor: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "libmedia_helper-v30",
 	strip: {
 		none: true,
