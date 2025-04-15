@@ -863,7 +863,7 @@ vendor/etc/init/init.thermalloadalgod.rc
 vendor/lib/libthermalalgo.so
 
 # VNDK
-system/lib64/libutils.so:vendor/lib64/libutils-v30.so
+system/lib64/libutils.so:vendor/lib64/libutils-v30.so;FIX_SONAME
 
 # WiFi - from Redmi/merlin/merlin:11/RP1A.200720.011/V12.0.5.0.RJOCNXM:user/release-keys
 vendor/bin/stp_dump3|73ff60240688d76fc005a59716db1bdcdf63627f
