@@ -1,5 +1,4 @@
 runtime_resource_overlay {
     name: "FrameworksResOverlayRMX2020",
-    sdk_version: "current",
     vendor: true,
 }

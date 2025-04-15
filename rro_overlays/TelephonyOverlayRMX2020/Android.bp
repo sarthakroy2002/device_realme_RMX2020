@@ -1,5 +1,4 @@
 runtime_resource_overlay {
     name: "TelephonyOverlayRMX2020",
-    sdk_version: "current",
     vendor: true,
 }
