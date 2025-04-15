@@ -5,21 +5,6 @@
 //
 
 cc_prebuilt_library_shared {
-    name: "libmedia_helper-v30",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: ["libmedia_helper-v30.so"],
-        },
-    },
-    compile_multilib: "32",
-    check_elf_files: false,
-    vendor: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libui-v32",
     shared_libs: [
         "android.hardware.graphics.common-V2-ndk_platform",

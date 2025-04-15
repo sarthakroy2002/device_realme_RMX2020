@@ -347,7 +347,6 @@ PRODUCT_PACKAGES += \
 
 # VNDK
 PRODUCT_PACKAGES += \
-    libmedia_helper-v30 \
     libutils-v32 \
     libui-v32
 
