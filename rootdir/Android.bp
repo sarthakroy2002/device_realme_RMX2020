@@ -6,35 +6,35 @@
 prebuilt_etc {
     name: "init.connectivity.rc",
     src: "etc/init.connectivity.rc",
-    sub_dir: "init/hw",
+    relative_install_path: "init/hw",
     vendor: true,
 }
 
 prebuilt_etc {
     name: "init.modem.rc",
     src: "etc/init.modem.rc",
-    sub_dir: "init/hw",
+    relative_install_path: "init/hw",
     vendor: true,
 }
 
 prebuilt_etc {
     name: "init.mt6768.rc",
     src: "etc/init.mt6768.rc",
-    sub_dir: "init/hw",
+    relative_install_path: "init/hw",
     vendor: true,
 }
 
 prebuilt_etc {
     name: "init.mt6768.usb.rc",
     src: "etc/init.mt6768.usb.rc",
-    sub_dir: "init/hw",
+    relative_install_path: "init/hw",
     vendor: true,
 }
 
 prebuilt_etc {
     name: "init.sensor_1_0.rc",
     src: "etc/init.sensor_1_0.rc",
-    sub_dir: "init/hw",
+    relative_install_path: "init/hw",
     vendor: true,
 }
 
@@ -55,6 +55,6 @@ prebuilt_etc {
 prebuilt_etc {
     name: "init.recovery.mt6768.rc",
     src: "etc/init.recovery.mt6768.rc",
-    sub_dir: "init",
+    relative_install_path: "init",
     recovery: true,
 }
