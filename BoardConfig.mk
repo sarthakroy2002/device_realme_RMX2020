@@ -57,9 +57,6 @@ BUILD_BROKEN_ENFORCE_SYSPROP_OWNER := true
 # DPI
 TARGET_SCREEN_DENSITY := 320
 
-# Init
-TARGET_RECOVERY_DEVICE_MODULES := libinit_RMX2020
-
 # Kernel
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
