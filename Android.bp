@@ -1,3 +1,31 @@
 soong_namespace {
 
 }
+
+prebuilt_hidl_interfaces {
+    name: "hidl_pplagent_interface",
+    interfaces: [
+        "vendor.mediatek.hardware.pplagent@1.0::IPplAgent",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_mdmonitor_interface",
+    interfaces: [
+        "vendor.mediatek.hardware.mdmonitor@1.0::IMDMonitorService",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_aee_interface",
+    interfaces: [
+        "vendor.mediatek.hardware.aee@1.0::IAee",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_mtkcodecservice_interface",
+    interfaces: [
+        "vendor.mediatek.hardware.mtkcodecservice@1.1::IMtkCodecService",
+    ],
+}
