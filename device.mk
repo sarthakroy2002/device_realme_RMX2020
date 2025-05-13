@@ -135,6 +135,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vndservicemanager
 
+# Init
+$(call soong_config_set,libinit,vendor_init_lib,//$(DEVICE_PATH):libinit_RMX2020)
+
 # Kernel
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 PRODUCT_ENABLE_UFFD_GC := true
