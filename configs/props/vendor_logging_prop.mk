@@ -24,6 +24,7 @@ PRODUCT_VENDOR_PROPERTIES +=  \
     persist.log.tag.GsmCdmaConn=S \
     persist.log.tag.GsmCdmaPhone=S \
     persist.log.tag.hwcomposer=S \
+    persist.log.tag.HWUI=S \
     persist.log.tag.IMSRILRequest=S \
     persist.log.tag.IMS_RILA=S \
     persist.log.tag.IccCardProxy=S \
