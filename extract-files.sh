@@ -129,6 +129,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libsink.so" "libsink-mtk.so" "${2}"
             ;;
+        vendor/bin/hw/mtkfusionrild)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --add-needed "libutils-v32.so" "${2}"
+            ;;
         *)
             return 1
             ;;
