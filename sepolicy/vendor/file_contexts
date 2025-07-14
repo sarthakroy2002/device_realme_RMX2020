@@ -6,7 +6,7 @@
 /(vendor|odm)/bin/hw/vendor\.oplus\.hardware\.biometrics\.fingerprint@2\.1-service                        u:object_r:hal_fingerprint_default_exec:s0
 
 # Fingerprint
-/dev/esfp0                                                                                                u:object_r:fp_device:s0  
+/dev/esfp0                                                                                                u:object_r:fp_device:s0
 /dev/silead_fp                                                                                            u:object_r:fp_device:s0
 
 # Latency
@@ -16,7 +16,7 @@
 /dev/pn553                                                                                                u:object_r:nfc_device:s0
 
 # Sensor
-/dev/m_virtual_sensor_misc(/.*)?                                                                          u:object_r:m_virtual_sensor_device:s0 
+/dev/m_virtual_sensor_misc(/.*)?                                                                          u:object_r:m_virtual_sensor_device:s0
 
 # Touch
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@[0-9]\.[0-9]-service\.RMX2020                       u:object_r:hal_lineage_touch_default_exec:s0
+/vendor/bin/hw/vendor\.lineage\.touch-service\.RMX2020                                                    u:object_r:hal_lineage_touch_default_exec:s0
