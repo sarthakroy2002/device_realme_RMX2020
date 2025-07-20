@@ -9,5 +9,5 @@
       android:targetPackage="com.android.networkstack.tethering"
       android:targetName="TetheringConfig"
       android:isStatic="true"
-      android:priority="0"/>
+      android:priority="850"/>
 </manifest>
