@@ -65,4 +65,13 @@
             <instance>default</instance>
         </interface>
     </hal>
+    <!-- Touch -->
+    <hal format="hidl" optional="true">
+        <name>vendor.lineage.touch</name>
+        <version>1.0</version>
+        <interface>
+            <name>ITouchscreenGesture</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
 </compatibility-matrix>
