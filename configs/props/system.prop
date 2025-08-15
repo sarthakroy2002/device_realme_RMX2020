@@ -31,7 +31,6 @@ persist.sys.fuse.passthrough.enable=true
 
 # Radio
 persist.sys.fflag.override.settings_provider_model=false
-persist.sys.radio.force_lte_ca=true
 
 # IPO
 sys.ipo.disable=1
