@@ -122,6 +122,10 @@ ro.vendor.mtk_log_hide_gps=1
 ro.hardware.egl=mali
 ro.opengles.version=196610
 
+# HWUI
+debug.hwui.target_cpu_time_percent=30
+debug.hwui.use_hint_manager=true
+
 # Incremental
 ro.incremental.enable=yes
 
