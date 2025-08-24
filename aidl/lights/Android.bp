@@ -1,0 +1,19 @@
+// Copyright (C) 2019 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+
+cc_binary {
+    relative_install_path: "hw",
+    name: "android.hardware.light-service.RMX2020",
+    proprietary: true,
+    init_rc: ["android.hardware.light-service.RMX2020.rc"],
+    vintf_fragments: ["android.hardware.light-service.RMX2020.xml"],
+    srcs: ["main.cpp", "Light.cpp"],
+    shared_libs: [
+        "libhardware",
+        "libbase",
+        "libbinder_ndk",
+        "android.hardware.light-V2-ndk",
+    ],
+    vendor: true,
+}
