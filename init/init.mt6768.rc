@@ -90,7 +90,7 @@ on charger
     chown system system /sys/class/leds/red/brightness
     chown system system /sys/class/leds/green/brightness
 
-    start vendor.light-default
+    start vendor.light
 
 on property:sys.boot_completed=1
     write /proc/pl_lk "0"
@@ -650,8 +650,6 @@ on boot
     chmod 0644 /data/oppo/multimedia/oppo_display_perf_list.xml
     #endif /* VENDOR_EDIT */
 
-    chmod 0664 /sys/class/leds/lcd-backlight/brightness
-    chown system system /sys/class/leds/lcd-backlight/brightness
     chmod 0664 /sys/class/leds/red/brightness
     chown system system /sys/class/leds/red/brightness
     chmod 0664 /sys/class/leds/green/brightness

@@ -1,19 +1,30 @@
-// Copyright (C) 2019 The LineageOS Project
 //
-// SPDX-License-Identifier: Apache-2.0
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-FileCopyrightText: Yet Another AOSP Project
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
 
-cc_binary {
+rust_binary {
+    name: "android.hardware.lights-service.RMX2020",
     relative_install_path: "hw",
-    name: "android.hardware.light-service.RMX2020",
-    proprietary: true,
-    init_rc: ["android.hardware.light-service.RMX2020.rc"],
-    vintf_fragments: ["android.hardware.light-service.RMX2020.xml"],
-    srcs: ["main.cpp", "Light.cpp"],
-    shared_libs: [
-        "libhardware",
-        "libbase",
-        "libbinder_ndk",
-        "android.hardware.light-V2-ndk",
-    ],
+    init_rc: ["android.hardware.lights-service.RMX2020.rc"],
+    vintf_fragments: ["android.hardware.lights-service.RMX2020.xml"],
     vendor: true,
+    rustlibs: [
+        "liblogger",
+        "liblog_rust",
+        "libbinder_rs",
+        "android.hardware.light-V2-rust",
+    ],
+    srcs: [ "main.rs" ],
 }

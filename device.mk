@@ -154,7 +154,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light-service.RMX2020
+    android.hardware.lights-service.RMX2020
 
 # Media
 PRODUCT_COPY_FILES += \
