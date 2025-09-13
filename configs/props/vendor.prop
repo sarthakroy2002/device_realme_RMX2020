@@ -83,6 +83,7 @@ debug.sf.earlyGl.sf.duration=30000000
 debug.sf.hwc.min.duration=21000000
 debug.sf.late.app.duration=24000000
 debug.sf.late.sf.duration=30000000
+debug.sf.enable_egl_image_tracker=0
 debug.sf.predict_hwc_composition_strategy=0
 debug.sf.treat_170m_as_sRGB=1
 debug.sf.use_phase_offsets_as_durations=1
