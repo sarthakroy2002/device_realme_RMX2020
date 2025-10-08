@@ -1,8 +1,8 @@
 #
-# Copyright (C) 2018-2022 ArrowOS
+# Copyright (C) 2018-2025 PixelOS
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_RMX2020.mk
+    $(LOCAL_DIR)/custom_RMX2020.mk
