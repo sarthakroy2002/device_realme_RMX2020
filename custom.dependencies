@@ -1,0 +1,24 @@
+[
+  {
+    "repository": "PixelOS-Devices/android_kernel_realme_RMX2020",
+    "target_path": "kernel/realme/RMX2020"
+  },
+  {
+    "remote": "gitlab",
+    "repository": "NoPrincessHere/proprietary_vendor_realme_RMX2020",
+    "target_path": "vendor/realme/RMX2020"
+  },
+  {
+    "remote": "gitlab",
+    "repository": "NoPrincessHere/proprietary_vendor_realme_RMX2020-ims",
+    "target_path": "vendor/realme/RMX2020-ims"
+  },
+  {
+    "repository": "YAAP/hardware_mediatek",
+    "target_path": "hardware/mediatek"
+  },
+  {
+    "repository": "YAAP/device_mediatek_sepolicy_vndr",
+    "target_path": "device/mediatek/sepolicy_vndr"
+  }
+]
