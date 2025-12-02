@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015-2016 The CyanogenMod Project
-                   2017 The LineageOS Project
+                   2017-2025 The LineageOS Project
 
      SPDX-License-Identifier: Apache-2.0
 -->
@@ -18,7 +18,8 @@
 
     <application
         android:label="@string/device_settings_app_name"
-        android:persistent="true">
+        android:persistent="true"
+        android:theme="@style/Theme.SubSettingsBase.Expressive">
 
         <receiver android:name=".BootCompletedReceiver"
                   android:exported="false">
@@ -36,8 +37,7 @@
         <activity
             android:name=".DozeSettingsActivity"
             android:exported="false"
-            android:label="@string/ambient_display_title"
-            android:theme="@style/Theme.SubSettingsBase">
+            android:label="@string/ambient_display_title">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
