@@ -94,8 +94,6 @@ on property:sys.boot_completed=1
     write /proc/pl_lk "0"
 
 on fs
-    start vendor.boot-hal-1-1
-
     # mount fstab
     mount_all /vendor/etc/fstab.mt6768 --early
     write /sys/block/zram0/comp_algorithm lz4
@@ -143,12 +141,6 @@ on post-fs
 
     chown system system /mnt/vendor/protect_s
     chmod 0770 /mnt/vendor/protect_s
-
-    # Support A/B feature for EMMC and UFS boot region
-    symlink /dev/block/sda /dev/block/mmcblk0boot0
-    symlink /dev/block/sdb /dev/block/mmcblk0boot1
-    symlink /dev/block/mmcblk0boot0 /dev/block/platform/bootdevice/by-name/preloader_a
-    symlink /dev/block/mmcblk0boot1 /dev/block/platform/bootdevice/by-name/preloader_b
 
 on late-fs
     setprop init.userspace_reboot.userdata_remount.timeoutmillis 10000
