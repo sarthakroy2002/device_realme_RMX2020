@@ -15,10 +15,12 @@
   },
   {
     "repository": "YAAP/hardware_mediatek",
-    "target_path": "hardware/mediatek"
+    "target_path": "hardware/mediatek",
+    "branch": "sixteen"
   },
   {
     "repository": "YAAP/device_mediatek_sepolicy_vndr",
-    "target_path": "device/mediatek/sepolicy_vndr"
+    "target_path": "device/mediatek/sepolicy_vndr",
+    "branch": "sixteen"
   }
 ]
