@@ -444,9 +444,6 @@
          tts, etc. dialogs. -->
     <string name="config_appsNotReportingCrashes">com.google.android.tts</string>
 
-    <!-- The max scale for the wallpaper when it's zoomed in -->
-    <item name="config_wallpaperMaxScale" format="float" type="dimen">1</item>
-
     <!-- The default intensity level for alarm vibrations. See
          Settings.System.ALARM_VIBRATION_INTENSITY more details on the constant values and
          meanings. -->
