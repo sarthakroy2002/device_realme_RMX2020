@@ -117,7 +117,11 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             grep -q "libcutils.so" "${2}" || "${PATCHELF}" --add-needed "libcutils.so" "${2}"
             ;;
-        vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron)
+        vendor/lib/libnvram.so \
+        |vendor/lib64/libnvram.so \
+        |vendor/lib/libsysenv.so \
+        |vendor/lib64/libsysenv.so \
+        |vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron)
             [ "$2" = "" ] && return 0
             grep -q "libbase_shim.so" "${2}" || "${PATCHELF}" --add-needed "libbase_shim.so" "${2}"
             ;;
