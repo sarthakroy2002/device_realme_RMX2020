@@ -1,3 +1,6 @@
+# eBPF
+ro.bpf.kver_override=5.4.186
+
 # FM
 ro.fm.chip=0x6631
 ro.fm.band=1
