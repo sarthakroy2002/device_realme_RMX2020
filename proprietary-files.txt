@@ -1105,7 +1105,6 @@ vendor/lib/libaal_cust.so
 vendor/lib/libaal_key.so
 vendor/lib/libaal_mtk.so
 vendor/lib/libaalservice.so
-vendor/lib/libaedv.so
 vendor/lib/libakm.so
 vendor/lib/libaurisysdemo.so
 vendor/lib/libbessound_hd_mtk_vendor.so
@@ -1310,7 +1309,6 @@ vendor/lib64/libaal_key.so
 vendor/lib64/libaal_mtk.so
 vendor/lib64/libaalservice.so
 vendor/lib64/libacdk.so
-vendor/lib64/libaedv.so
 vendor/lib64/libakm.so
 vendor/lib64/libarmnn.so
 vendor/lib64/libarmnn_ndk.mtk.so

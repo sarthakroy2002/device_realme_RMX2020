@@ -328,6 +328,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/mediatek \
     hardware/mediatek/libmtkperf_client \
+    hardware/mediatek/libaedv \
     hardware/lineage/interfaces/power-libperfmgr \
     $(DEVICE_PATH)
 
