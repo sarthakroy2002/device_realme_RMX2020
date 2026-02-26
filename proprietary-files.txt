@@ -26,7 +26,6 @@ vendor/lib/libtinyxml.so
 # Audio (Hardware)
 vendor/lib/hw/audio.primary.mt6768.so
 vendor/lib/hw/audio.r_submix.mt6768.so
-vendor/lib/hw/audio.usb.mt6768.so
 vendor/lib/vendor.mediatek.hardware.audio@6.1.so
 vendor/lib64/vendor.mediatek.hardware.audio@6.1.so
 
