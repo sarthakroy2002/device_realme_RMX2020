@@ -329,6 +329,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/mediatek \
     hardware/mediatek/libmtkperf_client \
     hardware/mediatek/libaedv \
+    hardware/mediatek/wlan/wifi_hal \
     hardware/lineage/interfaces/power-libperfmgr \
     $(DEVICE_PATH)
 
@@ -384,9 +385,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libkeystore-engine-wifi-hidl \
     libkeystore-wifi-hidl
-
-PRODUCT_PACKAGES += \
-    libwifi-hal-wrapper
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(DEVICE_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
