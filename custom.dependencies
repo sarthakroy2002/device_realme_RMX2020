@@ -21,6 +21,6 @@
   {
     "repository": "YAAP/device_mediatek_sepolicy_vndr",
     "target_path": "device/mediatek/sepolicy_vndr",
-    "branch": "sixteen"
+    "branch": "sixteen-legacy"
   }
 ]
