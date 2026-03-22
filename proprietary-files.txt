@@ -51,29 +51,6 @@ vendor/lib/libspeech_enh_lib.so;FIX_SONAME
 vendor/lib/libspeechparser_vendor.so
 vendor/lib/libtinyxml.so
 vendor/lib/vendor.mediatek.hardware.audio@6.1.so
-vendor/lib64/libMtkSpeechEnh.so
-vendor/lib64/lib_aurisys_lvimfs.so
-vendor/lib64/lib_iir.so
-vendor/lib64/lib_speech_enh.so
-vendor/lib64/libaurisysdemo.so
-vendor/lib64/libbessound_hd_mtk_vendor.so
-vendor/lib64/libblisrc32_vendor.so
-vendor/lib64/libcvsd_mtk.so
-vendor/lib64/libktvdrc.so
-vendor/lib64/libktveffect.so
-vendor/lib64/libktveffect_rec.so
-vendor/lib64/libktveq.so
-vendor/lib64/libktvns.so
-vendor/lib64/libktvreverb.so
-vendor/lib64/libktvsoundtouch.so
-vendor/lib64/libktvvolume.so
-vendor/lib64/liblvimfs.so
-vendor/lib64/liblvimfs_wrapper.so
-vendor/lib64/libmsbc_mtk.so
-vendor/lib64/libmtklimiter_vendor.so
-vendor/lib64/libmtkshifter_vendor.so
-vendor/lib64/libspeech_enh_lib.so;FIX_SONAME
-vendor/lib64/libspeechparser_vendor.so
 vendor/lib64/vendor.mediatek.hardware.audio@6.1.so
 
 # Audio (device)
