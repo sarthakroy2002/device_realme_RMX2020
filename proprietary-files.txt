@@ -297,14 +297,21 @@ vendor/lib64/libbluetooth_audio_session_mediatek.so
 vendor/lib64/libcdsprpc.so;DISABLE_DEPS
 
 # Camera
+odm/bin/hw/camerasloganserver
+odm/etc/init/camerasloganserver.rc
+odm/etc/vintf/manifest/manifest_oplus_camera_slogan.xml
+odm/lib/hw/vendor.oplus.hardware.camera.slogan@1.0-impl.so
 odm/lib/libormshalclient.so
+odm/lib/vendor.oplus.hardware.camera.slogan@1.0.so
 odm/lib/vendor.oplus.hardware.orms@1.0.so
+odm/lib64/hw/vendor.oplus.hardware.camera.slogan@1.0-impl.so
 odm/lib64/libormshalclient.so
+odm/lib64/vendor.oplus.hardware.camera.slogan@1.0.so
 odm/lib64/vendor.oplus.hardware.orms@1.0.so
-system_ext/lib/vendor.oplus.hardware.camera.slogan@1.0.so
-system_ext/lib64/vendor.oplus.hardware.camera.slogan@1.0.so
 vendor/bin/hw/camerahalserver
 vendor/bin/jpegtool
+vendor/etc/camera/Arc_wdc_calib.bin
+vendor/etc/camera/M_Attribute_AG_BMW_1.1.0.model
 vendor/etc/init/camerahalserver.rc
 vendor/etc/ncf_pack.ncf
 vendor/lib/hw/vendor.mediatek.hardware.camera.bgservice@1.1-impl.so
