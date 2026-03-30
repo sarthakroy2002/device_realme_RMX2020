@@ -41,6 +41,15 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>vendor.oplus.hardware.camera.slogan</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ISlogan</name>
+            <instance>internal/0</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>vendor.oplus.hardware.radio</name>
         <version>1.0</version>
         <interface>
