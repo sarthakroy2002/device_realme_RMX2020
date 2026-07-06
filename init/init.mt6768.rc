@@ -6,6 +6,7 @@ import /vendor/etc/init/hw/init.volte.rc
 import /vendor/etc/init/hw/init.mal.rc
 import /vendor/etc/init/hw/init.sensor_1_0.rc
 import /vendor/etc/init/hw/init.modem.rc
+import /vendor/etc/init/hw/init.device.rc
 
 
 on early-init

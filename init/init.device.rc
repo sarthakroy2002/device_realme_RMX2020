@@ -1,0 +1,16 @@
+# egis fingerprint support
+on property:persist.sys.fp.vendor=et520
+    stop fps_hal
+    stop vendor.fps_hal.RMX2020
+
+    enable vendor.fps_hal
+
+service vendor.fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.3-service.rbs
+    # "class hal" causes a race condition on some devices due to files created
+    # in /data. As a workaround, postpone startup until later in boot once
+    # /data is mounted.
+    override
+    class late_start
+    user system
+    group system input uhid
+    disabled

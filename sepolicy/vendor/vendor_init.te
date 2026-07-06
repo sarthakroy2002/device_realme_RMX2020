@@ -4,3 +4,4 @@ allow vendor_init proc_vm:file rw_file_perms;
 allow vendor_init sysfs_otg_switch:file rw_file_perms;
 get_prop(vendor_init, vendor_oplus_fingerprint_prop)
 set_prop(vendor_init, vendor_oplus_fingerprint_prop)
+get_prop(vendor_init, system_oplus_fingerprint_prop)

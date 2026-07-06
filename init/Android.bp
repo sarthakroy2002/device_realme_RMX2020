@@ -11,6 +11,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.device.rc",
+    src: "init.device.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.modem.rc",
     src: "init.modem.rc",
     relative_install_path: "init/hw",

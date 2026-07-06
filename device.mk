@@ -96,7 +96,8 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.RMX2020
+    android.hardware.biometrics.fingerprint@2.1-service.RMX2020 \
+    android.hardware.biometrics.fingerprint@2.3-service.rbs
 
 # FM Radio
 PRODUCT_PACKAGES += \
@@ -282,6 +283,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     init.recovery.mt6768.rc \
     init.connectivity.rc \
+    init.device.rc \
     init.modem.rc \
     init.mt6768.rc \
     init.mt6768.usb.rc \
@@ -333,6 +335,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/mediatek/libaedv \
     hardware/mediatek/wlan/wifi_hal \
     hardware/lineage/interfaces/power-libperfmgr \
+    hardware/egistec/fingerprint \
     $(DEVICE_PATH)
 
 # Text classifier
