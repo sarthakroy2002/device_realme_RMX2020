@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
  
-#define LOG_TAG "android.hardware.biometrics.fingerprint@2.1-service.RMX2020"
+#define LOG_TAG "android.hardware.biometrics.fingerprint@2.3-service.RMX2020"
 
 #include <hardware/hardware.h>
 #include <hardware/fingerprint.h>
@@ -19,7 +19,7 @@ namespace android {
 namespace hardware {
 namespace biometrics {
 namespace fingerprint {
-namespace V2_1 {
+namespace V2_3 {
 namespace implementation {
 
 BiometricsFingerprint::BiometricsFingerprint() {
@@ -249,8 +249,21 @@ Return<RequestStatus> BiometricsFingerprint::authenticate(uint64_t operationId, 
     return OplusToAOSPRequestStatus(mOplusBiometricsFingerprint->authenticate(operationId, gid));
 }
 
+Return<bool> BiometricsFingerprint::isUdfps(uint32_t /*sensorId*/) {
+    return false;
+}
+
+Return<void> BiometricsFingerprint::onFingerDown(uint32_t /*x*/, uint32_t /*y*/, float /*minor*/,
+                                                 float /*major*/) {
+    return Void();
+}
+
+Return<void> BiometricsFingerprint::onFingerUp() {
+    return Void();
+}
+
 } // namespace implementation
-}  // namespace V2_1
+}  // namespace V2_3
 }  // namespace fingerprint
 }  // namespace biometrics
 }  // namespace hardware

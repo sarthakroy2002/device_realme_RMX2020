@@ -4,15 +4,15 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#define LOG_TAG "android.hardware.biometrics.fingerprint@2.1-service.RMX2020"
+#define LOG_TAG "android.hardware.biometrics.fingerprint@2.3-service.RMX2020"
 
 #include <android-base/logging.h>
 #include <hidl/HidlTransportSupport.h>
 
 #include "BiometricsFingerprint.h"
 
-using android::hardware::biometrics::fingerprint::V2_1::IBiometricsFingerprint;
-using android::hardware::biometrics::fingerprint::V2_1::implementation::BiometricsFingerprint;
+using android::hardware::biometrics::fingerprint::V2_3::IBiometricsFingerprint;
+using android::hardware::biometrics::fingerprint::V2_3::implementation::BiometricsFingerprint;
 using android::hardware::configureRpcThreadpool;
 using android::hardware::joinRpcThreadpool;
 using android::OK;
